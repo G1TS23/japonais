@@ -42,6 +42,9 @@ watch(
     phase.value = 'input'
     picked.value = null
     if (c && props.direction === 'romaji2kana') choices.value = makeChoices(c, props.pool)
+    // L'input reste le même élément DOM d'une carte à l'autre (pas de v-if par
+    // carte) : le focus survit déjà en général. On le réaffirme quand même
+    // ici en filet de sécurité (ex. premier montage).
     if (c && props.direction === 'kana2romaji') nextTick(() => inputEl.value?.focus())
   },
   { immediate: true },
@@ -80,11 +83,16 @@ function submitInput() {
   if (!c) return
   if (phase.value !== 'input') {
     advance()
+    // Le bouton vient de voler le focus au champ (comportement navigateur
+    // normal) : on le reprend tout de suite, dans le même geste utilisateur,
+    // sinon le clavier mobile refuse de se rouvrir après coup.
+    inputEl.value?.focus()
     return
   }
   const ok = matchesRomaji(c.entry, answer.value)
   registerAttempt(c, ok)
   phase.value = ok ? 'correct' : 'wrong'
+  inputEl.value?.focus()
   if (ok) setTimeout(advance, 350)
 }
 
@@ -146,7 +154,7 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             autocomplete="off"
             autocorrect="off"
             spellcheck="false"
-            :readonly="phase !== 'input'"
+            enterkeyhint="done"
             placeholder="rōmaji…"
             class="w-full rounded-lg border-2 bg-transparent px-4 py-3 text-center text-lg outline-none transition"
             :class="{
