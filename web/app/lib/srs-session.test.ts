@@ -1,4 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { reactive } from 'vue'
 import { Rating, State } from 'ts-fsrs'
 import { getDb, uid, type Card } from './db'
 import { newFsrsFields } from './fsrs'
@@ -133,6 +134,25 @@ describe('shouldRequeueInSession', () => {
     await getDb().cards.add(card)
     const updated = await recordReview(card, 0.9, Rating.Again, NOW)
     expect(shouldRequeueInSession(updated.state)).toBe(true)
+  })
+})
+
+describe('recordReview avec une carte réactive Vue (repro DataCloneError)', () => {
+  it('accepte une carte issue d’un ref()/reactive() Vue sans DataCloneError', async () => {
+    // Reproduit exactement l'appel réel : SrsReview.vue lit la carte depuis
+    // `current.value` (un ref Vue), donc `card.tags` arrive en Proxy, pas en
+    // Array natif. IndexedDB (et fake-indexeddb, qui applique aussi le
+    // structured clone) refuse de cloner un Proxy tel quel.
+    const db = getDb()
+    const plain = manualCard({ id: 'reactive-1' })
+    await db.cards.add(plain)
+
+    const reactiveCard = reactive(plain) as unknown as Card
+    await expect(recordReview(reactiveCard, 0.9, Rating.Good, NOW)).resolves.toBeDefined()
+
+    const stored = await db.cards.get('reactive-1')
+    expect(stored?.tags).toEqual(['n5'])
+    expect(Array.isArray(stored?.tags)).toBe(true)
   })
 })
 

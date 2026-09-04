@@ -1,3 +1,4 @@
+import { toRaw } from 'vue'
 import { VOCAB_N5, type VocabEntry } from '~/data/vocab'
 import { getDb, uid, type Card } from './db'
 import { applyRating, newFsrsFields, State, type Grade } from './fsrs'
@@ -69,18 +70,26 @@ export async function getTodayQueue(newCardsPerDay: number, now: Date = new Date
   return { due, fresh: allNew.slice(0, remaining) }
 }
 
-/** Applique une note et persiste la carte + le journal de révision. */
+/**
+ * Applique une note et persiste la carte + le journal de révision.
+ *
+ * `card` vient typiquement d'un `ref()` Vue (ex. `current.value` dans
+ * SrsReview.vue) : ses champs objets/tableaux (`tags`…) sont alors des
+ * proxies réactifs. IndexedDB (structured clone) refuse de cloner un Proxy
+ * — d'où `toRaw()` avant tout écriture Dexie.
+ */
 export async function recordReview(card: Card, retention: number, rating: Grade, now: Date = new Date()): Promise<Card> {
   const db = getDb()
-  const priorState = card.state
-  const { card: fields, scheduledDays } = applyRating(card, retention, rating, now)
-  const updated: Card = { ...card, ...fields }
+  const raw = toRaw(card)
+  const priorState = raw.state
+  const { card: fields, scheduledDays } = applyRating(raw, retention, rating, now)
+  const updated: Card = { ...raw, ...fields }
 
   await db.transaction('rw', db.cards, db.reviewLogs, async () => {
     await db.cards.put(updated)
     await db.reviewLogs.add({
       id: uid(),
-      cardId: card.id,
+      cardId: raw.id,
       rating,
       priorState,
       scheduled_days: scheduledDays,
