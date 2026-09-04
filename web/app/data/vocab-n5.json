@@ -1,0 +1,7900 @@
+[
+  {
+    "content_id": "ああ|ああ",
+    "terme": "ああ",
+    "lecture": "ああ",
+    "sens_en": "Ah!, Oh!",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "会う|あう",
+    "terme": "会う",
+    "lecture": "あう",
+    "sens_en": "to meet, to see",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "青|あお",
+    "terme": "青",
+    "lecture": "あお",
+    "sens_en": "blue",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "青い|あおい",
+    "terme": "青い",
+    "lecture": "あおい",
+    "sens_en": "blue",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "赤|あか",
+    "terme": "赤",
+    "lecture": "あか",
+    "sens_en": "red",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "赤い|あかい",
+    "terme": "赤い",
+    "lecture": "あかい",
+    "sens_en": "red",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "明るい|あかるい",
+    "terme": "明るい",
+    "lecture": "あかるい",
+    "sens_en": "bright (in reference to personality or weather); cheerful",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "秋|あき",
+    "terme": "秋",
+    "lecture": "あき",
+    "sens_en": "fall (season)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "開く|あく",
+    "terme": "開く",
+    "lecture": "あく",
+    "sens_en": "to open, to become open",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "開ける|あける",
+    "terme": "開ける",
+    "lecture": "あける",
+    "sens_en": "to open (v.t.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "上げる|あげる",
+    "terme": "上げる",
+    "lecture": "あげる",
+    "sens_en": "to raise, to lift",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "朝|あさ",
+    "terme": "朝",
+    "lecture": "あさ",
+    "sens_en": "morning",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "朝御飯|あさごはん",
+    "terme": "朝御飯",
+    "lecture": "あさごはん",
+    "sens_en": "breakfast",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "明後日|あさって",
+    "terme": "明後日",
+    "lecture": "あさって",
+    "sens_en": "day after tomorrow",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "足; 脚|あし",
+    "terme": "足; 脚",
+    "lecture": "あし",
+    "sens_en": "foot; leg",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "明日|あした",
+    "terme": "明日",
+    "lecture": "あした",
+    "sens_en": "tomorrow",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "あそこ|あそこ",
+    "terme": "あそこ",
+    "lecture": "あそこ",
+    "sens_en": "there, over there, that place",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "遊ぶ|あそぶ",
+    "terme": "遊ぶ",
+    "lecture": "あそぶ",
+    "sens_en": "to play; to spend time pleasantly; to hang out",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "暖かい|あたたかい",
+    "terme": "暖かい",
+    "lecture": "あたたかい",
+    "sens_en": "warm",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "頭|あたま",
+    "terme": "頭",
+    "lecture": "あたま",
+    "sens_en": "head",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "新しい|あたらしい",
+    "terme": "新しい",
+    "lecture": "あたらしい",
+    "sens_en": "new",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "あちら|あちら",
+    "terme": "あちら",
+    "lecture": "あちら",
+    "sens_en": "this way (polite)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "暑い|あつい",
+    "terme": "暑い",
+    "lecture": "あつい",
+    "sens_en": "hot (in reference to weather), warm",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "熱い|あつい",
+    "terme": "熱い",
+    "lecture": "あつい",
+    "sens_en": "hot (objects)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "厚い|あつい",
+    "terme": "厚い",
+    "lecture": "あつい",
+    "sens_en": "kind, warm(hearted), thick, deep",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "あっち|あっち",
+    "terme": "あっち",
+    "lecture": "あっち",
+    "sens_en": "over there",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "後|あと",
+    "terme": "後",
+    "lecture": "あと",
+    "sens_en": "afterwards (later); in the future; the rest; since then",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "あなた|あなた",
+    "terme": "あなた",
+    "lecture": "あなた",
+    "sens_en": "you",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "兄|あに",
+    "terme": "兄",
+    "lecture": "あに",
+    "sens_en": "(my) older brother (humble)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "姉|あね",
+    "terme": "姉",
+    "lecture": "あね",
+    "sens_en": "(my) older sister (humble)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "アパート|アパート",
+    "terme": "アパート",
+    "lecture": "アパート",
+    "sens_en": "apartment (abbr.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "あの|あの",
+    "terme": "あの",
+    "lecture": "あの",
+    "sens_en": "that over there; like that, that way; um...",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "浴びる|あびる",
+    "terme": "浴びる",
+    "lecture": "あびる",
+    "sens_en": "to bathe, to shower",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "危ない|あぶない",
+    "terme": "危ない",
+    "lecture": "あぶない",
+    "sens_en": "dangerous, critical",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "甘い|あまい",
+    "terme": "甘い",
+    "lecture": "あまい",
+    "sens_en": "generous, sweet",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "余り|あまり",
+    "terme": "余り",
+    "lecture": "あまり",
+    "sens_en": "not very; surplus",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "雨|あめ",
+    "terme": "雨",
+    "lecture": "あめ",
+    "sens_en": "rain",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "飴|あめ",
+    "terme": "飴",
+    "lecture": "あめ",
+    "sens_en": "(hard) candy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "洗う|あらう",
+    "terme": "洗う",
+    "lecture": "あらう",
+    "sens_en": "to wash",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "在る|ある",
+    "terme": "在る",
+    "lecture": "ある",
+    "sens_en": "to be, to have",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "有る|ある",
+    "terme": "有る",
+    "lecture": "ある",
+    "sens_en": "to be, to have",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "歩く|あるく",
+    "terme": "歩く",
+    "lecture": "あるく",
+    "sens_en": "to walk",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "あれ|あれ",
+    "terme": "あれ",
+    "lecture": "あれ",
+    "sens_en": "that one (over there)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いい; よい|いい; よい",
+    "terme": "いい; よい",
+    "lecture": "いい; よい",
+    "sens_en": "good",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いいえ|いいえ",
+    "terme": "いいえ",
+    "lecture": "いいえ",
+    "sens_en": "no, not at all",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "言う|いう",
+    "terme": "言う",
+    "lecture": "いう",
+    "sens_en": "to say",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "家|いえ",
+    "terme": "家",
+    "lecture": "いえ",
+    "sens_en": "house, home",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いかが|いかが",
+    "terme": "いかが",
+    "lecture": "いかが",
+    "sens_en": "how, in what way",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "行く|いく; ゆく",
+    "terme": "行く",
+    "lecture": "いく; ゆく",
+    "sens_en": "to go",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いくつ|いくつ",
+    "terme": "いくつ",
+    "lecture": "いくつ",
+    "sens_en": "how many, how old",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いくら|いくら",
+    "terme": "いくら",
+    "lecture": "いくら",
+    "sens_en": "how much, how many",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "池|いけ",
+    "terme": "池",
+    "lecture": "いけ",
+    "sens_en": "pond",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "医者|いしゃ",
+    "terme": "医者",
+    "lecture": "いしゃ",
+    "sens_en": "doctor; physician",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "椅子|いす",
+    "terme": "椅子",
+    "lecture": "いす",
+    "sens_en": "chair",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "忙しい|いそがしい",
+    "terme": "忙しい",
+    "lecture": "いそがしい",
+    "sens_en": "busy (people, days)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "痛い|いたい",
+    "terme": "痛い",
+    "lecture": "いたい",
+    "sens_en": "hurt; painful; sore",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一|いち",
+    "terme": "一",
+    "lecture": "いち",
+    "sens_en": "one",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一日|いちにち",
+    "terme": "一日",
+    "lecture": "いちにち",
+    "sens_en": "one day (duration)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一番|いちばん",
+    "terme": "一番",
+    "lecture": "いちばん",
+    "sens_en": "best (most), first, number one",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いつ|いつ",
+    "terme": "いつ",
+    "lecture": "いつ",
+    "sens_en": "when",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "五日|いつか",
+    "terme": "五日",
+    "lecture": "いつか",
+    "sens_en": "five days; fifth day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一緒|いっしょ",
+    "terme": "一緒",
+    "lecture": "いっしょ",
+    "sens_en": "together",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "五つ|いつつ",
+    "terme": "五つ",
+    "lecture": "いつつ",
+    "sens_en": "five things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "いつも|いつも",
+    "terme": "いつも",
+    "lecture": "いつも",
+    "sens_en": "always, usually, every time, never (with neg. verb)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "犬|いぬ",
+    "terme": "犬",
+    "lecture": "いぬ",
+    "sens_en": "dog",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今|いま",
+    "terme": "今",
+    "lecture": "いま",
+    "sens_en": "now",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "意味|いみ",
+    "terme": "意味",
+    "lecture": "いみ",
+    "sens_en": "meaning, significance",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "妹|いもうと",
+    "terme": "妹",
+    "lecture": "いもうと",
+    "sens_en": "younger sister (humble)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "嫌|いや",
+    "terme": "嫌",
+    "lecture": "いや",
+    "sens_en": "disagreeable, detestable, unpleasant",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "入口|いりぐち",
+    "terme": "入口",
+    "lecture": "いりぐち",
+    "sens_en": "entrance",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "居る|いる",
+    "terme": "居る",
+    "lecture": "いる",
+    "sens_en": "(humble) to be (animate), to exist",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "要る|いる",
+    "terme": "要る",
+    "lecture": "いる",
+    "sens_en": "to need",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "入れる|いれる",
+    "terme": "入れる",
+    "lecture": "いれる",
+    "sens_en": "to put in",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "色|いろ",
+    "terme": "色",
+    "lecture": "いろ",
+    "sens_en": "color",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "色々|いろいろ",
+    "terme": "色々",
+    "lecture": "いろいろ",
+    "sens_en": "various",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "上|うえ",
+    "terme": "上",
+    "lecture": "うえ",
+    "sens_en": "above (up, top, etc.), over, on top of",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "後ろ|うしろ",
+    "terme": "後ろ",
+    "lecture": "うしろ",
+    "sens_en": "back, behind, rear",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "薄い|うすい",
+    "terme": "薄い",
+    "lecture": "うすい",
+    "sens_en": "thin, weak",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "歌|うた",
+    "terme": "歌",
+    "lecture": "うた",
+    "sens_en": "a song",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "歌う|うたう",
+    "terme": "歌う",
+    "lecture": "うたう",
+    "sens_en": "to sing",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "うち|うち",
+    "terme": "うち",
+    "lecture": "うち",
+    "sens_en": "home; house; my place",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "生まれる|うまれる",
+    "terme": "生まれる",
+    "lecture": "うまれる",
+    "sens_en": "to be born",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "海|うみ",
+    "terme": "海",
+    "lecture": "うみ",
+    "sens_en": "sea, beach",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "売る|うる",
+    "terme": "売る",
+    "lecture": "うる",
+    "sens_en": "to sell (v.t.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "うるさい|うるさい",
+    "terme": "うるさい",
+    "lecture": "うるさい",
+    "sens_en": "noisy; annoying",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "上着|うわぎ",
+    "terme": "上着",
+    "lecture": "うわぎ",
+    "sens_en": "coat, jacket",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "絵|え",
+    "terme": "絵",
+    "lecture": "え",
+    "sens_en": "a painting; a picture; a drawing",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "映画|えいが",
+    "terme": "映画",
+    "lecture": "えいが",
+    "sens_en": "movie, film",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "映画館|えいがかん",
+    "terme": "映画館",
+    "lecture": "えいがかん",
+    "sens_en": "movie theater, cinema",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "英語|えいご",
+    "terme": "英語",
+    "lecture": "えいご",
+    "sens_en": "English (language)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ええ|ええ",
+    "terme": "ええ",
+    "lecture": "ええ",
+    "sens_en": "yes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "駅|えき",
+    "terme": "駅",
+    "lecture": "えき",
+    "sens_en": "station",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "エレベーター|エレベーター",
+    "terme": "エレベーター",
+    "lecture": "エレベーター",
+    "sens_en": "elevator",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～円|～えん",
+    "terme": "～円",
+    "lecture": "～えん",
+    "sens_en": "Yen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "鉛筆|えんぴつ",
+    "terme": "鉛筆",
+    "lecture": "えんぴつ",
+    "sens_en": "pencil",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お～|お～",
+    "terme": "お～",
+    "lecture": "お～",
+    "sens_en": "honorable ~ (honorific)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "美味しい|おいしい",
+    "terme": "美味しい",
+    "lecture": "おいしい",
+    "sens_en": "delicious, tasty",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "多い|おおい",
+    "terme": "多い",
+    "lecture": "おおい",
+    "sens_en": "many; there are a lot",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大きい|おおきい",
+    "terme": "大きい",
+    "lecture": "おおきい",
+    "sens_en": "big, large",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大きな|おおきな",
+    "terme": "大きな",
+    "lecture": "おおきな",
+    "sens_en": "big",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大勢|おおぜい",
+    "terme": "大勢",
+    "lecture": "おおぜい",
+    "sens_en": "great number of people",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お母さん|おかあさん",
+    "terme": "お母さん",
+    "lecture": "おかあさん",
+    "sens_en": "mother (formal)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お菓子|おかし",
+    "terme": "お菓子",
+    "lecture": "おかし",
+    "sens_en": "confections, sweets, snack",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お金|おかね",
+    "terme": "お金",
+    "lecture": "おかね",
+    "sens_en": "money",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "起きる|おきる",
+    "terme": "起きる",
+    "lecture": "おきる",
+    "sens_en": "to get up (e.g., from sleeping); to happen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "置く|おく",
+    "terme": "置く",
+    "lecture": "おく",
+    "sens_en": "to put; to lay; to place",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "奥さん|おくさん",
+    "terme": "奥さん",
+    "lecture": "おくさん",
+    "sens_en": "(someone else's) wife (hon.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お酒|おさけ",
+    "terme": "お酒",
+    "lecture": "おさけ",
+    "sens_en": "sake; alcohol",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お皿|おさら",
+    "terme": "お皿",
+    "lecture": "おさら",
+    "sens_en": "plate, dish",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "伯父; 叔父さん|おじさん",
+    "terme": "伯父; 叔父さん",
+    "lecture": "おじさん",
+    "sens_en": "uncle, middle-aged man",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "おじいさん|おじいさん",
+    "terme": "おじいさん",
+    "lecture": "おじいさん",
+    "sens_en": "grandfather, male senior citizen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "教える|おしえる",
+    "terme": "教える",
+    "lecture": "おしえる",
+    "sens_en": "to teach, to inform, to instruct",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "押す|おす",
+    "terme": "押す",
+    "lecture": "おす",
+    "sens_en": "to push, to press, to stamp (e.g., a passport)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "遅い|おそい",
+    "terme": "遅い",
+    "lecture": "おそい",
+    "sens_en": "slow; (to be) late",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お茶|おちゃ",
+    "terme": "お茶",
+    "lecture": "おちゃ",
+    "sens_en": "(green) tea",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お手洗い|おてあらい",
+    "terme": "お手洗い",
+    "lecture": "おてあらい",
+    "sens_en": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お父さん|おとうさん",
+    "terme": "お父さん",
+    "lecture": "おとうさん",
+    "sens_en": "father (formal)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "弟|おとうと",
+    "terme": "弟",
+    "lecture": "おとうと",
+    "sens_en": "younger brother",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "男|おとこ",
+    "terme": "男",
+    "lecture": "おとこ",
+    "sens_en": "man, male",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "男の子|おとこのこ",
+    "terme": "男の子",
+    "lecture": "おとこのこ",
+    "sens_en": "boy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一昨日|おととい",
+    "terme": "一昨日",
+    "lecture": "おととい",
+    "sens_en": "the day before yesterday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "おととし|おととし",
+    "terme": "おととし",
+    "lecture": "おととし",
+    "sens_en": "year before last",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大人|おとな",
+    "terme": "大人",
+    "lecture": "おとな",
+    "sens_en": "adult",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お腹|おなか",
+    "terme": "お腹",
+    "lecture": "おなか",
+    "sens_en": "stomach",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "同じ|おなじ",
+    "terme": "同じ",
+    "lecture": "おなじ",
+    "sens_en": "same, identical",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お兄さん|おにいさん",
+    "terme": "お兄さん",
+    "lecture": "おにいさん",
+    "sens_en": "(someone else's) older brother (formal)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お姉さん|おねえさん",
+    "terme": "お姉さん",
+    "lecture": "おねえさん",
+    "sens_en": "older sister (formal)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "伯母さん; 叔母さん|おばさん",
+    "terme": "伯母さん; 叔母さん",
+    "lecture": "おばさん",
+    "sens_en": "aunt",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "おばあさん|おばあさん",
+    "terme": "おばあさん",
+    "lecture": "おばあさん",
+    "sens_en": "grandmother, female senior-citizen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お風呂|おふろ",
+    "terme": "お風呂",
+    "lecture": "おふろ",
+    "sens_en": "a bath",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "お弁当|おべんとう",
+    "terme": "お弁当",
+    "lecture": "おべんとう",
+    "sens_en": "a boxed lunch",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "覚える|おぼえる",
+    "terme": "覚える",
+    "lecture": "おぼえる",
+    "sens_en": "to learn, to commit to memory, to remember, to memorize",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "おまわりさん|おまわりさん",
+    "terme": "おまわりさん",
+    "lecture": "おまわりさん",
+    "sens_en": "policeman (friendly term)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "重い|おもい",
+    "terme": "重い",
+    "lecture": "おもい",
+    "sens_en": "heavy; serious",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "面白い|おもしろい",
+    "terme": "面白い",
+    "lecture": "おもしろい",
+    "sens_en": "interesting, amusing",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "泳ぐ|およぐ",
+    "terme": "泳ぐ",
+    "lecture": "およぐ",
+    "sens_en": "to swim",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "降りる|おりる",
+    "terme": "降りる",
+    "lecture": "おりる",
+    "sens_en": "to get off",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "終る|おわる",
+    "terme": "終る",
+    "lecture": "おわる",
+    "sens_en": "to finish, to close",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "音楽|おんがく",
+    "terme": "音楽",
+    "lecture": "おんがく",
+    "sens_en": "Music",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "女|おんな",
+    "terme": "女",
+    "lecture": "おんな",
+    "sens_en": "woman, female",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "女の子|おんなのこ",
+    "terme": "女の子",
+    "lecture": "おんなのこ",
+    "sens_en": "girl",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～回|～かい",
+    "terme": "～回",
+    "lecture": "～かい",
+    "sens_en": "counter for occurrences (~ times)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～階|～かい",
+    "terme": "～階",
+    "lecture": "～かい",
+    "sens_en": "counter for stories (floors) of a building",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "外国|がいこく",
+    "terme": "外国",
+    "lecture": "がいこく",
+    "sens_en": "foreign country; abroad",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "外国人|がいこくじん",
+    "terme": "外国人",
+    "lecture": "がいこくじん",
+    "sens_en": "foreigner",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "会社|かいしゃ",
+    "terme": "会社",
+    "lecture": "かいしゃ",
+    "sens_en": "company, corporation",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "階段|かいだん",
+    "terme": "階段",
+    "lecture": "かいだん",
+    "sens_en": "stairs",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "買い物|かいもの",
+    "terme": "買い物",
+    "lecture": "かいもの",
+    "sens_en": "shopping",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "買う|かう",
+    "terme": "買う",
+    "lecture": "かう",
+    "sens_en": "to buy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "返す|かえす",
+    "terme": "返す",
+    "lecture": "かえす",
+    "sens_en": "to return something",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "帰る|かえる",
+    "terme": "帰る",
+    "lecture": "かえる",
+    "sens_en": "to go back, to go home, to return",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "顔|かお",
+    "terme": "顔",
+    "lecture": "かお",
+    "sens_en": "face (body part)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "かかる|かかる",
+    "terme": "かかる",
+    "lecture": "かかる",
+    "sens_en": "it takes (amount of time, money) (v.i.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "鍵|かぎ",
+    "terme": "鍵",
+    "lecture": "かぎ",
+    "sens_en": "a lock; a key",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "書く|かく",
+    "terme": "書く",
+    "lecture": "かく",
+    "sens_en": "to write",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "学生|がくせい",
+    "terme": "学生",
+    "lecture": "がくせい",
+    "sens_en": "student",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～か月|～かげつ",
+    "terme": "～か月",
+    "lecture": "～かげつ",
+    "sens_en": "(number of) months",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "掛ける|かける",
+    "terme": "掛ける",
+    "lecture": "かける",
+    "sens_en": "to put on (e.g., glasses); to hang (e.g., on a wall)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "かける|かける",
+    "terme": "かける",
+    "lecture": "かける",
+    "sens_en": "to dial/call (e.g., phone); to sit down",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "傘|かさ",
+    "terme": "傘",
+    "lecture": "かさ",
+    "sens_en": "umbrella, parasol",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "貸す|かす",
+    "terme": "貸す",
+    "lecture": "かす",
+    "sens_en": "to lend",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "風|かぜ",
+    "terme": "風",
+    "lecture": "かぜ",
+    "sens_en": "wind, breeze",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "風邪|かぜ",
+    "terme": "風邪",
+    "lecture": "かぜ",
+    "sens_en": "cold, flu",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "方|かた",
+    "terme": "方",
+    "lecture": "かた",
+    "sens_en": "-- honorific form for 人 (ひと) --; way of doing",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "家族|かぞく",
+    "terme": "家族",
+    "lecture": "かぞく",
+    "sens_en": "family, members of a family",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "片仮名|かたかな",
+    "terme": "片仮名",
+    "lecture": "かたかな",
+    "sens_en": "katakana",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～月|～がつ",
+    "terme": "～月",
+    "lecture": "～がつ",
+    "sens_en": "month of year",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "学校|がっこう",
+    "terme": "学校",
+    "lecture": "がっこう",
+    "sens_en": "a school",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "カップ|カップ",
+    "terme": "カップ",
+    "lecture": "カップ",
+    "sens_en": "cup",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "家庭|かてい",
+    "terme": "家庭",
+    "lecture": "かてい",
+    "sens_en": "home; family",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "角|かど",
+    "terme": "角",
+    "lecture": "かど",
+    "sens_en": "corner (e.g., desk, pavement)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "かばん|かばん",
+    "terme": "かばん",
+    "lecture": "かばん",
+    "sens_en": "bag, basket",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "花瓶|かびん",
+    "terme": "花瓶",
+    "lecture": "かびん",
+    "sens_en": "(flower) vase",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "かぶる|かぶる",
+    "terme": "かぶる",
+    "lecture": "かぶる",
+    "sens_en": "to wear, to put on (e.g., a hat on the head)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "紙|かみ",
+    "terme": "紙",
+    "lecture": "かみ",
+    "sens_en": "paper",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "カメラ|カメラ",
+    "terme": "カメラ",
+    "lecture": "カメラ",
+    "sens_en": "camera",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "火曜日|かようび",
+    "terme": "火曜日",
+    "lecture": "かようび",
+    "sens_en": "Tuesday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "辛い|からい",
+    "terme": "辛い",
+    "lecture": "からい",
+    "sens_en": "hot and spicy; salty",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "体|からだ",
+    "terme": "体",
+    "lecture": "からだ",
+    "sens_en": "body; health",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "借りる|かりる",
+    "terme": "借りる",
+    "lecture": "かりる",
+    "sens_en": "to borrow, to owe",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～がる|～がる",
+    "terme": "～がる",
+    "lecture": "～がる",
+    "sens_en": "feel",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "軽い|かるい",
+    "terme": "軽い",
+    "lecture": "かるい",
+    "sens_en": "light, non-serious, minor",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "カレー|カレー",
+    "terme": "カレー",
+    "lecture": "カレー",
+    "sens_en": "curry (abbr. for curry and rice)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "カレンダー|カレンダー",
+    "terme": "カレンダー",
+    "lecture": "カレンダー",
+    "sens_en": "calendar",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "川; 河|かわ",
+    "terme": "川; 河",
+    "lecture": "かわ",
+    "sens_en": "river",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～側|～がわ",
+    "terme": "～側",
+    "lecture": "～がわ",
+    "sens_en": "~ side",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "可愛い|かわいい",
+    "terme": "可愛い",
+    "lecture": "かわいい",
+    "sens_en": "cute, adorable",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "漢字|かんじ",
+    "terme": "漢字",
+    "lecture": "かんじ",
+    "sens_en": "kanji; Chinese character",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "木|き",
+    "terme": "木",
+    "lecture": "き",
+    "sens_en": "tree, wood, timber",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "黄色|きいろ",
+    "terme": "黄色",
+    "lecture": "きいろ",
+    "sens_en": "yellow",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "黄色い|きいろい",
+    "terme": "黄色い",
+    "lecture": "きいろい",
+    "sens_en": "yellow",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "消える|きえる",
+    "terme": "消える",
+    "lecture": "きえる",
+    "sens_en": "to vanish, to disappear",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "聞く|きく",
+    "terme": "聞く",
+    "lecture": "きく",
+    "sens_en": "to hear, to listen, to ask",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "北|きた",
+    "terme": "北",
+    "lecture": "きた",
+    "sens_en": "north",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ギター|ギター",
+    "terme": "ギター",
+    "lecture": "ギター",
+    "sens_en": "guitar",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "汚い|きたない",
+    "terme": "汚い",
+    "lecture": "きたない",
+    "sens_en": "dirty, unclean, filthy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "喫茶店|きっさてん",
+    "terme": "喫茶店",
+    "lecture": "きっさてん",
+    "sens_en": "café",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "切手|きって",
+    "terme": "切手",
+    "lecture": "きって",
+    "sens_en": "postal (postage) stamps",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "切符|きっぷ",
+    "terme": "切符",
+    "lecture": "きっぷ",
+    "sens_en": "a ticket",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "昨日|きのう",
+    "terme": "昨日",
+    "lecture": "きのう",
+    "sens_en": "yesterday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "九|きゅう",
+    "terme": "九",
+    "lecture": "きゅう",
+    "sens_en": "nine",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "牛肉|ぎゅうにく",
+    "terme": "牛肉",
+    "lecture": "ぎゅうにく",
+    "sens_en": "beef",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "牛乳|ぎゅうにゅう",
+    "terme": "牛乳",
+    "lecture": "ぎゅうにゅう",
+    "sens_en": "milk",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今日|きょう",
+    "terme": "今日",
+    "lecture": "きょう",
+    "sens_en": "today, this day",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "教室|きょうしつ",
+    "terme": "教室",
+    "lecture": "きょうしつ",
+    "sens_en": "classroom",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "兄弟|きょうだい",
+    "terme": "兄弟",
+    "lecture": "きょうだい",
+    "sens_en": "siblings (humble), brothers and sisters",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "去年|きょねん",
+    "terme": "去年",
+    "lecture": "きょねん",
+    "sens_en": "last year",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "嫌い|きらい",
+    "terme": "嫌い",
+    "lecture": "きらい",
+    "sens_en": "dislike",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "切る|きる",
+    "terme": "切る",
+    "lecture": "きる",
+    "sens_en": "to cut; to hang up (a phone)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "着る|きる",
+    "terme": "着る",
+    "lecture": "きる",
+    "sens_en": "to put on (clothes above your waist); to wear",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "綺麗|きれい",
+    "terme": "綺麗",
+    "lecture": "きれい",
+    "sens_en": "pretty, clean, tidy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "キロ; キログラム|キロ; キログラム",
+    "terme": "キロ; キログラム",
+    "lecture": "キロ; キログラム",
+    "sens_en": "(abbr.) kilo (kilogram)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "キロ; キロメートル|キロ; キロメートル",
+    "terme": "キロ; キロメートル",
+    "lecture": "キロ; キロメートル",
+    "sens_en": "(abbr.) kilo (kilometer)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "銀行|ぎんこう",
+    "terme": "銀行",
+    "lecture": "ぎんこう",
+    "sens_en": "bank",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "金曜日|きんようび",
+    "terme": "金曜日",
+    "lecture": "きんようび",
+    "sens_en": "Friday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "九|く",
+    "terme": "九",
+    "lecture": "く",
+    "sens_en": "nine",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "薬|くすり",
+    "terme": "薬",
+    "lecture": "くすり",
+    "sens_en": "medicine",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "下さい|ください",
+    "terme": "下さい",
+    "lecture": "ください",
+    "sens_en": "(with te-form verb) please do for me",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "果物|くだもの",
+    "terme": "果物",
+    "lecture": "くだもの",
+    "sens_en": "fruit",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "口|くち",
+    "terme": "口",
+    "lecture": "くち",
+    "sens_en": "job opening; mouth",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "靴|くつ",
+    "terme": "靴",
+    "lecture": "くつ",
+    "sens_en": "shoes, footwear",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "靴下|くつした",
+    "terme": "靴下",
+    "lecture": "くつした",
+    "sens_en": "socks",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "国|くに",
+    "terme": "国",
+    "lecture": "くに",
+    "sens_en": "country; place of origin",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "曇り|くもり",
+    "terme": "曇り",
+    "lecture": "くもり",
+    "sens_en": "cloudiness, cloudy weather",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "曇る|くもる",
+    "terme": "曇る",
+    "lecture": "くもる",
+    "sens_en": "to become cloudy, to become dim",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "暗い|くらい",
+    "terme": "暗い",
+    "lecture": "くらい",
+    "sens_en": "dark, gloomy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～くらい; ぐらい|～くらい; ぐらい",
+    "terme": "～くらい; ぐらい",
+    "lecture": "～くらい; ぐらい",
+    "sens_en": "approximate (quantity)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "クラス|クラス",
+    "terme": "クラス",
+    "lecture": "クラス",
+    "sens_en": "a class",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "グラム|グラム",
+    "terme": "グラム",
+    "lecture": "グラム",
+    "sens_en": "gram",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "来る|くる",
+    "terme": "来る",
+    "lecture": "くる",
+    "sens_en": "to come",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "車|くるま",
+    "terme": "車",
+    "lecture": "くるま",
+    "sens_en": "car, vehicle",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "黒|くろ",
+    "terme": "黒",
+    "lecture": "くろ",
+    "sens_en": "black",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "黒い|くろい",
+    "terme": "黒い",
+    "lecture": "くろい",
+    "sens_en": "black; dark",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "警官|けいかん",
+    "terme": "警官",
+    "lecture": "けいかん",
+    "sens_en": "police officer",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今朝|けさ",
+    "terme": "今朝",
+    "lecture": "けさ",
+    "sens_en": "this morning",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "消す|けす",
+    "terme": "消す",
+    "lecture": "けす",
+    "sens_en": "to erase, to delete, to turn off power",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "結構|けっこう",
+    "terme": "結構",
+    "lecture": "けっこう",
+    "sens_en": "splendid; enough, tolerably",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "結婚|けっこん (する)",
+    "terme": "結婚",
+    "lecture": "けっこん (する)",
+    "sens_en": "marriage (get married)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "月曜日|げつようび",
+    "terme": "月曜日",
+    "lecture": "げつようび",
+    "sens_en": "Monday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "玄関|げんかん",
+    "terme": "玄関",
+    "lecture": "げんかん",
+    "sens_en": "entrance (to a house or a building)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "元気|げんき",
+    "terme": "元気",
+    "lecture": "げんき",
+    "sens_en": "health(y), energetic",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～個|～こ",
+    "terme": "～個",
+    "lecture": "～こ",
+    "sens_en": "counter for small items (e.g., fruits, cups)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "五|ご",
+    "terme": "五",
+    "lecture": "ご",
+    "sens_en": "five",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～語|～ご",
+    "terme": "～語",
+    "lecture": "～ご",
+    "sens_en": "word, language",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "公園|こうえん",
+    "terme": "公園",
+    "lecture": "こうえん",
+    "sens_en": "a park",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "交差点|こうさてん",
+    "terme": "交差点",
+    "lecture": "こうさてん",
+    "sens_en": "intersection",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "紅茶|こうちゃ",
+    "terme": "紅茶",
+    "lecture": "こうちゃ",
+    "sens_en": "black tea",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "交番|こうばん",
+    "terme": "交番",
+    "lecture": "こうばん",
+    "sens_en": "police box",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "声|こえ",
+    "terme": "声",
+    "lecture": "こえ",
+    "sens_en": "voice",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "コート|コート",
+    "terme": "コート",
+    "lecture": "コート",
+    "sens_en": "coat; court (e.g., tennis)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "コーヒー|コーヒー",
+    "terme": "コーヒー",
+    "lecture": "コーヒー",
+    "sens_en": "coffee",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ここ|ここ",
+    "terme": "ここ",
+    "lecture": "ここ",
+    "sens_en": "here, this place",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "午後|ごご",
+    "terme": "午後",
+    "lecture": "ごご",
+    "sens_en": "afternoon, P.M.",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "九日|ここのか",
+    "terme": "九日",
+    "lecture": "ここのか",
+    "sens_en": "nine days; ninth day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "九つ|ここのつ",
+    "terme": "九つ",
+    "lecture": "ここのつ",
+    "sens_en": "nine things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "午前|ごぜん",
+    "terme": "午前",
+    "lecture": "ごぜん",
+    "sens_en": "morning, A.M.",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "答える|こたえる",
+    "terme": "答える",
+    "lecture": "こたえる",
+    "sens_en": "to answer, to reply",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "こちら|こちら",
+    "terme": "こちら",
+    "lecture": "こちら",
+    "sens_en": "this person (polite); this way (polite)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "こっち|こっち",
+    "terme": "こっち",
+    "lecture": "こっち",
+    "sens_en": "this person; this direction; this side",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "コップ|コップ",
+    "terme": "コップ",
+    "lecture": "コップ",
+    "sens_en": "a tumbler; a glass",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今年|ことし",
+    "terme": "今年",
+    "lecture": "ことし",
+    "sens_en": "this year",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "言葉|ことば",
+    "terme": "言葉",
+    "lecture": "ことば",
+    "sens_en": "language; word(s); expression(s)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "子供|こども",
+    "terme": "子供",
+    "lecture": "こども",
+    "sens_en": "child(ren)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "この|この",
+    "terme": "この",
+    "lecture": "この",
+    "sens_en": "this",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "御飯|ごはん",
+    "terme": "御飯",
+    "lecture": "ごはん",
+    "sens_en": "rice (cooked); meal",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "コピーする|コピーする",
+    "terme": "コピーする",
+    "lecture": "コピーする",
+    "sens_en": "to copy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "困る|こまる",
+    "terme": "困る",
+    "lecture": "こまる",
+    "sens_en": "to be bothered, to have difficulty",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "これ|これ",
+    "terme": "これ",
+    "lecture": "これ",
+    "sens_en": "this one",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～ころ; ～ごろ|～ころ; ～ごろ",
+    "terme": "～ころ; ～ごろ",
+    "lecture": "～ころ; ～ごろ",
+    "sens_en": "about, toward, approximately (time)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今月|こんげつ",
+    "terme": "今月",
+    "lecture": "こんげつ",
+    "sens_en": "this month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今週|こんしゅう",
+    "terme": "今週",
+    "lecture": "こんしゅう",
+    "sens_en": "this week",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "こんな|こんな",
+    "terme": "こんな",
+    "lecture": "こんな",
+    "sens_en": "such, like this",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "今晩|こんばん",
+    "terme": "今晩",
+    "lecture": "こんばん",
+    "sens_en": "tonight, this evening",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "さあ|さあ",
+    "terme": "さあ",
+    "lecture": "さあ",
+    "sens_en": "come now, well",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～歳|～さい",
+    "terme": "～歳",
+    "lecture": "～さい",
+    "sens_en": "~ years old",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "財布|さいふ",
+    "terme": "財布",
+    "lecture": "さいふ",
+    "sens_en": "wallet",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "魚|さかな",
+    "terme": "魚",
+    "lecture": "さかな",
+    "sens_en": "fish",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "先|さき",
+    "terme": "先",
+    "lecture": "さき",
+    "sens_en": "future; recent, previous",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "咲く|さく",
+    "terme": "咲く",
+    "lecture": "さく",
+    "sens_en": "to bloom",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "作文|さくぶん",
+    "terme": "作文",
+    "lecture": "さくぶん",
+    "sens_en": "essay; composition",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "差す|さす",
+    "terme": "差す",
+    "lecture": "さす",
+    "sens_en": "to raise (stretch out) hands, to raise (e.g., umbrella)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～冊|～さつ",
+    "terme": "～冊",
+    "lecture": "～さつ",
+    "sens_en": "counter for books",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "雑誌|ざっし",
+    "terme": "雑誌",
+    "lecture": "ざっし",
+    "sens_en": "magazine, journal",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "砂糖|さとう",
+    "terme": "砂糖",
+    "lecture": "さとう",
+    "sens_en": "sugar",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "寒い|さむい",
+    "terme": "寒い",
+    "lecture": "さむい",
+    "sens_en": "cold (in reference to weather)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "さ来年|さらいねん",
+    "terme": "さ来年",
+    "lecture": "さらいねん",
+    "sens_en": "year after next",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～さん|～さん",
+    "terme": "～さん",
+    "lecture": "～さん",
+    "sens_en": "Mr. ~, Ms. ~",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "三|さん",
+    "terme": "三",
+    "lecture": "さん",
+    "sens_en": "three",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "散歩|さんぽ (する)",
+    "terme": "散歩",
+    "lecture": "さんぽ (する)",
+    "sens_en": "walk, stroll",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "四|し",
+    "terme": "四",
+    "lecture": "し",
+    "sens_en": "four",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～時|～じ",
+    "terme": "～時",
+    "lecture": "～じ",
+    "sens_en": "~ o'clock (time)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "塩|しお",
+    "terme": "塩",
+    "lecture": "しお",
+    "sens_en": "salt",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "しかし|しかし",
+    "terme": "しかし",
+    "lecture": "しかし",
+    "sens_en": "however; but",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "時間|じかん",
+    "terme": "時間",
+    "lecture": "じかん",
+    "sens_en": "time",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～時間|～じかん",
+    "terme": "～時間",
+    "lecture": "～じかん",
+    "sens_en": "~ hours",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "仕事|しごと",
+    "terme": "仕事",
+    "lecture": "しごと",
+    "sens_en": "work, job, occupation, employment",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "辞書|じしょ",
+    "terme": "辞書",
+    "lecture": "じしょ",
+    "sens_en": "dictionary",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "静か|しずか",
+    "terme": "静か",
+    "lecture": "しずか",
+    "sens_en": "quiet, calm",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "下|した",
+    "terme": "下",
+    "lecture": "した",
+    "sens_en": "under, below, beneath",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "七|しち",
+    "terme": "七",
+    "lecture": "しち",
+    "sens_en": "seven",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "質問|しつもん",
+    "terme": "質問",
+    "lecture": "しつもん",
+    "sens_en": "question, inquiry",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "自転車|じてんしゃ",
+    "terme": "自転車",
+    "lecture": "じてんしゃ",
+    "sens_en": "bicycle",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "自動車|じどうしゃ",
+    "terme": "自動車",
+    "lecture": "じどうしゃ",
+    "sens_en": "automobile",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "死ぬ|しぬ",
+    "terme": "死ぬ",
+    "lecture": "しぬ",
+    "sens_en": "to die",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "字引|じびき",
+    "terme": "字引",
+    "lecture": "じびき",
+    "sens_en": "dictionary",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "自分|じぶん",
+    "terme": "自分",
+    "lecture": "じぶん",
+    "sens_en": "myself, oneself",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "閉まる|しまる",
+    "terme": "閉まる",
+    "lecture": "しまる",
+    "sens_en": "to close, to be closed",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "閉める|しめる",
+    "terme": "閉める",
+    "lecture": "しめる",
+    "sens_en": "to close, to shut",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "締める|しめる",
+    "terme": "締める",
+    "lecture": "しめる",
+    "sens_en": "to tie, to fasten, to tighten",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "じゃ; じゃあ|じゃ; じゃあ",
+    "terme": "じゃ; じゃあ",
+    "lecture": "じゃ; じゃあ",
+    "sens_en": "well, well then",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "写真|しゃしん",
+    "terme": "写真",
+    "lecture": "しゃしん",
+    "sens_en": "a picture; a photograph",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "シャツ|シャツ",
+    "terme": "シャツ",
+    "lecture": "シャツ",
+    "sens_en": "shirt",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "シャワー|シャワー",
+    "terme": "シャワー",
+    "lecture": "シャワー",
+    "sens_en": "shower",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "十|じゅう",
+    "terme": "十",
+    "lecture": "じゅう",
+    "sens_en": "ten",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～中|～じゅう",
+    "terme": "～中",
+    "lecture": "～じゅう",
+    "sens_en": "during, while",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～週間|～しゅうかん",
+    "terme": "～週間",
+    "lecture": "～しゅうかん",
+    "sens_en": "~ weeks",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "授業|じゅぎょう",
+    "terme": "授業",
+    "lecture": "じゅぎょう",
+    "sens_en": "a class (of school)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "宿題|しゅくだい",
+    "terme": "宿題",
+    "lecture": "しゅくだい",
+    "sens_en": "homework",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "上手|じょうず",
+    "terme": "上手",
+    "lecture": "じょうず",
+    "sens_en": "be good at, skillful",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "丈夫|じょうぶ",
+    "terme": "丈夫",
+    "lecture": "じょうぶ",
+    "sens_en": "strong, solid, durable",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "醤油|しょうゆ",
+    "terme": "醤油",
+    "lecture": "しょうゆ",
+    "sens_en": "soy sauce",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "食堂|しょくどう",
+    "terme": "食堂",
+    "lecture": "しょくどう",
+    "sens_en": "cafeteria, dining hall",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "知る|しる",
+    "terme": "知る",
+    "lecture": "しる",
+    "sens_en": "to know, to understand",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "白|しろ",
+    "terme": "白",
+    "lecture": "しろ",
+    "sens_en": "white",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "白い|しろい",
+    "terme": "白い",
+    "lecture": "しろい",
+    "sens_en": "white",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～人|～じん",
+    "terme": "～人",
+    "lecture": "～じん",
+    "sens_en": "counter for people",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "新聞|しんぶん",
+    "terme": "新聞",
+    "lecture": "しんぶん",
+    "sens_en": "newspaper",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "水曜日|すいようび",
+    "terme": "水曜日",
+    "lecture": "すいようび",
+    "sens_en": "Wednesday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "吸う|すう",
+    "terme": "吸う",
+    "lecture": "すう",
+    "sens_en": "to breathe in, to suck",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "スカート|スカート",
+    "terme": "スカート",
+    "lecture": "スカート",
+    "sens_en": "skirt",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "好き|すき",
+    "terme": "好き",
+    "lecture": "すき",
+    "sens_en": "liking, fondness, love",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～すぎ|～すぎ",
+    "terme": "～すぎ",
+    "lecture": "～すぎ",
+    "sens_en": "past; to exceed, ~ too much",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "少ない|すくない",
+    "terme": "少ない",
+    "lecture": "すくない",
+    "sens_en": "a little; a few",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "すぐに|すぐに",
+    "terme": "すぐに",
+    "lecture": "すぐに",
+    "sens_en": "immediately, soon",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "少し|すこし",
+    "terme": "少し",
+    "lecture": "すこし",
+    "sens_en": "little, few",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "涼しい|すずしい",
+    "terme": "涼しい",
+    "lecture": "すずしい",
+    "sens_en": "cool, refreshing (in reference to weather)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～ずつ|～ずつ",
+    "terme": "～ずつ",
+    "lecture": "～ずつ",
+    "sens_en": "at a time",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ストーブ|ストーブ",
+    "terme": "ストーブ",
+    "lecture": "ストーブ",
+    "sens_en": "heater (lit: stove)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "スプーン|スプーン",
+    "terme": "スプーン",
+    "lecture": "スプーン",
+    "sens_en": "spoon",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "スポーツ|スポーツ",
+    "terme": "スポーツ",
+    "lecture": "スポーツ",
+    "sens_en": "sport(s)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ズボン|ズボン",
+    "terme": "ズボン",
+    "lecture": "ズボン",
+    "sens_en": "trousers",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "住む|すむ",
+    "terme": "住む",
+    "lecture": "すむ",
+    "sens_en": "to reside, to live in",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "する|する",
+    "terme": "する",
+    "lecture": "する",
+    "sens_en": "to do, to try; to wear small items (e.g., necktie, watch, etc.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "座る|すわる",
+    "terme": "座る",
+    "lecture": "すわる",
+    "sens_en": "to sit",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "背|せい",
+    "terme": "背",
+    "lecture": "せい",
+    "sens_en": "(one's) height, stature",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "生徒|せいと",
+    "terme": "生徒",
+    "lecture": "せいと",
+    "sens_en": "student; pupil",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "セーター|セーター",
+    "terme": "セーター",
+    "lecture": "セーター",
+    "sens_en": "sweater",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "石鹸|せっけん",
+    "terme": "石鹸",
+    "lecture": "せっけん",
+    "sens_en": "soap",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "背広|せびろ",
+    "terme": "背広",
+    "lecture": "せびろ",
+    "sens_en": "men's suit",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "狭い|せまい",
+    "terme": "狭い",
+    "lecture": "せまい",
+    "sens_en": "narrow; not spacious",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ゼロ|ゼロ",
+    "terme": "ゼロ",
+    "lecture": "ゼロ",
+    "sens_en": "zero",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "千|せん",
+    "terme": "千",
+    "lecture": "せん",
+    "sens_en": "thousand",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "先月|せんげつ",
+    "terme": "先月",
+    "lecture": "せんげつ",
+    "sens_en": "last month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "先週|せんしゅう",
+    "terme": "先週",
+    "lecture": "せんしゅう",
+    "sens_en": "last week",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "先生|せんせい",
+    "terme": "先生",
+    "lecture": "せんせい",
+    "sens_en": "teacher, professor; master; doctor",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "洗濯|せんたく",
+    "terme": "洗濯",
+    "lecture": "せんたく",
+    "sens_en": "washing, laundry",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "全部|ぜんぶ",
+    "terme": "全部",
+    "lecture": "ぜんぶ",
+    "sens_en": "all, entire, whole",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "そう; そうです|そう; そうです",
+    "terme": "そう; そうです",
+    "lecture": "そう; そうです",
+    "sens_en": "yes; appears, to be the case",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "掃除|そうじ (する)",
+    "terme": "掃除",
+    "lecture": "そうじ (する)",
+    "sens_en": "cleaning, sweeping",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "そうして; そして|そうして; そして",
+    "terme": "そうして; そして",
+    "lecture": "そうして; そして",
+    "sens_en": "and, like that",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "そこ|そこ",
+    "terme": "そこ",
+    "lecture": "そこ",
+    "sens_en": "that place, there; bottom, sole",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "そちら|そちら",
+    "terme": "そちら",
+    "lecture": "そちら",
+    "sens_en": "over there",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "そっち|そっち",
+    "terme": "そっち",
+    "lecture": "そっち",
+    "sens_en": "over there",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "外|そと",
+    "terme": "外",
+    "lecture": "そと",
+    "sens_en": "outside, exterior",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "その|その",
+    "terme": "その",
+    "lecture": "その",
+    "sens_en": "that",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "そば|そば",
+    "terme": "そば",
+    "lecture": "そば",
+    "sens_en": "near, close, beside; Japanese traditional buckwheat noodle",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "空|そら",
+    "terme": "空",
+    "lecture": "そら",
+    "sens_en": "sky",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "それ|それ",
+    "terme": "それ",
+    "lecture": "それ",
+    "sens_en": "that one",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "それから|それから",
+    "terme": "それから",
+    "lecture": "それから",
+    "sens_en": "and then, after that",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "それでは|それでは",
+    "terme": "それでは",
+    "lecture": "それでは",
+    "sens_en": "in that situation, well then...",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～台|～だい",
+    "terme": "～台",
+    "lecture": "～だい",
+    "sens_en": "counter for vehicles; machines",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大学|だいがく",
+    "terme": "大学",
+    "lecture": "だいがく",
+    "sens_en": "college; university",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大使館|たいしかん",
+    "terme": "大使館",
+    "lecture": "たいしかん",
+    "sens_en": "embassy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大丈夫|だいじょうぶ",
+    "terme": "大丈夫",
+    "lecture": "だいじょうぶ",
+    "sens_en": "It's ok (all right); No need to worry; Everything is under control",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大好き|だいすき",
+    "terme": "大好き",
+    "lecture": "だいすき",
+    "sens_en": "very like-able, like very much",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大切|たいせつ",
+    "terme": "大切",
+    "lecture": "たいせつ",
+    "sens_en": "important",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "台所|だいどころ",
+    "terme": "台所",
+    "lecture": "だいどころ",
+    "sens_en": "kitchen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "大変|たいへん",
+    "terme": "大変",
+    "lecture": "たいへん",
+    "sens_en": "very; difficult, hard",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "高い|たかい",
+    "terme": "高い",
+    "lecture": "たかい",
+    "sens_en": "tall, high; expensive",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～だけ|～だけ",
+    "terme": "～だけ",
+    "lecture": "～だけ",
+    "sens_en": "only ~, just ~, as ~",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "沢山|たくさん",
+    "terme": "沢山",
+    "lecture": "たくさん",
+    "sens_en": "many, much",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "タクシー|タクシー",
+    "terme": "タクシー",
+    "lecture": "タクシー",
+    "sens_en": "taxi",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "出す|だす",
+    "terme": "出す",
+    "lecture": "だす",
+    "sens_en": "to take (something) out; to hand in (something)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～たち|～たち",
+    "terme": "～たち",
+    "lecture": "～たち",
+    "sens_en": "plural suffix",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "立つ|たつ",
+    "terme": "立つ",
+    "lecture": "たつ",
+    "sens_en": "to stand up",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "たて|たて",
+    "terme": "たて",
+    "lecture": "たて",
+    "sens_en": "length, height",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "建物|たてもの",
+    "terme": "建物",
+    "lecture": "たてもの",
+    "sens_en": "building",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "楽しい|たのしい",
+    "terme": "楽しい",
+    "lecture": "たのしい",
+    "sens_en": "enjoyable, fun",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "頼む|たのむ",
+    "terme": "頼む",
+    "lecture": "たのむ",
+    "sens_en": "to request, to ask (a favor)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "たばこ|たばこ",
+    "terme": "たばこ",
+    "lecture": "たばこ",
+    "sens_en": "tobacco, cigarettes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "多分|たぶん",
+    "terme": "多分",
+    "lecture": "たぶん",
+    "sens_en": "perhaps, probably, maybe",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "食べ物|たべもの",
+    "terme": "食べ物",
+    "lecture": "たべもの",
+    "sens_en": "food",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "食べる|たべる",
+    "terme": "食べる",
+    "lecture": "たべる",
+    "sens_en": "to eat",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "卵|たまご",
+    "terme": "卵",
+    "lecture": "たまご",
+    "sens_en": "egg",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "誰|だれ",
+    "terme": "誰",
+    "lecture": "だれ",
+    "sens_en": "who",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "誰か|だれか",
+    "terme": "誰か",
+    "lecture": "だれか",
+    "sens_en": "someone",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "誕生日|たんじょうび",
+    "terme": "誕生日",
+    "lecture": "たんじょうび",
+    "sens_en": "birthday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "段々|だんだん",
+    "terme": "段々",
+    "lecture": "だんだん",
+    "sens_en": "gradually, by degrees",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "小さい|ちいさい",
+    "terme": "小さい",
+    "lecture": "ちいさい",
+    "sens_en": "small, little",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "小さな|ちいさな",
+    "terme": "小さな",
+    "lecture": "ちいさな",
+    "sens_en": "small, little",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "近い|ちかい",
+    "terme": "近い",
+    "lecture": "ちかい",
+    "sens_en": "near, close by, short",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "違う|ちがう",
+    "terme": "違う",
+    "lecture": "ちがう",
+    "sens_en": "to be different; to differ; wrong",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "近く|ちかく",
+    "terme": "近く",
+    "lecture": "ちかく",
+    "sens_en": "nearby; in the neighborhood",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "地下鉄|ちかてつ",
+    "terme": "地下鉄",
+    "lecture": "ちかてつ",
+    "sens_en": "underground train, subway",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "地図|ちず",
+    "terme": "地図",
+    "lecture": "ちず",
+    "sens_en": "a map",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "父|ちち",
+    "terme": "父",
+    "lecture": "ちち",
+    "sens_en": "(my) father",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "茶色|ちゃいろ",
+    "terme": "茶色",
+    "lecture": "ちゃいろ",
+    "sens_en": "brown",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "茶碗|ちゃわん",
+    "terme": "茶碗",
+    "lecture": "ちゃわん",
+    "sens_en": "rice bowl",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～中|～ちゅう",
+    "terme": "～中",
+    "lecture": "～ちゅう",
+    "sens_en": "during, while ~ing",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "丁度|ちょうど",
+    "terme": "丁度",
+    "lecture": "ちょうど",
+    "sens_en": "just, right, exactly",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ちょっと|ちょっと",
+    "terme": "ちょっと",
+    "lecture": "ちょっと",
+    "sens_en": "a little, somewhat; just a little, somewhat",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一日|ついたち",
+    "terme": "一日",
+    "lecture": "ついたち",
+    "sens_en": "one day; first day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "使う|つかう",
+    "terme": "使う",
+    "lecture": "つかう",
+    "sens_en": "to use",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "疲れる|つかれる",
+    "terme": "疲れる",
+    "lecture": "つかれる",
+    "sens_en": "to get (become) tired; to become fatigued",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "次|つぎ",
+    "terme": "次",
+    "lecture": "つぎ",
+    "sens_en": "next",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "着く|つく",
+    "terme": "着く",
+    "lecture": "つく",
+    "sens_en": "to arrive at, to reach",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "机|つくえ",
+    "terme": "机",
+    "lecture": "つくえ",
+    "sens_en": "desk",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "作る|つくる",
+    "terme": "作る",
+    "lecture": "つくる",
+    "sens_en": "to make, to create",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "つける|つける",
+    "terme": "つける",
+    "lecture": "つける",
+    "sens_en": "to turn on (e.g., a light); to take",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "勤める|つとめる",
+    "terme": "勤める",
+    "lecture": "つとめる",
+    "sens_en": "to work (for)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "つまらない|つまらない",
+    "terme": "つまらない",
+    "lecture": "つまらない",
+    "sens_en": "boring, dull; insignificant",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "冷たい|つめたい",
+    "terme": "冷たい",
+    "lecture": "つめたい",
+    "sens_en": "cold (things, people)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "強い|つよい",
+    "terme": "強い",
+    "lecture": "つよい",
+    "sens_en": "strong, powerful",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "手|て",
+    "terme": "手",
+    "lecture": "て",
+    "sens_en": "hand",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "テープ|テープ",
+    "terme": "テープ",
+    "lecture": "テープ",
+    "sens_en": "tape",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "テープレコーダー|テープレコーダー",
+    "terme": "テープレコーダー",
+    "lecture": "テープレコーダー",
+    "sens_en": "tape recorder",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "テーブル|テーブル",
+    "terme": "テーブル",
+    "lecture": "テーブル",
+    "sens_en": "table",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "出かける|でかける",
+    "terme": "出かける",
+    "lecture": "でかける",
+    "sens_en": "to go out; to depart",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "手紙|てがみ",
+    "terme": "手紙",
+    "lecture": "てがみ",
+    "sens_en": "letter",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "できる|できる",
+    "terme": "できる",
+    "lecture": "できる",
+    "sens_en": "to be able to (to accomplish)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "出口|でぐち",
+    "terme": "出口",
+    "lecture": "でぐち",
+    "sens_en": "an exit",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "テスト|テスト",
+    "terme": "テスト",
+    "lecture": "テスト",
+    "sens_en": "test",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "では|では",
+    "terme": "では",
+    "lecture": "では",
+    "sens_en": "then, well, so",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "デパート|デパート",
+    "terme": "デパート",
+    "lecture": "デパート",
+    "sens_en": "(abbr.) department store",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "でも|でも",
+    "terme": "でも",
+    "lecture": "でも",
+    "sens_en": "but, however",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "出る|でる",
+    "terme": "出る",
+    "lecture": "でる",
+    "sens_en": "to appear, to leave",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "テレビ|テレビ",
+    "terme": "テレビ",
+    "lecture": "テレビ",
+    "sens_en": "television, TV",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "天気|てんき",
+    "terme": "天気",
+    "lecture": "てんき",
+    "sens_en": "weather",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "電気|でんき",
+    "terme": "電気",
+    "lecture": "でんき",
+    "sens_en": "electricity, (electric) light",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "電車|でんしゃ",
+    "terme": "電車",
+    "lecture": "でんしゃ",
+    "sens_en": "electric train",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "電話|でんわ",
+    "terme": "電話",
+    "lecture": "でんわ",
+    "sens_en": "a telephone",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "戸|と",
+    "terme": "戸",
+    "lecture": "と",
+    "sens_en": "door (Japanese style)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～度|～ど",
+    "terme": "～度",
+    "lecture": "～ど",
+    "sens_en": "counter for occurrences; ~ degree; ~ point",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ドア|ドア",
+    "terme": "ドア",
+    "lecture": "ドア",
+    "sens_en": "door (Western style)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "トイレ|トイレ",
+    "terme": "トイレ",
+    "lecture": "トイレ",
+    "sens_en": "bathroom; toilet",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どう|どう",
+    "terme": "どう",
+    "lecture": "どう",
+    "sens_en": "how, in what way",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どうして|どうして",
+    "terme": "どうして",
+    "lecture": "どうして",
+    "sens_en": "why, for what reason",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どうぞ|どうぞ",
+    "terme": "どうぞ",
+    "lecture": "どうぞ",
+    "sens_en": "please, kindly, by all means",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "動物|どうぶつ",
+    "terme": "動物",
+    "lecture": "どうぶつ",
+    "sens_en": "animal",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どうも|どうも",
+    "terme": "どうも",
+    "lecture": "どうも",
+    "sens_en": "Thank you; somehow; no matter how hard one may try",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "十|(〜を) とお",
+    "terme": "十",
+    "lecture": "(〜を) とお",
+    "sens_en": "ten (~)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "遠い|とおい",
+    "terme": "遠い",
+    "lecture": "とおい",
+    "sens_en": "far (away), distant",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "十日|とおか",
+    "terme": "十日",
+    "lecture": "とおか",
+    "sens_en": "ten days; tenth day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～時|～とき",
+    "terme": "～時",
+    "lecture": "～とき",
+    "sens_en": "at the time of ~",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "時々|ときどき",
+    "terme": "時々",
+    "lecture": "ときどき",
+    "sens_en": "sometimes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "時計|とけい",
+    "terme": "時計",
+    "lecture": "とけい",
+    "sens_en": "a watch; a clock",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どこ|どこ",
+    "terme": "どこ",
+    "lecture": "どこ",
+    "sens_en": "where, what place",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "所|ところ",
+    "terme": "所",
+    "lecture": "ところ",
+    "sens_en": "place",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "年|とし",
+    "terme": "年",
+    "lecture": "とし",
+    "sens_en": "year, age",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "図書館|としょかん",
+    "terme": "図書館",
+    "lecture": "としょかん",
+    "sens_en": "library",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どちら|どちら",
+    "terme": "どちら",
+    "lecture": "どちら",
+    "sens_en": "which (one) (way); where (polite)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どっち|どっち",
+    "terme": "どっち",
+    "lecture": "どっち",
+    "sens_en": "which one, which way",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "とても|とても",
+    "terme": "とても",
+    "lecture": "とても",
+    "sens_en": "very (much), greatly, exceedingly",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どなた|どなた",
+    "terme": "どなた",
+    "lecture": "どなた",
+    "sens_en": "who",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "隣|となり",
+    "terme": "隣",
+    "lecture": "となり",
+    "sens_en": "next to, next door to",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どの|どの",
+    "terme": "どの",
+    "lecture": "どの",
+    "sens_en": "which",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "飛ぶ|とぶ",
+    "terme": "飛ぶ",
+    "lecture": "とぶ",
+    "sens_en": "to fly, to hop",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "止まる|とまる",
+    "terme": "止まる",
+    "lecture": "とまる",
+    "sens_en": "to come to a halt",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "友達|ともだち",
+    "terme": "友達",
+    "lecture": "ともだち",
+    "sens_en": "friend",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "土曜日|どようび",
+    "terme": "土曜日",
+    "lecture": "どようび",
+    "sens_en": "Saturday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "鳥|とり",
+    "terme": "鳥",
+    "lecture": "とり",
+    "sens_en": "chicken (lit., bird)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "鶏肉|とりにく",
+    "terme": "鶏肉",
+    "lecture": "とりにく",
+    "sens_en": "chicken meat",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "取る|とる",
+    "terme": "取る",
+    "lecture": "とる",
+    "sens_en": "to take (a class); to get (a grade)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "撮る|とる",
+    "terme": "撮る",
+    "lecture": "とる",
+    "sens_en": "to take (a photo), to make (a film)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どれ|どれ",
+    "terme": "どれ",
+    "lecture": "どれ",
+    "sens_en": "which one",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "どんな|どんな",
+    "terme": "どんな",
+    "lecture": "どんな",
+    "sens_en": "what, what kind of",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ない|ない",
+    "terme": "ない",
+    "lecture": "ない",
+    "sens_en": "there isn't, doesn't have",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ナイフ|ナイフ",
+    "terme": "ナイフ",
+    "lecture": "ナイフ",
+    "sens_en": "knife",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "中|なか",
+    "terme": "中",
+    "lecture": "なか",
+    "sens_en": "inside, middle, among",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "長い|ながい",
+    "terme": "長い",
+    "lecture": "ながい",
+    "sens_en": "long, lengthy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "鳴く|なく",
+    "terme": "鳴く",
+    "lecture": "なく",
+    "sens_en": "to make sound (animal)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "無くす|なくす",
+    "terme": "無くす",
+    "lecture": "なくす",
+    "sens_en": "to lose something",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "なぜ|なぜ",
+    "terme": "なぜ",
+    "lecture": "なぜ",
+    "sens_en": "why (same as どうして)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "夏|なつ",
+    "terme": "夏",
+    "lecture": "なつ",
+    "sens_en": "summer",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "夏休み|なつやすみ",
+    "terme": "夏休み",
+    "lecture": "なつやすみ",
+    "sens_en": "summer vacation",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～など|～など",
+    "terme": "～など",
+    "lecture": "～など",
+    "sens_en": "et cetera",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "七つ|ななつ",
+    "terme": "七つ",
+    "lecture": "ななつ",
+    "sens_en": "seven things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "何|なん; なに",
+    "terme": "何",
+    "lecture": "なん; なに",
+    "sens_en": "what",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "七日|なのか",
+    "terme": "七日",
+    "lecture": "なのか",
+    "sens_en": "seven days; seventh day (of the month)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "名前|なまえ",
+    "terme": "名前",
+    "lecture": "なまえ",
+    "sens_en": "name",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "習う|ならう",
+    "terme": "習う",
+    "lecture": "ならう",
+    "sens_en": "to learn",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "並ぶ|ならぶ",
+    "terme": "並ぶ",
+    "lecture": "ならぶ",
+    "sens_en": "to line up, to stand in a line (v.i.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "並べる|ならべる",
+    "terme": "並べる",
+    "lecture": "ならべる",
+    "sens_en": "to put (things) side by side; to line up",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "なる|なる",
+    "terme": "なる",
+    "lecture": "なる",
+    "sens_en": "to become",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "何～|なん～",
+    "terme": "何～",
+    "lecture": "なん～",
+    "sens_en": "what sort of ~",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "二|に",
+    "terme": "二",
+    "lecture": "に",
+    "sens_en": "two",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "にぎやか|にぎやか",
+    "terme": "にぎやか",
+    "lecture": "にぎやか",
+    "sens_en": "bustling, busy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "肉|にく",
+    "terme": "肉",
+    "lecture": "にく",
+    "sens_en": "meat",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "西|にし",
+    "terme": "西",
+    "lecture": "にし",
+    "sens_en": "west",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～日|～にち",
+    "terme": "～日",
+    "lecture": "～にち",
+    "sens_en": "~ day of the month, for ~ days",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "日曜日|にちようび",
+    "terme": "日曜日",
+    "lecture": "にちようび",
+    "sens_en": "Sunday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "荷物|にもつ",
+    "terme": "荷物",
+    "lecture": "にもつ",
+    "sens_en": "luggage; baggage",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ニュース|ニュース",
+    "terme": "ニュース",
+    "lecture": "ニュース",
+    "sens_en": "news",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "庭|にわ",
+    "terme": "庭",
+    "lecture": "にわ",
+    "sens_en": "garden",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～人|～にん",
+    "terme": "～人",
+    "lecture": "～にん",
+    "sens_en": "counter for people",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "脱ぐ|ぬぐ",
+    "terme": "脱ぐ",
+    "lecture": "ぬぐ",
+    "sens_en": "to take off (clothes)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "温い|ぬるい",
+    "terme": "温い",
+    "lecture": "ぬるい",
+    "sens_en": "lukewarm",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ネクタイ|ネクタイ",
+    "terme": "ネクタイ",
+    "lecture": "ネクタイ",
+    "sens_en": "tie, necktie",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "猫|ねこ",
+    "terme": "猫",
+    "lecture": "ねこ",
+    "sens_en": "cat",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "寝る|ねる",
+    "terme": "寝る",
+    "lecture": "ねる",
+    "sens_en": "to sleep; to go to sleep; to go to bed",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～年|～ねん",
+    "terme": "～年",
+    "lecture": "～ねん",
+    "sens_en": "~ years",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ノート|ノート",
+    "terme": "ノート",
+    "lecture": "ノート",
+    "sens_en": "notebook",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "登る|のぼる",
+    "terme": "登る",
+    "lecture": "のぼる",
+    "sens_en": "to climb",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "飲み物|のみもの",
+    "terme": "飲み物",
+    "lecture": "のみもの",
+    "sens_en": "drink, beverage",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "飲む|のむ",
+    "terme": "飲む",
+    "lecture": "のむ",
+    "sens_en": "to drink",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "乗る|のる",
+    "terme": "乗る",
+    "lecture": "のる",
+    "sens_en": "to get on, to ride in, to board",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "歯|は",
+    "terme": "歯",
+    "lecture": "は",
+    "sens_en": "tooth",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "パーティー|パーティー",
+    "terme": "パーティー",
+    "lecture": "パーティー",
+    "sens_en": "a party",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "はい|はい",
+    "terme": "はい",
+    "lecture": "はい",
+    "sens_en": "yes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～杯|～はい",
+    "terme": "～杯",
+    "lecture": "～はい",
+    "sens_en": "counter for cupfuls",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "灰皿|はいざら",
+    "terme": "灰皿",
+    "lecture": "はいざら",
+    "sens_en": "ashtray",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "入る|はいる",
+    "terme": "入る",
+    "lecture": "はいる",
+    "sens_en": "to enter, to contain, to hold",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "葉書|はがき",
+    "terme": "葉書",
+    "lecture": "はがき",
+    "sens_en": "postcard",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "はく|はく",
+    "terme": "はく",
+    "lecture": "はく",
+    "sens_en": "to put on (items below your waist)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "箱|はこ",
+    "terme": "箱",
+    "lecture": "はこ",
+    "sens_en": "box",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "橋|はし",
+    "terme": "橋",
+    "lecture": "はし",
+    "sens_en": "bridge",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "箸|はし",
+    "terme": "箸",
+    "lecture": "はし",
+    "sens_en": "chopsticks",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "始まる|はじまる",
+    "terme": "始まる",
+    "lecture": "はじまる",
+    "sens_en": "(something) begins",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "初め; 始め|はじめ",
+    "terme": "初め; 始め",
+    "lecture": "はじめ",
+    "sens_en": "beginning, start",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "初めて|はじめて",
+    "terme": "初めて",
+    "lecture": "はじめて",
+    "sens_en": "for the first time",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "走る|はしる",
+    "terme": "走る",
+    "lecture": "はしる",
+    "sens_en": "to run",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "バス|バス",
+    "terme": "バス",
+    "lecture": "バス",
+    "sens_en": "bus; bath; bass",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "バター|バター",
+    "terme": "バター",
+    "lecture": "バター",
+    "sens_en": "butter",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "二十歳|はたち",
+    "terme": "二十歳",
+    "lecture": "はたち",
+    "sens_en": "20 years old",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "働く|はたらく",
+    "terme": "働く",
+    "lecture": "はたらく",
+    "sens_en": "to work",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "八|はち",
+    "terme": "八",
+    "lecture": "はち",
+    "sens_en": "eight",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "二十日|はつか",
+    "terme": "二十日",
+    "lecture": "はつか",
+    "sens_en": "twenty days, twentieth (day of the month)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "花|はな",
+    "terme": "花",
+    "lecture": "はな",
+    "sens_en": "flower",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "鼻|はな",
+    "terme": "鼻",
+    "lecture": "はな",
+    "sens_en": "nose",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "話|はなし",
+    "terme": "話",
+    "lecture": "はなし",
+    "sens_en": "talk (chat), story",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "話す|はなす",
+    "terme": "話す",
+    "lecture": "はなす",
+    "sens_en": "to speak",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "母|はは",
+    "terme": "母",
+    "lecture": "はは",
+    "sens_en": "(my) mother",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "早い|はやい",
+    "terme": "早い",
+    "lecture": "はやい",
+    "sens_en": "early",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "速い|はやい",
+    "terme": "速い",
+    "lecture": "はやい",
+    "sens_en": "fast, quick",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "春|はる",
+    "terme": "春",
+    "lecture": "はる",
+    "sens_en": "spring",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "貼る|はる",
+    "terme": "貼る",
+    "lecture": "はる",
+    "sens_en": "to post; to paste; to attach",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "晴れ|はれ",
+    "terme": "晴れ",
+    "lecture": "はれ",
+    "sens_en": "clear (sunny) weather",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "晴れる|はれる",
+    "terme": "晴れる",
+    "lecture": "はれる",
+    "sens_en": "to be sunny",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "半|はん",
+    "terme": "半",
+    "lecture": "はん",
+    "sens_en": "half (e.g., にじはん | half-past two)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "晩|ばん",
+    "terme": "晩",
+    "lecture": "ばん",
+    "sens_en": "evening",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～番|～ばん",
+    "terme": "～番",
+    "lecture": "～ばん",
+    "sens_en": "~st; ~th best",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "パン|パン",
+    "terme": "パン",
+    "lecture": "パン",
+    "sens_en": "bread",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ハンカチ|ハンカチ",
+    "terme": "ハンカチ",
+    "lecture": "ハンカチ",
+    "sens_en": "handkerchief",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "番号|ばんごう",
+    "terme": "番号",
+    "lecture": "ばんごう",
+    "sens_en": "number, series of digits",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "晩御飯|ばんごはん",
+    "terme": "晩御飯",
+    "lecture": "ばんごはん",
+    "sens_en": "dinner, evening meal",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "半分|はんぶん",
+    "terme": "半分",
+    "lecture": "はんぶん",
+    "sens_en": "half",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "東|ひがし",
+    "terme": "東",
+    "lecture": "ひがし",
+    "sens_en": "east",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～匹|～ひき",
+    "terme": "～匹",
+    "lecture": "～ひき",
+    "sens_en": "counter for small animals",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "引く|ひく",
+    "terme": "引く",
+    "lecture": "ひく",
+    "sens_en": "to pull, to draw; subtract",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "弾く|ひく",
+    "terme": "弾く",
+    "lecture": "ひく",
+    "sens_en": "to play (a string instrument or piano)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "低い|ひくい",
+    "terme": "低い",
+    "lecture": "ひくい",
+    "sens_en": "short, low",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "飛行機|ひこうき",
+    "terme": "飛行機",
+    "lecture": "ひこうき",
+    "sens_en": "airplane",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "左|ひだり",
+    "terme": "左",
+    "lecture": "ひだり",
+    "sens_en": "left hand side",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "人|ひと",
+    "terme": "人",
+    "lecture": "ひと",
+    "sens_en": "man, person",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一つ|ひとつ",
+    "terme": "一つ",
+    "lecture": "ひとつ",
+    "sens_en": "one thing",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一月|ひとつき",
+    "terme": "一月",
+    "lecture": "ひとつき",
+    "sens_en": "one month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "一人|ひとり",
+    "terme": "一人",
+    "lecture": "ひとり",
+    "sens_en": "one person",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "暇|ひま",
+    "terme": "暇",
+    "lecture": "ひま",
+    "sens_en": "free time, leisure",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "百|ひゃく",
+    "terme": "百",
+    "lecture": "ひゃく",
+    "sens_en": "hundred",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "病院|びょういん",
+    "terme": "病院",
+    "lecture": "びょういん",
+    "sens_en": "hospital",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "病気|びょうき",
+    "terme": "病気",
+    "lecture": "びょうき",
+    "sens_en": "illness; sickness",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "平仮名|ひらがな",
+    "terme": "平仮名",
+    "lecture": "ひらがな",
+    "sens_en": "hiragana",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "昼|ひる",
+    "terme": "昼",
+    "lecture": "ひる",
+    "sens_en": "noon, daytime",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "昼御飯|ひるごはん",
+    "terme": "昼御飯",
+    "lecture": "ひるごはん",
+    "sens_en": "lunch, midday meal",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "広い|ひろい",
+    "terme": "広い",
+    "lecture": "ひろい",
+    "sens_en": "spacious; wide; broad",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "フィルム|フィルム",
+    "terme": "フィルム",
+    "lecture": "フィルム",
+    "sens_en": "film (roll of)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "封筒|ふうとう",
+    "terme": "封筒",
+    "lecture": "ふうとう",
+    "sens_en": "envelope",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "プール|プール",
+    "terme": "プール",
+    "lecture": "プール",
+    "sens_en": "swimming pool",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "フォーク|フォーク",
+    "terme": "フォーク",
+    "lecture": "フォーク",
+    "sens_en": "fork",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "吹く|ふく",
+    "terme": "吹く",
+    "lecture": "ふく",
+    "sens_en": "to blow (wind, etc.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "服|ふく",
+    "terme": "服",
+    "lecture": "ふく",
+    "sens_en": "clothes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "二つ|ふたつ",
+    "terme": "二つ",
+    "lecture": "ふたつ",
+    "sens_en": "two things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "豚肉|ぶたにく",
+    "terme": "豚肉",
+    "lecture": "ぶたにく",
+    "sens_en": "pork",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "二人|ふたり",
+    "terme": "二人",
+    "lecture": "ふたり",
+    "sens_en": "two people",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "二日|ふつか",
+    "terme": "二日",
+    "lecture": "ふつか",
+    "sens_en": "two days; second day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "太い|ふとい",
+    "terme": "太い",
+    "lecture": "ふとい",
+    "sens_en": "fat, thick",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "冬|ふゆ",
+    "terme": "冬",
+    "lecture": "ふゆ",
+    "sens_en": "winter",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "降る|ふる",
+    "terme": "降る",
+    "lecture": "ふる",
+    "sens_en": "to precipitate, to fall (e.g., rain, snow, etc.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "古い|ふるい",
+    "terme": "古い",
+    "lecture": "ふるい",
+    "sens_en": "old (in reference to objects, not people), aged, ancient",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～分|～ふん",
+    "terme": "～分",
+    "lecture": "～ふん",
+    "sens_en": "~ minutes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "文章|ぶんしょう",
+    "terme": "文章",
+    "lecture": "ぶんしょう",
+    "sens_en": "sentence, text",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ページ|ページ",
+    "terme": "ページ",
+    "lecture": "ページ",
+    "sens_en": "a page",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "下手|へた",
+    "terme": "下手",
+    "lecture": "へた",
+    "sens_en": "unskillful, poor",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ベッド|ベッド",
+    "terme": "ベッド",
+    "lecture": "ベッド",
+    "sens_en": "bed",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ペット|ペット",
+    "terme": "ペット",
+    "lecture": "ペット",
+    "sens_en": "pet",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "部屋|へや",
+    "terme": "部屋",
+    "lecture": "へや",
+    "sens_en": "a room",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "辺|へん",
+    "terme": "辺",
+    "lecture": "へん",
+    "sens_en": "area, vicinity",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ペン|ペン",
+    "terme": "ペン",
+    "lecture": "ペン",
+    "sens_en": "pen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "勉強|べんきょう (する)",
+    "terme": "勉強",
+    "lecture": "べんきょう (する)",
+    "sens_en": "study",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "便利|べんり",
+    "terme": "便利",
+    "lecture": "べんり",
+    "sens_en": "convenient, handy",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "帽子|ぼうし",
+    "terme": "帽子",
+    "lecture": "ぼうし",
+    "sens_en": "hat; cap",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ボールペン|ボールペン",
+    "terme": "ボールペン",
+    "lecture": "ボールペン",
+    "sens_en": "ball-point pen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "外|ほか",
+    "terme": "外",
+    "lecture": "ほか",
+    "sens_en": "other, the rest",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ポケット|ポケット",
+    "terme": "ポケット",
+    "lecture": "ポケット",
+    "sens_en": "pocket",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "欲しい|ほしい",
+    "terme": "欲しい",
+    "lecture": "ほしい",
+    "sens_en": "to want, in need of",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ポスト|ポスト",
+    "terme": "ポスト",
+    "lecture": "ポスト",
+    "sens_en": "mailbox; post, position",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "細い|ほそい",
+    "terme": "細い",
+    "lecture": "ほそい",
+    "sens_en": "thin, slender, fine",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ボタン|ボタン",
+    "terme": "ボタン",
+    "lecture": "ボタン",
+    "sens_en": "button",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ホテル|ホテル",
+    "terme": "ホテル",
+    "lecture": "ホテル",
+    "sens_en": "hotel",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "本|ほん",
+    "terme": "本",
+    "lecture": "ほん",
+    "sens_en": "book",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～本|～ほん",
+    "terme": "～本",
+    "lecture": "～ほん",
+    "sens_en": "counter for long cylindrical things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "本棚|ほんだな",
+    "terme": "本棚",
+    "lecture": "ほんだな",
+    "sens_en": "bookshelf",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "本当|ほんとう",
+    "terme": "本当",
+    "lecture": "ほんとう",
+    "sens_en": "real, true",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～枚|～まい",
+    "terme": "～枚",
+    "lecture": "～まい",
+    "sens_en": "counter for flat things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "毎朝|まいあさ",
+    "terme": "毎朝",
+    "lecture": "まいあさ",
+    "sens_en": "every morning",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "毎月|まいげつ; まいつき",
+    "terme": "毎月",
+    "lecture": "まいげつ; まいつき",
+    "sens_en": "every month, monthly",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "毎週|まいしゅう",
+    "terme": "毎週",
+    "lecture": "まいしゅう",
+    "sens_en": "every week",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "毎日|まいにち",
+    "terme": "毎日",
+    "lecture": "まいにち",
+    "sens_en": "every day",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "毎年|まいねん; まいとし",
+    "terme": "毎年",
+    "lecture": "まいねん; まいとし",
+    "sens_en": "every year, yearly, annually",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "毎晩|まいばん",
+    "terme": "毎晩",
+    "lecture": "まいばん",
+    "sens_en": "every night",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "前|まえ",
+    "terme": "前",
+    "lecture": "まえ",
+    "sens_en": "before, in front",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～前|～まえ",
+    "terme": "～前",
+    "lecture": "～まえ",
+    "sens_en": "in front of ~",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "曲る|まがる",
+    "terme": "曲る",
+    "lecture": "まがる",
+    "sens_en": "to turn, to bend",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "まずい|まずい",
+    "terme": "まずい",
+    "lecture": "まずい",
+    "sens_en": "terrible (in reference to food), unappetizing, unpleasant (taste)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "また|また",
+    "terme": "また",
+    "lecture": "また",
+    "sens_en": "and; furthermore",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "まだ|まだ",
+    "terme": "まだ",
+    "lecture": "まだ",
+    "sens_en": "yet, still, besides",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "町|まち",
+    "terme": "町",
+    "lecture": "まち",
+    "sens_en": "town; city",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "待つ|まつ",
+    "terme": "待つ",
+    "lecture": "まつ",
+    "sens_en": "to wait",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "まっすぐ|まっすぐ",
+    "terme": "まっすぐ",
+    "lecture": "まっすぐ",
+    "sens_en": "straight (ahead), direct",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "マッチ|マッチ",
+    "terme": "マッチ",
+    "lecture": "マッチ",
+    "sens_en": "match",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "窓|まど",
+    "terme": "窓",
+    "lecture": "まど",
+    "sens_en": "window",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "丸い; 円い|まるい",
+    "terme": "丸い; 円い",
+    "lecture": "まるい",
+    "sens_en": "round, circular",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "万|まん",
+    "terme": "万",
+    "lecture": "まん",
+    "sens_en": "ten thousand",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "万年筆|まんねんひつ",
+    "terme": "万年筆",
+    "lecture": "まんねんひつ",
+    "sens_en": "fountain pen",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "磨く|みがく",
+    "terme": "磨く",
+    "lecture": "みがく",
+    "sens_en": "to brush (teeth); to polish",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "右|みぎ",
+    "terme": "右",
+    "lecture": "みぎ",
+    "sens_en": "right hand side",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "短い|みじかい",
+    "terme": "短い",
+    "lecture": "みじかい",
+    "sens_en": "short (length)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "水|みず",
+    "terme": "水",
+    "lecture": "みず",
+    "sens_en": "water",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "店|みせ",
+    "terme": "店",
+    "lecture": "みせ",
+    "sens_en": "store, shop",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "見せる|みせる",
+    "terme": "見せる",
+    "lecture": "みせる",
+    "sens_en": "to show, to display",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "道|みち",
+    "terme": "道",
+    "lecture": "みち",
+    "sens_en": "road, street; way, directions",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "三日|みっか",
+    "terme": "三日",
+    "lecture": "みっか",
+    "sens_en": "three days, third day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "三つ|みっつ",
+    "terme": "三つ",
+    "lecture": "みっつ",
+    "sens_en": "three things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "緑|みどり",
+    "terme": "緑",
+    "lecture": "みどり",
+    "sens_en": "green",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "皆さん|みなさん",
+    "terme": "皆さん",
+    "lecture": "みなさん",
+    "sens_en": "all of you, everyone",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "南|みなみ",
+    "terme": "南",
+    "lecture": "みなみ",
+    "sens_en": "South",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "耳|みみ",
+    "terme": "耳",
+    "lecture": "みみ",
+    "sens_en": "ear",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "見る|みる",
+    "terme": "見る",
+    "lecture": "みる",
+    "sens_en": "to see, to look",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "みんな|みんな",
+    "terme": "みんな",
+    "lecture": "みんな",
+    "sens_en": "all, everyone, everybody",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "六日|むいか",
+    "terme": "六日",
+    "lecture": "むいか",
+    "sens_en": "six days; sixth day of month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "向こう|むこう",
+    "terme": "向こう",
+    "lecture": "むこう",
+    "sens_en": "beyond, over there",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "難しい|むずかしい",
+    "terme": "難しい",
+    "lecture": "むずかしい",
+    "sens_en": "difficult",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "六つ|むっつ",
+    "terme": "六つ",
+    "lecture": "むっつ",
+    "sens_en": "six things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "村|むら",
+    "terme": "村",
+    "lecture": "むら",
+    "sens_en": "village",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "目|め",
+    "terme": "目",
+    "lecture": "め",
+    "sens_en": "eye(s)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "メートル|メートル",
+    "terme": "メートル",
+    "lecture": "メートル",
+    "sens_en": "meter",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "眼鏡|めがね",
+    "terme": "眼鏡",
+    "lecture": "めがね",
+    "sens_en": "eye glasses",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "もう|もう",
+    "terme": "もう",
+    "lecture": "もう",
+    "sens_en": "already; again; more",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "木曜日|もくようび",
+    "terme": "木曜日",
+    "lecture": "もくようび",
+    "sens_en": "Thursday",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "もしもし|もしもし",
+    "terme": "もしもし",
+    "lecture": "もしもし",
+    "sens_en": "Hello? (used on the phone)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "持つ|もつ",
+    "terme": "持つ",
+    "lecture": "もつ",
+    "sens_en": "to hold, to carry; to possess",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "もっと|もっと",
+    "terme": "もっと",
+    "lecture": "もっと",
+    "sens_en": "more",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "物|もの",
+    "terme": "物",
+    "lecture": "もの",
+    "sens_en": "thing (concrete object)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "門|もん",
+    "terme": "門",
+    "lecture": "もん",
+    "sens_en": "gate",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "問題|もんだい",
+    "terme": "問題",
+    "lecture": "もんだい",
+    "sens_en": "a problem",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "～屋|～や",
+    "terme": "～屋",
+    "lecture": "～や",
+    "sens_en": "~ shop",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "八百屋|やおや",
+    "terme": "八百屋",
+    "lecture": "やおや",
+    "sens_en": "greengrocer",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "野菜|やさい",
+    "terme": "野菜",
+    "lecture": "やさい",
+    "sens_en": "vegetable",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "易しい|やさしい",
+    "terme": "易しい",
+    "lecture": "やさしい",
+    "sens_en": "easy, plain, simple",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "安い|やすい",
+    "terme": "安い",
+    "lecture": "やすい",
+    "sens_en": "inexpensive; cheap (things)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "休み|やすみ",
+    "terme": "休み",
+    "lecture": "やすみ",
+    "sens_en": "holiday; day off; absence",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "休む|やすむ",
+    "terme": "休む",
+    "lecture": "やすむ",
+    "sens_en": "to rest, to have a break, to get time off",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "八つ|やっつ",
+    "terme": "八つ",
+    "lecture": "やっつ",
+    "sens_en": "eight things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "山|やま",
+    "terme": "山",
+    "lecture": "やま",
+    "sens_en": "mountain",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "やる|やる",
+    "terme": "やる",
+    "lecture": "やる",
+    "sens_en": "to do; to give (to pets, parents, siblings, etc.)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "夕方|ゆうがた",
+    "terme": "夕方",
+    "lecture": "ゆうがた",
+    "sens_en": "late afternoon (typically just before dinner time), evening",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "夕飯|ゆうはん",
+    "terme": "夕飯",
+    "lecture": "ゆうはん",
+    "sens_en": "dinner, supper, evening meal",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "郵便局|ゆうびんきょく",
+    "terme": "郵便局",
+    "lecture": "ゆうびんきょく",
+    "sens_en": "post office",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "昨夜|ゆうべ",
+    "terme": "昨夜",
+    "lecture": "ゆうべ",
+    "sens_en": "last night",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "有名|ゆうめい",
+    "terme": "有名",
+    "lecture": "ゆうめい",
+    "sens_en": "famous",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "雪|ゆき",
+    "terme": "雪",
+    "lecture": "ゆき",
+    "sens_en": "snow",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ゆっくりと|ゆっくりと",
+    "terme": "ゆっくりと",
+    "lecture": "ゆっくりと",
+    "sens_en": "slowly, at ease",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "八日|ようか",
+    "terme": "八日",
+    "lecture": "ようか",
+    "sens_en": "eight days; eighth day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "洋服|ようふく",
+    "terme": "洋服",
+    "lecture": "ようふく",
+    "sens_en": "Western-style clothes",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "よく|よく",
+    "terme": "よく",
+    "lecture": "よく",
+    "sens_en": "frequently, often (much); well, skillfully",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "横|よこ",
+    "terme": "横",
+    "lecture": "よこ",
+    "sens_en": "beside; side; width",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "四日|よっか",
+    "terme": "四日",
+    "lecture": "よっか",
+    "sens_en": "four days; fourth day of the month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "四つ|よっつ",
+    "terme": "四つ",
+    "lecture": "よっつ",
+    "sens_en": "four things",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "呼ぶ|よぶ",
+    "terme": "呼ぶ",
+    "lecture": "よぶ",
+    "sens_en": "to call (one's name); to invite",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "読む|よむ",
+    "terme": "読む",
+    "lecture": "よむ",
+    "sens_en": "to read",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "夜|よる",
+    "terme": "夜",
+    "lecture": "よる",
+    "sens_en": "evening, night",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "弱い|よわい",
+    "terme": "弱い",
+    "lecture": "よわい",
+    "sens_en": "weak",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "来月|らいげつ",
+    "terme": "来月",
+    "lecture": "らいげつ",
+    "sens_en": "next month",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "来週|らいしゅう",
+    "terme": "来週",
+    "lecture": "らいしゅう",
+    "sens_en": "next week",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "来年|らいねん",
+    "terme": "来年",
+    "lecture": "らいねん",
+    "sens_en": "next year",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ラジオ|ラジオ",
+    "terme": "ラジオ",
+    "lecture": "ラジオ",
+    "sens_en": "radio",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ラジオカセ|ラジオカセ",
+    "terme": "ラジオカセ",
+    "lecture": "ラジオカセ",
+    "sens_en": "radio cassette player",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "りっぱ|りっぱ",
+    "terme": "りっぱ",
+    "lecture": "りっぱ",
+    "sens_en": "splendid, fine",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "留学生|りゅうがくせい",
+    "terme": "留学生",
+    "lecture": "りゅうがくせい",
+    "sens_en": "international student",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "両親|りょうしん",
+    "terme": "両親",
+    "lecture": "りょうしん",
+    "sens_en": "parents (lit., both parents)",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "料理|りょうり",
+    "terme": "料理",
+    "lecture": "りょうり",
+    "sens_en": "cooking; cuisine",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "旅行|りょこう",
+    "terme": "旅行",
+    "lecture": "りょこう",
+    "sens_en": "travel, trip",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "零|れい",
+    "terme": "零",
+    "lecture": "れい",
+    "sens_en": "zero, nought",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "冷蔵庫|れいぞうこ",
+    "terme": "冷蔵庫",
+    "lecture": "れいぞうこ",
+    "sens_en": "refrigerator",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "レコード|レコード",
+    "terme": "レコード",
+    "lecture": "レコード",
+    "sens_en": "record",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "レストラン|レストラン",
+    "terme": "レストラン",
+    "lecture": "レストラン",
+    "sens_en": "restaurant",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "練習|れんしゅう (する)",
+    "terme": "練習",
+    "lecture": "れんしゅう (する)",
+    "sens_en": "(to) practice",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "廊下|ろうか",
+    "terme": "廊下",
+    "lecture": "ろうか",
+    "sens_en": "corridor",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "六|ろく",
+    "terme": "六",
+    "lecture": "ろく",
+    "sens_en": "six",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "ワイシャツ|ワイシャツ",
+    "terme": "ワイシャツ",
+    "lecture": "ワイシャツ",
+    "sens_en": "shirt (lit: white shirt), business shirt",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "若い|わかい",
+    "terme": "若い",
+    "lecture": "わかい",
+    "sens_en": "young",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "分かる|わかる",
+    "terme": "分かる",
+    "lecture": "わかる",
+    "sens_en": "to understand",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "忘れる|わすれる",
+    "terme": "忘れる",
+    "lecture": "わすれる",
+    "sens_en": "to forget",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "私|わたし",
+    "terme": "私",
+    "lecture": "わたし",
+    "sens_en": "I, myself",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "私|わたくし",
+    "terme": "私",
+    "lecture": "わたくし",
+    "sens_en": "I (formal), myself, private affairs",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "渡す|わたす",
+    "terme": "渡す",
+    "lecture": "わたす",
+    "sens_en": "to hand (something) over (v.t.); to get across",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "渡る|わたる",
+    "terme": "渡る",
+    "lecture": "わたる",
+    "sens_en": "to cross over, to go across",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  },
+  {
+    "content_id": "悪い|わるい",
+    "terme": "悪い",
+    "lecture": "わるい",
+    "sens_en": "bad, sinful; inferior",
+    "sens_fr": null,
+    "sens_fr_source": null,
+    "tags": [
+      "n5"
+    ]
+  }
+]

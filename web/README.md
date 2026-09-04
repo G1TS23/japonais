@@ -25,9 +25,10 @@ composants). IndexedDB est simulé via `fake-indexeddb` (voir `test/setup.ts`).
 | `app/lib/kana-session.test.ts` | `pool`, `buildQueue` (longueur, `weakOnly`), `makeChoices` |
 | `app/lib/backup.test.ts` | export/import round-trip, rejet des fichiers invalides, `resetAll` |
 | `app/lib/streak.test.ts` | série quotidienne (incrément, plafond à un par jour, remise à zéro) |
+| `app/lib/fsrs.test.ts` | carte neuve, aperçu des 4 notes (échéances croissantes), `lapses` sur "Again", effet de la rétention |
+| `app/lib/srs-session.test.ts` | import du deck (idempotent), file du jour (dues/nouvelles/suspendues), plafond quotidien, journal de révision |
 
-À étendre à l'étape 3 (moteur FSRS — priorité haute, planification silencieusement
-fausse sinon) et, plus tard, aux composants (`@vue/test-utils`) si besoin.
+À étendre aux composants (`@vue/test-utils`) si besoin, plus tard.
 
 ## État (plan de construction, SPEC §7)
 
@@ -38,7 +39,12 @@ fausse sinon) et, plus tard, aux composants (`@vue/test-utils`) si besoin.
       points faibles), session avec réinjection des ratés, saisie rōmaji + QCM,
       grille de chaleur par caractère, série quotidienne. Données :
       `app/data/kana.ts` (104 mores × 2 scripts).
-- [ ] Étape 3 — SRS (FSRS)
+- [x] **Étape 3 — SRS (FSRS)** : moteur `ts-fsrs` (wrapper `lib/fsrs.ts`), file
+      du jour (dues + nouvelles cartes plafonnées), révision recto/verso avec
+      aperçu des 4 intervalles (Again/Hard/Good/Easy), séries quotidiennes.
+      Deck N5 auto-importé au premier passage (718 mots, `scripts/import-vocab-n5.mjs`
+      depuis une source ouverte — sens en anglais pour l'instant, français à
+      compléter, voir `scripts/README.md`).
 - [ ] Étape 4 — Navigateur de programme (@nuxt/content)
 - [ ] Étape 5 — Quiz par palier
 - [ ] Étape 6 — Finitions (PWA / hors-ligne, thème, a11y)
@@ -51,14 +57,22 @@ app/
   assets/css/main.css  # Tailwind v4 + tokens de thème
   components/           # PageHeader, StatCard, SegmentedControl, ToggleSwitch…
   components/kana/      # KanaDrill, KanaResults, KanaHeatmap
+  components/srs/       # SrsReview, SrsResults
   composables/          # useLiveQuery (wrapper Dexie.liveQuery), useKanaStats
-  data/kana.ts          # jeu de données hiragana + katakana
+  data/kana.ts           # jeu de données hiragana + katakana
+  data/vocab.ts           # type VocabEntry + export du deck N5
+  data/vocab-n5.json       # 718 mots N5 (généré, voir scripts/)
   layouts/default.vue   # coquille + navigation
-  lib/db.ts             # schéma Dexie (IndexedDB)
-  lib/backup.ts         # export / import / reset JSON
-  lib/kana-session.ts   # pool / file de session / QCM (pur)
-  lib/streak.ts         # série quotidienne (progress store)
+  lib/db.ts              # schéma Dexie (IndexedDB)
+  lib/backup.ts          # export / import / reset JSON
+  lib/kana-session.ts    # pool / file de session / QCM (pur)
+  lib/streak.ts           # série quotidienne (progress store)
+  lib/fsrs.ts              # wrapper ts-fsrs (aperçu des notes, application)
+  lib/srs-session.ts       # import du deck, file du jour, journal de révision
   pages/                # /, /kana, /srs, /programme, /quiz, /settings
   plugins/theme.client.ts
   stores/settings.ts    # préférences (Pinia + Dexie)
+scripts/
+  import-vocab-n5.mjs   # génère data/vocab-n5.json depuis scripts/sources/
+  sources/jlpt-n5.csv   # source (MIT), voir scripts/README.md
 ```

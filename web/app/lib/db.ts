@@ -1,28 +1,38 @@
 import Dexie, { type Table } from 'dexie'
+import type { Grade, State } from 'ts-fsrs'
 
 // --- Types des enregistrements ---------------------------------------------
 
-export type CardState = 'new' | 'learning' | 'review' | 'relearning'
-
-/** Carte de vocabulaire pilotée par FSRS (champs FSRS ajoutés à l'étape 3). */
+/**
+ * Carte de vocabulaire pilotée par FSRS. Les champs FSRS (due, stability,
+ * difficulty, elapsed_days, scheduled_days, learning_steps, reps, lapses,
+ * state, last_review) suivent exactement la forme attendue par `ts-fsrs`
+ * (voir `lib/fsrs.ts`) — due/last_review en timestamp ms, state en enum
+ * numérique `State`.
+ */
 export interface Card {
   id: string
+  /** Clé stable de l'entrée de contenu d'origine (`data/vocab.ts`), pour éviter les doublons à l'import. */
+  content_id?: string
   terme: string
   lecture: string
-  sens_fr: string
-  sens_fr_source: 'jmdict' | 'manuel'
+  sens_fr: string | null
+  sens_fr_source: 'jmdict' | 'manuel' | null
   sens_en: string
   exemple_jp?: string
   exemple_fr?: string
   nature?: string
   tags: string[]
-  // Champs FSRS (placeholders tant que le moteur n'est pas branché)
-  state: CardState
-  due: number // timestamp ms ; 0 = jamais planifiée
-  stability?: number
-  difficulty?: number
+  // FSRS
+  due: number
+  stability: number
+  difficulty: number
+  elapsed_days: number
+  scheduled_days: number
+  learning_steps: number
   reps: number
   lapses: number
+  state: State
   last_review?: number
   suspendue: boolean
   created_at: number
@@ -31,9 +41,9 @@ export interface Card {
 export interface ReviewLog {
   id: string
   cardId: string
-  rating: 1 | 2 | 3 | 4 // Again / Hard / Good / Easy
-  state: CardState
-  elapsed_ms: number
+  rating: Grade // Again(1) / Hard(2) / Good(3) / Easy(4)
+  /** État de la carte AVANT cette révision (pour compter les nouvelles cartes du jour). */
+  priorState: State
   scheduled_days: number
   ts: number
 }
@@ -96,7 +106,7 @@ export class JaponaisDB extends Dexie {
   constructor() {
     super('japonais')
     this.version(1).stores({
-      cards: '&id, terme, state, due, suspendue, *tags',
+      cards: '&id, content_id, terme, state, due, suspendue, *tags',
       reviewLogs: '&id, cardId, ts',
       kanaStats: '&kana, type',
       quizAttempts: '&id, palier, ts',

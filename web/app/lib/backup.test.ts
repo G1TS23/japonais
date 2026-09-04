@@ -1,18 +1,25 @@
 import { beforeEach, describe, expect, it } from 'vitest'
+import { State } from 'ts-fsrs'
 import { getDb, type Card } from './db'
 import { BACKUP_FORMAT, downloadBackup, exportAll, importAll, resetAll } from './backup'
 
 function sampleCard(overrides: Partial<Card> = {}): Card {
   return {
     id: 'card-1',
+    content_id: '食べる|たべる',
     terme: '食べる',
     lecture: 'たべる',
     sens_fr: 'manger',
     sens_fr_source: 'jmdict',
     sens_en: 'to eat',
     tags: ['n5', 'verbe'],
-    state: 'new',
+    state: State.New,
     due: 0,
+    stability: 0,
+    difficulty: 0,
+    elapsed_days: 0,
+    scheduled_days: 0,
+    learning_steps: 0,
     reps: 0,
     lapses: 0,
     suspendue: false,
