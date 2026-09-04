@@ -32,7 +32,11 @@ const tally = { again: 0, hard: 0, good: 0, easy: 0 }
 
 const current = computed<Card | undefined>(() => queue.value[index.value])
 const doneCount = computed(() => Math.min(seen.value.size, total))
-const remaining = computed(() => queue.value.length - index.value)
+// Cartes requeuées en plus du total de départ. Ne pas dériver ce nombre de
+// `doneCount` vs `index` : `seen` grandit dès la notation, `index` seulement
+// après le await recordReview() (écriture Dexie) — décalage qui faisait
+// clignoter "+1 à revoir" même sans requeue.
+const extraToReview = computed(() => queue.value.length - total)
 
 const meaning = computed(() => (current.value ? displaySens(current.value, settings.values.sensLang) : null))
 
@@ -105,10 +109,9 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
         :style="{ width: `${Math.round((doneCount / total) * 100)}%` }"
       />
     </div>
-    <div v-if="remaining > total - doneCount" class="mb-5 text-right text-xs text-amber-500">
-      +{{ remaining - (total - doneCount) }} à revoir
+    <div class="mb-5 min-h-4 text-right text-xs text-amber-500">
+      <span v-if="extraToReview > 0">+{{ extraToReview }} à revoir</span>
     </div>
-    <div v-else class="mb-5" />
 
     <div class="flex min-h-72 flex-col items-center justify-center gap-4 rounded-2xl border border-neutral-200 bg-white p-8 text-center dark:border-neutral-800 dark:bg-neutral-900">
       <div class="jp text-4xl">{{ current.terme }}</div>

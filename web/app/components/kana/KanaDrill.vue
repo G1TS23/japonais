@@ -24,7 +24,13 @@ const firstTryCorrect = ref(0)
 const current = computed<DrillItem | undefined>(() => queue.value[index.value])
 const total = props.items.length
 const doneCount = computed(() => Math.min(firstSeen.value.size, total))
-const remaining = computed(() => queue.value.length - index.value)
+// Items requeued en plus du total de départ (queue.value ne grandit que sur
+// une mauvaise réponse, cf. registerAttempt). Ne pas dériver ce nombre de
+// `doneCount` vs `index` : ces deux valeurs changent à des moments différents
+// (doneCount à la réponse, index seulement à l'avancement, ~350ms plus tard
+// sur une bonne réponse) — ça faisait clignoter "+1 à revoir" sur une bonne
+// réponse alors que rien n'avait été remis en file.
+const extraToReview = computed(() => queue.value.length - total)
 
 // --- Saisie (kana -> rōmaji) ---------------------------------------------
 const answer = ref('')
@@ -136,8 +142,10 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
       <div class="h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
         <div class="h-full bg-brand-500 transition-all" :style="{ width: `${progressPct}%` }" />
       </div>
-      <div v-if="remaining > total - doneCount" class="mt-1 text-right text-xs text-amber-500">
-        +{{ remaining - (total - doneCount) }} à revoir
+      <!-- Hauteur réservée (min-h-4 ≈ line-height de text-xs) même quand vide,
+           pour ne pas décaler le bloc kana en dessous à l'apparition/disparition. -->
+      <div class="mt-1 min-h-4 text-right text-xs text-amber-500">
+        <span v-if="extraToReview > 0">+{{ extraToReview }} à revoir</span>
       </div>
     </div>
 
