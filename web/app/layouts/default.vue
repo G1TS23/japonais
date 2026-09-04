@@ -1,13 +1,15 @@
 <script setup lang="ts">
+import type { IconName } from '~/components/AppIcon.vue'
+
 const route = useRoute()
 
-const links = [
-  { to: '/', label: 'Tableau de bord', short: 'Accueil', icon: '📊' },
-  { to: '/kana', label: 'Kana', short: 'Kana', icon: 'あ' },
-  { to: '/srs', label: 'SRS', short: 'SRS', icon: '🃏' },
-  { to: '/programme', label: 'Programme', short: 'Prog.', icon: '🗺️' },
-  { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: '✍️' },
-  { to: '/settings', label: 'Réglages', short: 'Réglages', icon: '⚙️' },
+const links: { to: string; label: string; short: string; icon: IconName }[] = [
+  { to: '/', label: 'Tableau de bord', short: 'Accueil', icon: 'home' },
+  { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language' },
+  { to: '/srs', label: 'SRS', short: 'SRS', icon: 'rectangle-stack' },
+  { to: '/programme', label: 'Programme', short: 'Prog.', icon: 'map' },
+  { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
+  { to: '/settings', label: 'Réglages', short: 'Réglages', icon: 'cog-6-tooth' },
 ]
 
 function isActive(to: string) {
@@ -37,14 +39,14 @@ function isActive(to: string) {
             v-for="l in links"
             :key="l.to"
             :to="l.to"
-            class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition"
+            class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
             :class="
               isActive(l.to)
                 ? 'bg-brand-500 text-white'
                 : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100'
             "
           >
-            <span class="w-5 text-center">{{ l.icon }}</span>
+            <AppIcon :name="l.icon" class="h-5 w-5 shrink-0" />
             <span>{{ l.label }}</span>
           </NuxtLink>
         </nav>
@@ -71,7 +73,7 @@ function isActive(to: string) {
             : 'text-neutral-500 dark:text-neutral-400'
         "
       >
-        <span class="text-lg leading-none">{{ l.icon }}</span>
+        <AppIcon :name="l.icon" class="h-5 w-5" />
         <span class="max-w-full truncate px-0.5">{{ l.short }}</span>
       </NuxtLink>
     </nav>
