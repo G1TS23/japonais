@@ -108,8 +108,11 @@ function cellTitle(char: string): string {
       />
     </div>
 
-    <div class="space-y-3 overflow-x-auto">
-      <div v-for="(group, gi) in groups" :key="gi" class="space-y-1.5">
+    <!-- Groupes en 2 colonnes qui se remplissent verticalement (comme des
+         colonnes de journal) sur écran large, plutôt qu'une seule longue
+         liste : la carte reste large et courte au lieu de tout en hauteur. -->
+    <div class="columns-1 gap-x-8 md:columns-2">
+      <div v-for="(group, gi) in groups" :key="gi" class="mb-3 space-y-1.5 break-inside-avoid">
         <div v-for="r in group" :key="r.label" class="flex items-center gap-1.5">
           <span class="jp w-6 shrink-0 text-center text-xs text-neutral-400">{{ r.label }}</span>
           <div class="flex flex-wrap gap-1">
@@ -131,8 +134,8 @@ function cellTitle(char: string): string {
       <span class="text-xs font-medium text-neutral-400">Combinaisons (ゃ ゅ ょ)</span>
       <div class="h-px flex-1 bg-neutral-200 dark:bg-neutral-800" />
     </div>
-    <div class="space-y-3 overflow-x-auto">
-      <div v-for="(group, gi) in yoonGroups" :key="gi" class="space-y-1.5">
+    <div class="columns-1 gap-x-8 md:columns-2">
+      <div v-for="(group, gi) in yoonGroups" :key="gi" class="mb-3 space-y-1.5 break-inside-avoid">
         <div v-for="r in group" :key="r.label" class="flex items-center gap-1.5">
           <span class="jp w-6 shrink-0 text-center text-xs text-neutral-400">{{ r.label }}</span>
           <div class="flex flex-wrap gap-1">
