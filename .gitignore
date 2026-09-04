@@ -1,0 +1,23 @@
+# Dépendances
+**/node_modules
+
+# Sorties de build Nuxt
+web/.output
+web/.data
+web/.nuxt
+web/.nitro
+web/.cache
+web/dist
+
+# Divers
+.DS_Store
+*.log
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea
+.vscode

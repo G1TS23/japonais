@@ -1,0 +1,7 @@
+[build]
+  base = "web"
+  command = "npm run generate"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_VERSION = "22"
