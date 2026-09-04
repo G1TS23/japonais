@@ -5,3 +5,7 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # Nitro détecte Netlify et bascule sinon sur le préréglage "netlify-static"
+  # (sortie dans dist/ au lieu de .output/public/). On force "static" pour que
+  # la sortie soit identique en local, en CI et sur Netlify.
+  NITRO_PRESET = "static"
