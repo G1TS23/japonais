@@ -14,8 +14,9 @@ const links: { to: string; label: string; short: string; icon: IconName }[] = [
 ]
 
 // Barre latérale réduite à des icônes (avec bouton pour l'étendre à nouveau) :
-// utile sur les fenêtres desktop plus étroites, où le contenu large (ex. le
-// tableau des kana) réclame le maximum de place. Préférence mémorisée.
+// utile sur les fenêtres desktop plus étroites, où du contenu large (le
+// tableau des kana notamment) réclame le maximum de place. Préférence
+// mémorisée.
 const collapsed = useStorage('nav-collapsed', false)
 
 function isActive(to: string) {
@@ -34,51 +35,56 @@ function isActive(to: string) {
       <span class="font-semibold tracking-tight">日本語</span>
     </header>
 
+    <!-- Barre latérale (desktop uniquement) : ancrée au bord gauche du
+         viewport (position fixed), indépendamment de la largeur de fenêtre —
+         pas seulement "collée" dans la colonne centrée du contenu. -->
+    <aside
+      class="fixed inset-y-0 left-0 z-30 hidden flex-col border-r border-neutral-200 bg-neutral-50 py-10 transition-[width] duration-200 md:flex dark:border-neutral-800 dark:bg-neutral-950"
+      :class="collapsed ? 'w-14 px-2' : 'w-52 px-4'"
+      style="padding-top: calc(env(safe-area-inset-top) + 2.5rem)"
+    >
+      <div class="mb-4 flex items-center gap-2 px-1" :class="collapsed && 'justify-center'">
+        <span class="text-2xl">🇯🇵</span>
+        <span v-show="!collapsed" class="font-semibold tracking-tight">日本語</span>
+      </div>
+      <nav class="flex flex-1 flex-col gap-1 overflow-y-auto">
+        <NuxtLink
+          v-for="l in links"
+          :key="l.to"
+          :to="l.to"
+          :title="collapsed ? l.label : undefined"
+          class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
+          :class="[
+            collapsed && 'justify-center px-0',
+            isActive(l.to)
+              ? 'bg-brand-500 text-white'
+              : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
+          ]"
+        >
+          <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
+          <span v-show="!collapsed">{{ l.label }}</span>
+        </NuxtLink>
+
+        <button
+          type="button"
+          :title="collapsed ? 'Étendre la navigation' : 'Réduire la navigation'"
+          class="mt-2 flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-neutral-400 transition hover:bg-neutral-200/60 hover:text-neutral-700 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-300"
+          :class="collapsed && 'justify-center px-0'"
+          @click="collapsed = !collapsed"
+        >
+          <AppIcon :name="collapsed ? 'chevron-double-right' : 'chevron-double-left'" class="h-5 w-5 shrink-0" />
+          <span v-show="!collapsed">Réduire</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Contenu : décalé de la largeur de la barre latérale sur desktop -->
     <div
-      class="mx-auto mt-14 flex max-w-5xl gap-6 px-4 py-6 md:mt-0 md:py-10"
+      class="mt-14 transition-[margin] duration-200 md:mt-0"
+      :class="collapsed ? 'md:ml-14' : 'md:ml-52'"
       style="padding-top: env(safe-area-inset-top)"
     >
-      <!-- Barre latérale (desktop uniquement) : logo + nav fixés ensemble -->
-      <aside
-        class="sticky top-10 hidden h-fit shrink-0 transition-[width] duration-200 md:block"
-        :class="collapsed ? 'w-14' : 'w-52'"
-      >
-        <div class="mb-4 flex items-center gap-2 px-1" :class="collapsed && 'justify-center'">
-          <span class="text-2xl">🇯🇵</span>
-          <span v-show="!collapsed" class="font-semibold tracking-tight">日本語</span>
-        </div>
-        <nav class="flex flex-col gap-1">
-          <NuxtLink
-            v-for="l in links"
-            :key="l.to"
-            :to="l.to"
-            :title="collapsed ? l.label : undefined"
-            class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
-            :class="[
-              collapsed && 'justify-center px-0',
-              isActive(l.to)
-                ? 'bg-brand-500 text-white'
-                : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
-            ]"
-          >
-            <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
-            <span v-show="!collapsed">{{ l.label }}</span>
-          </NuxtLink>
-
-          <button
-            type="button"
-            :title="collapsed ? 'Étendre la navigation' : 'Réduire la navigation'"
-            class="mt-2 flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-neutral-400 transition hover:bg-neutral-200/60 hover:text-neutral-700 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-300"
-            :class="collapsed && 'justify-center px-0'"
-            @click="collapsed = !collapsed"
-          >
-            <AppIcon :name="collapsed ? 'chevron-double-right' : 'chevron-double-left'" class="h-5 w-5 shrink-0" />
-            <span v-show="!collapsed">Réduire</span>
-          </button>
-        </nav>
-      </aside>
-
-      <main class="min-w-0 flex-1 pb-24 md:pb-0">
+      <main class="mx-auto max-w-5xl px-4 py-6 pb-24 md:py-10">
         <slot />
       </main>
     </div>
