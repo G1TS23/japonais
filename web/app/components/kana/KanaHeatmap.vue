@@ -77,6 +77,29 @@ const yoonRows = computed(() => buildRows(YOON_COLUMNS, YOON_LABELS))
 const gridStyle = `grid-template-columns: 1.5rem repeat(${COLUMNS.length}, 2.25rem)`
 const yoonGridStyle = `grid-template-columns: 1.5rem repeat(${YOON_COLUMNS.length}, 2.25rem)`
 
+// --- Mobile : le tableau large impose un défilement horizontal peu pratique
+// sur téléphone. On y remet plutôt une consonne par ligne, groupée par
+// famille (か→が, さ→ざ, た→だ, は→ば→ぱ), dérivée des mêmes COLUMNS /
+// YOON_COLUMNS que le tableau desktop (pas de données dupliquées).
+const FAMILY_GROUPS = [[0], [1, 2], [3, 4], [5, 6], [7], [8, 9, 10], [11], [12], [13], [14], [15]]
+const YOON_FAMILY_GROUPS = [[0, 1], [2, 3], [4], [5], [6, 7, 8], [9], [10]]
+
+function columnCells(col: ColumnDef): Cell[] {
+  return col.hira
+    .filter((h): h is string => !!h)
+    .map((hira) => {
+      const entry = byHira.get(hira)!
+      return { char: script.value === 'hiragana' ? entry.hira : entry.kata, romaji: entry.romaji }
+    })
+}
+
+function buildFamilyGroups(columns: ColumnDef[], groups: number[][]) {
+  return groups.map((idxs) => idxs.map((i) => ({ label: columns[i]!.label, cells: columnCells(columns[i]!) })))
+}
+
+const mobileGroups = computed(() => buildFamilyGroups(COLUMNS, FAMILY_GROUPS))
+const yoonMobileGroups = computed(() => buildFamilyGroups(YOON_COLUMNS, YOON_FAMILY_GROUPS))
+
 function cellClass(char: string): string {
   const a = byChar.value.get(char)
   if (!a || a.seen === 0) return 'bg-neutral-100 text-neutral-400 dark:bg-neutral-800 dark:text-neutral-500'
@@ -105,7 +128,51 @@ function cellTitle(char: string): string {
       />
     </div>
 
-    <div class="overflow-x-auto pb-1">
+    <!-- Mobile (< md) : une consonne par ligne, groupée par famille -->
+    <div class="space-y-3 md:hidden">
+      <div v-for="(group, gi) in mobileGroups" :key="gi" class="space-y-1.5">
+        <div v-for="r in group" :key="r.label" class="flex items-center gap-1.5">
+          <span class="jp w-6 shrink-0 text-center text-xs text-neutral-400">{{ r.label }}</span>
+          <div class="flex flex-wrap gap-1">
+            <span
+              v-for="c in r.cells"
+              :key="c.char"
+              :title="`${c.romaji} — ${cellTitle(c.char)}`"
+              class="jp flex h-9 w-9 items-center justify-center rounded-md text-lg"
+              :class="cellClass(c.char)"
+            >
+              {{ c.char }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4 mb-2 flex items-center gap-2 md:hidden">
+      <span class="text-xs font-medium text-neutral-400">Combinaisons (ゃ ゅ ょ)</span>
+      <div class="h-px flex-1 bg-neutral-200 dark:bg-neutral-800" />
+    </div>
+    <div class="space-y-3 md:hidden">
+      <div v-for="(group, gi) in yoonMobileGroups" :key="gi" class="space-y-1.5">
+        <div v-for="r in group" :key="r.label" class="flex items-center gap-1.5">
+          <span class="jp w-6 shrink-0 text-center text-xs text-neutral-400">{{ r.label }}</span>
+          <div class="flex flex-wrap gap-1">
+            <span
+              v-for="c in r.cells"
+              :key="c.char"
+              :title="`${c.romaji} — ${cellTitle(c.char)}`"
+              class="jp flex h-9 w-9 items-center justify-center rounded-md text-lg"
+              :class="cellClass(c.char)"
+            >
+              {{ c.char }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop (>= md) : tableau gojūon, consonnes en colonnes -->
+    <div class="hidden overflow-x-auto pb-1 md:block">
       <div class="grid w-max gap-1" :style="gridStyle">
         <div />
         <span v-for="col in COLUMNS" :key="col.label" class="jp text-center text-xs text-neutral-400">{{ col.label }}</span>
@@ -127,11 +194,11 @@ function cellTitle(char: string): string {
       </div>
     </div>
 
-    <div class="mt-4 mb-2 flex items-center gap-2">
+    <div class="mt-4 mb-2 hidden items-center gap-2 md:flex">
       <span class="text-xs font-medium text-neutral-400">Combinaisons (ゃ ゅ ょ)</span>
       <div class="h-px flex-1 bg-neutral-200 dark:bg-neutral-800" />
     </div>
-    <div class="overflow-x-auto pb-1">
+    <div class="hidden overflow-x-auto pb-1 md:block">
       <div class="grid w-max gap-1" :style="yoonGridStyle">
         <div />
         <span v-for="col in YOON_COLUMNS" :key="col.label" class="jp text-center text-xs text-neutral-400">{{ col.label }}</span>
