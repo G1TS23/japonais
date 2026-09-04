@@ -90,6 +90,15 @@ export async function recordReview(card: Card, retention: number, rating: Grade,
   return updated
 }
 
+/**
+ * Une carte notée qui reste en Learning/Relearning doit revenir DANS la même
+ * session (intervalle en minutes) ; une carte passée en Review a un intervalle
+ * en jours et n'a pas à réapparaître avant la prochaine ouverture de /srs.
+ */
+export function shouldRequeueInSession(state: State): boolean {
+  return state === State.Learning || state === State.Relearning
+}
+
 /** Texte à afficher pour le sens, avec repli anglais si le français manque. */
 export function displaySens(card: Pick<Card, 'sens_fr' | 'sens_en'>, sensLang: 'fr' | 'en'): { text: string; isFallback: boolean } {
   if (sensLang === 'en') return { text: card.sens_en, isFallback: false }

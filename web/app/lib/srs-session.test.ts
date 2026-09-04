@@ -8,6 +8,7 @@ import {
   newCardsIntroducedToday,
   recordReview,
   seedDeckIfEmpty,
+  shouldRequeueInSession,
 } from './srs-session'
 import type { VocabEntry } from '~/data/vocab'
 
@@ -113,6 +114,25 @@ describe('recordReview', () => {
     const logs = await db.reviewLogs.where('cardId').equals('r1').toArray()
     expect(logs).toHaveLength(1)
     expect(logs[0]).toMatchObject({ cardId: 'r1', rating: Rating.Good, priorState: State.New })
+  })
+})
+
+describe('shouldRequeueInSession', () => {
+  it('Learning et Relearning doivent revenir dans la session', () => {
+    expect(shouldRequeueInSession(State.Learning)).toBe(true)
+    expect(shouldRequeueInSession(State.Relearning)).toBe(true)
+  })
+
+  it('New et Review ne sont pas réinjectées (planification en jours, pas en minutes)', () => {
+    expect(shouldRequeueInSession(State.New)).toBe(false)
+    expect(shouldRequeueInSession(State.Review)).toBe(false)
+  })
+
+  it('reproduit le scénario signalé : noter Again une carte neuve doit demander une réinjection', async () => {
+    const card = manualCard({ id: 'again-repro' })
+    await getDb().cards.add(card)
+    const updated = await recordReview(card, 0.9, Rating.Again, NOW)
+    expect(shouldRequeueInSession(updated.state)).toBe(true)
   })
 })
 

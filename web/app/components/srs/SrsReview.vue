@@ -2,7 +2,7 @@
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import type { Card } from '~/lib/db'
 import { previewRatings, Rating, type RatingPreview } from '~/lib/fsrs'
-import { displaySens, recordReview } from '~/lib/srs-session'
+import { displaySens, recordReview, shouldRequeueInSession } from '~/lib/srs-session'
 import { useSettingsStore } from '~/stores/settings'
 
 const props = defineProps<{ queue: Card[] }>()
@@ -13,14 +13,26 @@ const emit = defineEmits<{
 
 const settings = useSettingsStore()
 
+// File de travail locale et mutable : une carte notée Again/Hard qui reste en
+// apprentissage (Learning/Relearning) est réinsérée un peu plus loin dans la
+// file pour revenir DANS la même session — sinon on ne la revoit jamais avant
+// la prochaine ouverture de /srs. Les cartes qui passent en Review (Good/Easy,
+// ou Hard sur une carte déjà mûre) ne sont pas réinjectées : leur prochain
+// intervalle se compte en jours, pas en minutes.
+const REQUEUE_GAP = 3
+const queue = ref<Card[]>(props.queue.slice())
 const index = ref(0)
+const total = props.queue.length
+const seen = ref<Set<string>>(new Set())
+
 const phase = ref<'front' | 'back'>('front')
 const preview = ref<RatingPreview[]>([])
 const startedAt = Date.now()
 const tally = { again: 0, hard: 0, good: 0, easy: 0 }
 
-const current = computed<Card | undefined>(() => props.queue[index.value])
-const total = props.queue.length
+const current = computed<Card | undefined>(() => queue.value[index.value])
+const doneCount = computed(() => Math.min(seen.value.size, total))
+const remaining = computed(() => queue.value.length - index.value)
 
 const meaning = computed(() => (current.value ? displaySens(current.value, settings.values.sensLang) : null))
 
@@ -46,9 +58,15 @@ async function rate(rating: Rating.Again | Rating.Hard | Rating.Good | Rating.Ea
   else if (rating === Rating.Good) tally.good++
   else tally.easy++
 
-  await recordReview(c, settings.values.retention, rating)
+  seen.value.add(c.id)
+  const updated = await recordReview(c, settings.values.retention, rating)
 
-  if (index.value + 1 >= total) {
+  if (shouldRequeueInSession(updated.state)) {
+    const pos = Math.min(queue.value.length, index.value + 1 + REQUEUE_GAP)
+    queue.value.splice(pos, 0, updated)
+  }
+
+  if (index.value + 1 >= queue.value.length) {
     emit('finish', { total, ...tally, durationMs: Date.now() - startedAt })
     return
   }
@@ -78,15 +96,19 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
 <template>
   <div v-if="current" class="mx-auto max-w-md">
     <div class="mb-6 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
-      <span>{{ index + 1 }} / {{ total }}</span>
+      <span>{{ doneCount }} / {{ total }}</span>
       <button class="hover:text-neutral-900 dark:hover:text-neutral-100" @click="emit('quit')">Quitter</button>
     </div>
-    <div class="mb-6 h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
+    <div class="mb-1 h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
       <div
         class="h-full bg-brand-500 transition-all"
-        :style="{ width: `${Math.round((index / total) * 100)}%` }"
+        :style="{ width: `${Math.round((doneCount / total) * 100)}%` }"
       />
     </div>
+    <div v-if="remaining > total - doneCount" class="mb-5 text-right text-xs text-amber-500">
+      +{{ remaining - (total - doneCount) }} à revoir
+    </div>
+    <div v-else class="mb-5" />
 
     <div class="flex min-h-72 flex-col items-center justify-center gap-4 rounded-2xl border border-neutral-200 bg-white p-8 text-center dark:border-neutral-800 dark:bg-neutral-900">
       <div class="jp text-4xl">{{ current.terme }}</div>
