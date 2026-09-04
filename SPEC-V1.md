@@ -167,6 +167,15 @@ Chaque étape est utilisable seule ; la v1 est atteinte à la fin de l'étape 6.
 
 ---
 
+## 7bis. Tests
+
+**Vitest** pour la logique pure (pas de tests de composants pour l'instant) :
+jeux de données (`data/`), moteurs de session (`lib/kana-session.ts`,
+futur moteur FSRS), persistance (`lib/backup.ts`, `lib/streak.ts`) via
+`fake-indexeddb`. Lancé en CI à chaque push/PR, avant le build. Priorité haute
+sur le moteur FSRS de l'étape 3 : une erreur de planification y est silencieuse
+et coûteuse (mauvais intervalles de révision) contrairement à un bug d'UI.
+
 ## 8. Hors périmètre v1 (pour mémoire)
 
 - Compte utilisateur et synchronisation multi-appareils.

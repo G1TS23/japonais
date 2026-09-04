@@ -9,9 +9,25 @@ Voir [`../SPEC-V1.md`](../SPEC-V1.md) pour le périmètre et l'architecture.
 ```bash
 npm install       # dépendances
 npm run dev        # serveur de dev (http://localhost:3000)
+npm run test        # tests unitaires (Vitest)
 npm run generate   # build statique -> .output/public
 npm run preview    # prévisualiser le build
 ```
+
+## Tests
+
+**Vitest**, sur la logique pure et les modules de données (pas encore de tests de
+composants). IndexedDB est simulé via `fake-indexeddb` (voir `test/setup.ts`).
+
+| Fichier | Couvre |
+|---|---|
+| `app/data/kana.test.ts` | intégrité du jeu de données (pas de doublon, champs non vides, `matchesRomaji`) |
+| `app/lib/kana-session.test.ts` | `pool`, `buildQueue` (longueur, `weakOnly`), `makeChoices` |
+| `app/lib/backup.test.ts` | export/import round-trip, rejet des fichiers invalides, `resetAll` |
+| `app/lib/streak.test.ts` | série quotidienne (incrément, plafond à un par jour, remise à zéro) |
+
+À étendre à l'étape 3 (moteur FSRS — priorité haute, planification silencieusement
+fausse sinon) et, plus tard, aux composants (`@vue/test-utils`) si besoin.
 
 ## État (plan de construction, SPEC §7)
 
