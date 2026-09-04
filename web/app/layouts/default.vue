@@ -39,13 +39,13 @@ function isActive(to: string) {
          viewport (position fixed), indépendamment de la largeur de fenêtre —
          pas seulement "collée" dans la colonne centrée du contenu. -->
     <aside
-      class="fixed inset-y-0 left-0 z-30 hidden flex-col border-r border-neutral-200 bg-neutral-50 py-10 transition-[width] duration-200 md:flex dark:border-neutral-800 dark:bg-neutral-950"
+      class="fixed inset-y-0 left-0 z-30 hidden flex-col overflow-x-hidden border-r border-neutral-200 bg-neutral-50 py-10 transition-[width] duration-200 md:flex dark:border-neutral-800 dark:bg-neutral-950"
       :class="collapsed ? 'w-14 px-2' : 'w-52 px-4'"
       style="padding-top: calc(env(safe-area-inset-top) + 2.5rem)"
     >
       <div class="mb-4 flex items-center gap-2 px-1" :class="collapsed && 'justify-center'">
         <span class="text-2xl">🇯🇵</span>
-        <span v-show="!collapsed" class="font-semibold tracking-tight">日本語</span>
+        <span v-show="!collapsed" class="font-semibold tracking-tight whitespace-nowrap">日本語</span>
       </div>
       <nav class="flex flex-1 flex-col gap-1 overflow-y-auto">
         <NuxtLink
@@ -62,7 +62,7 @@ function isActive(to: string) {
           ]"
         >
           <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
-          <span v-show="!collapsed">{{ l.label }}</span>
+          <span v-show="!collapsed" class="whitespace-nowrap">{{ l.label }}</span>
         </NuxtLink>
 
         <button
@@ -73,7 +73,7 @@ function isActive(to: string) {
           @click="collapsed = !collapsed"
         >
           <AppIcon :name="collapsed ? 'chevron-double-right' : 'chevron-double-left'" class="h-5 w-5 shrink-0" />
-          <span v-show="!collapsed">Réduire</span>
+          <span v-show="!collapsed" class="whitespace-nowrap">Réduire</span>
         </button>
       </nav>
     </aside>
