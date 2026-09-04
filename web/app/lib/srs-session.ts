@@ -33,6 +33,30 @@ export async function seedDeckIfEmpty(entries: VocabEntry[] = VOCAB_N5, now: Dat
   return cards.length
 }
 
+/**
+ * Rattrapage de contenu : complète `sens_fr` sur les cartes déjà présentes
+ * qui n'en ont pas encore (ex. deck importé avant l'ajout des traductions
+ * françaises), en le récupérant sur l'entrée correspondante de `entries` via
+ * `content_id`. Ne touche à rien d'autre (progression FSRS intacte).
+ */
+export async function syncContentTranslations(entries: VocabEntry[] = VOCAB_N5): Promise<number> {
+  const db = getDb()
+  const byContentId = new Map(entries.map((e) => [e.content_id, e]))
+  const stale = await db.cards.filter((c) => !c.sens_fr && !!c.content_id).toArray()
+  if (!stale.length) return 0
+
+  let updated = 0
+  await db.transaction('rw', db.cards, async () => {
+    for (const card of stale) {
+      const source = byContentId.get(card.content_id!)
+      if (!source?.sens_fr) continue
+      await db.cards.update(card.id, { sens_fr: source.sens_fr, sens_fr_source: source.sens_fr_source })
+      updated++
+    }
+  })
+  return updated
+}
+
 /** Nombre de cartes distinctes entrées en révision pour la première fois aujourd'hui. */
 export async function newCardsIntroducedToday(now: Date = new Date()): Promise<number> {
   const db = getDb()

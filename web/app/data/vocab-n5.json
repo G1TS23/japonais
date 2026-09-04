@@ -4,8 +4,8 @@
     "terme": "ああ",
     "lecture": "ああ",
     "sens_en": "Ah!, Oh!",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "comme ça (utilisé pour quelque chose ou quelqu'un éloigné de l'orateur et de l'auditeur), ainsi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -15,8 +15,8 @@
     "terme": "会う",
     "lecture": "あう",
     "sens_en": "to meet, to see",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rencontrer, se rencontrer ; rencontrer (des difficultés), être confronté à",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -26,8 +26,8 @@
     "terme": "青",
     "lecture": "あお",
     "sens_en": "blue",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bleu, vert",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -37,8 +37,8 @@
     "terme": "青い",
     "lecture": "あおい",
     "sens_en": "blue",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bleu (profond), pâle, vert (des plantes)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -48,8 +48,8 @@
     "terme": "赤",
     "lecture": "あか",
     "sens_en": "red",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rouge, pourpre, écarlate ; Rouge (communiste)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -59,8 +59,8 @@
     "terme": "赤い",
     "lecture": "あかい",
     "sens_en": "red",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rouge",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -70,8 +70,8 @@
     "terme": "明るい",
     "lecture": "あかるい",
     "sens_en": "bright (in reference to personality or weather); cheerful",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "clair, gai, radieux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -81,8 +81,8 @@
     "terme": "秋",
     "lecture": "あき",
     "sens_en": "fall (season)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "automne",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -92,8 +92,8 @@
     "terme": "開く",
     "lecture": "あく",
     "sens_en": "to open, to become open",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être ouvert, se vider ; être moins encombré, se désemplir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -103,8 +103,8 @@
     "terme": "開ける",
     "lecture": "あける",
     "sens_en": "to open (v.t.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ouvrir, vider",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -114,8 +114,8 @@
     "terme": "上げる",
     "lecture": "あげる",
     "sens_en": "to raise, to lift",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "donner, offrir, refiler ; énumérer, donner (un exemple)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -125,8 +125,8 @@
     "terme": "朝",
     "lecture": "あさ",
     "sens_en": "morning",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "matin, matinée",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -136,8 +136,8 @@
     "terme": "朝御飯",
     "lecture": "あさごはん",
     "sens_en": "breakfast",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "petit déjeuner",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -147,8 +147,8 @@
     "terme": "明後日",
     "lecture": "あさって",
     "sens_en": "day after tomorrow",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "après-demain",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -158,8 +158,8 @@
     "terme": "足; 脚",
     "lecture": "あし",
     "sens_en": "foot; leg",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "allure (de la marche), demarche, jambe",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -169,8 +169,8 @@
     "terme": "明日",
     "lecture": "あした",
     "sens_en": "tomorrow",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "demain",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -180,8 +180,8 @@
     "terme": "あそこ",
     "lecture": "あそこ",
     "sens_en": "there, over there, that place",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cet endroit-là, là, là-bas ; organes génitaux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -191,8 +191,8 @@
     "terme": "遊ぶ",
     "lecture": "あそぶ",
     "sens_en": "to play; to spend time pleasantly; to hang out",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jouer à, s'amuser, visiter ; être inactif, ne rien faire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -202,8 +202,8 @@
     "terme": "暖かい",
     "lecture": "あたたかい",
     "sens_en": "warm",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaud",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -213,8 +213,8 @@
     "terme": "頭",
     "lecture": "あたま",
     "sens_en": "head",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tête",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -224,8 +224,8 @@
     "terme": "新しい",
     "lecture": "あたらしい",
     "sens_en": "new",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "neuf, nouveau",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -235,8 +235,8 @@
     "terme": "あちら",
     "lecture": "あちら",
     "sens_en": "this way (polite)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "par là (direction distante à la fois du locuteur et de l'auditeur), là bas, là ; celui-là (quelque chose physiquement éloigné du locuteur et de l'auditeur, ou quelque chose non visible mais connu à la fois par le locuteur et l'auditeur), ça, cela",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -246,8 +246,8 @@
     "terme": "暑い",
     "lecture": "あつい",
     "sens_en": "hot (in reference to weather), warm",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaud (température de l'air), faire chaud",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -257,8 +257,8 @@
     "terme": "熱い",
     "lecture": "あつい",
     "sens_en": "hot (objects)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaud (objet)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -268,8 +268,8 @@
     "terme": "厚い",
     "lecture": "あつい",
     "sens_en": "kind, warm(hearted), thick, deep",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aimable, chaleureux, cordial",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -279,8 +279,8 @@
     "terme": "あっち",
     "lecture": "あっち",
     "sens_en": "over there",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "par là (direction distante à la fois du locuteur et de l'auditeur), là bas, là ; celui-là (quelque chose physiquement éloigné du locuteur et de l'auditeur, ou quelque chose non visible mais connu à la fois par le locuteur et l'auditeur), ça, cela",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -290,8 +290,8 @@
     "terme": "後",
     "lecture": "あと",
     "sens_en": "afterwards (later); in the future; the rest; since then",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "derrière, en arrière",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -301,8 +301,8 @@
     "terme": "あなた",
     "lecture": "あなた",
     "sens_en": "you",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vous, toi (pour un interlocuteur de même statut ou inférieur) ; chéri (appellation d'un mari par sa femme)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -312,8 +312,8 @@
     "terme": "兄",
     "lecture": "あに",
     "sens_en": "(my) older brother (humble)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "frère ainé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -323,8 +323,8 @@
     "terme": "姉",
     "lecture": "あね",
     "sens_en": "(my) older sister (humble)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sœur aînée",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -334,8 +334,8 @@
     "terme": "アパート",
     "lecture": "アパート",
     "sens_en": "apartment (abbr.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "appartement ; immeuble d'appartements (à la structure très légère par opposition à mansion)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -345,8 +345,8 @@
     "terme": "あの",
     "lecture": "あの",
     "sens_en": "that over there; like that, that way; um...",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ça (quelqu'un ou quelque chose de distant à la fois du locuteur et de l'auditeur, ou situation inconnue à la fois du locuteur et de l'auditeur)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -356,8 +356,8 @@
     "terme": "浴びる",
     "lecture": "あびる",
     "sens_en": "to bathe, to shower",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "prendre une douche, se baigner, se dorer au soleil",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -367,8 +367,8 @@
     "terme": "危ない",
     "lecture": "あぶない",
     "sens_en": "dangerous, critical",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dangereux, périlleux, risqué",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -378,8 +378,8 @@
     "terme": "甘い",
     "lecture": "あまい",
     "sens_en": "generous, sweet",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "doux, indulgent, sucré",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -389,8 +389,8 @@
     "terme": "余り",
     "lecture": "あまり",
     "sens_en": "not very; surplus",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "excès, résidu, reste",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -400,8 +400,8 @@
     "terme": "雨",
     "lecture": "あめ",
     "sens_en": "rain",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pluie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -411,8 +411,8 @@
     "terme": "飴",
     "lecture": "あめ",
     "sens_en": "(hard) candy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bonbon, sucrerie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -422,8 +422,8 @@
     "terme": "洗う",
     "lecture": "あらう",
     "sens_en": "to wash",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "laver",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -433,8 +433,8 @@
     "terme": "在る",
     "lecture": "ある",
     "sens_en": "to be, to have",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être, exister",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -444,8 +444,8 @@
     "terme": "有る",
     "lecture": "ある",
     "sens_en": "to be, to have",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être, exister",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -455,8 +455,8 @@
     "terme": "歩く",
     "lecture": "あるく",
     "sens_en": "to walk",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "marcher",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -466,8 +466,8 @@
     "terme": "あれ",
     "lecture": "あれ",
     "sens_en": "that one (over there)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "çà, celui-là ; organes génitaux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -477,8 +477,8 @@
     "terme": "いい; よい",
     "lecture": "いい; よい",
     "sens_en": "good",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "début de la nuit, soirée",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -488,8 +488,8 @@
     "terme": "いいえ",
     "lecture": "いいえ",
     "sens_en": "no, not at all",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "négatif, non",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -499,8 +499,8 @@
     "terme": "言う",
     "lecture": "いう",
     "sens_en": "to say",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -510,8 +510,8 @@
     "terme": "家",
     "lecture": "いえ",
     "sens_en": "house, home",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "maison",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -521,8 +521,8 @@
     "terme": "いかが",
     "lecture": "いかが",
     "sens_en": "how, in what way",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "comment, de quelle manière (poli)",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -532,8 +532,8 @@
     "terme": "行く",
     "lecture": "いく; ゆく",
     "sens_en": "to go",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aller ; décéder, mourir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -543,8 +543,8 @@
     "terme": "いくつ",
     "lecture": "いくつ",
     "sens_en": "how many, how old",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "combien, combien de? ; quel âge?",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -554,8 +554,8 @@
     "terme": "いくら",
     "lecture": "いくら",
     "sens_en": "how much, how many",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "combien ça coûte?, combien de temps?, combien de?",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -565,8 +565,8 @@
     "terme": "池",
     "lecture": "いけ",
     "sens_en": "pond",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étang, bassin, mare",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -576,8 +576,8 @@
     "terme": "医者",
     "lecture": "いしゃ",
     "sens_en": "doctor; physician",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "médecin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -587,8 +587,8 @@
     "terme": "椅子",
     "lecture": "いす",
     "sens_en": "chair",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaise",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -598,8 +598,8 @@
     "terme": "忙しい",
     "lecture": "いそがしい",
     "sens_en": "busy (people, days)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être occupé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -609,8 +609,8 @@
     "terme": "痛い",
     "lecture": "いたい",
     "sens_en": "hurt; painful; sore",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "avoir mal (douleur)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -620,8 +620,8 @@
     "terme": "一",
     "lecture": "いち",
     "sens_en": "one",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "un",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -631,8 +631,8 @@
     "terme": "一日",
     "lecture": "いちにち",
     "sens_en": "one day (duration)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "une journée ; le 1er du mois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -642,8 +642,8 @@
     "terme": "一番",
     "lecture": "いちばん",
     "sens_en": "best (most), first, number one",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le numéro un, le plus ; un événement, un tour (jeu, épreuve sportive), une épreuve (sportive)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -653,8 +653,8 @@
     "terme": "いつ",
     "lecture": "いつ",
     "sens_en": "when",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quand",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -664,8 +664,8 @@
     "terme": "五日",
     "lecture": "いつか",
     "sens_en": "five days; fifth day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cinq jours, le cinq (dans le mois)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -675,8 +675,8 @@
     "terme": "一緒",
     "lecture": "いっしょ",
     "sens_en": "together",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ensemble",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -686,8 +686,8 @@
     "terme": "五つ",
     "lecture": "いつつ",
     "sens_en": "five things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cinq",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -697,8 +697,8 @@
     "terme": "いつも",
     "lecture": "いつも",
     "sens_en": "always, usually, every time, never (with neg. verb)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "à chaque fois, (nég) jamais, habituellement",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -708,8 +708,8 @@
     "terme": "犬",
     "lecture": "いぬ",
     "sens_en": "dog",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chien",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -719,8 +719,8 @@
     "terme": "今",
     "lecture": "いま",
     "sens_en": "now",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "actuellement, en ce moment, maintenant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -730,8 +730,8 @@
     "terme": "意味",
     "lecture": "いみ",
     "sens_en": "meaning, significance",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sens, signification",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -741,8 +741,8 @@
     "terme": "妹",
     "lecture": "いもうと",
     "sens_en": "younger sister (humble)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(ma) sœur cadette",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -752,8 +752,8 @@
     "terme": "嫌",
     "lecture": "いや",
     "sens_en": "disagreeable, detestable, unpleasant",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "désagréable, ne pas aimer, ne pas apprécier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -763,8 +763,8 @@
     "terme": "入口",
     "lecture": "いりぐち",
     "sens_en": "entrance",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bouche (métro), entrée, porte",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -774,8 +774,8 @@
     "terme": "居る",
     "lecture": "いる",
     "sens_en": "(humble) to be (animate), to exist",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être (êtres animés), exister",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -785,8 +785,8 @@
     "terme": "要る",
     "lecture": "いる",
     "sens_en": "to need",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "avoir besoin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -796,8 +796,8 @@
     "terme": "入れる",
     "lecture": "いれる",
     "sens_en": "to put in",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ajouter, faire entrer, insérer ; comprendre, inclure",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -807,8 +807,8 @@
     "terme": "色",
     "lecture": "いろ",
     "sens_en": "color",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "couleur, teinte ; amour, sensualité",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -818,8 +818,8 @@
     "terme": "色々",
     "lecture": "いろいろ",
     "sens_en": "various",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "divers, varié",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -829,8 +829,8 @@
     "terme": "上",
     "lecture": "うえ",
     "sens_en": "above (up, top, etc.), over, on top of",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "au-dessus, autorité supérieure, dessus",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -840,8 +840,8 @@
     "terme": "後ろ",
     "lecture": "うしろ",
     "sens_en": "back, behind, rear",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "arrière, derrière, dos",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -851,8 +851,8 @@
     "terme": "薄い",
     "lecture": "うすい",
     "sens_en": "thin, weak",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dilué, léger, pâle",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -862,8 +862,8 @@
     "terme": "歌",
     "lecture": "うた",
     "sens_en": "a song",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chanson, poème",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -873,8 +873,8 @@
     "terme": "歌う",
     "lecture": "うたう",
     "sens_en": "to sing",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chanter",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -884,8 +884,8 @@
     "terme": "うち",
     "lecture": "うち",
     "sens_en": "home; house; my place",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(sa) maison",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -895,8 +895,8 @@
     "terme": "生まれる",
     "lecture": "うまれる",
     "sens_en": "to be born",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "naître",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -906,8 +906,8 @@
     "terme": "海",
     "lecture": "うみ",
     "sens_en": "sea, beach",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -917,8 +917,8 @@
     "terme": "売る",
     "lecture": "うる",
     "sens_en": "to sell (v.t.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vendre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -928,8 +928,8 @@
     "terme": "うるさい",
     "lecture": "うるさい",
     "sens_en": "noisy; annoying",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "assourdissant, bruyant, tapageur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -939,8 +939,8 @@
     "terme": "上着",
     "lecture": "うわぎ",
     "sens_en": "coat, jacket",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "manteau, tunique, vêtement de dessus",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -950,8 +950,8 @@
     "terme": "絵",
     "lecture": "え",
     "sens_en": "a painting; a picture; a drawing",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dessin, esquisse, image",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -961,8 +961,8 @@
     "terme": "映画",
     "lecture": "えいが",
     "sens_en": "movie, film",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "film",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -972,8 +972,8 @@
     "terme": "映画館",
     "lecture": "えいがかん",
     "sens_en": "movie theater, cinema",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cinéma (batiment)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -983,8 +983,8 @@
     "terme": "英語",
     "lecture": "えいご",
     "sens_en": "English (language)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "la langue anglaise",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -994,8 +994,8 @@
     "terme": "ええ",
     "lecture": "ええ",
     "sens_en": "yes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "oui",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1005,8 +1005,8 @@
     "terme": "駅",
     "lecture": "えき",
     "sens_en": "station",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "gare",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1016,8 +1016,8 @@
     "terme": "エレベーター",
     "lecture": "エレベーター",
     "sens_en": "elevator",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ascenseur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1027,8 +1027,8 @@
     "terme": "～円",
     "lecture": "～えん",
     "sens_en": "Yen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cercle, yen",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1038,8 +1038,8 @@
     "terme": "鉛筆",
     "lecture": "えんぴつ",
     "sens_en": "pencil",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "crayon",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1049,8 +1049,8 @@
     "terme": "お～",
     "lecture": "お～",
     "sens_en": "honorable ~ (honorific)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cordon, courroie, sangle",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1060,8 +1060,8 @@
     "terme": "美味しい",
     "lecture": "おいしい",
     "sens_en": "delicious, tasty",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bon, délicieux, excellent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1071,8 +1071,8 @@
     "terme": "多い",
     "lecture": "おおい",
     "sens_en": "many; there are a lot",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beaucoup, nombreux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1082,8 +1082,8 @@
     "terme": "大きい",
     "lecture": "おおきい",
     "sens_en": "big, large",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "gros, large",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1093,8 +1093,8 @@
     "terme": "大きな",
     "lecture": "おおきな",
     "sens_en": "big",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "grand, gros, large",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1104,8 +1104,8 @@
     "terme": "大勢",
     "lecture": "おおぜい",
     "sens_en": "great number of people",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "foule, nombreux (personnes)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1115,8 +1115,8 @@
     "terme": "お母さん",
     "lecture": "おかあさん",
     "sens_en": "mother (formal)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mère",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1126,8 +1126,8 @@
     "terme": "お菓子",
     "lecture": "おかし",
     "sens_en": "confections, sweets, snack",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bonbon, confiserie, gâteaux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1137,8 +1137,8 @@
     "terme": "お金",
     "lecture": "おかね",
     "sens_en": "money",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "argent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1148,8 +1148,8 @@
     "terme": "起きる",
     "lecture": "おきる",
     "sens_en": "to get up (e.g., from sleeping); to happen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "se lever",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1159,8 +1159,8 @@
     "terme": "置く",
     "lecture": "おく",
     "sens_en": "to put; to lay; to place",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "déposer, mettre, placer ; conserver, garder, laisser",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1170,8 +1170,8 @@
     "terme": "奥さん",
     "lecture": "おくさん",
     "sens_en": "(someone else's) wife (hon.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "femme, femme marié, madame",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1181,8 +1181,8 @@
     "terme": "お酒",
     "lecture": "おさけ",
     "sens_en": "sake; alcohol",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "alcool, sake",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1192,8 +1192,8 @@
     "terme": "お皿",
     "lecture": "おさら",
     "sens_en": "plate, dish",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "assiette, plat",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1203,8 +1203,8 @@
     "terme": "伯父; 叔父さん",
     "lecture": "おじさん",
     "sens_en": "uncle, middle-aged man",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "oncle ; homme plus âgé, Monsieur ! (interjection)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1214,8 +1214,8 @@
     "terme": "おじいさん",
     "lecture": "おじいさん",
     "sens_en": "grandfather, male senior citizen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "grand-père, homme âgé, vieillard",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1225,8 +1225,8 @@
     "terme": "教える",
     "lecture": "おしえる",
     "sens_en": "to teach, to inform, to instruct",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "enseigner, indiquer, informer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1236,8 +1236,8 @@
     "terme": "押す",
     "lecture": "おす",
     "sens_en": "to push, to press, to stamp (e.g., a passport)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "appuyer, pousser, tamponner",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1247,8 +1247,8 @@
     "terme": "遅い",
     "lecture": "おそい",
     "sens_en": "slow; (to be) late",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tard, tardif ; lent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1258,8 +1258,8 @@
     "terme": "お茶",
     "lecture": "おちゃ",
     "sens_en": "(green) tea",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "thé (vert)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1269,8 +1269,8 @@
     "terme": "お手洗い",
     "lecture": "おてあらい",
     "sens_en": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "WC publics, toilettes",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1280,8 +1280,8 @@
     "terme": "お父さん",
     "lecture": "おとうさん",
     "sens_en": "father (formal)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "père, papa",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1291,8 +1291,8 @@
     "terme": "弟",
     "lecture": "おとうと",
     "sens_en": "younger brother",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "petit frère",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1302,8 +1302,8 @@
     "terme": "男",
     "lecture": "おとこ",
     "sens_en": "man, male",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "homme, mâle",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1313,8 +1313,8 @@
     "terme": "男の子",
     "lecture": "おとこのこ",
     "sens_en": "boy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "garçon, jeune garçon",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1324,8 +1324,8 @@
     "terme": "一昨日",
     "lecture": "おととい",
     "sens_en": "the day before yesterday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "avant-hier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1335,8 +1335,8 @@
     "terme": "おととし",
     "lecture": "おととし",
     "sens_en": "year before last",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "il y a 2 ans",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1346,8 +1346,8 @@
     "terme": "大人",
     "lecture": "おとな",
     "sens_en": "adult",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "adulte",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1357,8 +1357,8 @@
     "terme": "お腹",
     "lecture": "おなか",
     "sens_en": "stomach",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ventre, estomac",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1368,8 +1368,8 @@
     "terme": "同じ",
     "lecture": "おなじ",
     "sens_en": "same, identical",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "\"la même chose\", égal, équivalent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1379,8 +1379,8 @@
     "terme": "お兄さん",
     "lecture": "おにいさん",
     "sens_en": "(someone else's) older brother (formal)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "frère aîné",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1390,8 +1390,8 @@
     "terme": "お姉さん",
     "lecture": "おねえさん",
     "sens_en": "older sister (formal)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sœur aînée",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1401,8 +1401,8 @@
     "terme": "伯母さん; 叔母さん",
     "lecture": "おばさん",
     "sens_en": "aunt",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tante, dame, (hon) tante",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1412,8 +1412,8 @@
     "terme": "おばあさん",
     "lecture": "おばあさん",
     "sens_en": "grandmother, female senior-citizen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "femme âgée, grand'mère",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1423,8 +1423,8 @@
     "terme": "お風呂",
     "lecture": "おふろ",
     "sens_en": "a bath",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bain",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1434,8 +1434,8 @@
     "terme": "お弁当",
     "lecture": "おべんとう",
     "sens_en": "a boxed lunch",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bento, panier repas japonais",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1445,8 +1445,8 @@
     "terme": "覚える",
     "lecture": "おぼえる",
     "sens_en": "to learn, to commit to memory, to remember, to memorize",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "apprendre, mémoriser, se rappeler",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1456,8 +1456,8 @@
     "terme": "おまわりさん",
     "lecture": "おまわりさん",
     "sens_en": "policeman (friendly term)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "policier (terme amical)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1467,8 +1467,8 @@
     "terme": "重い",
     "lecture": "おもい",
     "sens_en": "heavy; serious",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lourd ; grave, important, sérieux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1478,8 +1478,8 @@
     "terme": "面白い",
     "lecture": "おもしろい",
     "sens_en": "interesting, amusing",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "amusant, bizarre, intéressant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1489,8 +1489,8 @@
     "terme": "泳ぐ",
     "lecture": "およぐ",
     "sens_en": "to swim",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nager",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1500,8 +1500,8 @@
     "terme": "降りる",
     "lecture": "おりる",
     "sens_en": "to get off",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "descendre (d'un bus, un escalier)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1511,8 +1511,8 @@
     "terme": "終る",
     "lecture": "おわる",
     "sens_en": "to finish, to close",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "finir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1522,8 +1522,8 @@
     "terme": "音楽",
     "lecture": "おんがく",
     "sens_en": "Music",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "musique",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1533,8 +1533,8 @@
     "terme": "女",
     "lecture": "おんな",
     "sens_en": "woman, female",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "femme",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1544,8 +1544,8 @@
     "terme": "女の子",
     "lecture": "おんなのこ",
     "sens_en": "girl",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fille, petite fille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1555,8 +1555,8 @@
     "terme": "～回",
     "lecture": "～かい",
     "sens_en": "counter for occurrences (~ times)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "-fois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1566,8 +1566,8 @@
     "terme": "～階",
     "lecture": "～かい",
     "sens_en": "counter for stories (floors) of a building",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "-étage (compteur), niveaux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1577,8 +1577,8 @@
     "terme": "外国",
     "lecture": "がいこく",
     "sens_en": "foreign country; abroad",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "l'étranger, pays étranger",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1588,8 +1588,8 @@
     "terme": "外国人",
     "lecture": "がいこくじん",
     "sens_en": "foreigner",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étranger",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1599,8 +1599,8 @@
     "terme": "会社",
     "lecture": "かいしゃ",
     "sens_en": "company, corporation",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "compagnie, entreprise, société",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1610,8 +1610,8 @@
     "terme": "階段",
     "lecture": "かいだん",
     "sens_en": "stairs",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "escaliers",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1621,8 +1621,8 @@
     "terme": "買い物",
     "lecture": "かいもの",
     "sens_en": "shopping",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "achats, shopping",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1632,8 +1632,8 @@
     "terme": "買う",
     "lecture": "かう",
     "sens_en": "to buy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "acheter",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1643,8 +1643,8 @@
     "terme": "返す",
     "lecture": "かえす",
     "sens_en": "to return something",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rendre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1654,8 +1654,8 @@
     "terme": "帰る",
     "lecture": "かえる",
     "sens_en": "to go back, to go home, to return",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rentrer, retourner",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1665,8 +1665,8 @@
     "terme": "顔",
     "lecture": "かお",
     "sens_en": "face (body part)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "face, figure, visage",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1676,8 +1676,8 @@
     "terme": "かかる",
     "lecture": "かかる",
     "sens_en": "it takes (amount of time, money) (v.i.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être accroché(?), pendre (de qqch.)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1687,8 +1687,8 @@
     "terme": "鍵",
     "lecture": "かぎ",
     "sens_en": "a lock; a key",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "clé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1698,8 +1698,8 @@
     "terme": "書く",
     "lecture": "かく",
     "sens_en": "to write",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "écrire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1709,8 +1709,8 @@
     "terme": "学生",
     "lecture": "がくせい",
     "sens_en": "student",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "élève, étudiant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1720,8 +1720,8 @@
     "terme": "～か月",
     "lecture": "～かげつ",
     "sens_en": "(number of) months",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(nombre de) mois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1731,8 +1731,8 @@
     "terme": "掛ける",
     "lecture": "かける",
     "sens_en": "to put on (e.g., glasses); to hang (e.g., on a wall)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "accrocher, asseoir, construire ; s'asseoir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1742,8 +1742,8 @@
     "terme": "かける",
     "lecture": "かける",
     "sens_en": "to dial/call (e.g., phone); to sit down",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "accrocher, asseoir, construire ; s'asseoir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1753,8 +1753,8 @@
     "terme": "傘",
     "lecture": "かさ",
     "sens_en": "umbrella, parasol",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "parapluie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1764,8 +1764,8 @@
     "terme": "貸す",
     "lecture": "かす",
     "sens_en": "to lend",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "faire crédit à quelqu'un, louer, prêter",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1775,8 +1775,8 @@
     "terme": "風",
     "lecture": "かぜ",
     "sens_en": "wind, breeze",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "brise, vent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1786,8 +1786,8 @@
     "terme": "風邪",
     "lecture": "かぜ",
     "sens_en": "cold, flu",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "grippe, refroidissement, rhume",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1797,8 +1797,8 @@
     "terme": "方",
     "lecture": "かた",
     "sens_en": "-- honorific form for 人 (ひと) --; way of doing",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "direction, sens ; personne, dame, monsieur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1808,8 +1808,8 @@
     "terme": "家族",
     "lecture": "かぞく",
     "sens_en": "family, members of a family",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "famille, membre de la famille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1819,8 +1819,8 @@
     "terme": "片仮名",
     "lecture": "かたかな",
     "sens_en": "katakana",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "katakana (syllabaire japonais)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1830,8 +1830,8 @@
     "terme": "～月",
     "lecture": "～がつ",
     "sens_en": "month of year",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mois (de l’année)",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -1841,8 +1841,8 @@
     "terme": "学校",
     "lecture": "がっこう",
     "sens_en": "a school",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "école",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1852,8 +1852,8 @@
     "terme": "カップ",
     "lecture": "カップ",
     "sens_en": "cup",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bol, coupe, tasse",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1863,8 +1863,8 @@
     "terme": "家庭",
     "lecture": "かてい",
     "sens_en": "home; family",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(sa) famille, (sa) maison",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1874,8 +1874,8 @@
     "terme": "角",
     "lecture": "かど",
     "sens_en": "corner (e.g., desk, pavement)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "coin ; bord, rebord",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1885,8 +1885,8 @@
     "terme": "かばん",
     "lecture": "かばん",
     "sens_en": "bag, basket",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cartable, panier, sac",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1896,8 +1896,8 @@
     "terme": "花瓶",
     "lecture": "かびん",
     "sens_en": "(flower) vase",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vase (à fleurs)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1907,8 +1907,8 @@
     "terme": "かぶる",
     "lecture": "かぶる",
     "sens_en": "to wear, to put on (e.g., a hat on the head)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mettre, porter, se couvrir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1918,8 +1918,8 @@
     "terme": "紙",
     "lecture": "かみ",
     "sens_en": "paper",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "papier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1929,8 +1929,8 @@
     "terme": "カメラ",
     "lecture": "カメラ",
     "sens_en": "camera",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "appareil photo",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1940,8 +1940,8 @@
     "terme": "火曜日",
     "lecture": "かようび",
     "sens_en": "Tuesday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "Mardi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1951,8 +1951,8 @@
     "terme": "辛い",
     "lecture": "からい",
     "sens_en": "hot and spicy; salty",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "épicé, piquant, relevé ; acerbe, sévère (envers quelqu'un)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1962,8 +1962,8 @@
     "terme": "体",
     "lecture": "からだ",
     "sens_en": "body; health",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "corps (physique), santé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1973,8 +1973,8 @@
     "terme": "借りる",
     "lecture": "かりる",
     "sens_en": "to borrow, to owe",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "emprunter, louer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1984,8 +1984,8 @@
     "terme": "～がる",
     "lecture": "～がる",
     "sens_en": "feel",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "montrer des signes de, sentir, penser ; se comporter comme si, prétendre, faire semblant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -1995,8 +1995,8 @@
     "terme": "軽い",
     "lecture": "かるい",
     "sens_en": "light, non-serious, minor",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "léger, mineur, peu sérieux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2006,8 +2006,8 @@
     "terme": "カレー",
     "lecture": "カレー",
     "sens_en": "curry (abbr. for curry and rice)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "curry",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2017,8 +2017,8 @@
     "terme": "カレンダー",
     "lecture": "カレンダー",
     "sens_en": "calendar",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "calendrier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2028,8 +2028,8 @@
     "terme": "川; 河",
     "lecture": "かわ",
     "sens_en": "river",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cours d'eau, fleuve, rivière",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2039,8 +2039,8 @@
     "terme": "～側",
     "lecture": "～がわ",
     "sens_en": "~ side",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "alentour, côté, ligne",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2050,8 +2050,8 @@
     "terme": "可愛い",
     "lecture": "かわいい",
     "sens_en": "cute, adorable",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "charmant(e), chou, mignon(ne)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2061,8 +2061,8 @@
     "terme": "漢字",
     "lecture": "かんじ",
     "sens_en": "kanji; Chinese character",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "caractères sino-japonais",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2072,8 +2072,8 @@
     "terme": "木",
     "lecture": "き",
     "sens_en": "tree, wood, timber",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "arbre ; bois (matière)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2083,8 +2083,8 @@
     "terme": "黄色",
     "lecture": "きいろ",
     "sens_en": "yellow",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jaune",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2094,8 +2094,8 @@
     "terme": "黄色い",
     "lecture": "きいろい",
     "sens_en": "yellow",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jaune",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2105,8 +2105,8 @@
     "terme": "消える",
     "lecture": "きえる",
     "sens_en": "to vanish, to disappear",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "disparaître, s'éteindre, s'évanouir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2116,8 +2116,8 @@
     "terme": "聞く",
     "lecture": "きく",
     "sens_en": "to hear, to listen, to ask",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "écouter, demander, entendre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2127,8 +2127,8 @@
     "terme": "北",
     "lecture": "きた",
     "sens_en": "north",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nord",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2138,8 +2138,8 @@
     "terme": "ギター",
     "lecture": "ギター",
     "sens_en": "guitar",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "guitare",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2149,8 +2149,8 @@
     "terme": "汚い",
     "lecture": "きたない",
     "sens_en": "dirty, unclean, filthy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "malpropre, sale",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2160,8 +2160,8 @@
     "terme": "喫茶店",
     "lecture": "きっさてん",
     "sens_en": "café",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "café (lieu), salon de thé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2171,8 +2171,8 @@
     "terme": "切手",
     "lecture": "きって",
     "sens_en": "postal (postage) stamps",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "timbre (poste)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2182,8 +2182,8 @@
     "terme": "切符",
     "lecture": "きっぷ",
     "sens_en": "a ticket",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "billet, ticket",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2193,8 +2193,8 @@
     "terme": "昨日",
     "lecture": "きのう",
     "sens_en": "yesterday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2204,8 +2204,8 @@
     "terme": "九",
     "lecture": "きゅう",
     "sens_en": "nine",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "neuf (9)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2215,8 +2215,8 @@
     "terme": "牛肉",
     "lecture": "ぎゅうにく",
     "sens_en": "beef",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "viande de bœuf",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2226,8 +2226,8 @@
     "terme": "牛乳",
     "lecture": "ぎゅうにゅう",
     "sens_en": "milk",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lait de vache",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2237,8 +2237,8 @@
     "terme": "今日",
     "lecture": "きょう",
     "sens_en": "today, this day",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aujourd'hui, ce jour",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2248,8 +2248,8 @@
     "terme": "教室",
     "lecture": "きょうしつ",
     "sens_en": "classroom",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "salle de classe",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2259,8 +2259,8 @@
     "terme": "兄弟",
     "lecture": "きょうだい",
     "sens_en": "siblings (humble), brothers and sisters",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "frère, frères et sœurs, fratrie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2270,8 +2270,8 @@
     "terme": "去年",
     "lecture": "きょねん",
     "sens_en": "last year",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "l'année dernière",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2281,8 +2281,8 @@
     "terme": "嫌い",
     "lecture": "きらい",
     "sens_en": "dislike",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "détestable, haissable",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2292,8 +2292,8 @@
     "terme": "切る",
     "lecture": "きる",
     "sens_en": "to cut; to hang up (a phone)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "égoutter, émincer, éteindre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2303,8 +2303,8 @@
     "terme": "着る",
     "lecture": "きる",
     "sens_en": "to put on (clothes above your waist); to wear",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être habillé de, enfiler, mettre ses habits",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2314,8 +2314,8 @@
     "terme": "綺麗",
     "lecture": "きれい",
     "sens_en": "pretty, clean, tidy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beau, joli, propre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2325,8 +2325,8 @@
     "terme": "キロ; キログラム",
     "lecture": "キロ; キログラム",
     "sens_en": "(abbr.) kilo (kilogram)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "kilo, kilogramme",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2336,8 +2336,8 @@
     "terme": "キロ; キロメートル",
     "lecture": "キロ; キロメートル",
     "sens_en": "(abbr.) kilo (kilometer)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "kilo, kilogramme",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2347,8 +2347,8 @@
     "terme": "銀行",
     "lecture": "ぎんこう",
     "sens_en": "bank",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "banque",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2358,8 +2358,8 @@
     "terme": "金曜日",
     "lecture": "きんようび",
     "sens_en": "Friday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vendredi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2369,8 +2369,8 @@
     "terme": "九",
     "lecture": "く",
     "sens_en": "nine",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "neuf (9)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2380,8 +2380,8 @@
     "terme": "薬",
     "lecture": "くすり",
     "sens_en": "medicine",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "médicament",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2391,8 +2391,8 @@
     "terme": "下さい",
     "lecture": "ください",
     "sens_en": "(with te-form verb) please do for me",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "s'il vous plaît (donnez-moi) ; faites (ceci) pour moi s'il vous plaît",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2402,8 +2402,8 @@
     "terme": "果物",
     "lecture": "くだもの",
     "sens_en": "fruit",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fruit",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2413,8 +2413,8 @@
     "terme": "口",
     "lecture": "くち",
     "sens_en": "job opening; mouth",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bouche, orifice, ouverture",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2424,8 +2424,8 @@
     "terme": "靴",
     "lecture": "くつ",
     "sens_en": "shoes, footwear",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaussure",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2435,8 +2435,8 @@
     "terme": "靴下",
     "lecture": "くつした",
     "sens_en": "socks",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaussettes",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2446,8 +2446,8 @@
     "terme": "国",
     "lecture": "くに",
     "sens_en": "country; place of origin",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pays",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2457,8 +2457,8 @@
     "terme": "曇り",
     "lecture": "くもり",
     "sens_en": "cloudiness, cloudy weather",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "couvert, nuageux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2468,8 +2468,8 @@
     "terme": "曇る",
     "lecture": "くもる",
     "sens_en": "to become cloudy, to become dim",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "se couvrir, s'obscurcir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2479,8 +2479,8 @@
     "terme": "暗い",
     "lecture": "くらい",
     "sens_en": "dark, gloomy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sombre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2490,8 +2490,8 @@
     "terme": "～くらい; ぐらい",
     "lecture": "～くらい; ぐらい",
     "sens_en": "approximate (quantity)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sombre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2501,8 +2501,8 @@
     "terme": "クラス",
     "lecture": "クラス",
     "sens_en": "a class",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "classe",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2512,8 +2512,8 @@
     "terme": "グラム",
     "lecture": "グラム",
     "sens_en": "gram",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "gramme",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2523,8 +2523,8 @@
     "terme": "来る",
     "lecture": "くる",
     "sens_en": "to come",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "arriver, atteindre, provenir de",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2534,8 +2534,8 @@
     "terme": "車",
     "lecture": "くるま",
     "sens_en": "car, vehicle",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "véhicule, voiture",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2545,8 +2545,8 @@
     "terme": "黒",
     "lecture": "くろ",
     "sens_en": "black",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "noir ; sombre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2556,8 +2556,8 @@
     "terme": "黒い",
     "lecture": "くろい",
     "sens_en": "black; dark",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "noir ; sombre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2567,8 +2567,8 @@
     "terme": "警官",
     "lecture": "けいかん",
     "sens_en": "police officer",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "policier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2578,8 +2578,8 @@
     "terme": "今朝",
     "lecture": "けさ",
     "sens_en": "this morning",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ce matin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2589,8 +2589,8 @@
     "terme": "消す",
     "lecture": "けす",
     "sens_en": "to erase, to delete, to turn off power",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "éteindre (appareil), effacer, supprimer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2600,8 +2600,8 @@
     "terme": "結構",
     "lecture": "けっこう",
     "sens_en": "splendid; enough, tolerably",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beau, bien, pas mal ; architecture, construction",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2611,8 +2611,8 @@
     "terme": "結婚",
     "lecture": "けっこん (する)",
     "sens_en": "marriage (get married)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mariage",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2622,8 +2622,8 @@
     "terme": "月曜日",
     "lecture": "げつようび",
     "sens_en": "Monday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "Lundi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2633,8 +2633,8 @@
     "terme": "玄関",
     "lecture": "げんかん",
     "sens_en": "entrance (to a house or a building)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "entrée, hall d'entrée, vestibule",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2644,8 +2644,8 @@
     "terme": "元気",
     "lecture": "げんき",
     "sens_en": "health(y), energetic",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "énergie, bonne santé, santé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2655,8 +2655,8 @@
     "terme": "～個",
     "lecture": "～こ",
     "sens_en": "counter for small items (e.g., fruits, cups)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(compteur pour divers objets)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2666,8 +2666,8 @@
     "terme": "五",
     "lecture": "ご",
     "sens_en": "five",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cinq",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2677,8 +2677,8 @@
     "terme": "～語",
     "lecture": "～ご",
     "sens_en": "word, language",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "langue, mot",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2688,8 +2688,8 @@
     "terme": "公園",
     "lecture": "こうえん",
     "sens_en": "a park",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jardin public, parc",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2699,8 +2699,8 @@
     "terme": "交差点",
     "lecture": "こうさてん",
     "sens_en": "intersection",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "croisement, intersection",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2710,8 +2710,8 @@
     "terme": "紅茶",
     "lecture": "こうちゃ",
     "sens_en": "black tea",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "thé noir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2721,8 +2721,8 @@
     "terme": "交番",
     "lecture": "こうばん",
     "sens_en": "police box",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "antenne de police, kiosque de police",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2732,8 +2732,8 @@
     "terme": "声",
     "lecture": "こえ",
     "sens_en": "voice",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "voix",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2743,8 +2743,8 @@
     "terme": "コート",
     "lecture": "コート",
     "sens_en": "coat; court (e.g., tennis)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "court de tennis, manteau",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2754,8 +2754,8 @@
     "terme": "コーヒー",
     "lecture": "コーヒー",
     "sens_en": "coffee",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "café",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2765,8 +2765,8 @@
     "terme": "ここ",
     "lecture": "ここ",
     "sens_en": "here, this place",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cet endroit, ici",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2776,8 +2776,8 @@
     "terme": "午後",
     "lecture": "ごご",
     "sens_en": "afternoon, P.M.",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "après-midi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2787,8 +2787,8 @@
     "terme": "九日",
     "lecture": "ここのか",
     "sens_en": "nine days; ninth day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le neuvième jour du mois, neuf jours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2798,8 +2798,8 @@
     "terme": "九つ",
     "lecture": "ここのつ",
     "sens_en": "nine things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "neuf",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2809,8 +2809,8 @@
     "terme": "午前",
     "lecture": "ごぜん",
     "sens_en": "morning, A.M.",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "matin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2820,8 +2820,8 @@
     "terme": "答える",
     "lecture": "こたえる",
     "sens_en": "to answer, to reply",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "répondre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2831,8 +2831,8 @@
     "terme": "こちら",
     "lecture": "こちら",
     "sens_en": "this person (polite); this way (polite)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "celui-ci, de ce coté-ci, ici",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2842,8 +2842,8 @@
     "terme": "こっち",
     "lecture": "こっち",
     "sens_en": "this person; this direction; this side",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "celui-ci, de ce coté-ci, ici",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2853,8 +2853,8 @@
     "terme": "コップ",
     "lecture": "コップ",
     "sens_en": "a tumbler; a glass",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "verre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2864,8 +2864,8 @@
     "terme": "今年",
     "lecture": "ことし",
     "sens_en": "this year",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cette année",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2875,8 +2875,8 @@
     "terme": "言葉",
     "lecture": "ことば",
     "sens_en": "language; word(s); expression(s)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "langage, mot(s), parole",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2886,8 +2886,8 @@
     "terme": "子供",
     "lecture": "こども",
     "sens_en": "child(ren)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "enfant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2897,8 +2897,8 @@
     "terme": "この",
     "lecture": "この",
     "sens_en": "this",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "neuf (9)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2908,8 +2908,8 @@
     "terme": "御飯",
     "lecture": "ごはん",
     "sens_en": "rice (cooked); meal",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "repas, riz (cuit)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2919,8 +2919,8 @@
     "terme": "コピーする",
     "lecture": "コピーする",
     "sens_en": "to copy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "copie, photocopie ; notice publicitaire en couverture d'un livre, quatrième de couverture",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2930,8 +2930,8 @@
     "terme": "困る",
     "lecture": "こまる",
     "sens_en": "to be bothered, to have difficulty",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être embarrassé, être ennuyé, être géné",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2941,8 +2941,8 @@
     "terme": "これ",
     "lecture": "これ",
     "sens_en": "this one",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ceci",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2952,8 +2952,8 @@
     "terme": "～ころ; ～ごろ",
     "lecture": "～ころ; ～ごろ",
     "sens_en": "about, toward, approximately (time)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aux alentours de (heure), environ",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2963,8 +2963,8 @@
     "terme": "今月",
     "lecture": "こんげつ",
     "sens_en": "this month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ce mois-ci",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2974,8 +2974,8 @@
     "terme": "今週",
     "lecture": "こんしゅう",
     "sens_en": "this week",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cette semaine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2985,8 +2985,8 @@
     "terme": "こんな",
     "lecture": "こんな",
     "sens_en": "such, like this",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cette sorte de, un tel",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -2996,8 +2996,8 @@
     "terme": "今晩",
     "lecture": "こんばん",
     "sens_en": "tonight, this evening",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ce soir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3007,8 +3007,8 @@
     "terme": "さあ",
     "lecture": "さあ",
     "sens_en": "come now, well",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "allez!, va!",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3018,8 +3018,8 @@
     "terme": "～歳",
     "lecture": "～さい",
     "sens_en": "~ years old",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "-ans (âge)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3029,8 +3029,8 @@
     "terme": "財布",
     "lecture": "さいふ",
     "sens_en": "wallet",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bourse, porte-monnaie, portefeuille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3040,8 +3040,8 @@
     "terme": "魚",
     "lecture": "さかな",
     "sens_en": "fish",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "poisson",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3051,8 +3051,8 @@
     "terme": "先",
     "lecture": "さき",
     "sens_en": "future; recent, previous",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "avant, précédent ; bout (de ligne), pointe (crayon)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3062,8 +3062,8 @@
     "terme": "咲く",
     "lecture": "さく",
     "sens_en": "to bloom",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fleurir, s'épanouir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3073,8 +3073,8 @@
     "terme": "作文",
     "lecture": "さくぶん",
     "sens_en": "essay; composition",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "écriture, composition",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3084,8 +3084,8 @@
     "terme": "差す",
     "lecture": "さす",
     "sens_en": "to raise (stretch out) hands, to raise (e.g., umbrella)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "faire apparaitre (?), lever les mains, sortir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3095,8 +3095,8 @@
     "terme": "～冊",
     "lecture": "～さつ",
     "sens_en": "counter for books",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tome, volume ; compteur de livres",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3106,8 +3106,8 @@
     "terme": "雑誌",
     "lecture": "ざっし",
     "sens_en": "magazine, journal",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "magazine, périodique, revue",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3117,8 +3117,8 @@
     "terme": "砂糖",
     "lecture": "さとう",
     "sens_en": "sugar",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sucre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3128,8 +3128,8 @@
     "terme": "寒い",
     "lecture": "さむい",
     "sens_en": "cold (in reference to weather)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "froid (temps,...)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3139,8 +3139,8 @@
     "terme": "さ来年",
     "lecture": "さらいねん",
     "sens_en": "year after next",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dans deux ans",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3150,8 +3150,8 @@
     "terme": "～さん",
     "lecture": "～さん",
     "sens_en": "Mr. ~, Ms. ~",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "Mme, Mr",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3161,8 +3161,8 @@
     "terme": "三",
     "lecture": "さん",
     "sens_en": "three",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "trois (3)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3172,8 +3172,8 @@
     "terme": "散歩",
     "lecture": "さんぽ (する)",
     "sens_en": "walk, stroll",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "promenade",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3183,8 +3183,8 @@
     "terme": "四",
     "lecture": "し",
     "sens_en": "four",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quatre (4)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3194,8 +3194,8 @@
     "terme": "～時",
     "lecture": "～じ",
     "sens_en": "~ o'clock (time)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "temps (spécifié), quand..., durant...",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3205,8 +3205,8 @@
     "terme": "塩",
     "lecture": "しお",
     "sens_en": "salt",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sel",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3216,8 +3216,8 @@
     "terme": "しかし",
     "lecture": "しかし",
     "sens_en": "however; but",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cependant, mais, néanmoins",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3227,8 +3227,8 @@
     "terme": "時間",
     "lecture": "じかん",
     "sens_en": "time",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "temps",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3238,8 +3238,8 @@
     "terme": "～時間",
     "lecture": "～じかん",
     "sens_en": "~ hours",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "temps",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3249,8 +3249,8 @@
     "terme": "仕事",
     "lecture": "しごと",
     "sens_en": "work, job, occupation, employment",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "emploi, occupation, travail",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3260,8 +3260,8 @@
     "terme": "辞書",
     "lecture": "じしょ",
     "sens_en": "dictionary",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dictionnaire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3271,8 +3271,8 @@
     "terme": "静か",
     "lecture": "しずか",
     "sens_en": "quiet, calm",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "calme, silencieux, tranquille, paisible",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3282,8 +3282,8 @@
     "terme": "下",
     "lecture": "した",
     "sens_en": "under, below, beneath",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "en-dessous, inférieur, sous",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3293,8 +3293,8 @@
     "terme": "七",
     "lecture": "しち",
     "sens_en": "seven",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sept",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3304,8 +3304,8 @@
     "terme": "質問",
     "lecture": "しつもん",
     "sens_en": "question, inquiry",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "demande, question, requête",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3315,8 +3315,8 @@
     "terme": "自転車",
     "lecture": "じてんしゃ",
     "sens_en": "bicycle",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bicyclette, vélo",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3326,8 +3326,8 @@
     "terme": "自動車",
     "lecture": "じどうしゃ",
     "sens_en": "automobile",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "automobile, voiture",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3337,8 +3337,8 @@
     "terme": "死ぬ",
     "lecture": "しぬ",
     "sens_en": "to die",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mourir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3348,8 +3348,8 @@
     "terme": "字引",
     "lecture": "じびき",
     "sens_en": "dictionary",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dictionnaire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3359,8 +3359,8 @@
     "terme": "自分",
     "lecture": "じぶん",
     "sens_en": "myself, oneself",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "moi-même, soi-même",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3370,8 +3370,8 @@
     "terme": "閉まる",
     "lecture": "しまる",
     "sens_en": "to close, to be closed",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(se) fermer, devenir ferme, sérieux, responsable, verrouiller",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3381,8 +3381,8 @@
     "terme": "閉める",
     "lecture": "しめる",
     "sens_en": "to close, to shut",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fermer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3392,8 +3392,8 @@
     "terme": "締める",
     "lecture": "しめる",
     "sens_en": "to tie, to fasten, to tighten",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "attacher, lier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3403,8 +3403,8 @@
     "terme": "じゃ; じゃあ",
     "lecture": "じゃ; じゃあ",
     "sens_en": "well, well then",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bien, bon",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3414,8 +3414,8 @@
     "terme": "写真",
     "lecture": "しゃしん",
     "sens_en": "a picture; a photograph",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "photographie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3425,8 +3425,8 @@
     "terme": "シャツ",
     "lecture": "シャツ",
     "sens_en": "shirt",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chemise, maillot de corps",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3436,8 +3436,8 @@
     "terme": "シャワー",
     "lecture": "シャワー",
     "sens_en": "shower",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "douche",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3447,8 +3447,8 @@
     "terme": "十",
     "lecture": "じゅう",
     "sens_en": "ten",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dix (10), le chiffre dix (utilisé dans les documents officiels)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3458,8 +3458,8 @@
     "terme": "～中",
     "lecture": "～じゅう",
     "sens_en": "during, while",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "animal, bête.",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3469,8 +3469,8 @@
     "terme": "～週間",
     "lecture": "～しゅうかん",
     "sens_en": "~ weeks",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hebdomadaire, semaine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3480,8 +3480,8 @@
     "terme": "授業",
     "lecture": "じゅぎょう",
     "sens_en": "a class (of school)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cours, leçon",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3491,8 +3491,8 @@
     "terme": "宿題",
     "lecture": "しゅくだい",
     "sens_en": "homework",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "devoirs (d'école)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3502,8 +3502,8 @@
     "terme": "上手",
     "lecture": "じょうず",
     "sens_en": "be good at, skillful",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "adroit, bon, doué",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3513,8 +3513,8 @@
     "terme": "丈夫",
     "lecture": "じょうぶ",
     "sens_en": "strong, solid, durable",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "gentilhomme, guerrier, héros ; bonne santé, durable, fort",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3524,8 +3524,8 @@
     "terme": "醤油",
     "lecture": "しょうゆ",
     "sens_en": "soy sauce",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sauce soja",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3535,8 +3535,8 @@
     "terme": "食堂",
     "lecture": "しょくどう",
     "sens_en": "cafeteria, dining hall",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cafétéria, restaurant, salle à manger",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3546,8 +3546,8 @@
     "terme": "知る",
     "lecture": "しる",
     "sens_en": "to know, to understand",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "connaître, savoir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3557,8 +3557,8 @@
     "terme": "白",
     "lecture": "しろ",
     "sens_en": "white",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "blanc",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3568,8 +3568,8 @@
     "terme": "白い",
     "lecture": "しろい",
     "sens_en": "white",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "blanc",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3579,8 +3579,8 @@
     "terme": "～人",
     "lecture": "～じん",
     "sens_en": "counter for people",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être humain, homme, personne",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3590,8 +3590,8 @@
     "terme": "新聞",
     "lecture": "しんぶん",
     "sens_en": "newspaper",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "journal",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3601,8 +3601,8 @@
     "terme": "水曜日",
     "lecture": "すいようび",
     "sens_en": "Wednesday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mercredi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3612,8 +3612,8 @@
     "terme": "吸う",
     "lecture": "すう",
     "sens_en": "to breathe in, to suck",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aspirer, fumer, sucer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3623,8 +3623,8 @@
     "terme": "スカート",
     "lecture": "スカート",
     "sens_en": "skirt",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jupe",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3634,8 +3634,8 @@
     "terme": "好き",
     "lecture": "すき",
     "sens_en": "liking, fondness, love",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aimé, apprecié, penchant pour",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3645,8 +3645,8 @@
     "terme": "～すぎ",
     "lecture": "～すぎ",
     "sens_en": "past; to exceed, ~ too much",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "après, passé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3656,8 +3656,8 @@
     "terme": "少ない",
     "lecture": "すくない",
     "sens_en": "a little; a few",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "insuffisant, rare, un petit nombre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3667,8 +3667,8 @@
     "terme": "すぐに",
     "lecture": "すぐに",
     "sens_en": "immediately, soon",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aussitôt, immédiatement, sur le champ",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3678,8 +3678,8 @@
     "terme": "少し",
     "lecture": "すこし",
     "sens_en": "little, few",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "un peu, une petite quantité ; un instant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3689,8 +3689,8 @@
     "terme": "涼しい",
     "lecture": "すずしい",
     "sens_en": "cool, refreshing (in reference to weather)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "frais, rafraîchissant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3700,8 +3700,8 @@
     "terme": "～ずつ",
     "lecture": "～ずつ",
     "sens_en": "at a time",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaque",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3711,8 +3711,8 @@
     "terme": "ストーブ",
     "lecture": "ストーブ",
     "sens_en": "heater (lit: stove)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chauffage (lit. poêle), radiateur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3722,8 +3722,8 @@
     "terme": "スプーン",
     "lecture": "スプーン",
     "sens_en": "spoon",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cuillère, cuiller",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3733,8 +3733,8 @@
     "terme": "スポーツ",
     "lecture": "スポーツ",
     "sens_en": "sport(s)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sport",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3744,8 +3744,8 @@
     "terme": "ズボン",
     "lecture": "ズボン",
     "sens_en": "trousers",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pantalon",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3755,8 +3755,8 @@
     "terme": "住む",
     "lecture": "すむ",
     "sens_en": "to reside, to live in",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "habiter, résider, vivre(à)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3766,8 +3766,8 @@
     "terme": "する",
     "lecture": "する",
     "sens_en": "to do, to try; to wear small items (e.g., necktie, watch, etc.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "coûter, essayer, faire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3777,8 +3777,8 @@
     "terme": "座る",
     "lecture": "すわる",
     "sens_en": "to sit",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "s'asseoir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3788,8 +3788,8 @@
     "terme": "背",
     "lecture": "せい",
     "sens_en": "(one's) height, stature",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "stature, taille (d'une personne)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3799,8 +3799,8 @@
     "terme": "生徒",
     "lecture": "せいと",
     "sens_en": "student; pupil",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "élève",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3810,8 +3810,8 @@
     "terme": "セーター",
     "lecture": "セーター",
     "sens_en": "sweater",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pull-over, tricot (sweater)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3821,8 +3821,8 @@
     "terme": "石鹸",
     "lecture": "せっけん",
     "sens_en": "soap",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "savon",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3832,8 +3832,8 @@
     "terme": "背広",
     "lecture": "せびろ",
     "sens_en": "men's suit",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "costume (pour homme)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3843,8 +3843,8 @@
     "terme": "狭い",
     "lecture": "せまい",
     "sens_en": "narrow; not spacious",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étroit, confiné, petit",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3854,8 +3854,8 @@
     "terme": "ゼロ",
     "lecture": "ゼロ",
     "sens_en": "zero",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "zéro",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3865,8 +3865,8 @@
     "terme": "千",
     "lecture": "せん",
     "sens_en": "thousand",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "1000, mille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3876,8 +3876,8 @@
     "terme": "先月",
     "lecture": "せんげつ",
     "sens_en": "last month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le mois passé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3887,8 +3887,8 @@
     "terme": "先週",
     "lecture": "せんしゅう",
     "sens_en": "last week",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "la semaine passée",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3898,8 +3898,8 @@
     "terme": "先生",
     "lecture": "せんせい",
     "sens_en": "teacher, professor; master; doctor",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "instituteur, maître, professeur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3909,8 +3909,8 @@
     "terme": "洗濯",
     "lecture": "せんたく",
     "sens_en": "washing, laundry",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "blanchissage, lavage, lessive",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3920,8 +3920,8 @@
     "terme": "全部",
     "lecture": "ぜんぶ",
     "sens_en": "all, entire, whole",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "entièrement, intégralité, totalité",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3931,8 +3931,8 @@
     "terme": "そう; そうです",
     "lecture": "そう; そうです",
     "sens_en": "yes; appears, to be the case",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ainsi, comme cela, oui",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3942,8 +3942,8 @@
     "terme": "掃除",
     "lecture": "そうじ (する)",
     "sens_en": "cleaning, sweeping",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "balayage, nettoyage",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3953,8 +3953,8 @@
     "terme": "そうして; そして",
     "lecture": "そうして; そして",
     "sens_en": "and, like that",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ensuite, et, puis",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3964,8 +3964,8 @@
     "terme": "そこ",
     "lecture": "そこ",
     "sens_en": "that place, there; bottom, sole",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "là (lieu relativement proche de l'auditeur) ; là (lieu qui vient d'être cité), cet endroit",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3975,8 +3975,8 @@
     "terme": "そちら",
     "lecture": "そちら",
     "sens_en": "over there",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ce coté là, là, par là",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3986,8 +3986,8 @@
     "terme": "そっち",
     "lecture": "そっち",
     "sens_en": "over there",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ce coté là, là, par là",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -3997,8 +3997,8 @@
     "terme": "外",
     "lecture": "そと",
     "sens_en": "outside, exterior",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "à l'extérieur, extérieur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4008,8 +4008,8 @@
     "terme": "その",
     "lecture": "その",
     "sens_en": "that",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ça (quelque chose ou quelqu'un éloigné de l'orateur, proche de l'auditeur ; actions de l'auditeur, ou les idées exprimées ou comprises par l'auditeur) ; hum..., euh...",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4019,8 +4019,8 @@
     "terme": "そば",
     "lecture": "そば",
     "sens_en": "near, close, beside; Japanese traditional buckwheat noodle",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "soba (nouilles de sarasin)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4030,8 +4030,8 @@
     "terme": "空",
     "lecture": "そら",
     "sens_en": "sky",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ciel",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4041,8 +4041,8 @@
     "terme": "それ",
     "lecture": "それ",
     "sens_en": "that one",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ça, ceci, cela",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4052,8 +4052,8 @@
     "terme": "それから",
     "lecture": "それから",
     "sens_en": "and then, after that",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ensuite, et puis, puis",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4063,8 +4063,8 @@
     "terme": "それでは",
     "lecture": "それでは",
     "sens_en": "in that situation, well then...",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "alors, dans ce cas, eh bien",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4074,8 +4074,8 @@
     "terme": "～台",
     "lecture": "～だい",
     "sens_en": "counter for vehicles; machines",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "piédestal, socle, support",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4085,8 +4085,8 @@
     "terme": "大学",
     "lecture": "だいがく",
     "sens_en": "college; university",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "université",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4096,8 +4096,8 @@
     "terme": "大使館",
     "lecture": "たいしかん",
     "sens_en": "embassy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ambassade",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4107,8 +4107,8 @@
     "terme": "大丈夫",
     "lecture": "だいじょうぶ",
     "sens_en": "It's ok (all right); No need to worry; Everything is under control",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "OK, digne de confiance, en sécurité",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4118,8 +4118,8 @@
     "terme": "大好き",
     "lecture": "だいすき",
     "sens_en": "very like-able, like very much",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être fou de quelqu'un (quelque chose), aimer le plus quelque chose",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4129,8 +4129,8 @@
     "terme": "大切",
     "lecture": "たいせつ",
     "sens_en": "important",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "important",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4140,8 +4140,8 @@
     "terme": "台所",
     "lecture": "だいどころ",
     "sens_en": "kitchen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cuisine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4151,8 +4151,8 @@
     "terme": "大変",
     "lecture": "たいへん",
     "sens_en": "very; difficult, hard",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "énorme, extrême, extraordinaire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4162,8 +4162,8 @@
     "terme": "高い",
     "lecture": "たかい",
     "sens_en": "tall, high; expensive",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "élevé, cher, grand",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4173,8 +4173,8 @@
     "terme": "～だけ",
     "lecture": "～だけ",
     "sens_en": "only ~, just ~, as ~",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "seulement, juste, uniquement ; que (par ex. aussitôt que, autant que)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4184,8 +4184,8 @@
     "terme": "沢山",
     "lecture": "たくさん",
     "sens_en": "many, much",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beaucoup",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4195,8 +4195,8 @@
     "terme": "タクシー",
     "lecture": "タクシー",
     "sens_en": "taxi",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "taxi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4206,8 +4206,8 @@
     "terme": "出す",
     "lecture": "だす",
     "sens_en": "to take (something) out; to hand in (something)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "envoyer (par la poste), sortir (quelque chose de son sac), tirer (la langue)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4217,8 +4217,8 @@
     "terme": "～たち",
     "lecture": "～たち",
     "sens_en": "plural suffix",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "longue épée, épée longue",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4228,8 +4228,8 @@
     "terme": "立つ",
     "lecture": "たつ",
     "sens_en": "to stand up",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être érigé, être dressé, être levé ; démarrer, partir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4239,8 +4239,8 @@
     "terme": "たて",
     "lecture": "たて",
     "sens_en": "length, height",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hauteur, longueur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4250,8 +4250,8 @@
     "terme": "建物",
     "lecture": "たてもの",
     "sens_en": "building",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "immeuble",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4261,8 +4261,8 @@
     "terme": "楽しい",
     "lecture": "たのしい",
     "sens_en": "enjoyable, fun",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "agréable, heureux, joyeux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4272,8 +4272,8 @@
     "terme": "頼む",
     "lecture": "たのむ",
     "sens_en": "to request, to ask (a favor)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "demander, prier, supplier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4283,8 +4283,8 @@
     "terme": "たばこ",
     "lecture": "たばこ",
     "sens_en": "tobacco, cigarettes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cigarettes, tabac",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4294,8 +4294,8 @@
     "terme": "多分",
     "lecture": "たぶん",
     "sens_en": "perhaps, probably, maybe",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "peut-être, probablement",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4305,8 +4305,8 @@
     "terme": "食べ物",
     "lecture": "たべもの",
     "sens_en": "food",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nourriture",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4316,8 +4316,8 @@
     "terme": "食べる",
     "lecture": "たべる",
     "sens_en": "to eat",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "manger",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4327,8 +4327,8 @@
     "terme": "卵",
     "lecture": "たまご",
     "sens_en": "egg",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "œuf(s), œufs de poisson ; (un expert) en devenir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4338,8 +4338,8 @@
     "terme": "誰",
     "lecture": "だれ",
     "sens_en": "who",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "qui",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4349,8 +4349,8 @@
     "terme": "誰か",
     "lecture": "だれか",
     "sens_en": "someone",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quelqu'un",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4360,8 +4360,8 @@
     "terme": "誕生日",
     "lecture": "たんじょうび",
     "sens_en": "birthday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(jour) anniversaire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4371,8 +4371,8 @@
     "terme": "段々",
     "lecture": "だんだん",
     "sens_en": "gradually, by degrees",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "par étapes, petit à petit, progressivement",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4382,8 +4382,8 @@
     "terme": "小さい",
     "lecture": "ちいさい",
     "sens_en": "small, little",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "petit",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4393,8 +4393,8 @@
     "terme": "小さな",
     "lecture": "ちいさな",
     "sens_en": "small, little",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "petit, minuscule",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4404,8 +4404,8 @@
     "terme": "近い",
     "lecture": "ちかい",
     "sens_en": "near, close by, short",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "près, près de",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4415,8 +4415,8 @@
     "terme": "違う",
     "lecture": "ちがう",
     "sens_en": "to be different; to differ; wrong",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être différent, différer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4426,8 +4426,8 @@
     "terme": "近く",
     "lecture": "ちかく",
     "sens_en": "nearby; in the neighborhood",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "alentours, voisinage",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4437,8 +4437,8 @@
     "terme": "地下鉄",
     "lecture": "ちかてつ",
     "sens_en": "underground train, subway",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "métro, métropolitain",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4448,8 +4448,8 @@
     "terme": "地図",
     "lecture": "ちず",
     "sens_en": "a map",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "carte, plan",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4459,8 +4459,8 @@
     "terme": "父",
     "lecture": "ちち",
     "sens_en": "(my) father",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "père",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4470,8 +4470,8 @@
     "terme": "茶色",
     "lecture": "ちゃいろ",
     "sens_en": "brown",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "brun, marron",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4481,8 +4481,8 @@
     "terme": "茶碗",
     "lecture": "ちゃわん",
     "sens_en": "rice bowl",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bol, tasse",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4492,8 +4492,8 @@
     "terme": "～中",
     "lecture": "～ちゅう",
     "sens_en": "during, while ~ing",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "entier, intérieur, milieu",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4503,8 +4503,8 @@
     "terme": "丁度",
     "lecture": "ちょうど",
     "sens_en": "just, right, exactly",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "exact, juste",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4514,8 +4514,8 @@
     "terme": "ちょっと",
     "lecture": "ちょっと",
     "sens_en": "a little, somewhat; just a little, somewhat",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "un instant, un moment, un peu",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4525,8 +4525,8 @@
     "terme": "一日",
     "lecture": "ついたち",
     "sens_en": "one day; first day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le premier du mois ; les dix premiers jours du mois lunaire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4536,8 +4536,8 @@
     "terme": "使う",
     "lecture": "つかう",
     "sens_en": "to use",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "consommer, employer, manier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4547,8 +4547,8 @@
     "terme": "疲れる",
     "lecture": "つかれる",
     "sens_en": "to get (become) tired; to become fatigued",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être fatigué",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4558,8 +4558,8 @@
     "terme": "次",
     "lecture": "つぎ",
     "sens_en": "next",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "suivant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4569,8 +4569,8 @@
     "terme": "着く",
     "lecture": "つく",
     "sens_en": "to arrive at, to reach",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "arriver à, atteindre, parvenir à",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4580,8 +4580,8 @@
     "terme": "机",
     "lecture": "つくえ",
     "sens_en": "desk",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bureau",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4591,8 +4591,8 @@
     "terme": "作る",
     "lecture": "つくる",
     "sens_en": "to make, to create",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "élaborer, établir, ajuster",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4602,8 +4602,8 @@
     "terme": "つける",
     "lecture": "つける",
     "sens_en": "to turn on (e.g., a light); to take",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "placer, poser",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4613,8 +4613,8 @@
     "terme": "勤める",
     "lecture": "つとめる",
     "sens_en": "to work (for)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "travailler (pour), être employé (par), servir (dans l'armée par ex.) ; servir (en tant que), agir (en tant que), assurer (le poste de)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4624,8 +4624,8 @@
     "terme": "つまらない",
     "lecture": "つまらない",
     "sens_en": "boring, dull; insignificant",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ennuyeux, insignifiant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4635,8 +4635,8 @@
     "terme": "冷たい",
     "lecture": "つめたい",
     "sens_en": "cold (things, people)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "froid, glacial ; cœur froid, cœur sec",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4646,8 +4646,8 @@
     "terme": "強い",
     "lecture": "つよい",
     "sens_en": "strong, powerful",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fort, puissant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4657,8 +4657,8 @@
     "terme": "手",
     "lecture": "て",
     "sens_en": "hand",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "main",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4668,8 +4668,8 @@
     "terme": "テープ",
     "lecture": "テープ",
     "sens_en": "tape",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bande magnétique, cassette (audio)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4679,8 +4679,8 @@
     "terme": "テープレコーダー",
     "lecture": "テープレコーダー",
     "sens_en": "tape recorder",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "magnétophone",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4690,8 +4690,8 @@
     "terme": "テーブル",
     "lecture": "テーブル",
     "sens_en": "table",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "table",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4701,8 +4701,8 @@
     "terme": "出かける",
     "lecture": "でかける",
     "sens_en": "to go out; to depart",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "partir, sortir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4712,8 +4712,8 @@
     "terme": "手紙",
     "lecture": "てがみ",
     "sens_en": "letter",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lettre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4723,8 +4723,8 @@
     "terme": "できる",
     "lecture": "できる",
     "sens_en": "to be able to (to accomplish)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "possible (forme potentielle de \"suru\")",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4734,8 +4734,8 @@
     "terme": "出口",
     "lecture": "でぐち",
     "sens_en": "an exit",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fuite, orifice, passerelle",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4745,8 +4745,8 @@
     "terme": "テスト",
     "lecture": "テスト",
     "sens_en": "test",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "épreuve, essai, examen",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4756,8 +4756,8 @@
     "terme": "では",
     "lecture": "では",
     "sens_en": "then, well, so",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "alors, donc, et bien",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4767,8 +4767,8 @@
     "terme": "デパート",
     "lecture": "デパート",
     "sens_en": "(abbr.) department store",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "grand magasin (lit. depart(ment store))",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4778,8 +4778,8 @@
     "terme": "でも",
     "lecture": "でも",
     "sens_en": "but, however",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mais, parce que",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4789,8 +4789,8 @@
     "terme": "出る",
     "lecture": "でる",
     "sens_en": "to appear, to leave",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être publié, apparaître, sortir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4800,8 +4800,8 @@
     "terme": "テレビ",
     "lecture": "テレビ",
     "sens_en": "television, TV",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "TV, télé, télévision",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4811,8 +4811,8 @@
     "terme": "天気",
     "lecture": "てんき",
     "sens_en": "weather",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beau temps, les éléments, temps",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4822,8 +4822,8 @@
     "terme": "電気",
     "lecture": "でんき",
     "sens_en": "electricity, (electric) light",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "électricité, lumière (électrique)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4833,8 +4833,8 @@
     "terme": "電車",
     "lecture": "でんしゃ",
     "sens_en": "electric train",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "train (électrique)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4844,8 +4844,8 @@
     "terme": "電話",
     "lecture": "でんわ",
     "sens_en": "a telephone",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "téléphone",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4855,8 +4855,8 @@
     "terme": "戸",
     "lecture": "と",
     "sens_en": "door (Japanese style)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "porte coulissante",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4866,8 +4866,8 @@
     "terme": "～度",
     "lecture": "～ど",
     "sens_en": "counter for occurrences; ~ degree; ~ point",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(compteur) fois, degrés",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4877,8 +4877,8 @@
     "terme": "ドア",
     "lecture": "ドア",
     "sens_en": "door (Western style)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "porte (à l'occidentale)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4888,8 +4888,8 @@
     "terme": "トイレ",
     "lecture": "トイレ",
     "sens_en": "bathroom; toilet",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "toilettes",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4899,8 +4899,8 @@
     "terme": "どう",
     "lecture": "どう",
     "sens_en": "how, in what way",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "comment, de quelle manière",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4910,8 +4910,8 @@
     "terme": "どうして",
     "lecture": "どうして",
     "sens_en": "why, for what reason",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dans quel but, par quel moyen, pour quelle raison?",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4921,8 +4921,8 @@
     "terme": "どうぞ",
     "lecture": "どうぞ",
     "sens_en": "please, kindly, by all means",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "allez-y, je vous prie, s'il vous plait",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4932,8 +4932,8 @@
     "terme": "動物",
     "lecture": "どうぶつ",
     "sens_en": "animal",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "animal",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4943,8 +4943,8 @@
     "terme": "どうも",
     "lecture": "どうも",
     "sens_en": "Thank you; somehow; no matter how hard one may try",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "au combien, beaucoup, merci (lit. en effet)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4954,8 +4954,8 @@
     "terme": "十",
     "lecture": "(〜を) とお",
     "sens_en": "ten (~)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dix",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -4965,8 +4965,8 @@
     "terme": "遠い",
     "lecture": "とおい",
     "sens_en": "far (away), distant",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "distant, lointain",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4976,8 +4976,8 @@
     "terme": "十日",
     "lecture": "とおか",
     "sens_en": "ten days; tenth day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dix jours, le dix (du mois)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4987,8 +4987,8 @@
     "terme": "～時",
     "lecture": "～とき",
     "sens_en": "at the time of ~",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "heure, temps ; moment, occasion",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -4998,8 +4998,8 @@
     "terme": "時々",
     "lecture": "ときどき",
     "sens_en": "sometimes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "de temps en temps, quelquefois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5009,8 +5009,8 @@
     "terme": "時計",
     "lecture": "とけい",
     "sens_en": "a watch; a clock",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "horloge, montre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5020,8 +5020,8 @@
     "terme": "どこ",
     "lecture": "どこ",
     "sens_en": "where, what place",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "où",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5031,8 +5031,8 @@
     "terme": "所",
     "lecture": "ところ",
     "sens_en": "place",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "endroit, lieu",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5042,8 +5042,8 @@
     "terme": "年",
     "lecture": "とし",
     "sens_en": "year, age",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "âge, année",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5053,8 +5053,8 @@
     "terme": "図書館",
     "lecture": "としょかん",
     "sens_en": "library",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bibliothèque",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5064,8 +5064,8 @@
     "terme": "どちら",
     "lecture": "どちら",
     "sens_en": "which (one) (way); where (polite)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lequel, quelle direction",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5075,8 +5075,8 @@
     "terme": "どっち",
     "lecture": "どっち",
     "sens_en": "which one, which way",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lequel, quelle direction",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5086,8 +5086,8 @@
     "terme": "とても",
     "lecture": "とても",
     "sens_en": "very (much), greatly, exceedingly",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "excessivement, très, vraiment",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5097,8 +5097,8 @@
     "terme": "どなた",
     "lecture": "どなた",
     "sens_en": "who",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "qui?",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5108,8 +5108,8 @@
     "terme": "隣",
     "lecture": "となり",
     "sens_en": "next to, next door to",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "porte d'à coté, voisin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5119,8 +5119,8 @@
     "terme": "どの",
     "lecture": "どの",
     "sens_en": "which",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "monseigneur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5130,8 +5130,8 @@
     "terme": "飛ぶ",
     "lecture": "とぶ",
     "sens_en": "to fly, to hop",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "voler ; bondir, sauter, voler",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5141,8 +5141,8 @@
     "terme": "止まる",
     "lecture": "とまる",
     "sens_en": "to come to a halt",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être limité à, demeurer, faire halte ; s'établir, s'installer, se fixer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5152,8 +5152,8 @@
     "terme": "友達",
     "lecture": "ともだち",
     "sens_en": "friend",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ami",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5163,8 +5163,8 @@
     "terme": "土曜日",
     "lecture": "どようび",
     "sens_en": "Saturday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "samedi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5174,8 +5174,8 @@
     "terme": "鳥",
     "lecture": "とり",
     "sens_en": "chicken (lit., bird)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "oiseau, volaille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5185,8 +5185,8 @@
     "terme": "鶏肉",
     "lecture": "とりにく",
     "sens_en": "chicken meat",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "viande de poulet",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5196,8 +5196,8 @@
     "terme": "取る",
     "lecture": "とる",
     "sens_en": "to take (a class); to get (a grade)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "prendre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5207,8 +5207,8 @@
     "terme": "撮る",
     "lecture": "とる",
     "sens_en": "to take (a photo), to make (a film)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "photographier, prendre une photo",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5218,8 +5218,8 @@
     "terme": "どれ",
     "lecture": "どれ",
     "sens_en": "which one",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bien, lequel (d'un groupe d'au moins trois), maintenant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5229,8 +5229,8 @@
     "terme": "どんな",
     "lecture": "どんな",
     "sens_en": "what, what kind of",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quel, quel genre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5240,8 +5240,8 @@
     "terme": "ない",
     "lecture": "ない",
     "sens_en": "there isn't, doesn't have",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "décédé, mort",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5251,8 +5251,8 @@
     "terme": "ナイフ",
     "lecture": "ナイフ",
     "sens_en": "knife",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "canif, couteau",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5262,8 +5262,8 @@
     "terme": "中",
     "lecture": "なか",
     "sens_en": "inside, middle, among",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "à l'intérieur, dedans",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5273,8 +5273,8 @@
     "terme": "長い",
     "lecture": "ながい",
     "sens_en": "long, lengthy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "long, long (temps)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5284,8 +5284,8 @@
     "terme": "鳴く",
     "lecture": "なく",
     "sens_en": "to make sound (animal)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aboyer (chien), chanter,sifler (oiseaux), crier, pousser son cri (animal)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5295,8 +5295,8 @@
     "terme": "無くす",
     "lecture": "なくす",
     "sens_en": "to lose something",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "égarer, perdre quelqu'un pere, mère,amie ...",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5306,8 +5306,8 @@
     "terme": "なぜ",
     "lecture": "なぜ",
     "sens_en": "why (same as どうして)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "comment (uniq. dans \"comment se fait-il\"), pourquoi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5317,8 +5317,8 @@
     "terme": "夏",
     "lecture": "なつ",
     "sens_en": "summer",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "été",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5328,8 +5328,8 @@
     "terme": "夏休み",
     "lecture": "なつやすみ",
     "sens_en": "summer vacation",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vacances d'été",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5339,8 +5339,8 @@
     "terme": "～など",
     "lecture": "～など",
     "sens_en": "et cetera",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "et cetera, etc., et ainsi de suite ; ou autre chose",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5350,8 +5350,8 @@
     "terme": "七つ",
     "lecture": "ななつ",
     "sens_en": "seven things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sept",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5361,8 +5361,8 @@
     "terme": "何",
     "lecture": "なん; なに",
     "sens_en": "what",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "que, quel, quoi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5372,8 +5372,8 @@
     "terme": "七日",
     "lecture": "なのか",
     "sens_en": "seven days; seventh day (of the month)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le septième jour (du mois), sept jours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5383,8 +5383,8 @@
     "terme": "名前",
     "lecture": "なまえ",
     "sens_en": "name",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nom",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5394,8 +5394,8 @@
     "terme": "習う",
     "lecture": "ならう",
     "sens_en": "to learn",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étudier, apprendre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5405,8 +5405,8 @@
     "terme": "並ぶ",
     "lecture": "ならぶ",
     "sens_en": "to line up, to stand in a line (v.i.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "faire la queue, se mettre en rangs",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5416,8 +5416,8 @@
     "terme": "並べる",
     "lecture": "ならべる",
     "sens_en": "to put (things) side by side; to line up",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "exposer, mettre en rangs",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5427,8 +5427,8 @@
     "terme": "なる",
     "lecture": "なる",
     "sens_en": "to become",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "devenir, s'établir, être ; aboutir à, mener à, s'avérer être",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5438,8 +5438,8 @@
     "terme": "何～",
     "lecture": "なん～",
     "sens_en": "what sort of ~",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quel genre de ~, quel ~",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -5449,8 +5449,8 @@
     "terme": "二",
     "lecture": "に",
     "sens_en": "two",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "deux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5460,8 +5460,8 @@
     "terme": "にぎやか",
     "lecture": "にぎやか",
     "sens_en": "bustling, busy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "animé, vivant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5471,8 +5471,8 @@
     "terme": "肉",
     "lecture": "にく",
     "sens_en": "meat",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "viande",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5482,8 +5482,8 @@
     "terme": "西",
     "lecture": "にし",
     "sens_en": "west",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ouest",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5493,8 +5493,8 @@
     "terme": "～日",
     "lecture": "～にち",
     "sens_en": "~ day of the month, for ~ days",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dimanche ; jour (calendaire)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5504,8 +5504,8 @@
     "terme": "日曜日",
     "lecture": "にちようび",
     "sens_en": "Sunday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dimanche",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5515,8 +5515,8 @@
     "terme": "荷物",
     "lecture": "にもつ",
     "sens_en": "luggage; baggage",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bagages",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5526,8 +5526,8 @@
     "terme": "ニュース",
     "lecture": "ニュース",
     "sens_en": "news",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "informations, journal (TV), nouvelles",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5537,8 +5537,8 @@
     "terme": "庭",
     "lecture": "にわ",
     "sens_en": "garden",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jardin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5548,8 +5548,8 @@
     "terme": "～人",
     "lecture": "～にん",
     "sens_en": "counter for people",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "compteur pour les personnes ; personne",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5559,8 +5559,8 @@
     "terme": "脱ぐ",
     "lecture": "ぬぐ",
     "sens_en": "to take off (clothes)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "se déshabiller",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5570,8 +5570,8 @@
     "terme": "温い",
     "lecture": "ぬるい",
     "sens_en": "lukewarm",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tiède",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5581,8 +5581,8 @@
     "terme": "ネクタイ",
     "lecture": "ネクタイ",
     "sens_en": "tie, necktie",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cravate",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5592,8 +5592,8 @@
     "terme": "猫",
     "lecture": "ねこ",
     "sens_en": "cat",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chat",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5603,8 +5603,8 @@
     "terme": "寝る",
     "lecture": "ねる",
     "sens_en": "to sleep; to go to sleep; to go to bed",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aller au lit, dormir, se coucher",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5614,8 +5614,8 @@
     "terme": "～年",
     "lecture": "～ねん",
     "sens_en": "~ years",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "année (par ex. apr. J.-C.) ; compteur pour les années",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5625,8 +5625,8 @@
     "terme": "ノート",
     "lecture": "ノート",
     "sens_en": "notebook",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cahier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5636,8 +5636,8 @@
     "terme": "登る",
     "lecture": "のぼる",
     "sens_en": "to climb",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être promu, escalader, gravir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5647,8 +5647,8 @@
     "terme": "飲み物",
     "lecture": "のみもの",
     "sens_en": "drink, beverage",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "boisson, breuvage",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5658,8 +5658,8 @@
     "terme": "飲む",
     "lecture": "のむ",
     "sens_en": "to drink",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "boire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5669,8 +5669,8 @@
     "terme": "乗る",
     "lecture": "のる",
     "sens_en": "to get on, to ride in, to board",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "embarquer, monter, prendre (train) ; rejoindre, se joindre à",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5680,8 +5680,8 @@
     "terme": "歯",
     "lecture": "は",
     "sens_en": "tooth",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5691,8 +5691,8 @@
     "terme": "パーティー",
     "lecture": "パーティー",
     "sens_en": "a party",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cordée, parti, réunion",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5702,8 +5702,8 @@
     "terme": "はい",
     "lecture": "はい",
     "sens_en": "yes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "oui, c'est exact ; j'ai compris, d'accord, OK",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5713,8 +5713,8 @@
     "terme": "～杯",
     "lecture": "～はい",
     "sens_en": "counter for cupfuls",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "verre de saké, coupe (pour boissons alcoolisées) ; compteur pour les tasses pleines",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5724,8 +5724,8 @@
     "terme": "灰皿",
     "lecture": "はいざら",
     "sens_en": "ashtray",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cendrier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5735,8 +5735,8 @@
     "terme": "入る",
     "lecture": "はいる",
     "sens_en": "to enter, to contain, to hold",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "entrer, pénétrer ; devenir membre de, faire partie de",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5746,8 +5746,8 @@
     "terme": "葉書",
     "lecture": "はがき",
     "sens_en": "postcard",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "carte postale",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5757,8 +5757,8 @@
     "terme": "はく",
     "lecture": "はく",
     "sens_en": "to put on (items below your waist)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "balayer, brosser",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5768,8 +5768,8 @@
     "terme": "箱",
     "lecture": "はこ",
     "sens_en": "box",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "boîte",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5779,8 +5779,8 @@
     "terme": "橋",
     "lecture": "はし",
     "sens_en": "bridge",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pont",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5790,8 +5790,8 @@
     "terme": "箸",
     "lecture": "はし",
     "sens_en": "chopsticks",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "baguettes (pour manger)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5801,8 +5801,8 @@
     "terme": "始まる",
     "lecture": "はじまる",
     "sens_en": "(something) begins",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "commencer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5812,8 +5812,8 @@
     "terme": "初め; 始め",
     "lecture": "はじめ",
     "sens_en": "beginning, start",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "début, départ, origine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5823,8 +5823,8 @@
     "terme": "初めて",
     "lecture": "はじめて",
     "sens_en": "for the first time",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pour la première fois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5834,8 +5834,8 @@
     "terme": "走る",
     "lecture": "はしる",
     "sens_en": "to run",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "courir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5845,8 +5845,8 @@
     "terme": "バス",
     "lecture": "バス",
     "sens_en": "bus; bath; bass",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bus ; bain",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5856,8 +5856,8 @@
     "terme": "バター",
     "lecture": "バター",
     "sens_en": "butter",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beurre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5867,8 +5867,8 @@
     "terme": "二十歳",
     "lecture": "はたち",
     "sens_en": "20 years old",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "20 ans (être agé de)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5878,8 +5878,8 @@
     "terme": "働く",
     "lecture": "はたらく",
     "sens_en": "to work",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "exercer, mettre en œuvre, travailler ; entrer en jeu",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5889,8 +5889,8 @@
     "terme": "八",
     "lecture": "はち",
     "sens_en": "eight",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "huit (8)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5900,8 +5900,8 @@
     "terme": "二十日",
     "lecture": "はつか",
     "sens_en": "twenty days, twentieth (day of the month)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le vingt (du mois), vingt jours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5911,8 +5911,8 @@
     "terme": "花",
     "lecture": "はな",
     "sens_en": "flower",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fleurs, pétale",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5922,8 +5922,8 @@
     "terme": "鼻",
     "lecture": "はな",
     "sens_en": "nose",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nez",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5933,8 +5933,8 @@
     "terme": "話",
     "lecture": "はなし",
     "sens_en": "talk (chat), story",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "conversation, discours, discussion",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5944,8 +5944,8 @@
     "terme": "話す",
     "lecture": "はなす",
     "sens_en": "to speak",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "discuter, parler",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5955,8 +5955,8 @@
     "terme": "母",
     "lecture": "はは",
     "sens_en": "(my) mother",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mère",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5966,8 +5966,8 @@
     "terme": "早い",
     "lecture": "はやい",
     "sens_en": "early",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rapide, tôt, prompt",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5977,8 +5977,8 @@
     "terme": "速い",
     "lecture": "はやい",
     "sens_en": "fast, quick",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "rapide, tôt, prompt",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5988,8 +5988,8 @@
     "terme": "春",
     "lecture": "はる",
     "sens_en": "spring",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "printemps",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -5999,8 +5999,8 @@
     "terme": "貼る",
     "lecture": "はる",
     "sens_en": "to post; to paste; to attach",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étaler, allonger, apposer ; être coûteux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6010,8 +6010,8 @@
     "terme": "晴れ",
     "lecture": "はれ",
     "sens_en": "clear (sunny) weather",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beau temps",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6021,8 +6021,8 @@
     "terme": "晴れる",
     "lecture": "はれる",
     "sens_en": "to be sunny",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "beau temps, ensoleillé",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6032,8 +6032,8 @@
     "terme": "半",
     "lecture": "はん",
     "sens_en": "half (e.g., にじはん | half-past two)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "demi, et demie, moitié",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6043,8 +6043,8 @@
     "terme": "晩",
     "lecture": "ばん",
     "sens_en": "evening",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nuit, soir, soirée",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6054,8 +6054,8 @@
     "terme": "～番",
     "lecture": "～ばん",
     "sens_en": "~st; ~th best",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nombre (dans une série) ; (son) tour",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6065,8 +6065,8 @@
     "terme": "パン",
     "lecture": "パン",
     "sens_en": "bread",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pain ; panning (vidéo), panoramique (faire un)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6076,8 +6076,8 @@
     "terme": "ハンカチ",
     "lecture": "ハンカチ",
     "sens_en": "handkerchief",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mouchoir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6087,8 +6087,8 @@
     "terme": "番号",
     "lecture": "ばんごう",
     "sens_en": "number, series of digits",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "numéro",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6098,8 +6098,8 @@
     "terme": "晩御飯",
     "lecture": "ばんごはん",
     "sens_en": "dinner, evening meal",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "dîner, souper, repas du soir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6109,8 +6109,8 @@
     "terme": "半分",
     "lecture": "はんぶん",
     "sens_en": "half",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "moitié",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6120,8 +6120,8 @@
     "terme": "東",
     "lecture": "ひがし",
     "sens_en": "east",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "est",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6131,8 +6131,8 @@
     "terme": "～匹",
     "lecture": "～ひき",
     "sens_en": "counter for small animals",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(numéral pour petits animaux), rouleaux de tissu",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6142,8 +6142,8 @@
     "terme": "引く",
     "lecture": "ひく",
     "sens_en": "to pull, to draw; subtract",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jouer (d'un instrument a cordes), moins (soustraction), tirer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6153,8 +6153,8 @@
     "terme": "弾く",
     "lecture": "ひく",
     "sens_en": "to play (a string instrument or piano)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jouer (d'un instrument)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6164,8 +6164,8 @@
     "terme": "低い",
     "lecture": "ひくい",
     "sens_en": "short, low",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bas",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6175,8 +6175,8 @@
     "terme": "飛行機",
     "lecture": "ひこうき",
     "sens_en": "airplane",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "avion",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6186,8 +6186,8 @@
     "terme": "左",
     "lecture": "ひだり",
     "sens_en": "left hand side",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "gauche",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6197,8 +6197,8 @@
     "terme": "人",
     "lecture": "ひと",
     "sens_en": "man, person",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être humain, adult, homme",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6208,8 +6208,8 @@
     "terme": "一つ",
     "lecture": "ひとつ",
     "sens_en": "one thing",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "un",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6219,8 +6219,8 @@
     "terme": "一月",
     "lecture": "ひとつき",
     "sens_en": "one month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "un mois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6230,8 +6230,8 @@
     "terme": "一人",
     "lecture": "ひとり",
     "sens_en": "one person",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "une personne",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6241,8 +6241,8 @@
     "terme": "暇",
     "lecture": "ひま",
     "sens_en": "free time, leisure",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "loisirs, temps libre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6252,8 +6252,8 @@
     "terme": "百",
     "lecture": "ひゃく",
     "sens_en": "hundred",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "100, cent",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6263,8 +6263,8 @@
     "terme": "病院",
     "lecture": "びょういん",
     "sens_en": "hospital",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hôpital",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6274,8 +6274,8 @@
     "terme": "病気",
     "lecture": "びょうき",
     "sens_en": "illness; sickness",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "maladie, manie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6285,8 +6285,8 @@
     "terme": "平仮名",
     "lecture": "ひらがな",
     "sens_en": "hiragana",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hiragana > alphabet phonétique constitué de 46 signes de base",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6296,8 +6296,8 @@
     "terme": "昼",
     "lecture": "ひる",
     "sens_en": "noon, daytime",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jour, journée, midi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6307,8 +6307,8 @@
     "terme": "昼御飯",
     "lecture": "ひるごはん",
     "sens_en": "lunch, midday meal",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "déjeuner, repas de midi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6318,8 +6318,8 @@
     "terme": "広い",
     "lecture": "ひろい",
     "sens_en": "spacious; wide; broad",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ample, large, spacieux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6329,8 +6329,8 @@
     "terme": "フィルム",
     "lecture": "フィルム",
     "sens_en": "film (roll of)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "film, pellicule",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6340,8 +6340,8 @@
     "terme": "封筒",
     "lecture": "ふうとう",
     "sens_en": "envelope",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "enveloppe",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6351,8 +6351,8 @@
     "terme": "プール",
     "lecture": "プール",
     "sens_en": "swimming pool",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "piscine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6362,8 +6362,8 @@
     "terme": "フォーク",
     "lecture": "フォーク",
     "sens_en": "fork",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "folk (musique), fourchette",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6373,8 +6373,8 @@
     "terme": "吹く",
     "lecture": "ふく",
     "sens_en": "to blow (wind, etc.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "émettre, faire jaillir, souffler (vent, etc.)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6384,8 +6384,8 @@
     "terme": "服",
     "lecture": "ふく",
     "sens_en": "clothes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vêtement",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6395,8 +6395,8 @@
     "terme": "二つ",
     "lecture": "ふたつ",
     "sens_en": "two things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "deux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6406,8 +6406,8 @@
     "terme": "豚肉",
     "lecture": "ぶたにく",
     "sens_en": "pork",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "viande de porc",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6417,8 +6417,8 @@
     "terme": "二人",
     "lecture": "ふたり",
     "sens_en": "two people",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "deux personnes ; couple, paire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6428,8 +6428,8 @@
     "terme": "二日",
     "lecture": "ふつか",
     "sens_en": "two days; second day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "deuxième jour du mois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6439,8 +6439,8 @@
     "terme": "太い",
     "lecture": "ふとい",
     "sens_en": "fat, thick",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "epais, gros",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6450,8 +6450,8 @@
     "terme": "冬",
     "lecture": "ふゆ",
     "sens_en": "winter",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hiver",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6461,8 +6461,8 @@
     "terme": "降る",
     "lecture": "ふる",
     "sens_en": "to precipitate, to fall (e.g., rain, snow, etc.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "grêler, neiger, pleuvoir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6472,8 +6472,8 @@
     "terme": "古い",
     "lecture": "ふるい",
     "sens_en": "old (in reference to objects, not people), aged, ancient",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ancien, antique, caduque",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6483,8 +6483,8 @@
     "terme": "～分",
     "lecture": "～ふん",
     "sens_en": "~ minutes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "minute ; fun (un dixième de monme, 5.787 grains)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6494,8 +6494,8 @@
     "terme": "文章",
     "lecture": "ぶんしょう",
     "sens_en": "sentence, text",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "phrase, style littéraire, texte",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6505,8 +6505,8 @@
     "terme": "ページ",
     "lecture": "ページ",
     "sens_en": "a page",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "page",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6516,8 +6516,8 @@
     "terme": "下手",
     "lecture": "へた",
     "sens_en": "unskillful, poor",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être mauvais en, maladroit, pas doué",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6527,8 +6527,8 @@
     "terme": "ベッド",
     "lecture": "ベッド",
     "sens_en": "bed",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lit",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6538,8 +6538,8 @@
     "terme": "ペット",
     "lecture": "ペット",
     "sens_en": "pet",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "animal familier ; trompette",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6549,8 +6549,8 @@
     "terme": "部屋",
     "lecture": "へや",
     "sens_en": "a room",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chambre, pièce, salle",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6560,8 +6560,8 @@
     "terme": "辺",
     "lecture": "へん",
     "sens_en": "area, vicinity",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "la proximité, les alentours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6571,8 +6571,8 @@
     "terme": "ペン",
     "lecture": "ペン",
     "sens_en": "pen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "PEN (club), plume, stylo",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6582,8 +6582,8 @@
     "terme": "勉強",
     "lecture": "べんきょう (する)",
     "sens_en": "study",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "études, rabais",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6593,8 +6593,8 @@
     "terme": "便利",
     "lecture": "べんり",
     "sens_en": "convenient, handy",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "confortable, pratique, utile",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6604,8 +6604,8 @@
     "terme": "帽子",
     "lecture": "ぼうし",
     "sens_en": "hat; cap",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bonnet, casquette, chapeau",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6615,8 +6615,8 @@
     "terme": "ボールペン",
     "lecture": "ボールペン",
     "sens_en": "ball-point pen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "stylo à bille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6626,8 +6626,8 @@
     "terme": "外",
     "lecture": "ほか",
     "sens_en": "other, the rest",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ailleurs, le reste !",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6637,8 +6637,8 @@
     "terme": "ポケット",
     "lecture": "ポケット",
     "sens_en": "pocket",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "poche",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6648,8 +6648,8 @@
     "terme": "欲しい",
     "lecture": "ほしい",
     "sens_en": "to want, in need of",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "ayant besoin, désiré, voulu ; je veux que (vous fassiez)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6659,8 +6659,8 @@
     "terme": "ポスト",
     "lecture": "ポスト",
     "sens_en": "mailbox; post, position",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "boîte aux lettres, post-, poste",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6670,8 +6670,8 @@
     "terme": "細い",
     "lecture": "ほそい",
     "sens_en": "thin, slender, fine",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fin, fluet, mince",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6681,8 +6681,8 @@
     "terme": "ボタン",
     "lecture": "ボタン",
     "sens_en": "button",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "bouton",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6692,8 +6692,8 @@
     "terme": "ホテル",
     "lecture": "ホテル",
     "sens_en": "hotel",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "hôtel",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6703,8 +6703,8 @@
     "terme": "本",
     "lecture": "ほん",
     "sens_en": "book",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(pour compter les objets ronds et longs), ceci, chef",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6714,8 +6714,8 @@
     "terme": "～本",
     "lecture": "～ほん",
     "sens_en": "counter for long cylindrical things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(pour compter les objets ronds et longs), ceci, chef",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6725,8 +6725,8 @@
     "terme": "本棚",
     "lecture": "ほんだな",
     "sens_en": "bookshelf",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étagère d'une bibliothèque, bibliothèque (meuble), rayonnage d'une bibliothèque",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6736,8 +6736,8 @@
     "terme": "本当",
     "lecture": "ほんとう",
     "sens_en": "real, true",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "réalité, réel, vérité",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6747,8 +6747,8 @@
     "terme": "～枚",
     "lecture": "～まい",
     "sens_en": "counter for flat things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "(compteur des objets plats, comme des feuilles)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6758,8 +6758,8 @@
     "terme": "毎朝",
     "lecture": "まいあさ",
     "sens_en": "every morning",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaque matin, tous les matins",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6769,8 +6769,8 @@
     "terme": "毎月",
     "lecture": "まいげつ; まいつき",
     "sens_en": "every month, monthly",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaque mois, mensuel",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6780,8 +6780,8 @@
     "terme": "毎週",
     "lecture": "まいしゅう",
     "sens_en": "every week",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaque semaine, toutes les semaines",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6791,8 +6791,8 @@
     "terme": "毎日",
     "lecture": "まいにち",
     "sens_en": "every day",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaque jour, tous les jours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6802,8 +6802,8 @@
     "terme": "毎年",
     "lecture": "まいねん; まいとし",
     "sens_en": "every year, yearly, annually",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "annuel, chaque année",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6813,8 +6813,8 @@
     "terme": "毎晩",
     "lecture": "まいばん",
     "sens_en": "every night",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chaque soir, tous les soirs",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6824,8 +6824,8 @@
     "terme": "前",
     "lecture": "まえ",
     "sens_en": "before, in front",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "antérieur, auparavant, avant ; tête (de ligne)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6835,8 +6835,8 @@
     "terme": "～前",
     "lecture": "～まえ",
     "sens_en": "in front of ~",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "antérieur, auparavant, avant ; tête (de ligne)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6846,8 +6846,8 @@
     "terme": "曲る",
     "lecture": "まがる",
     "sens_en": "to turn, to bend",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "plier, se courber",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6857,8 +6857,8 @@
     "terme": "まずい",
     "lecture": "まずい",
     "sens_en": "terrible (in reference to food), unappetizing, unpleasant (taste)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fade (dans le sens mauvais, voire immangeable), sans goût",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6868,8 +6868,8 @@
     "terme": "また",
     "lecture": "また",
     "sens_en": "and; furthermore",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aine, entrejambe",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6879,8 +6879,8 @@
     "terme": "まだ",
     "lecture": "まだ",
     "sens_en": "yet, still, besides",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "pas encore, jusque là, seulement ; pas encore (avec un verbe à la forme négative)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6890,8 +6890,8 @@
     "terme": "町",
     "lecture": "まち",
     "sens_en": "town; city",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quartier, ville ; rue",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6901,8 +6901,8 @@
     "terme": "待つ",
     "lecture": "まつ",
     "sens_en": "to wait",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "attendre, mettre ses espérances dans quelque chose",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6912,8 +6912,8 @@
     "terme": "まっすぐ",
     "lecture": "まっすぐ",
     "sens_en": "straight (ahead), direct",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "direct, droit, en face",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6923,8 +6923,8 @@
     "terme": "マッチ",
     "lecture": "マッチ",
     "sens_en": "match",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "aller avec, allumette, match",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6934,8 +6934,8 @@
     "terme": "窓",
     "lecture": "まど",
     "sens_en": "window",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "fenêtre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6945,8 +6945,8 @@
     "terme": "丸い; 円い",
     "lecture": "まるい",
     "sens_en": "round, circular",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "circulaire, rond, sphérique",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6956,8 +6956,8 @@
     "terme": "万",
     "lecture": "まん",
     "sens_en": "ten thousand",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "10.000, dix mille, innombrables",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6967,8 +6967,8 @@
     "terme": "万年筆",
     "lecture": "まんねんひつ",
     "sens_en": "fountain pen",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "stylo",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6978,8 +6978,8 @@
     "terme": "磨く",
     "lecture": "みがく",
     "sens_en": "to brush (teeth); to polish",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "astiquer, brosser, cirer ; affiner, améliorer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -6989,8 +6989,8 @@
     "terme": "右",
     "lecture": "みぎ",
     "sens_en": "right hand side",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "droite",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7000,8 +7000,8 @@
     "terme": "短い",
     "lecture": "みじかい",
     "sens_en": "short (length)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "court",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7011,8 +7011,8 @@
     "terme": "水",
     "lecture": "みず",
     "sens_en": "water",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "eau",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7022,8 +7022,8 @@
     "terme": "店",
     "lecture": "みせ",
     "sens_en": "store, shop",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "échoppe, boutique, magasin",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7033,8 +7033,8 @@
     "terme": "見せる",
     "lecture": "みせる",
     "sens_en": "to show, to display",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "montrer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7044,8 +7044,8 @@
     "terme": "道",
     "lecture": "みち",
     "sens_en": "road, street; way, directions",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chemin, route",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7055,8 +7055,8 @@
     "terme": "三日",
     "lecture": "みっか",
     "sens_en": "three days, third day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le 3, trois jours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7066,8 +7066,8 @@
     "terme": "三つ",
     "lecture": "みっつ",
     "sens_en": "three things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "trois",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7077,8 +7077,8 @@
     "terme": "緑",
     "lecture": "みどり",
     "sens_en": "green",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "verdure, vert",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7088,8 +7088,8 @@
     "terme": "皆さん",
     "lecture": "みなさん",
     "sens_en": "all of you, everyone",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tous, vous tous (Mesdames et Messieurs!)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7099,8 +7099,8 @@
     "terme": "南",
     "lecture": "みなみ",
     "sens_en": "South",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "sud",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7110,8 +7110,8 @@
     "terme": "耳",
     "lecture": "みみ",
     "sens_en": "ear",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "oreille",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7121,8 +7121,8 @@
     "terme": "見る",
     "lecture": "みる",
     "sens_en": "to see, to look",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "voir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7132,8 +7132,8 @@
     "terme": "みんな",
     "lecture": "みんな",
     "sens_en": "all, everyone, everybody",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "tous, tout, tout le monde",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7143,8 +7143,8 @@
     "terme": "六日",
     "lecture": "むいか",
     "sens_en": "six days; sixth day of month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le six (du mois), six jours",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7154,8 +7154,8 @@
     "terme": "向こう",
     "lecture": "むこう",
     "sens_en": "beyond, over there",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "l'autre partie, le côté opposé, par delà",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7165,8 +7165,8 @@
     "terme": "難しい",
     "lecture": "むずかしい",
     "sens_en": "difficult",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "difficile",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7176,8 +7176,8 @@
     "terme": "六つ",
     "lecture": "むっつ",
     "sens_en": "six things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "six",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7187,8 +7187,8 @@
     "terme": "村",
     "lecture": "むら",
     "sens_en": "village",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "village",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7198,8 +7198,8 @@
     "terme": "目",
     "lecture": "め",
     "sens_en": "eye(s)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "œil, globe oculaire ; (cpt) numérateur des numéros d'ordre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7209,8 +7209,8 @@
     "terme": "メートル",
     "lecture": "メートル",
     "sens_en": "meter",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "compteur, mètre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7220,8 +7220,8 @@
     "terme": "眼鏡",
     "lecture": "めがね",
     "sens_en": "eye glasses",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lunettes",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7231,8 +7231,8 @@
     "terme": "もう",
     "lecture": "もう",
     "sens_en": "already; again; more",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "déja",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7242,8 +7242,8 @@
     "terme": "木曜日",
     "lecture": "もくようび",
     "sens_en": "Thursday",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jeudi",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7253,8 +7253,8 @@
     "terme": "もしもし",
     "lecture": "もしもし",
     "sens_en": "Hello? (used on the phone)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "allô",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7264,8 +7264,8 @@
     "terme": "持つ",
     "lecture": "もつ",
     "sens_en": "to hold, to carry; to possess",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "porter, tenir ; posséder",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7275,8 +7275,8 @@
     "terme": "もっと",
     "lecture": "もっと",
     "sens_en": "more",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "encore, plus",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7286,8 +7286,8 @@
     "terme": "物",
     "lecture": "もの",
     "sens_en": "thing (concrete object)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chose, objet",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7297,8 +7297,8 @@
     "terme": "門",
     "lecture": "もん",
     "sens_en": "gate",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "portail",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7308,8 +7308,8 @@
     "terme": "問題",
     "lecture": "もんだい",
     "sens_en": "a problem",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "problème, question",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7319,8 +7319,8 @@
     "terme": "～屋",
     "lecture": "～や",
     "sens_en": "~ shop",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "magasin (de quelque chose), boutique (de quelque chose), échoppe (de quelque chose) ; quelqu'un qui vend (quelque chose) ou travaille en tant que...",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7330,8 +7330,8 @@
     "terme": "八百屋",
     "lecture": "やおや",
     "sens_en": "greengrocer",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "marchand de légumes",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7341,8 +7341,8 @@
     "terme": "野菜",
     "lecture": "やさい",
     "sens_en": "vegetable",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "légume",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7352,8 +7352,8 @@
     "terme": "易しい",
     "lecture": "やさしい",
     "sens_en": "easy, plain, simple",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "facile, simple",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7363,8 +7363,8 @@
     "terme": "安い",
     "lecture": "やすい",
     "sens_en": "inexpensive; cheap (things)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "économique, bon marché, pas cher",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7374,8 +7374,8 @@
     "terme": "休み",
     "lecture": "やすみ",
     "sens_en": "holiday; day off; absence",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "congé, repos, vacances",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7385,8 +7385,8 @@
     "terme": "休む",
     "lecture": "やすむ",
     "sens_en": "to rest, to have a break, to get time off",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être absent, dormir, faire une pause",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7396,8 +7396,8 @@
     "terme": "八つ",
     "lecture": "やっつ",
     "sens_en": "eight things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "huit",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7407,8 +7407,8 @@
     "terme": "山",
     "lecture": "やま",
     "sens_en": "mountain",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mont, montagne ; amas, monceau, pile",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7418,8 +7418,8 @@
     "terme": "やる",
     "lecture": "やる",
     "sens_en": "to do; to give (to pets, parents, siblings, etc.)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "faire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7429,8 +7429,8 @@
     "terme": "夕方",
     "lecture": "ゆうがた",
     "sens_en": "late afternoon (typically just before dinner time), evening",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "soir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7440,8 +7440,8 @@
     "terme": "夕飯",
     "lecture": "ゆうはん",
     "sens_en": "dinner, supper, evening meal",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "souper (dîner en France)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7451,8 +7451,8 @@
     "terme": "郵便局",
     "lecture": "ゆうびんきょく",
     "sens_en": "post office",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "La Poste, poste",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7462,8 +7462,8 @@
     "terme": "昨夜",
     "lecture": "ゆうべ",
     "sens_en": "last night",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "soir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7473,8 +7473,8 @@
     "terme": "有名",
     "lecture": "ゆうめい",
     "sens_en": "famous",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "célébrité",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7484,8 +7484,8 @@
     "terme": "雪",
     "lecture": "ゆき",
     "sens_en": "snow",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "neige",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7495,8 +7495,8 @@
     "terme": "ゆっくりと",
     "lecture": "ゆっくりと",
     "sens_en": "slowly, at ease",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lentement, tranquillement",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -7506,8 +7506,8 @@
     "terme": "八日",
     "lecture": "ようか",
     "sens_en": "eight days; eighth day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "le 8 (jour du mois)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7517,8 +7517,8 @@
     "terme": "洋服",
     "lecture": "ようふく",
     "sens_en": "Western-style clothes",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "vêtements occidentaux",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7528,8 +7528,8 @@
     "terme": "よく",
     "lecture": "よく",
     "sens_en": "frequently, often (much); well, skillfully",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "désir, envie",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7539,8 +7539,8 @@
     "terme": "横",
     "lecture": "よこ",
     "sens_en": "beside; side; width",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "à coté, coté, largeur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7550,8 +7550,8 @@
     "terme": "四日",
     "lecture": "よっか",
     "sens_en": "four days; fourth day of the month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quatrième jour du mois ; quatre jours (durée)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7561,8 +7561,8 @@
     "terme": "四つ",
     "lecture": "よっつ",
     "sens_en": "four things",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "quatre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7572,8 +7572,8 @@
     "terme": "呼ぶ",
     "lecture": "よぶ",
     "sens_en": "to call (one's name); to invite",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "appeler, convier, faire venir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7583,8 +7583,8 @@
     "terme": "読む",
     "lecture": "よむ",
     "sens_en": "to read",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "lire",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7594,8 +7594,8 @@
     "terme": "夜",
     "lecture": "よる",
     "sens_en": "evening, night",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "nuit, soir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7605,8 +7605,8 @@
     "terme": "弱い",
     "lecture": "よわい",
     "sens_en": "weak",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "délicat, faible, fragile",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7616,8 +7616,8 @@
     "terme": "来月",
     "lecture": "らいげつ",
     "sens_en": "next month",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "mois suivant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7627,8 +7627,8 @@
     "terme": "来週",
     "lecture": "らいしゅう",
     "sens_en": "next week",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "semaine prochaine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7638,8 +7638,8 @@
     "terme": "来年",
     "lecture": "らいねん",
     "sens_en": "next year",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "année prochaine",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7649,8 +7649,8 @@
     "terme": "ラジオ",
     "lecture": "ラジオ",
     "sens_en": "radio",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "radio",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7660,8 +7660,8 @@
     "terme": "ラジオカセ",
     "lecture": "ラジオカセ",
     "sens_en": "radio cassette player",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "radio-cassette (lecteur)",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -7671,8 +7671,8 @@
     "terme": "りっぱ",
     "lecture": "りっぱ",
     "sens_en": "splendid, fine",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "distingué, grand, légitime",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7682,8 +7682,8 @@
     "terme": "留学生",
     "lecture": "りゅうがくせい",
     "sens_en": "international student",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "étudiant envoyé à l'étranger pour étudier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7693,8 +7693,8 @@
     "terme": "両親",
     "lecture": "りょうしん",
     "sens_en": "parents (lit., both parents)",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "les deux parents, parents",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7704,8 +7704,8 @@
     "terme": "料理",
     "lecture": "りょうり",
     "sens_en": "cooking; cuisine",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "cuisine, cuisiner",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7715,8 +7715,8 @@
     "terme": "旅行",
     "lecture": "りょこう",
     "sens_en": "travel, trip",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "voyage",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7726,8 +7726,8 @@
     "terme": "零",
     "lecture": "れい",
     "sens_en": "zero, nought",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "zéro",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7737,8 +7737,8 @@
     "terme": "冷蔵庫",
     "lecture": "れいぞうこ",
     "sens_en": "refrigerator",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "frigo, réfrigérateur",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7748,8 +7748,8 @@
     "terme": "レコード",
     "lecture": "レコード",
     "sens_en": "record",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "disque, record",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7759,8 +7759,8 @@
     "terme": "レストラン",
     "lecture": "レストラン",
     "sens_en": "restaurant",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "restaurant",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7770,8 +7770,8 @@
     "terme": "練習",
     "lecture": "れんしゅう (する)",
     "sens_en": "(to) practice",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "s'entraîner, s'exercer",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7781,8 +7781,8 @@
     "terme": "廊下",
     "lecture": "ろうか",
     "sens_en": "corridor",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "corridor, couloir",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7792,8 +7792,8 @@
     "terme": "六",
     "lecture": "ろく",
     "sens_en": "six",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "six",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7803,8 +7803,8 @@
     "terme": "ワイシャツ",
     "lecture": "ワイシャツ",
     "sens_en": "shirt (lit: white shirt), business shirt",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "chemise",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7814,8 +7814,8 @@
     "terme": "若い",
     "lecture": "わかい",
     "sens_en": "young",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "jeune",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7825,8 +7825,8 @@
     "terme": "分かる",
     "lecture": "わかる",
     "sens_en": "to understand",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être au courant, comprendre, connaître (une langue)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7836,8 +7836,8 @@
     "terme": "忘れる",
     "lecture": "わすれる",
     "sens_en": "to forget",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "être étourdi, être distrait, oublier",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7847,8 +7847,8 @@
     "terme": "私",
     "lecture": "わたし",
     "sens_en": "I, myself",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "moi-même, personnel ; je (fem)",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7858,8 +7858,8 @@
     "terme": "私",
     "lecture": "わたくし",
     "sens_en": "I (formal), myself, private affairs",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "je, moi (registre très poli)",
+    "sens_fr_source": "manuel",
     "tags": [
       "n5"
     ]
@@ -7869,8 +7869,8 @@
     "terme": "渡す",
     "lecture": "わたす",
     "sens_en": "to hand (something) over (v.t.); to get across",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "donner, livrer, remettre",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7880,8 +7880,8 @@
     "terme": "渡る",
     "lecture": "わたる",
     "sens_en": "to cross over, to go across",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "enjamber, franchir, traverser",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]
@@ -7891,8 +7891,8 @@
     "terme": "悪い",
     "lecture": "わるい",
     "sens_en": "bad, sinful; inferior",
-    "sens_fr": null,
-    "sens_fr_source": null,
+    "sens_fr": "grave, méchant, mauvais",
+    "sens_fr_source": "jmdict",
     "tags": [
       "n5"
     ]

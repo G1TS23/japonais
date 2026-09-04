@@ -10,6 +10,7 @@ import {
   recordReview,
   seedDeckIfEmpty,
   shouldRequeueInSession,
+  syncContentTranslations,
 } from './srs-session'
 import type { VocabEntry } from '~/data/vocab'
 
@@ -134,6 +135,39 @@ describe('shouldRequeueInSession', () => {
     await getDb().cards.add(card)
     const updated = await recordReview(card, 0.9, Rating.Again, NOW)
     expect(shouldRequeueInSession(updated.state)).toBe(true)
+  })
+})
+
+describe('syncContentTranslations', () => {
+  it('complète le français manquant sur une carte déjà présente, sans toucher à sa progression', async () => {
+    const db = getDb()
+    // content_id 'a' (食べる) a sens_fr: 'manger' dans SAMPLE_VOCAB.
+    await db.cards.add(manualCard({ id: 'legacy', content_id: 'a', sens_fr: null, reps: 4, lapses: 1 }))
+
+    const n = await syncContentTranslations(SAMPLE_VOCAB)
+    expect(n).toBe(1)
+
+    const updated = await db.cards.get('legacy')
+    expect(updated?.sens_fr).toBe('manger')
+    expect(updated?.sens_fr_source).toBe('jmdict')
+    expect(updated?.reps).toBe(4) // progression FSRS intacte
+  })
+
+  it('laisse à null si le contenu source n’a pas non plus de français', async () => {
+    const db = getDb()
+    // content_id 'b' (飲む) a sens_fr: null dans SAMPLE_VOCAB.
+    await db.cards.add(manualCard({ id: 'still-null', content_id: 'b', sens_fr: null }))
+    const n = await syncContentTranslations(SAMPLE_VOCAB)
+    expect(n).toBe(0)
+    expect((await db.cards.get('still-null'))?.sens_fr).toBeNull()
+  })
+
+  it('ne touche pas aux cartes qui ont déjà un sens français', async () => {
+    const db = getDb()
+    await db.cards.add(manualCard({ id: 'has-fr', content_id: 'a', sens_fr: 'déjà là' }))
+    const n = await syncContentTranslations(SAMPLE_VOCAB)
+    expect(n).toBe(0)
+    expect((await db.cards.get('has-fr'))?.sens_fr).toBe('déjà là')
   })
 })
 

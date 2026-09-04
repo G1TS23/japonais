@@ -42,9 +42,8 @@ composants). IndexedDB est simulé via `fake-indexeddb` (voir `test/setup.ts`).
 - [x] **Étape 3 — SRS (FSRS)** : moteur `ts-fsrs` (wrapper `lib/fsrs.ts`), file
       du jour (dues + nouvelles cartes plafonnées), révision recto/verso avec
       aperçu des 4 intervalles (Again/Hard/Good/Easy), séries quotidiennes.
-      Deck N5 auto-importé au premier passage (718 mots, `scripts/import-vocab-n5.mjs`
-      depuis une source ouverte — sens en anglais pour l'instant, français à
-      compléter, voir `scripts/README.md`).
+      Deck N5 auto-importé au premier passage (718 mots, sens bilingues FR/EN,
+      voir `scripts/README.md` pour la provenance).
 - [ ] Étape 4 — Navigateur de programme (@nuxt/content)
 - [ ] Étape 5 — Quiz par palier
 - [ ] Étape 6 — Finitions (PWA / hors-ligne, thème, a11y)
