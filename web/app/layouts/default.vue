@@ -46,7 +46,7 @@ function isActive(to: string) {
                 : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100'
             "
           >
-            <AppIcon :name="l.icon" class="h-5 w-5 shrink-0" />
+            <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
             <span>{{ l.label }}</span>
           </NuxtLink>
         </nav>
@@ -73,7 +73,7 @@ function isActive(to: string) {
             : 'text-neutral-500 dark:text-neutral-400'
         "
       >
-        <AppIcon :name="l.icon" class="h-5 w-5" />
+        <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5" />
         <span class="max-w-full truncate px-0.5">{{ l.short }}</span>
       </NuxtLink>
     </nav>
