@@ -19,22 +19,26 @@ function isActive(to: string) {
 
 <template>
   <div class="min-h-screen bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
-    <!-- Barre supérieure (mobile uniquement) -->
+    <!-- Barre supérieure (mobile uniquement) : fixée en haut -->
     <header
-      class="flex items-center gap-2 border-b border-neutral-200 px-4 py-3 md:hidden dark:border-neutral-800"
+      class="fixed inset-x-0 top-0 z-40 flex min-h-14 items-center gap-2 border-b border-neutral-200 bg-white/95 px-4 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
+      style="padding-top: env(safe-area-inset-top)"
     >
       <span class="text-xl">🇯🇵</span>
       <span class="font-semibold tracking-tight">日本語</span>
     </header>
 
-    <div class="mx-auto flex max-w-5xl gap-6 px-4 py-6 md:py-10">
-      <!-- Barre latérale (desktop uniquement) -->
-      <aside class="hidden w-52 shrink-0 md:block">
+    <div
+      class="mx-auto mt-14 flex max-w-5xl gap-6 px-4 py-6 md:mt-0 md:py-10"
+      style="padding-top: env(safe-area-inset-top)"
+    >
+      <!-- Barre latérale (desktop uniquement) : logo + nav fixés ensemble -->
+      <aside class="sticky top-10 hidden h-fit w-52 shrink-0 md:block">
         <div class="mb-4 flex items-center gap-2 px-1">
           <span class="text-2xl">🇯🇵</span>
           <span class="font-semibold tracking-tight">日本語</span>
         </div>
-        <nav class="sticky top-10 flex flex-col gap-1">
+        <nav class="flex flex-col gap-1">
           <NuxtLink
             v-for="l in links"
             :key="l.to"
