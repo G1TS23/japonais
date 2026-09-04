@@ -6,79 +6,76 @@ import { useKanaStats } from '~/composables/useKanaStats'
 const script = ref('hiragana')
 const { byChar } = useKanaStats()
 
-interface RowDef {
+interface ColumnDef {
   label: string
-  chars: string[]
+  /** Un hiragana par voyelle (a,i,u,e,o — ou ゃ,ゅ,ょ pour les combinaisons), null = case vide. */
+  hira: (string | null)[]
 }
 
-// Groupes par famille de consonne : chaque ligne voisée (dakuten) / semi-voisée
-// (handakuten) suit directement sa base, plutôt que d'être reléguée en bloc à
-// part — か→が, さ→ざ, た→だ, は→ば→ぱ. Un groupe = un tableau de lignes
-// affichées avec un peu moins d'espace entre elles qu'entre deux groupes.
-const GROUPS: RowDef[][] = [
-  [{ label: 'あ', chars: ['あ', 'い', 'う', 'え', 'お'] }],
-  [
-    { label: 'か', chars: ['か', 'き', 'く', 'け', 'こ'] },
-    { label: 'が', chars: ['が', 'ぎ', 'ぐ', 'げ', 'ご'] },
-  ],
-  [
-    { label: 'さ', chars: ['さ', 'し', 'す', 'せ', 'そ'] },
-    { label: 'ざ', chars: ['ざ', 'じ', 'ず', 'ぜ', 'ぞ'] },
-  ],
-  [
-    { label: 'た', chars: ['た', 'ち', 'つ', 'て', 'と'] },
-    { label: 'だ', chars: ['だ', 'ぢ', 'づ', 'で', 'ど'] },
-  ],
-  [{ label: 'な', chars: ['な', 'に', 'ぬ', 'ね', 'の'] }],
-  [
-    { label: 'は', chars: ['は', 'ひ', 'ふ', 'へ', 'ほ'] },
-    { label: 'ば', chars: ['ば', 'び', 'ぶ', 'べ', 'ぼ'] },
-    { label: 'ぱ', chars: ['ぱ', 'ぴ', 'ぷ', 'ぺ', 'ぽ'] },
-  ],
-  [{ label: 'ま', chars: ['ま', 'み', 'む', 'め', 'も'] }],
-  [{ label: 'や', chars: ['や', 'ゆ', 'よ'] }],
-  [{ label: 'ら', chars: ['ら', 'り', 'る', 'れ', 'ろ'] }],
-  [{ label: 'わ', chars: ['わ', 'を'] }],
-  [{ label: 'ん', chars: ['ん'] }],
+// Tableau classique du gojūon : consonnes en colonnes, voyelles en lignes.
+// Dakuten/handakuten intégrées juste après leur base (か→が, さ→ざ, た→だ,
+// は→ば→ぱ) plutôt qu'à part.
+const VOWEL_LABELS = ['あ', 'い', 'う', 'え', 'お']
+const COLUMNS: ColumnDef[] = [
+  { label: 'あ', hira: ['あ', 'い', 'う', 'え', 'お'] },
+  { label: 'か', hira: ['か', 'き', 'く', 'け', 'こ'] },
+  { label: 'が', hira: ['が', 'ぎ', 'ぐ', 'げ', 'ご'] },
+  { label: 'さ', hira: ['さ', 'し', 'す', 'せ', 'そ'] },
+  { label: 'ざ', hira: ['ざ', 'じ', 'ず', 'ぜ', 'ぞ'] },
+  { label: 'た', hira: ['た', 'ち', 'つ', 'て', 'と'] },
+  { label: 'だ', hira: ['だ', 'ぢ', 'づ', 'で', 'ど'] },
+  { label: 'な', hira: ['な', 'に', 'ぬ', 'ね', 'の'] },
+  { label: 'は', hira: ['は', 'ひ', 'ふ', 'へ', 'ほ'] },
+  { label: 'ば', hira: ['ば', 'び', 'ぶ', 'べ', 'ぼ'] },
+  { label: 'ぱ', hira: ['ぱ', 'ぴ', 'ぷ', 'ぺ', 'ぽ'] },
+  { label: 'ま', hira: ['ま', 'み', 'む', 'め', 'も'] },
+  { label: 'や', hira: ['や', null, 'ゆ', null, 'よ'] },
+  { label: 'ら', hira: ['ら', 'り', 'る', 'れ', 'ろ'] },
+  { label: 'わ', hira: ['わ', null, null, null, 'を'] },
+  { label: 'ん', hira: ['ん', null, null, null, null] },
 ]
 
-// Même principe pour les combinaisons ゃゅょ : きゃ→ぎゃ, しゃ→じゃ, ひゃ→びゃ→ぴゃ.
-const YOON_GROUPS: RowDef[][] = [
-  [
-    { label: 'きゃ', chars: ['きゃ', 'きゅ', 'きょ'] },
-    { label: 'ぎゃ', chars: ['ぎゃ', 'ぎゅ', 'ぎょ'] },
-  ],
-  [
-    { label: 'しゃ', chars: ['しゃ', 'しゅ', 'しょ'] },
-    { label: 'じゃ', chars: ['じゃ', 'じゅ', 'じょ'] },
-  ],
-  [{ label: 'ちゃ', chars: ['ちゃ', 'ちゅ', 'ちょ'] }],
-  [{ label: 'にゃ', chars: ['にゃ', 'にゅ', 'にょ'] }],
-  [
-    { label: 'ひゃ', chars: ['ひゃ', 'ひゅ', 'ひょ'] },
-    { label: 'びゃ', chars: ['びゃ', 'びゅ', 'びょ'] },
-    { label: 'ぴゃ', chars: ['ぴゃ', 'ぴゅ', 'ぴょ'] },
-  ],
-  [{ label: 'みゃ', chars: ['みゃ', 'みゅ', 'みょ'] }],
-  [{ label: 'りゃ', chars: ['りゃ', 'りゅ', 'りょ'] }],
+const YOON_LABELS = ['ゃ', 'ゅ', 'ょ']
+const YOON_COLUMNS: ColumnDef[] = [
+  { label: 'きゃ', hira: ['きゃ', 'きゅ', 'きょ'] },
+  { label: 'ぎゃ', hira: ['ぎゃ', 'ぎゅ', 'ぎょ'] },
+  { label: 'しゃ', hira: ['しゃ', 'しゅ', 'しょ'] },
+  { label: 'じゃ', hira: ['じゃ', 'じゅ', 'じょ'] },
+  { label: 'ちゃ', hira: ['ちゃ', 'ちゅ', 'ちょ'] },
+  { label: 'にゃ', hira: ['にゃ', 'にゅ', 'にょ'] },
+  { label: 'ひゃ', hira: ['ひゃ', 'ひゅ', 'ひょ'] },
+  { label: 'びゃ', hira: ['びゃ', 'びゅ', 'びょ'] },
+  { label: 'ぴゃ', hira: ['ぴゃ', 'ぴゅ', 'ぴょ'] },
+  { label: 'みゃ', hira: ['みゃ', 'みゅ', 'みょ'] },
+  { label: 'りゃ', hira: ['りゃ', 'りゅ', 'りょ'] },
 ]
 
-// hiragana -> entrée complète (kata, romaji…), pour n'écrire les caractères
-// qu'une fois (ci-dessus, en hiragana) tout en supportant le bascule katakana.
+// hiragana -> entrée complète (kata, romaji…) : les caractères ne sont écrits
+// qu'une fois (en hiragana) ci-dessus, la bascule katakana se fait ici.
 const byHira = new Map(KANA.map((e) => [e.hira, e]))
 
-function toCells(rows: RowDef[]) {
-  return rows.map((r) => ({
-    label: r.label,
-    cells: r.chars.map((hira) => {
+interface Cell {
+  char: string
+  romaji: string
+}
+
+function buildRows(columns: ColumnDef[], vowelLabels: string[]) {
+  return vowelLabels.map((label, vi) => ({
+    label,
+    cells: columns.map((col): Cell | null => {
+      const hira = col.hira[vi]
+      if (!hira) return null
       const entry = byHira.get(hira)!
       return { char: script.value === 'hiragana' ? entry.hira : entry.kata, romaji: entry.romaji }
     }),
   }))
 }
 
-const groups = computed(() => GROUPS.map(toCells))
-const yoonGroups = computed(() => YOON_GROUPS.map(toCells))
+const rows = computed(() => buildRows(COLUMNS, VOWEL_LABELS))
+const yoonRows = computed(() => buildRows(YOON_COLUMNS, YOON_LABELS))
+
+const gridStyle = `grid-template-columns: 1.5rem repeat(${COLUMNS.length}, 2.25rem)`
+const yoonGridStyle = `grid-template-columns: 1.5rem repeat(${YOON_COLUMNS.length}, 2.25rem)`
 
 function cellClass(char: string): string {
   const a = byChar.value.get(char)
@@ -108,25 +105,25 @@ function cellTitle(char: string): string {
       />
     </div>
 
-    <!-- Groupes en 2 colonnes qui se remplissent verticalement (comme des
-         colonnes de journal) sur écran large, plutôt qu'une seule longue
-         liste : la carte reste large et courte au lieu de tout en hauteur. -->
-    <div class="columns-1 gap-x-8 md:columns-2">
-      <div v-for="(group, gi) in groups" :key="gi" class="mb-3 space-y-1.5 break-inside-avoid">
-        <div v-for="r in group" :key="r.label" class="flex items-center gap-1.5">
-          <span class="jp w-6 shrink-0 text-center text-xs text-neutral-400">{{ r.label }}</span>
-          <div class="flex flex-wrap gap-1">
+    <div class="overflow-x-auto pb-1">
+      <div class="grid w-max gap-1" :style="gridStyle">
+        <div />
+        <span v-for="col in COLUMNS" :key="col.label" class="jp text-center text-xs text-neutral-400">{{ col.label }}</span>
+
+        <template v-for="row in rows" :key="row.label">
+          <span class="jp flex items-center justify-center text-xs text-neutral-400">{{ row.label }}</span>
+          <template v-for="(cell, ci) in row.cells" :key="ci">
             <span
-              v-for="c in r.cells"
-              :key="c.char"
-              :title="`${c.romaji} — ${cellTitle(c.char)}`"
+              v-if="cell"
+              :title="`${cell.romaji} — ${cellTitle(cell.char)}`"
               class="jp flex h-9 w-9 items-center justify-center rounded-md text-lg"
-              :class="cellClass(c.char)"
+              :class="cellClass(cell.char)"
             >
-              {{ c.char }}
+              {{ cell.char }}
             </span>
-          </div>
-        </div>
+            <span v-else />
+          </template>
+        </template>
       </div>
     </div>
 
@@ -134,22 +131,25 @@ function cellTitle(char: string): string {
       <span class="text-xs font-medium text-neutral-400">Combinaisons (ゃ ゅ ょ)</span>
       <div class="h-px flex-1 bg-neutral-200 dark:bg-neutral-800" />
     </div>
-    <div class="columns-1 gap-x-8 md:columns-2">
-      <div v-for="(group, gi) in yoonGroups" :key="gi" class="mb-3 space-y-1.5 break-inside-avoid">
-        <div v-for="r in group" :key="r.label" class="flex items-center gap-1.5">
-          <span class="jp w-6 shrink-0 text-center text-xs text-neutral-400">{{ r.label }}</span>
-          <div class="flex flex-wrap gap-1">
+    <div class="overflow-x-auto pb-1">
+      <div class="grid w-max gap-1" :style="yoonGridStyle">
+        <div />
+        <span v-for="col in YOON_COLUMNS" :key="col.label" class="jp text-center text-xs text-neutral-400">{{ col.label }}</span>
+
+        <template v-for="row in yoonRows" :key="row.label">
+          <span class="jp flex items-center justify-center text-xs text-neutral-400">{{ row.label }}</span>
+          <template v-for="(cell, ci) in row.cells" :key="ci">
             <span
-              v-for="c in r.cells"
-              :key="c.char"
-              :title="`${c.romaji} — ${cellTitle(c.char)}`"
+              v-if="cell"
+              :title="`${cell.romaji} — ${cellTitle(cell.char)}`"
               class="jp flex h-9 w-9 items-center justify-center rounded-md text-lg"
-              :class="cellClass(c.char)"
+              :class="cellClass(cell.char)"
             >
-              {{ c.char }}
+              {{ cell.char }}
             </span>
-          </div>
-        </div>
+            <span v-else />
+          </template>
+        </template>
       </div>
     </div>
 
