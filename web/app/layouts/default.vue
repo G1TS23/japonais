@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useStorage } from '@vueuse/core'
 import type { IconName } from '~/components/AppIcon.vue'
 
 const route = useRoute()
@@ -11,6 +12,11 @@ const links: { to: string; label: string; short: string; icon: IconName }[] = [
   { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
   { to: '/settings', label: 'Réglages', short: 'Réglages', icon: 'cog-6-tooth' },
 ]
+
+// Barre latérale réduite à des icônes (avec bouton pour l'étendre à nouveau) :
+// utile sur les fenêtres desktop plus étroites, où le contenu large (ex. le
+// tableau des kana) réclame le maximum de place. Préférence mémorisée.
+const collapsed = useStorage('nav-collapsed', false)
 
 function isActive(to: string) {
   return to === '/' ? route.path === '/' : route.path.startsWith(to)
@@ -33,26 +39,42 @@ function isActive(to: string) {
       style="padding-top: env(safe-area-inset-top)"
     >
       <!-- Barre latérale (desktop uniquement) : logo + nav fixés ensemble -->
-      <aside class="sticky top-10 hidden h-fit w-52 shrink-0 md:block">
-        <div class="mb-4 flex items-center gap-2 px-1">
+      <aside
+        class="sticky top-10 hidden h-fit shrink-0 transition-[width] duration-200 md:block"
+        :class="collapsed ? 'w-14' : 'w-52'"
+      >
+        <div class="mb-4 flex items-center gap-2 px-1" :class="collapsed && 'justify-center'">
           <span class="text-2xl">🇯🇵</span>
-          <span class="font-semibold tracking-tight">日本語</span>
+          <span v-show="!collapsed" class="font-semibold tracking-tight">日本語</span>
         </div>
         <nav class="flex flex-col gap-1">
           <NuxtLink
             v-for="l in links"
             :key="l.to"
             :to="l.to"
+            :title="collapsed ? l.label : undefined"
             class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
-            :class="
+            :class="[
+              collapsed && 'justify-center px-0',
               isActive(l.to)
                 ? 'bg-brand-500 text-white'
-                : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100'
-            "
+                : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
+            ]"
           >
             <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
-            <span>{{ l.label }}</span>
+            <span v-show="!collapsed">{{ l.label }}</span>
           </NuxtLink>
+
+          <button
+            type="button"
+            :title="collapsed ? 'Étendre la navigation' : 'Réduire la navigation'"
+            class="mt-2 flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium text-neutral-400 transition hover:bg-neutral-200/60 hover:text-neutral-700 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-300"
+            :class="collapsed && 'justify-center px-0'"
+            @click="collapsed = !collapsed"
+          >
+            <AppIcon :name="collapsed ? 'chevron-double-right' : 'chevron-double-left'" class="h-5 w-5 shrink-0" />
+            <span v-show="!collapsed">Réduire</span>
+          </button>
         </nav>
       </aside>
 
