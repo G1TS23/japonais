@@ -1,5 +1,7 @@
 # Apprentissage du japonais — débutant → B2
 
+[![CI](https://github.com/G1TS23/japonais/actions/workflows/ci.yml/badge.svg)](https://github.com/G1TS23/japonais/actions/workflows/ci.yml)
+
 Dossier de travail pour un apprentissage structuré du japonais, de zéro (bases kana)
 jusqu'au niveau **B2** du CECR (≈ JLPT N2 solide + expression orale/écrite entraînée).
 
