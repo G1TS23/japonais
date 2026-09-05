@@ -19,8 +19,12 @@ function toggle(id: string, isChecked: boolean) {
 
 <template>
   <div v-if="phase">
-    <NuxtLink to="/programme" class="text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100">
-      ← Programme
+    <NuxtLink
+      to="/programme"
+      class="mb-4 inline-flex items-center gap-1.5 rounded-lg border border-neutral-300 px-3 py-1.5 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+    >
+      <AppIcon name="chevron-double-left" class="h-4 w-4" />
+      Programme
     </NuxtLink>
 
     <PageHeader :title="`Phase ${phase.number} — ${phase.title}`" :subtitle="phase.summary" />
@@ -83,6 +87,12 @@ function toggle(id: string, isChecked: boolean) {
 
   <div v-else>
     <PageHeader title="Phase introuvable" />
-    <NuxtLink to="/programme" class="text-sm font-medium text-brand-600 hover:underline">← Retour au programme</NuxtLink>
+    <NuxtLink
+      to="/programme"
+      class="inline-flex items-center gap-1.5 rounded-lg border border-neutral-300 px-3 py-1.5 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+    >
+      <AppIcon name="chevron-double-left" class="h-4 w-4" />
+      Programme
+    </NuxtLink>
   </div>
 </template>
