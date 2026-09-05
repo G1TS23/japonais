@@ -4,6 +4,7 @@ import { getDb } from '~/lib/db'
 import { State } from '~/lib/fsrs'
 import { useLiveQuery } from '~/composables/useLiveQuery'
 import { getDailyStreak } from '~/lib/streak'
+import { currentPhase, getCheckedCriteria, phaseCompletion } from '~/lib/progress'
 
 useHead({ title: 'Tableau de bord — Japonais' })
 
@@ -30,11 +31,9 @@ const matureCards = useLiveQuery(() => db.cards.filter((c) => c.stability >= 21)
 const kanaWorked = useLiveQuery(() => db.kanaStats.filter((k) => k.seen > 0).count(), 0)
 const quizCount = useLiveQuery(() => db.quizAttempts.count(), 0)
 
-const currentPhase = useLiveQuery(
-  async () => (await db.progress.get('currentPhase'))?.value as string | undefined,
-  undefined,
-)
-const phaseLabel = computed(() => currentPhase.value ?? 'Phase 0 — Fondations')
+const checkedCriteria = useLiveQuery(() => getCheckedCriteria(), new Set<string>())
+const phase = computed(() => currentPhase(checkedCriteria.value))
+const completion = computed(() => phaseCompletion(phase.value, checkedCriteria.value))
 
 const shortcuts = [
   { to: '/kana', label: 'Drill kana', desc: 'Reconnaissance hiragana / katakana' },
@@ -63,9 +62,15 @@ const shortcuts = [
 
     <section class="mt-6 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
       <div class="text-xs font-medium tracking-wide text-neutral-400 uppercase">Phase en cours</div>
-      <div class="mt-1 text-lg font-semibold">{{ phaseLabel }}</div>
-      <NuxtLink to="/programme" class="mt-2 inline-block text-sm font-medium text-brand-600 hover:underline">
-        Ouvrir le programme →
+      <div class="mt-1 text-lg font-semibold">Phase {{ phase.number }} — {{ phase.title }}</div>
+      <div v-if="completion.total" class="mt-2">
+        <div class="h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
+          <div class="h-full bg-brand-500" :style="{ width: `${completion.pct}%` }" />
+        </div>
+        <div class="mt-1 text-xs text-neutral-400">{{ completion.done }} / {{ completion.total }} critères de sortie</div>
+      </div>
+      <NuxtLink :to="`/programme/${phase.id}`" class="mt-3 inline-block text-sm font-medium text-brand-600 hover:underline">
+        Ouvrir la phase →
       </NuxtLink>
     </section>
 

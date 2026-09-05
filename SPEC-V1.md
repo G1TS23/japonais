@@ -33,7 +33,7 @@ extensibles ensuite (N4, N3…).
 | État | Pinia. |
 | Utilitaires | VueUse. |
 | Style | Tailwind CSS + composants maison ; primitives accessibles via **Nuxt UI** (Reka UI). |
-| Contenu programme | `@nuxt/content` (Markdown + frontmatter) pour les 6 phases. |
+| Contenu programme | Données structurées (`data/programme.ts`), pas `@nuxt/content` — voir note étape 4 ci-dessous. |
 | Jeux de données | JSON/YAML versionnés dans `content/` (kana, vocab, kanji, grammaire, quiz). |
 | SRS | Bibliothèque **`ts-fsrs`** (implémentation FSRS maintenue) plutôt qu'un algo maison. |
 | PWA / hors-ligne | Inclus (`@vite-pwa/nuxt`) — révision sans connexion. Peu coûteux, forte valeur. |
@@ -86,9 +86,15 @@ quand disponible, **KANJIDIC2** (kanji), listes de grammaire N5 communautaires.
 - **Statistiques** : prévision des révisions à venir, révisions/jour, rétention,
   nombre de cartes matures.
 
-### 3.3 Navigateur de programme — `/programme`, `/programme/[phase]`
+### 3.3 Navigateur de programme — `/programme`, `/programme/[id]`
 
-- Rendu des **6 phases** depuis `@nuxt/content` (portage de `PROGRAMME.md`).
+- Rendu des **6 phases**, portées depuis `PROGRAMME.md` dans `data/programme.ts`
+  (données structurées typées, pas `@nuxt/content`) : à la construction, un
+  contenu figé qui ne change jamais au runtime et doit piloter des cases à
+  cocher à identifiants stables n'a pas besoin d'un module de contenu — même
+  logique que `data/kana.ts` / `data/vocab.ts`. `@nuxt/content` v3 s'installe
+  proprement (SQLite en WASM, pas de binaire natif), mais reste une dépendance
+  lourde (shiki, isomorphic-git, socket.io…) pour ce gain-là.
 - Par phase : points de grammaire, seuils vocab/kanji, compétences, et
   **critères de sortie en cases à cocher** (état persisté).
 - **Jalons** transversaux : liste cochable + **date** enregistrée.
