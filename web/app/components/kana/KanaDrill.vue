@@ -135,7 +135,10 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
     <div class="mb-6">
       <div class="mb-1 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
         <span>{{ doneCount }} / {{ total }}</span>
-        <button class="hover:text-neutral-900 dark:hover:text-neutral-100" @click="emit('quit')">
+        <button
+          class="-mx-2 -my-0.5 rounded px-2 py-0.5 transition hover:bg-neutral-200/60 hover:text-neutral-900 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100"
+          @click="emit('quit')"
+        >
           Quitter
         </button>
       </div>
@@ -197,7 +200,7 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             :key="ch"
             class="jp relative rounded-xl border-2 py-5 text-3xl transition"
             :class="{
-              'border-neutral-300 hover:border-brand-400 dark:border-neutral-700': !picked,
+              'border-neutral-300 hover:border-brand-400 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-800/60': !picked,
               'border-green-500 bg-green-50 dark:bg-green-950/40': picked && ch === current.char,
               'border-red-500 bg-red-50 dark:bg-red-950/40': picked === ch && ch !== current.char,
               'border-neutral-200 opacity-50 dark:border-neutral-800': picked && picked !== ch && ch !== current.char,

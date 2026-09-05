@@ -110,7 +110,7 @@ function replayMissed() {
               :class="
                 groups.includes(g.value)
                   ? 'border-brand-500 bg-brand-500 text-white'
-                  : 'border-neutral-300 text-neutral-600 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-400'
+                  : 'border-neutral-300 text-neutral-600 hover:border-neutral-400 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
               "
               @click="toggleGroup(g.value)"
             >

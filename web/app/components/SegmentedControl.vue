@@ -24,7 +24,7 @@ defineEmits<{ 'update:modelValue': [value: string] }>()
       :class="
         o.value === modelValue
           ? 'bg-brand-500 text-white'
-          : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100'
+          : 'text-neutral-600 hover:bg-neutral-200/70 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-700/70 dark:hover:text-neutral-100'
       "
       @click="$emit('update:modelValue', o.value)"
     >

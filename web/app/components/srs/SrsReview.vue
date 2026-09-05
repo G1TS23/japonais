@@ -101,7 +101,12 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
   <div v-if="current" class="mx-auto max-w-md">
     <div class="mb-6 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
       <span>{{ doneCount }} / {{ total }}</span>
-      <button class="hover:text-neutral-900 dark:hover:text-neutral-100" @click="emit('quit')">Quitter</button>
+      <button
+        class="-mx-2 -my-0.5 rounded px-2 py-0.5 transition hover:bg-neutral-200/60 hover:text-neutral-900 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100"
+        @click="emit('quit')"
+      >
+        Quitter
+      </button>
     </div>
     <div class="mb-1 h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
       <div

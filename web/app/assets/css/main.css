@@ -26,3 +26,16 @@ html {
 .jp {
   font-family: var(--font-jp);
 }
+
+/* Contrairement à <a>, un <button> n'a pas cursor:pointer par défaut dans le
+   navigateur, et Tailwind ne le réintroduit plus depuis la v3 — on le remet
+   globalement plutôt que bouton par bouton. */
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  cursor: not-allowed;
+}

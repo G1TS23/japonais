@@ -10,7 +10,7 @@ defineEmits<{ 'update:modelValue': [value: boolean] }>()
     :aria-checked="modelValue"
     :aria-label="label"
     class="relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:outline-none"
-    :class="modelValue ? 'bg-brand-500' : 'bg-neutral-300 dark:bg-neutral-700'"
+    :class="modelValue ? 'bg-brand-500 hover:bg-brand-600' : 'bg-neutral-300 hover:bg-neutral-400 dark:bg-neutral-700 dark:hover:bg-neutral-600'"
     @click="$emit('update:modelValue', !modelValue)"
   >
     <span

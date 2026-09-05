@@ -51,7 +51,7 @@ const seconds = computed(() => Math.round(props.result.durationMs / 1000))
           Nouvelle session (mêmes réglages)
         </button>
         <button
-          class="rounded-lg px-4 py-2 text-sm font-medium text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100"
+          class="rounded-lg px-4 py-2 text-sm font-medium text-neutral-500 transition hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
           @click="emit('config')"
         >
           Changer les réglages
