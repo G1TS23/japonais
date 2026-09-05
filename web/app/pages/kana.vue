@@ -86,70 +86,66 @@ function replayMissed() {
 
     <!-- CONFIG -->
     <div v-if="view === 'config'" class="space-y-5">
-      <div class="grid gap-x-8 gap-y-5 rounded-xl border border-neutral-200 bg-white p-5 md:grid-cols-2 dark:border-neutral-800 dark:bg-neutral-900">
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <span class="text-sm font-medium">Syllabaire</span>
-          <SegmentedControl
-            v-model="script"
-            :options="[
-              { value: 'hiragana', label: 'Hiragana' },
-              { value: 'katakana', label: 'Katakana' },
-              { value: 'mixte', label: 'Mixte' },
-            ]"
-          />
-        </div>
+      <div class="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+        <div class="grid gap-x-8 gap-y-5 md:grid-cols-2">
+          <SettingField label="Syllabaire">
+            <SegmentedControl
+              v-model="script"
+              :options="[
+                { value: 'hiragana', label: 'Hiragana' },
+                { value: 'katakana', label: 'Katakana' },
+                { value: 'mixte', label: 'Mixte' },
+              ]"
+            />
+          </SettingField>
 
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <span class="text-sm font-medium">Sens</span>
-          <SegmentedControl
-            v-model="direction"
-            :options="[
-              { value: 'kana2romaji', label: 'Kana → rōmaji' },
-              { value: 'romaji2kana', label: 'Rōmaji → kana' },
-            ]"
-          />
-        </div>
+          <SettingField label="Sens">
+            <SegmentedControl
+              v-model="direction"
+              :options="[
+                { value: 'kana2romaji', label: 'Kana → rōmaji' },
+                { value: 'romaji2kana', label: 'Rōmaji → kana' },
+              ]"
+            />
+          </SettingField>
 
-        <div>
-          <span class="text-sm font-medium">Groupes</span>
-          <div class="mt-2 flex flex-wrap gap-2">
-            <button
-              v-for="g in GROUPS"
-              :key="g.value"
-              type="button"
-              class="rounded-lg border px-3 py-1.5 text-sm font-medium transition"
-              :class="
-                groups.includes(g.value)
-                  ? 'border-brand-500 bg-brand-500 text-white'
-                  : 'border-neutral-300 text-neutral-600 hover:border-neutral-400 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
-              "
-              @click="toggleGroup(g.value)"
-            >
-              {{ g.label }}
-            </button>
-          </div>
-        </div>
+          <SettingField label="Groupes">
+            <div class="flex flex-wrap gap-2">
+              <button
+                v-for="g in GROUPS"
+                :key="g.value"
+                type="button"
+                class="rounded-lg border px-3 py-1.5 text-sm font-medium transition"
+                :class="
+                  groups.includes(g.value)
+                    ? 'border-brand-500 bg-brand-500 text-white'
+                    : 'border-neutral-300 text-neutral-600 hover:border-neutral-400 hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
+                "
+                @click="toggleGroup(g.value)"
+              >
+                {{ g.label }}
+              </button>
+            </div>
+          </SettingField>
 
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <span class="text-sm font-medium">Longueur</span>
-          <SegmentedControl
-            v-model="length"
-            :options="[
-              { value: '20', label: '20' },
-              { value: '50', label: '50' },
-              { value: 'all', label: 'Tout' },
-            ]"
-          />
-        </div>
+          <SettingField label="Longueur">
+            <SegmentedControl
+              v-model="length"
+              :options="[
+                { value: '20', label: '20' },
+                { value: '50', label: '50' },
+                { value: 'all', label: 'Tout' },
+              ]"
+            />
+          </SettingField>
 
-        <div class="flex items-center justify-between gap-4 md:col-span-2">
-          <span class="text-sm">
-            <span class="font-medium">Points faibles seulement</span>
-            <span class="block text-xs text-neutral-400">
-              {{ worked > 0 ? 'caractères sous 80 % de réussite' : 'disponible après quelques sessions' }}
-            </span>
-          </span>
-          <ToggleSwitch v-model="weakOnly" label="Points faibles seulement" />
+          <SettingField
+            label="Points faibles seulement"
+            :description="worked > 0 ? 'caractères sous 80 % de réussite' : 'disponible après quelques sessions'"
+            class="md:col-span-2"
+          >
+            <ToggleSwitch v-model="weakOnly" label="Points faibles seulement" />
+          </SettingField>
         </div>
       </div>
 

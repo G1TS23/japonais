@@ -70,70 +70,59 @@ async function onReset() {
       {{ message.text }}
     </div>
 
-    <section class="space-y-5 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
-      <h2 class="text-sm font-semibold text-neutral-500 dark:text-neutral-400">Préférences</h2>
+    <section class="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+      <h2 class="mb-4 text-sm font-semibold text-neutral-500 dark:text-neutral-400">Préférences</h2>
 
-      <div class="flex items-center justify-between gap-4">
-        <span class="text-sm font-medium">Thème</span>
-        <SegmentedControl
-          label="Thème"
-          :model-value="settings.values.theme"
-          :options="[
-            { value: 'system', label: 'Système' },
-            { value: 'light', label: 'Clair' },
-            { value: 'dark', label: 'Sombre' },
-          ]"
-          @update:model-value="settings.set('theme', $event as any)"
-        />
+      <div class="grid gap-x-8 gap-y-5 sm:grid-cols-2">
+        <SettingField label="Thème">
+          <SegmentedControl
+            label="Thème"
+            :model-value="settings.values.theme"
+            :options="[
+              { value: 'system', label: 'Système' },
+              { value: 'light', label: 'Clair' },
+              { value: 'dark', label: 'Sombre' },
+            ]"
+            @update:model-value="settings.set('theme', $event as any)"
+          />
+        </SettingField>
+
+        <SettingField label="Définitions en anglais" description="désactivé = français (par défaut)">
+          <ToggleSwitch
+            label="Afficher les définitions en anglais"
+            :model-value="settings.values.sensLang === 'en'"
+            @update:model-value="settings.set('sensLang', $event ? 'en' : 'fr')"
+          />
+        </SettingField>
+
+        <SettingField label="Nouvelles cartes / jour" description="plafond dans la file SRS">
+          <input
+            type="number"
+            min="0"
+            max="100"
+            :value="settings.values.newCardsPerDay"
+            class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700"
+            @change="settings.set('newCardsPerDay', Math.max(0, Number(($event.target as HTMLInputElement).value) || 0))"
+          />
+        </SettingField>
+
+        <SettingField label="Cible de rétention" description="FSRS — probabilité de rappel visée">
+          <input
+            type="number"
+            min="0.7"
+            max="0.99"
+            step="0.01"
+            :value="settings.values.retention"
+            class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700"
+            @change="
+              settings.set(
+                'retention',
+                Math.min(0.99, Math.max(0.7, Number(($event.target as HTMLInputElement).value) || 0.9)),
+              )
+            "
+          />
+        </SettingField>
       </div>
-
-      <div class="flex items-center justify-between gap-4">
-        <span class="text-sm">
-          <span class="font-medium">Définitions en anglais</span>
-          <span class="block text-xs text-neutral-400">désactivé = français (par défaut)</span>
-        </span>
-        <ToggleSwitch
-          label="Afficher les définitions en anglais"
-          :model-value="settings.values.sensLang === 'en'"
-          @update:model-value="settings.set('sensLang', $event ? 'en' : 'fr')"
-        />
-      </div>
-
-      <label class="flex items-center justify-between gap-4">
-        <span class="text-sm">
-          <span class="font-medium">Nouvelles cartes / jour</span>
-          <span class="block text-xs text-neutral-400">plafond dans la file SRS</span>
-        </span>
-        <input
-          type="number"
-          min="0"
-          max="100"
-          :value="settings.values.newCardsPerDay"
-          class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700"
-          @change="settings.set('newCardsPerDay', Math.max(0, Number(($event.target as HTMLInputElement).value) || 0))"
-        />
-      </label>
-
-      <label class="flex items-center justify-between gap-4">
-        <span class="text-sm">
-          <span class="font-medium">Cible de rétention</span>
-          <span class="block text-xs text-neutral-400">FSRS — probabilité de rappel visée</span>
-        </span>
-        <input
-          type="number"
-          min="0.7"
-          max="0.99"
-          step="0.01"
-          :value="settings.values.retention"
-          class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700"
-          @change="
-            settings.set(
-              'retention',
-              Math.min(0.99, Math.max(0.7, Number(($event.target as HTMLInputElement).value) || 0.9)),
-            )
-          "
-        />
-      </label>
     </section>
 
     <section class="mt-5 space-y-4 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
