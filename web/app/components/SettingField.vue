@@ -5,7 +5,7 @@ defineProps<{ label: string; description?: string; inline?: boolean }>()
 </script>
 
 <template>
-  <div v-if="inline" class="flex items-center justify-between gap-4">
+  <div v-if="inline" class="flex items-center gap-3">
     <div>
       <span class="text-sm font-medium">{{ label }}</span>
       <span v-if="description" class="block text-xs text-neutral-400">{{ description }}</span>

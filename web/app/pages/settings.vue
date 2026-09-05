@@ -87,11 +87,15 @@ async function onReset() {
           />
         </SettingField>
 
-        <SettingField label="Définitions en anglais" description="désactivé = français (par défaut)" inline>
-          <ToggleSwitch
-            label="Afficher les définitions en anglais"
-            :model-value="settings.values.sensLang === 'en'"
-            @update:model-value="settings.set('sensLang', $event ? 'en' : 'fr')"
+        <SettingField label="Langue des définitions">
+          <SegmentedControl
+            label="Langue des définitions"
+            :model-value="settings.values.sensLang"
+            :options="[
+              { value: 'fr', label: 'Français' },
+              { value: 'en', label: 'Anglais' },
+            ]"
+            @update:model-value="settings.set('sensLang', $event as any)"
           />
         </SettingField>
 
