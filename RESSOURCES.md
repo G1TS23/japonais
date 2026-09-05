@@ -22,12 +22,12 @@ un outil SRS, une source d'écoute et une de lecture par phase suffisent.
 
 | Ressource | Usage |
 |---|---|
-| **Anki** | SRS pivot. Gratuit (sauf iOS). Synchro AnkiWeb multi-appareils. |
-| Deck **Kaishi 1.5k** | Deck de démarrage moderne recommandé (~1 500 mots fréquents, phrases + audio). Remplace les vieux « Core 2k/6k ». |
-| Decks **JLPT Tango N5→N1** | Listes par niveau, phrases d'exemple. Pour du volume ciblé examen. |
+| **Le site** (`web/`) | SRS pivot pour ce programme — moteur FSRS intégré, deck N5 fourni (718 mots). Pas besoin d'Anki pour le vocabulaire de base. |
+| **Anki** | Utile uniquement pour ce que le site ne fait pas encore : sentence mining (créer ses propres cartes) à partir du N3/N4, ou decks N4+ en attendant qu'ils soient ajoutés au site. Gratuit (sauf iOS), synchro AnkiWeb. |
+| Decks **JLPT Tango N4→N1** | Pour compléter le vocabulaire une fois le deck N5 du site terminé, tant que les paliers suivants n'y sont pas encore. |
 | **Yomitan** (extension navigateur) | Dictionnaire pop-up sur n'importe quelle page + création de cartes Anki en un clic. Indispensable pour le sentence mining dès le N4. |
 | **10ten Reader** | Équivalent de Yomitan, alternative. |
-| **Bunpro** | SRS *de grammaire*, parcours N5→N1, avec exemples et liens vers explications. Complément du manuel. |
+| **Bunpro** | SRS *de grammaire*, parcours N5→N1, avec exemples et liens vers explications. Complément du manuel — le site ne couvre pas encore la grammaire (prévu à l'étape Quiz). |
 | **jpdb.io** | Analyse un texte/média et sort le vocabulaire par fréquence + SRS intégré. Utile pour préparer un livre ou un anime. |
 | **WaniKani** | SRS dédié kanji : radicaux → kanji → vocabulaire, ~60 niveaux. Payant. Très structuré ; certains le trouvent lent au début. |
 
@@ -79,7 +79,7 @@ un outil SRS, une source d'écoute et une de lecture par phase suffisent.
 
 | Ressource | Approche |
 |---|---|
-| Via le vocabulaire (Anki + Yomitan) | Recommandé par défaut : chaque mot fixe ses kanji en contexte. |
+| Via le vocabulaire (le site + Yomitan) | Recommandé par défaut : chaque mot fixe ses kanji en contexte. |
 | **WaniKani** | Parcours radicaux → kanji → vocab, SRS intégré, ~2 000 kanji. Payant. |
 | **KameSame** | SItué en complément de WaniKani, entraîne la production (sens → mot). |
 | *Remembering the Kanji* (Heisig) | Écriture + distinction de ~2 200 kanji, sans lectures. En complément uniquement. |

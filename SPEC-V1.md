@@ -33,7 +33,7 @@ extensibles ensuite (N4, N3…).
 | État | Pinia. |
 | Utilitaires | VueUse. |
 | Style | Tailwind CSS + composants maison ; primitives accessibles via **Nuxt UI** (Reka UI). |
-| Contenu programme | `@nuxt/content` (Markdown + frontmatter) pour les 6 phases. |
+| Contenu programme | Données structurées (`data/programme.ts`), pas `@nuxt/content` — voir note étape 4 ci-dessous. |
 | Jeux de données | JSON/YAML versionnés dans `content/` (kana, vocab, kanji, grammaire, quiz). |
 | SRS | Bibliothèque **`ts-fsrs`** (implémentation FSRS maintenue) plutôt qu'un algo maison. |
 | PWA / hors-ligne | Inclus (`@vite-pwa/nuxt`) — révision sans connexion. Peu coûteux, forte valeur. |
@@ -86,9 +86,15 @@ quand disponible, **KANJIDIC2** (kanji), listes de grammaire N5 communautaires.
 - **Statistiques** : prévision des révisions à venir, révisions/jour, rétention,
   nombre de cartes matures.
 
-### 3.3 Navigateur de programme — `/programme`, `/programme/[phase]`
+### 3.3 Navigateur de programme — `/programme`, `/programme/[id]`
 
-- Rendu des **6 phases** depuis `@nuxt/content` (portage de `PROGRAMME.md`).
+- Rendu des **6 phases**, portées depuis `PROGRAMME.md` dans `data/programme.ts`
+  (données structurées typées, pas `@nuxt/content`) : à la construction, un
+  contenu figé qui ne change jamais au runtime et doit piloter des cases à
+  cocher à identifiants stables n'a pas besoin d'un module de contenu — même
+  logique que `data/kana.ts` / `data/vocab.ts`. `@nuxt/content` v3 s'installe
+  proprement (SQLite en WASM, pas de binaire natif), mais reste une dépendance
+  lourde (shiki, isomorphic-git, socket.io…) pour ce gain-là.
 - Par phase : points de grammaire, seuils vocab/kanji, compétences, et
   **critères de sortie en cases à cocher** (état persisté).
 - **Jalons** transversaux : liste cochable + **date** enregistrée.
@@ -185,3 +191,28 @@ et coûteuse (mauvais intervalles de révision) contrairement à un bug d'UI.
 - Audio natif sur les cartes (TTS ou fichiers).
 - Paliers N4+ (données), ajout incrémental après la v1.
 - Accent de hauteur (module dédié).
+
+## 9. Pistes post-v1 (parking, à trancher plus tard)
+
+Discutées mais mises de côté — à revoir une fois la v1 finie (étapes 5 et 6).
+Ça déplacerait le projet d'un « compagnon » vers un quasi-cours complet.
+
+**Réaliste, forte valeur :**
+
+- **Grammaire — référence + SRS + quiz** : une fiche par point (structure, sens,
+  exemples), branchée sur FSRS (phrases à trou) et sur le quiz. Surtout du
+  contenu à rédiger/porter.
+- **Audio par synthèse vocale** : `SpeechSynthesis` (natif navigateur, zéro
+  dépendance) sur le vocab et les kana ; débloque écoute de vocabulaire et
+  dictée. Qualité dépend de l'OS/navigateur (bonne sur macOS).
+- **Dictionnaire intégré** : sous-ensemble de JMdict(-FR déjà récupéré),
+  lookup au tap dans toute l'app.
+- **Lecture graduée** : textes courts calibrés par palier, furigana à bascule,
+  lookup au tap.
+- **Tracé des kanji** : animation ordre des traits + canvas (déjà dans §8).
+
+**Possible, valeur limitée en solo :** shadowing / enregistrement, journal en
+japonais (sans correction).
+
+**Ne rentrera pas :** contenu natif sous copyright, tuteur / correction
+humaine, immersion réelle (seulement traçable).

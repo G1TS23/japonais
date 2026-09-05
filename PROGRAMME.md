@@ -36,9 +36,10 @@
   ajoute explicitement production orale et écrite à chaque phase à partir de la
   Phase 1, parce que c'est ce qui sépare « N2 » de « B2 ».
 - **Manuel + immersion + SRS + production**, en parallèle dès que possible. Le
-  manuel donne la structure ; le SRS (Anki) fixe le vocabulaire ; l'immersion
-  transforme les connaissances en compréhension réelle ; la production (parler,
-  écrire) les rend actives.
+  manuel donne la structure ; le SRS (intégré au site — drill kana + FSRS,
+  pas besoin d'Anki) fixe le vocabulaire ; l'immersion transforme les
+  connaissances en compréhension réelle ; la production (parler, écrire) les
+  rend actives.
 - Voir [`RESSOURCES.md`](./RESSOURCES.md) pour le détail des outils cités.
 
 ---
@@ -138,9 +139,8 @@ mécanique de base de la langue, installer les outils.
 
 **Outils à installer**
 
-- **Anki** (ordinateur + mobile) + synchronisation d'un compte AnkiWeb.
-- Un deck de drill kana (ex. « Kana - Hiragana and Katakana »), à supprimer une
-  fois la Phase 0 finie.
+- **Le site** (drill kana + SRS intégrés) — pas d'appli tierce nécessaire pour
+  la répétition espacée.
 - Clavier japonais sur l'ordinateur et le téléphone.
 - Un dictionnaire : **Jisho.org** + l'extension navigateur **Yomitan** (à
   configurer plus tard pour la lecture).
@@ -150,7 +150,7 @@ mécanique de base de la langue, installer les outils.
 - [ ] Lire à voix haute une phrase en kana inconnue sans hésiter (< 2 s/mot).
 - [ ] Écrire les deux syllabaires de mémoire.
 - [ ] Distinguer à l'oreille voyelle longue/courte et consonne géminée.
-- [ ] Anki en place, routine quotidienne amorcée.
+- [ ] Routine quotidienne sur le site amorcée (drill kana).
 
 ---
 
@@ -185,8 +185,8 @@ préfères une approche plus « immersive » sans anglais. Compléments gratuits
 
 **Vocabulaire / kanji**
 
-- Deck Anki de démarrage : **Kaishi 1.5k** (le plus recommandé aujourd'hui), en
-  parallèle du manuel. ~10–15 nouvelles cartes/jour.
+- Deck N5 intégré au site (718 mots), en parallèle du manuel. ~10–15 nouvelles
+  cartes/jour (réglable dans Réglages).
 - Kanji : ceux de Genki I (~100), appris *via le vocabulaire* (pas en liste
   isolée). Apprendre à écrire à la main au moins ce lot (ordre des traits,
   radicaux de base).
@@ -248,8 +248,10 @@ préfères une approche plus « immersive » sans anglais. Compléments gratuits
 
 **Vocabulaire / kanji**
 
-- Continuer Kaishi 1.5k jusqu'au bout, enchaîner sur un deck N4 (JLPT Tango N4)
-  ou basculer vers le **sentence mining** (voir §5).
+- Terminer le deck N5 du site, puis un deck N4 (à ajouter au site le moment
+  venu) ou basculer vers le **sentence mining** (voir §5 — nécessite un outil
+  externe type Anki tant que le site ne permet pas de créer ses propres
+  cartes).
 - Kanji : ~200 de plus. Reconnaissance prioritaire ; écriture manuelle au moins
   pour les plus fréquents.
 
@@ -324,8 +326,9 @@ préfères une approche plus « immersive » sans anglais. Compléments gratuits
 **Vocabulaire / kanji**
 
 - ~2 200 mots de plus (gros palier). **Sentence mining** recommandé à ce stade :
-  Yomitan + Anki, cartes fabriquées à partir de ce que tu lis/écoutes réellement.
-  Compléter avec un deck N3 si besoin de volume.
+  cartes fabriquées à partir de ce que tu lis/écoutes réellement (Yomitan +
+  Anki, tant que le site ne gère pas la création de cartes). Compléter avec un
+  deck N3 sur le site quand il existera, sinon un deck externe.
 - Kanji : ~350 de plus (cumul ~650). La reconnaissance devient prioritaire sur
   l'écriture ; garder un peu d'écriture manuelle pour la mémorisation.
 
@@ -458,15 +461,18 @@ Esquisse, pour savoir où mène la suite.
 1. **Manuel / grammaire structurée** — donne l'ossature et l'ordre des notions.
    Ne pas s'y enfermer : un point de grammaire est « appris » quand on l'a *vu en
    contexte* et *produit*, pas quand on a lu l'encadré.
-2. **SRS (Anki)** — mémorisation espacée du vocabulaire.
-   - Débuts : deck tout fait **Kaishi 1.5k**, puis decks JLPT Tango.
+2. **SRS (le site)** — mémorisation espacée du vocabulaire, moteur FSRS intégré.
+   - Débuts : deck N5 fourni par le site (718 mots).
    - À partir du N4/N3 : **sentence mining** — fabriquer ses cartes depuis ce
-     qu'on lit/écoute (Yomitan → Anki en un clic). Cartes = phrase entière avec
-     le mot cible, audio, image éventuelle. Recto = phrase, verso = lecture + sens.
-   - Dose : 10–20 nouvelles cartes/jour au début ; ajuster pour que les révisions
-     quotidiennes restent < 25–30 min. Mieux vaut moins mais tous les jours.
+     qu'on lit/écoute. Le site ne gère pas encore la création de cartes ; en
+     attendant, un outil externe (Yomitan → Anki) reste nécessaire pour cette
+     technique précise. Cartes = phrase entière avec le mot cible, audio, image
+     éventuelle. Recto = phrase, verso = lecture + sens.
+   - Dose : 10–20 nouvelles cartes/jour au début (réglable) ; ajuster pour que
+     les révisions quotidiennes restent < 25–30 min. Mieux vaut moins mais tous
+     les jours.
    - Ne jamais laisser la pile de révisions déborder plusieurs jours : c'est la
-     cause n°1 d'abandon d'Anki.
+     cause n°1 d'abandon d'un SRS, Anki ou autre.
 3. **Immersion (input compréhensible)** — l'échelle :
    input pour apprenants (Comprehensible Japanese) → podcasts pour apprenants
    (Teppei) → lecteurs gradués → contenu natif *avec* outils (Yomitan,
@@ -486,7 +492,7 @@ Esquisse, pour savoir où mène la suite.
 - **Recommandé** : apprendre les kanji *via le vocabulaire* (chaque mot nouveau
   fixe ses kanji en contexte), en s'appuyant sur une connaissance des **radicaux**
   pour décomposer et mémoriser. Outils : WaniKani (radicaux → kanji → vocab, très
-  structuré) *ou* simplement Anki + Yomitan.
+  structuré) *ou* simplement le SRS du site + Yomitan.
 - **Alternative** : *Remembering the Kanji* (Heisig) — apprend à écrire/distinguer
   ~2 200 kanji rapidement, mais sans lectures ni vocabulaire ; à faire *en
   complément*, jamais seul, et seulement si la méthode « clé en main » te parle.
@@ -525,13 +531,13 @@ notion reste passive.
 ## 6. Routines hebdomadaires types
 
 À adapter au fil des phases (plus d'immersion, moins de manuel avec le temps).
-« Anki tous les jours » est non négociable dans les trois versions.
+« SRS tous les jours » (le site) est non négociable dans les trois versions.
 
 ### ~4 h / semaine — rythme tranquille
 
 | Bloc | Volume |
 |---|---|
-| Anki (quotidien, 15 min) | 1 h 45 |
+| SRS (quotidien, 15 min) | 1 h 45 |
 | Manuel + grammaire (2 séances de ~45 min) | 1 h 30 |
 | Écoute active (podcast apprenant, 1 séance) | 0 h 45 |
 | *Immersion loisir* | bonus, non compté |
@@ -540,7 +546,7 @@ notion reste passive.
 
 | Bloc | Volume |
 |---|---|
-| Anki (quotidien, 20 min) | 2 h 20 |
+| SRS (quotidien, 20 min) | 2 h 20 |
 | Manuel + grammaire (3 séances de ~45 min) | 2 h 15 |
 | Écoute active | 1 h 30 |
 | Lecture graduée | 1 h 00 |
@@ -550,7 +556,7 @@ notion reste passive.
 
 | Bloc | Volume |
 |---|---|
-| Anki (quotidien, 30 min) | 3 h 30 |
+| SRS (quotidien, 30 min) | 3 h 30 |
 | Manuel + grammaire | 3 h 00 |
 | Immersion active (écoute + lecture natives) | 4 h 30 |
 | Sentence mining (fabrication de cartes) | 1 h 30 |
@@ -561,12 +567,12 @@ notion reste passive.
 
 ## 7. Suivi et jalons
 
-Tenir un journal (voir [`SUIVI.md`](./SUIVI.md)). Métriques utiles à relever
-chaque semaine :
+Le site affiche déjà en direct sur le tableau de bord : cartes matures
+(stabilité ≥ 21 j), total de cartes, kanji/kana travaillés, séries
+quotidiennes. Reste à saisir à la main (journal d'étude sur `/programme`,
+voir aussi [`SUIVI.md`](./SUIVI.md)) :
 
 - Heures d'étude « active » + heures d'immersion.
-- Cartes Anki **matures** (intervalle > 21 j) et total de cartes.
-- Kanji reconnus (approx.).
 - Contenus finis : leçons de manuel, chapitres de lecteurs, épisodes, livres.
 - Séances de production : tuteur, textes corrigés, échanges.
 
@@ -604,8 +610,9 @@ chaque semaine :
   développer. En faire un peu tous les jours dès la Phase 1.
 - **Négliger la production** jusqu'au N2 : on se retrouve avec une compréhension
   N2 et une expression A2. D'où la présence d'output à chaque phase ici.
-- **Laisser Anki déborder** : 3 jours sautés = 400 cartes en retard = abandon.
-  Réduire les nouvelles cartes plutôt que sauter les révisions.
+- **Laisser le SRS déborder** : 3 jours sautés = des centaines de cartes en
+  retard = abandon. Réduire les nouvelles cartes (réglable) plutôt que sauter
+  les révisions.
 - **Sauter d'appli en appli** (Duolingo → Wanikani → LingoDeer → …) sans finir un
   parcours. Choisir un manuel pivot et le terminer.
 - **Ignorer totalement l'accent de hauteur** au point de fossiliser une prosodie
