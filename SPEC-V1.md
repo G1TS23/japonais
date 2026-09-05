@@ -191,3 +191,28 @@ et coûteuse (mauvais intervalles de révision) contrairement à un bug d'UI.
 - Audio natif sur les cartes (TTS ou fichiers).
 - Paliers N4+ (données), ajout incrémental après la v1.
 - Accent de hauteur (module dédié).
+
+## 9. Pistes post-v1 (parking, à trancher plus tard)
+
+Discutées mais mises de côté — à revoir une fois la v1 finie (étapes 5 et 6).
+Ça déplacerait le projet d'un « compagnon » vers un quasi-cours complet.
+
+**Réaliste, forte valeur :**
+
+- **Grammaire — référence + SRS + quiz** : une fiche par point (structure, sens,
+  exemples), branchée sur FSRS (phrases à trou) et sur le quiz. Surtout du
+  contenu à rédiger/porter.
+- **Audio par synthèse vocale** : `SpeechSynthesis` (natif navigateur, zéro
+  dépendance) sur le vocab et les kana ; débloque écoute de vocabulaire et
+  dictée. Qualité dépend de l'OS/navigateur (bonne sur macOS).
+- **Dictionnaire intégré** : sous-ensemble de JMdict(-FR déjà récupéré),
+  lookup au tap dans toute l'app.
+- **Lecture graduée** : textes courts calibrés par palier, furigana à bascule,
+  lookup au tap.
+- **Tracé des kanji** : animation ordre des traits + canvas (déjà dans §8).
+
+**Possible, valeur limitée en solo :** shadowing / enregistrement, journal en
+japonais (sans correction).
+
+**Ne rentrera pas :** contenu natif sous copyright, tuteur / correction
+humaine, immersion réelle (seulement traçable).
