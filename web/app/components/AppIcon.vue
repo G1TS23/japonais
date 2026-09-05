@@ -12,6 +12,7 @@ export type IconName =
   | 'cog-6-tooth'
   | 'chevron-double-left'
   | 'chevron-double-right'
+  | 'arrow-left'
 
 const props = withDefaults(defineProps<{ name: IconName; solid?: boolean }>(), { solid: false })
 
@@ -42,6 +43,7 @@ const OUTLINE: Record<IconName, string[]> = {
   ],
   'chevron-double-left': ['m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5'],
   'chevron-double-right': ['m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5'],
+  'arrow-left': ['M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18'],
 }
 
 const SOLID: Record<IconName, PathDef[]> = {
@@ -93,6 +95,12 @@ const SOLID: Record<IconName, PathDef[]> = {
     },
     {
       d: 'M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z',
+      fillRule: 'evenodd',
+    },
+  ],
+  'arrow-left': [
+    {
+      d: 'M11.03 3.97a.75.75 0 0 1 0 1.06l-6.22 6.22H21a.75.75 0 0 1 0 1.5H4.81l6.22 6.22a.75.75 0 1 1-1.06 1.06l-7.5-7.5a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 0 1 1.06 0Z',
       fillRule: 'evenodd',
     },
   ],
