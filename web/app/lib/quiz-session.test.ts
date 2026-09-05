@@ -86,30 +86,41 @@ describe('poolSize', () => {
   })
 })
 
+const sampleQ = QUIZ_N5[0]!
+
 describe('recordQuizAttempt', () => {
-  it('accepte des tableaux réactifs Vue sans DataCloneError', async () => {
-    // Reproduit l'appel réel : quiz.vue passe `themes.value` (un ref Vue).
-    const themes = reactive(['particules', 'grammaire'])
+  it('accepte des tableaux/objets réactifs Vue sans DataCloneError', async () => {
+    // Reproduit l'appel réel : quiz.vue passe des refs Vue (proxies).
     await expect(
-      recordQuizAttempt({ palier: 'n5', themes, score: 5, total: 10, missed: reactive(['p-wa']) }),
+      recordQuizAttempt({
+        palier: 'n5',
+        themes: reactive(['particules', 'grammaire']),
+        score: 5,
+        total: 10,
+        missed: reactive(['p-wa']),
+        missedQuestions: reactive([{ ...sampleQ }]),
+        durationMs: 12000,
+      }),
     ).resolves.toBeUndefined()
     const rows = await recentQuizAttempts()
     expect(rows[0]?.themes).toEqual(['particules', 'grammaire'])
-    expect(Array.isArray(rows[0]?.missed)).toBe(true)
+    expect(rows[0]?.missedQuestions?.[0]?.id).toBe(sampleQ.id)
   })
 
-  it('enregistre une tentative et la relit, plus récente en premier', async () => {
+  it('enregistre une tentative et la relit, plus récente en premier, avec le détail des erreurs', async () => {
     await recordQuizAttempt(
-      { palier: 'n5', themes: ['particules'], score: 7, total: 10, missed: ['p-wa'] },
+      { palier: 'n5', themes: ['particules'], score: 7, total: 10, missed: ['p-wa'], missedQuestions: [sampleQ], durationMs: 30000 },
       new Date('2026-02-01T10:00:00Z'),
     )
     await recordQuizAttempt(
-      { palier: 'n5', themes: ['grammaire'], score: 9, total: 10, missed: [] },
+      { palier: 'n5', themes: ['grammaire'], score: 9, total: 10, missed: [], missedQuestions: [], durationMs: 25000 },
       new Date('2026-02-02T10:00:00Z'),
     )
     const rows = await recentQuizAttempts()
     expect(rows).toHaveLength(2)
     expect(rows[0]?.score).toBe(9)
     expect(rows[1]?.missed).toEqual(['p-wa'])
+    expect(rows[1]?.missedQuestions?.[0]?.explanation).toBe(sampleQ.explanation)
+    expect(rows[1]?.durationMs).toBe(30000)
   })
 })

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import type { QuizAttempt } from '~/lib/db'
 import {
   buildQuiz,
   poolSize,
@@ -14,20 +15,23 @@ import { useSettingsStore } from '~/stores/settings'
 
 useHead({ title: 'Quiz — Japonais' })
 
+const HISTORY_LIMIT = 10
+
 const settings = useSettingsStore()
 onMounted(async () => {
   await settings.load()
-  attempts.value = await recentQuizAttempts(5)
+  attempts.value = await recentQuizAttempts(HISTORY_LIMIT)
 })
 
-const view = ref<'config' | 'running' | 'done'>('config')
+const view = ref<'config' | 'running' | 'done' | 'review'>('config')
 const themes = ref<QuizTheme[]>(['particules', 'grammaire', 'vocabulaire'])
 const length = ref('10')
 
 type Summary = { score: number; total: number; missed: string[]; durationMs: number }
 const questions = ref<QuizQuestion[]>([])
 const lastSummary = ref<Summary | null>(null)
-const attempts = ref<Awaited<ReturnType<typeof recentQuizAttempts>>>([])
+const attempts = ref<QuizAttempt[]>([])
+const reviewAttempt = ref<QuizAttempt | null>(null)
 
 const available = computed(() => poolSize(themes.value))
 const canStart = computed(() => themes.value.length > 0)
@@ -47,6 +51,10 @@ function start() {
   view.value = 'running'
 }
 
+const missedQuestions = computed(() =>
+  lastSummary.value ? questions.value.filter((q) => lastSummary.value!.missed.includes(q.id)) : [],
+)
+
 async function onFinish(summary: Summary) {
   lastSummary.value = summary
   await recordQuizAttempt({
@@ -55,18 +63,37 @@ async function onFinish(summary: Summary) {
     score: summary.score,
     total: summary.total,
     missed: summary.missed,
+    missedQuestions: missedQuestions.value,
+    durationMs: summary.durationMs,
   })
-  attempts.value = await recentQuizAttempts(5)
+  attempts.value = await recentQuizAttempts(HISTORY_LIMIT)
   view.value = 'done'
 }
-
-const missedQuestions = computed(() =>
-  lastSummary.value ? questions.value.filter((q) => lastSummary.value!.missed.includes(q.id)) : [],
-)
 
 function replayMissed() {
   if (!missedQuestions.value.length) return
   questions.value = missedQuestions.value.map(shuffleOptions)
+  view.value = 'running'
+}
+
+// --- Relecture d'une tentative de l'historique ---------------------------
+
+function openReview(a: QuizAttempt) {
+  reviewAttempt.value = a
+  view.value = 'review'
+}
+
+const reviewSummary = computed<Summary>(() => ({
+  score: reviewAttempt.value?.score ?? 0,
+  total: reviewAttempt.value?.total ?? 0,
+  missed: reviewAttempt.value?.missed ?? [],
+  durationMs: reviewAttempt.value?.durationMs ?? 0,
+}))
+
+function replayReviewMissed() {
+  const qs = reviewAttempt.value?.missedQuestions
+  if (!qs?.length) return
+  questions.value = qs.map(shuffleOptions)
   view.value = 'running'
 }
 </script>
@@ -122,11 +149,21 @@ function replayMissed() {
         v-if="attempts.length"
         class="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900"
       >
-        <h2 class="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">Tentatives récentes</h2>
-        <ul class="space-y-1 text-sm text-neutral-600 dark:text-neutral-400">
-          <li v-for="a in attempts" :key="a.id" class="flex justify-between">
-            <span>{{ new Date(a.ts).toLocaleDateString() }} · {{ a.themes.join(', ') }}</span>
-            <span class="tabular-nums">{{ a.score }} / {{ a.total }}</span>
+        <h2 class="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">
+          Tentatives récentes
+          <span class="font-normal text-neutral-400">— {{ attempts.length }} affichées, toutes conservées</span>
+        </h2>
+        <ul class="divide-y divide-neutral-100 text-sm dark:divide-neutral-800">
+          <li v-for="a in attempts" :key="a.id">
+            <button
+              class="-mx-2 flex w-[calc(100%+1rem)] items-center justify-between gap-3 rounded px-2 py-2 text-left transition hover:bg-neutral-100 dark:hover:bg-neutral-800/60"
+              @click="openReview(a)"
+            >
+              <span class="text-neutral-600 dark:text-neutral-400">
+                {{ new Date(a.ts).toLocaleString() }} · {{ a.themes.join(', ') }}
+              </span>
+              <span class="shrink-0 tabular-nums font-medium">{{ a.score }} / {{ a.total }}</span>
+            </button>
           </li>
         </ul>
       </div>
@@ -140,6 +177,16 @@ function replayMissed() {
       :missed-questions="missedQuestions"
       @replay="replayMissed"
       @again="start"
+      @config="view = 'config'"
+    />
+
+    <QuizResults
+      v-else-if="view === 'review' && reviewAttempt"
+      historical
+      :date="new Date(reviewAttempt.ts).toLocaleString()"
+      :summary="reviewSummary"
+      :missed-questions="reviewAttempt.missedQuestions ?? []"
+      @replay="replayReviewMissed"
       @config="view = 'config'"
     />
   </div>

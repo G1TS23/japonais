@@ -107,12 +107,15 @@ export interface QuizAttemptInput {
   score: number
   total: number
   missed: string[]
+  missedQuestions: QuizQuestion[]
+  durationMs: number
 }
 
 export async function recordQuizAttempt(input: QuizAttemptInput, now: Date = new Date()): Promise<void> {
-  // `input.themes` / `input.missed` viennent souvent de refs Vue : les
-  // recopier en tableaux simples, sinon IndexedDB refuse de cloner le proxy
-  // (DataCloneError).
+  // Les tableaux/objets viennent de refs Vue (proxies réactifs) : IndexedDB
+  // refuse de les cloner tels quels (DataCloneError). Le round-trip JSON
+  // produit des structures 100 % simples (les questions ne contiennent que
+  // des chaînes / nombres / tableaux de chaînes).
   await getDb().quizAttempts.add({
     id: uid(),
     palier: input.palier,
@@ -120,10 +123,12 @@ export async function recordQuizAttempt(input: QuizAttemptInput, now: Date = new
     score: input.score,
     total: input.total,
     missed: [...input.missed],
+    missedQuestions: JSON.parse(JSON.stringify(input.missedQuestions)) as QuizQuestion[],
+    durationMs: input.durationMs,
     ts: now.getTime(),
   })
 }
 
-export async function recentQuizAttempts(limit = 10) {
+export async function recentQuizAttempts(limit = 20) {
   return getDb().quizAttempts.orderBy('ts').reverse().limit(limit).toArray()
 }
