@@ -99,15 +99,7 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
 
 <template>
   <div v-if="current" class="mx-auto max-w-md">
-    <div class="mb-6 flex items-center justify-between text-xs text-neutral-500 dark:text-neutral-400">
-      <span>{{ doneCount }} / {{ total }}</span>
-      <button
-        class="-mx-2 -my-0.5 rounded px-2 py-0.5 transition hover:bg-neutral-200/60 hover:text-neutral-900 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100"
-        @click="emit('quit')"
-      >
-        Quitter
-      </button>
-    </div>
+    <div class="mb-6 text-xs text-neutral-500 dark:text-neutral-400">{{ doneCount }} / {{ total }}</div>
     <div class="mb-1 h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
       <div
         class="h-full bg-brand-500 transition-all"
@@ -169,5 +161,12 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
       </button>
     </div>
     <p class="mt-3 text-center text-xs text-neutral-400">Espace pour retourner · 1-4 pour noter</p>
+
+    <button
+      class="mt-3 w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800"
+      @click="emit('quit')"
+    >
+      Quitter
+    </button>
   </div>
 </template>
