@@ -142,7 +142,7 @@ function replayMissed() {
           <SettingField
             label="Points faibles seulement"
             :description="worked > 0 ? 'caractères sous 80 % de réussite' : 'disponible après quelques sessions'"
-            class="md:col-span-2"
+            inline
           >
             <ToggleSwitch v-model="weakOnly" label="Points faibles seulement" />
           </SettingField>

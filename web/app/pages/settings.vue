@@ -87,7 +87,7 @@ async function onReset() {
           />
         </SettingField>
 
-        <SettingField label="Définitions en anglais" description="désactivé = français (par défaut)">
+        <SettingField label="Définitions en anglais" description="désactivé = français (par défaut)" inline>
           <ToggleSwitch
             label="Afficher les définitions en anglais"
             :model-value="settings.values.sensLang === 'en'"
