@@ -57,8 +57,7 @@ export const PHASES: Phase[] = [
       {
         title: 'Outils à installer',
         items: [
-          'Anki (ordinateur + mobile) + compte AnkiWeb.',
-          'Un deck de drill kana, à supprimer une fois la phase finie.',
+          'Le site (drill kana + SRS intégrés) — pas d\'appli tierce nécessaire pour la répétition espacée.',
           'Clavier japonais sur ordinateur et téléphone.',
           'Un dictionnaire : Jisho.org + extension Yomitan.',
         ],
@@ -68,7 +67,7 @@ export const PHASES: Phase[] = [
       { id: 'p0-1', text: 'Lire à voix haute une phrase en kana inconnue sans hésiter (< 2 s/mot).' },
       { id: 'p0-2', text: 'Écrire les deux syllabaires de mémoire.' },
       { id: 'p0-3', text: "Distinguer à l'oreille voyelle longue/courte et consonne géminée." },
-      { id: 'p0-4', text: 'Anki en place, routine quotidienne amorcée.' },
+      { id: 'p0-4', text: 'Routine quotidienne sur le site amorcée (drill kana).' },
     ],
   },
   {
@@ -101,7 +100,7 @@ export const PHASES: Phase[] = [
       {
         title: 'Vocabulaire / kanji',
         items: [
-          'Deck Anki de démarrage : Kaishi 1.5k, ~10–15 nouvelles cartes/jour.',
+          'Deck N5 intégré au site (718 mots), ~10–15 nouvelles cartes/jour (réglable dans Réglages).',
           'Kanji de Genki I (~100), appris via le vocabulaire, pas en liste isolée.',
         ],
       },
@@ -161,7 +160,7 @@ export const PHASES: Phase[] = [
       {
         title: 'Vocabulaire / kanji',
         items: [
-          "Kaishi 1.5k jusqu'au bout, puis deck N4 (JLPT Tango) ou sentence mining.",
+          "Terminer le deck N5 du site, puis un deck N4 (à ajouter au site) ou sentence mining (outil externe requis).",
           '~200 kanji de plus. Reconnaissance prioritaire.',
         ],
       },
@@ -227,7 +226,7 @@ export const PHASES: Phase[] = [
       {
         title: 'Vocabulaire / kanji',
         items: [
-          '~2 200 mots de plus. Sentence mining recommandé (Yomitan + Anki), complété par un deck N3 si besoin.',
+          '~2 200 mots de plus. Sentence mining recommandé (Yomitan + un outil externe type Anki, le site ne crée pas encore de cartes), complété par un deck N3 sur le site si besoin.',
           'Kanji : ~350 de plus (cumul ~650). Reconnaissance prioritaire sur écriture.',
         ],
       },

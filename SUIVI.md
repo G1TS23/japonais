@@ -1,5 +1,10 @@
 # Suivi de progression
 
+> **Ce suivi est maintenant intégré au site** (`/programme` : jalons cochables
+> et datés, critères de sortie par phase, journal d'étude ; tableau de bord :
+> cartes SRS, matures, kana/kanji travaillés, séries). Ce fichier ne sert plus
+> qu'en secours (suivi papier hors-ligne, avant que le site n'existe).
+
 Modèle à remplir. Voir [`PROGRAMME.md`](./PROGRAMME.md) §7 pour les métriques.
 
 ---
@@ -14,7 +19,7 @@ Modèle à remplir. Voir [`PROGRAMME.md`](./PROGRAMME.md) §7 pour les métrique
 | Cible finale | B2 (JLPT N2 solide + production entraînée) |
 | Rythme cible | ___ h / semaine |
 | Manuel pivot en cours | — |
-| Deck SRS en cours | Kaishi 1.5k |
+| Deck SRS en cours | Deck N5 du site |
 
 ### Compteurs (à mettre à jour ~1×/mois)
 
@@ -22,8 +27,8 @@ Modèle à remplir. Voir [`PROGRAMME.md`](./PROGRAMME.md) §7 pour les métrique
 |---|---|---|
 | Heures cumulées (étude active) | 0 | |
 | Heures cumulées (immersion) | 0 | |
-| Cartes Anki — total | 0 | |
-| Cartes Anki — matures (> 21 j) | 0 | |
+| Cartes SRS — total | 0 | |
+| Cartes SRS — matures (> 21 j) | 0 | |
 | Kanji reconnus (approx.) | 0 | |
 | Points de grammaire vus | 0 | |
 
@@ -36,7 +41,7 @@ Modèle à remplir. Voir [`PROGRAMME.md`](./PROGRAMME.md) §7 pour les métrique
 ### Semaine du 2026-__-__
 
 - **Heures** : étude ___ / immersion ___
-- **Anki** : ___ nouvelles cartes, révisions à jour ? O / N
+- **SRS** : ___ nouvelles cartes, révisions à jour ? O / N
 - **Manuel / grammaire** : (leçons, points vus)
 - **Écoute** : (contenus)
 - **Lecture** : (contenus)
