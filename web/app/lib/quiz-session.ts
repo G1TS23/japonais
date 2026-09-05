@@ -110,7 +110,18 @@ export interface QuizAttemptInput {
 }
 
 export async function recordQuizAttempt(input: QuizAttemptInput, now: Date = new Date()): Promise<void> {
-  await getDb().quizAttempts.add({ id: uid(), ...input, ts: now.getTime() })
+  // `input.themes` / `input.missed` viennent souvent de refs Vue : les
+  // recopier en tableaux simples, sinon IndexedDB refuse de cloner le proxy
+  // (DataCloneError).
+  await getDb().quizAttempts.add({
+    id: uid(),
+    palier: input.palier,
+    themes: [...input.themes],
+    score: input.score,
+    total: input.total,
+    missed: [...input.missed],
+    ts: now.getTime(),
+  })
 }
 
 export async function recentQuizAttempts(limit = 10) {

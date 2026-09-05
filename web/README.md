@@ -67,8 +67,8 @@ app/
   components/            # PageHeader, StatCard, SegmentedControl, ToggleSwitch, SettingField…
   components/kana/       # KanaDrill, KanaResults, KanaHeatmap
   components/srs/        # SrsReview, SrsResults
-  components/programme/  # StudyLogForm
   components/quiz/       # QuizSession, QuizResults
+  components/StudyLogForm.vue  # journal d'étude (/programme)
   composables/           # useLiveQuery (wrapper Dexie.liveQuery), useKanaStats
   data/kana.ts             # jeu de données hiragana + katakana
   data/vocab.ts             # type VocabEntry + export du deck N5

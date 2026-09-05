@@ -1,4 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
+import { reactive } from 'vue'
 import { QUIZ_N5 } from '~/data/quiz-n5'
 import { getDb } from './db'
 import {
@@ -86,6 +87,17 @@ describe('poolSize', () => {
 })
 
 describe('recordQuizAttempt', () => {
+  it('accepte des tableaux réactifs Vue sans DataCloneError', async () => {
+    // Reproduit l'appel réel : quiz.vue passe `themes.value` (un ref Vue).
+    const themes = reactive(['particules', 'grammaire'])
+    await expect(
+      recordQuizAttempt({ palier: 'n5', themes, score: 5, total: 10, missed: reactive(['p-wa']) }),
+    ).resolves.toBeUndefined()
+    const rows = await recentQuizAttempts()
+    expect(rows[0]?.themes).toEqual(['particules', 'grammaire'])
+    expect(Array.isArray(rows[0]?.missed)).toBe(true)
+  })
+
   it('enregistre une tentative et la relit, plus récente en premier', async () => {
     await recordQuizAttempt(
       { palier: 'n5', themes: ['particules'], score: 7, total: 10, missed: ['p-wa'] },
