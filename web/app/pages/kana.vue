@@ -86,7 +86,7 @@ function replayMissed() {
 
     <!-- CONFIG -->
     <div v-if="view === 'config'" class="space-y-5">
-      <div class="space-y-5 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+      <div class="grid gap-x-8 gap-y-5 rounded-xl border border-neutral-200 bg-white p-5 md:grid-cols-2 dark:border-neutral-800 dark:bg-neutral-900">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <span class="text-sm font-medium">Syllabaire</span>
           <SegmentedControl
@@ -95,6 +95,17 @@ function replayMissed() {
               { value: 'hiragana', label: 'Hiragana' },
               { value: 'katakana', label: 'Katakana' },
               { value: 'mixte', label: 'Mixte' },
+            ]"
+          />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <span class="text-sm font-medium">Sens</span>
+          <SegmentedControl
+            v-model="direction"
+            :options="[
+              { value: 'kana2romaji', label: 'Kana → rōmaji' },
+              { value: 'romaji2kana', label: 'Rōmaji → kana' },
             ]"
           />
         </div>
@@ -120,17 +131,6 @@ function replayMissed() {
         </div>
 
         <div class="flex flex-wrap items-center justify-between gap-3">
-          <span class="text-sm font-medium">Sens</span>
-          <SegmentedControl
-            v-model="direction"
-            :options="[
-              { value: 'kana2romaji', label: 'Kana → rōmaji' },
-              { value: 'romaji2kana', label: 'Rōmaji → kana' },
-            ]"
-          />
-        </div>
-
-        <div class="flex flex-wrap items-center justify-between gap-3">
           <span class="text-sm font-medium">Longueur</span>
           <SegmentedControl
             v-model="length"
@@ -142,7 +142,7 @@ function replayMissed() {
           />
         </div>
 
-        <div class="flex items-center justify-between gap-4">
+        <div class="flex items-center justify-between gap-4 md:col-span-2">
           <span class="text-sm">
             <span class="font-medium">Points faibles seulement</span>
             <span class="block text-xs text-neutral-400">
