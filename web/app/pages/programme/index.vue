@@ -55,12 +55,12 @@ function toggleMilestone(id: string) {
         class="rounded-xl border p-4 transition hover:border-brand-400 hover:shadow-sm dark:hover:border-brand-600"
         :class="
           phase.id === active.id
-            ? 'border-brand-300 bg-brand-50 dark:border-brand-700 dark:bg-brand-900/10'
+            ? 'border-brand-400 bg-brand-100 dark:border-brand-600 dark:bg-brand-500/15'
             : 'border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900'
         "
       >
         <div class="flex items-center justify-between gap-2">
-          <span class="text-xs font-semibold text-neutral-400">Phase {{ phase.number }}</span>
+          <span class="text-xs font-semibold text-neutral-500 dark:text-neutral-400">Phase {{ phase.number }}</span>
           <span v-if="phase.palier" class="rounded-full bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300">
             {{ phase.palier }}
           </span>

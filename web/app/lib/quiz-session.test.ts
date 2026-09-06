@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { reactive } from 'vue'
 import { QUIZ_N5 } from '~/data/quiz-n5'
-import { getDb } from './db'
+import { getDb, type QuizAttempt } from './db'
 import {
   buildQuiz,
   buildVocabQuestions,
@@ -9,6 +9,7 @@ import {
   recentQuizAttempts,
   recordQuizAttempt,
   shuffleOptions,
+  summarizeQuizAttempts,
 } from './quiz-session'
 
 beforeEach(async () => {
@@ -122,5 +123,66 @@ describe('recordQuizAttempt', () => {
     expect(rows[1]?.missed).toEqual(['p-wa'])
     expect(rows[1]?.missedQuestions?.[0]?.explanation).toBe(sampleQ.explanation)
     expect(rows[1]?.durationMs).toBe(30000)
+  })
+})
+
+function attempt(over: Partial<QuizAttempt>): QuizAttempt {
+  return {
+    id: Math.random().toString(36).slice(2),
+    palier: 'n5',
+    themes: ['particules'],
+    score: 5,
+    total: 10,
+    missed: [],
+    ts: 0,
+    ...over,
+  }
+}
+
+describe('summarizeQuizAttempts', () => {
+  it('renvoie des zéros sans tentative', () => {
+    const s = summarizeQuizAttempts([])
+    expect(s.attempts).toBe(0)
+    expect(s.accuracy).toBe(0)
+    expect(s.errorsByTheme).toEqual({ particules: 0, grammaire: 0, vocabulaire: 0 })
+    expect(s.toughest).toEqual([])
+    expect(s.lastTs).toBeNull()
+  })
+
+  const attempts: QuizAttempt[] = [
+    attempt({ ts: 3000, score: 10, total: 10, missed: [], durationMs: 30000 }),
+    attempt({ ts: 1000, score: 6, total: 10, missed: ['p-wa', 'p-wo', 'v-1-s', 'g-tai'], durationMs: 60000 }),
+    attempt({ ts: 2000, score: 8, total: 10, missed: ['p-wa', 'v-2-t'], durationMs: 40000 }),
+  ]
+
+  it('agrège réussite, meilleur score et moyenne glissante', () => {
+    const s = summarizeQuizAttempts(attempts, 2)
+    expect(s.attempts).toBe(3)
+    expect(s.totalQuestions).toBe(30)
+    expect(s.totalCorrect).toBe(24)
+    expect(s.accuracy).toBe(80)
+    expect(s.bestPct).toBe(100)
+    expect(s.recentCount).toBe(2)
+    expect(s.recentAccuracy).toBe(90) // 2 dernières : (8+10)/20
+    expect(s.avgMsPerQuestion).toBe(Math.round(130000 / 30))
+    expect(s.lastTs).toBe(3000)
+  })
+
+  it('trie l’historique par date croissante', () => {
+    const s = summarizeQuizAttempts(attempts)
+    expect(s.history.map((h) => h.ts)).toEqual([1000, 2000, 3000])
+    expect(s.history.map((h) => h.pct)).toEqual([60, 80, 100])
+  })
+
+  it('déduit le thème des erreurs depuis le préfixe de l’id', () => {
+    const s = summarizeQuizAttempts(attempts)
+    expect(s.errorsByTheme).toEqual({ particules: 3, grammaire: 1, vocabulaire: 2 })
+  })
+
+  it('liste les questions ratées ≥ 2 fois, avec l’énoncé', () => {
+    const s = summarizeQuizAttempts(attempts)
+    expect(s.toughest).toHaveLength(1)
+    expect(s.toughest[0]).toMatchObject({ id: 'p-wa', misses: 2, theme: 'particules' })
+    expect(s.toughest[0]?.prompt).toBe(QUIZ_N5.find((q) => q.id === 'p-wa')?.prompt)
   })
 })

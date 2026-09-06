@@ -1,6 +1,6 @@
 import { QUIZ_N5, type QuizQuestion, type QuizTheme } from '~/data/quiz-n5'
 import { VOCAB_N5, type VocabEntry } from '~/data/vocab'
-import { getDb, uid } from './db'
+import { getDb, uid, type QuizAttempt } from './db'
 
 export type { QuizQuestion, QuizTheme }
 
@@ -45,6 +45,10 @@ export function buildVocabQuestions(
   return picked.map((entry, i): QuizQuestion => {
     const distractors = shuffle(entries.filter((e) => e.content_id !== entry.content_id)).slice(0, 3)
     const jpToSens = i % 2 === 0
+    // L'énoncé et la « bonne réponse » portent déjà le terme et le sens ; la
+    // seule info à ajouter dans le récap est la lecture (rien si le mot est
+    // déjà en kana).
+    const reading = entry.lecture !== entry.terme ? `Lecture : ${entry.lecture}` : ''
 
     if (jpToSens) {
       const options = shuffle([sens(entry, lang), ...distractors.map((d) => sens(d, lang))])
@@ -55,7 +59,7 @@ export function buildVocabQuestions(
         hint: entry.lecture !== entry.terme ? entry.lecture : undefined,
         options,
         answer: options.indexOf(sens(entry, lang)),
-        explanation: `${entry.terme}（${entry.lecture}）= ${sens(entry, lang)}`,
+        explanation: reading,
       }
     }
 
@@ -66,7 +70,7 @@ export function buildVocabQuestions(
       prompt: `Quel mot signifie « ${sens(entry, lang)} » ?`,
       options,
       answer: options.indexOf(entry.terme),
-      explanation: `${entry.terme}（${entry.lecture}）= ${sens(entry, lang)}`,
+      explanation: reading,
     }
   })
 }
@@ -131,4 +135,113 @@ export async function recordQuizAttempt(input: QuizAttemptInput, now: Date = new
 
 export async function recentQuizAttempts(limit = 20) {
   return getDb().quizAttempts.orderBy('ts').reverse().limit(limit).toArray()
+}
+
+// --- Statistiques ------------------------------------------------------------
+
+const THEME_BY_PREFIX: Record<string, QuizTheme> = { p: 'particules', g: 'grammaire', v: 'vocabulaire' }
+
+/** Thème d'une question déduit du préfixe de son id (`p-…`, `g-…`, `v-…`). */
+function themeOfId(id: string): QuizTheme | null {
+  return THEME_BY_PREFIX[id.split('-')[0] ?? ''] ?? null
+}
+
+export interface QuizStats {
+  attempts: number
+  totalQuestions: number
+  totalCorrect: number
+  /** Réussite globale, 0–100. */
+  accuracy: number
+  /** Meilleur score sur une tentative, 0–100. */
+  bestPct: number
+  /** Réussite sur les `recentN` dernières tentatives, 0–100. */
+  recentAccuracy: number
+  /** Nombre de tentatives prises en compte dans `recentAccuracy`. */
+  recentCount: number
+  /** Durée moyenne par question en ms (tentatives chronométrées uniquement). */
+  avgMsPerQuestion: number
+  lastTs: number | null
+  /** Score % par tentative, ordre chronologique — pour le graphe d'évolution. */
+  history: { ts: number; pct: number }[]
+  /** Nombre d'erreurs par thème (déduit des ids ratés). */
+  errorsByTheme: Record<QuizTheme, number>
+  /** Questions les plus souvent ratées, ratées ≥ 2 fois, triées décroissant. */
+  toughest: { id: string; prompt: string; theme: QuizTheme | null; misses: number }[]
+}
+
+const EMPTY_STATS: QuizStats = {
+  attempts: 0,
+  totalQuestions: 0,
+  totalCorrect: 0,
+  accuracy: 0,
+  bestPct: 0,
+  recentAccuracy: 0,
+  recentCount: 0,
+  avgMsPerQuestion: 0,
+  lastTs: null,
+  history: [],
+  errorsByTheme: { particules: 0, grammaire: 0, vocabulaire: 0 },
+  toughest: [],
+}
+
+const pct = (correct: number, total: number) => (total ? Math.round((correct / total) * 100) : 0)
+
+/** Agrège toutes les tentatives de quiz en un jeu de statistiques. */
+export function summarizeQuizAttempts(attempts: QuizAttempt[], recentN = 5): QuizStats {
+  if (!attempts.length) return { ...EMPTY_STATS, errorsByTheme: { ...EMPTY_STATS.errorsByTheme } }
+
+  const sorted = [...attempts].sort((a, b) => a.ts - b.ts)
+
+  const totalQuestions = sorted.reduce((s, a) => s + a.total, 0)
+  const totalCorrect = sorted.reduce((s, a) => s + a.score, 0)
+  const bestPct = sorted.reduce((m, a) => Math.max(m, pct(a.score, a.total)), 0)
+
+  const recent = sorted.slice(-recentN)
+  const recentQ = recent.reduce((s, a) => s + a.total, 0)
+  const recentC = recent.reduce((s, a) => s + a.score, 0)
+
+  const timed = sorted.filter((a) => a.durationMs && a.total)
+  const timedMs = timed.reduce((s, a) => s + (a.durationMs ?? 0), 0)
+  const timedQ = timed.reduce((s, a) => s + a.total, 0)
+
+  const errorsByTheme: Record<QuizTheme, number> = { particules: 0, grammaire: 0, vocabulaire: 0 }
+  const missCount = new Map<string, number>()
+  const promptById = new Map<string, string>()
+  for (const q of QUIZ_N5) promptById.set(q.id, q.prompt)
+
+  for (const a of sorted) {
+    for (const q of a.missedQuestions ?? []) promptById.set(q.id, q.prompt)
+    for (const id of a.missed) {
+      const theme = themeOfId(id)
+      if (theme) errorsByTheme[theme]++
+      missCount.set(id, (missCount.get(id) ?? 0) + 1)
+    }
+  }
+
+  const toughest = [...missCount.entries()]
+    .filter(([, n]) => n >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5)
+    .map(([id, misses]) => ({ id, prompt: promptById.get(id) ?? id, theme: themeOfId(id), misses }))
+
+  return {
+    attempts: sorted.length,
+    totalQuestions,
+    totalCorrect,
+    accuracy: pct(totalCorrect, totalQuestions),
+    bestPct,
+    recentAccuracy: pct(recentC, recentQ),
+    recentCount: recent.length,
+    avgMsPerQuestion: timedQ ? Math.round(timedMs / timedQ) : 0,
+    lastTs: sorted[sorted.length - 1]?.ts ?? null,
+    history: sorted.map((a) => ({ ts: a.ts, pct: pct(a.score, a.total) })),
+    errorsByTheme,
+    toughest,
+  }
+}
+
+/** Charge toutes les tentatives et renvoie les statistiques agrégées. */
+export async function computeQuizStats(recentN = 5): Promise<QuizStats> {
+  const attempts = await getDb().quizAttempts.toArray()
+  return summarizeQuizAttempts(attempts, recentN)
 }

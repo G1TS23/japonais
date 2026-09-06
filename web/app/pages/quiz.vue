@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import type { QuizAttempt } from '~/lib/db'
 import {
   buildQuiz,
+  computeQuizStats,
   poolSize,
   recentQuizAttempts,
   recordQuizAttempt,
   shuffleOptions,
   THEMES,
   type QuizQuestion,
+  type QuizStats,
   type QuizTheme,
 } from '~/lib/quiz-session'
 import { useSettingsStore } from '~/stores/settings'
@@ -20,10 +22,24 @@ const HISTORY_LIMIT = 10
 const settings = useSettingsStore()
 onMounted(async () => {
   await settings.load()
-  attempts.value = await recentQuizAttempts(HISTORY_LIMIT)
+  await refreshHistory()
 })
 
+async function refreshHistory() {
+  attempts.value = await recentQuizAttempts(HISTORY_LIMIT)
+  stats.value = await computeQuizStats()
+}
+
 const view = ref<'config' | 'running' | 'done' | 'review'>('config')
+
+// Position dans la liste de l'historique au moment d'ouvrir un résumé, pour y
+// revenir à la fermeture. Toutes les autres bascules d'étape remontent en haut.
+const historyScrollY = ref(0)
+watch(view, async (to, from) => {
+  await nextTick()
+  window.scrollTo({ top: from === 'review' && to === 'config' ? historyScrollY.value : 0 })
+})
+
 const themes = ref<QuizTheme[]>(['particules', 'grammaire', 'vocabulaire'])
 const length = ref('10')
 
@@ -31,6 +47,7 @@ type Summary = { score: number; total: number; missed: string[]; durationMs: num
 const questions = ref<QuizQuestion[]>([])
 const lastSummary = ref<Summary | null>(null)
 const attempts = ref<QuizAttempt[]>([])
+const stats = ref<QuizStats | null>(null)
 const reviewAttempt = ref<QuizAttempt | null>(null)
 
 const available = computed(() => poolSize(themes.value))
@@ -66,7 +83,7 @@ async function onFinish(summary: Summary) {
     missedQuestions: missedQuestions.value,
     durationMs: summary.durationMs,
   })
-  attempts.value = await recentQuizAttempts(HISTORY_LIMIT)
+  await refreshHistory()
   view.value = 'done'
 }
 
@@ -79,6 +96,7 @@ function replayMissed() {
 // --- Relecture d'une tentative de l'historique ---------------------------
 
 function openReview(a: QuizAttempt) {
+  historyScrollY.value = window.scrollY
   reviewAttempt.value = a
   view.value = 'review'
 }
@@ -89,6 +107,12 @@ const reviewSummary = computed<Summary>(() => ({
   missed: reviewAttempt.value?.missed ?? [],
   durationMs: reviewAttempt.value?.durationMs ?? 0,
 }))
+
+/** Titre décrivant le contexte d'une tentative : palier + thèmes. */
+function attemptTitle(a: QuizAttempt): string {
+  const labels = a.themes.map((t) => THEMES.find((x) => x.value === t)?.label ?? t)
+  return `${a.palier.toUpperCase()} · ${labels.join(', ')}`
+}
 
 function replayReviewMissed() {
   const qs = reviewAttempt.value?.missedQuestions
@@ -145,6 +169,8 @@ function replayReviewMissed() {
         Commencer · {{ length === 'all' ? available : Math.min(Number(length), available) }} questions
       </button>
 
+      <QuizStats v-if="stats && stats.attempts" :stats="stats" />
+
       <div
         v-if="attempts.length"
         class="rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900"
@@ -183,6 +209,7 @@ function replayReviewMissed() {
     <QuizResults
       v-else-if="view === 'review' && reviewAttempt"
       historical
+      :title="attemptTitle(reviewAttempt)"
       :date="new Date(reviewAttempt.ts).toLocaleString()"
       :summary="reviewSummary"
       :missed-questions="reviewAttempt.missedQuestions ?? []"

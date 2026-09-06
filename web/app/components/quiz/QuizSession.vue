@@ -91,7 +91,7 @@ function optionClass(i: number): string {
         <span :class="isCorrect ? 'font-medium text-green-600 dark:text-green-400' : 'font-medium text-red-600 dark:text-red-400'">
           {{ isCorrect ? 'Correct' : 'Faux' }}
         </span>
-        — {{ current.explanation }}
+        <template v-if="current.explanation"> — {{ current.explanation }}</template>
       </div>
 
       <button
