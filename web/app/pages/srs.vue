@@ -13,6 +13,7 @@ const settings = useSettingsStore()
 onMounted(() => settings.load())
 
 const view = ref<'idle' | 'running' | 'done'>('idle')
+useScrollTopOn(view)
 const queue = ref<Card[]>([])
 type Summary = { total: number; again: number; hard: number; good: number; easy: number; durationMs: number }
 const lastSummary = ref<Summary | null>(null)

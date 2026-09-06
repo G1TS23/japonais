@@ -30,17 +30,16 @@ const dueToday = useLiveQuery(
 const matureCards = useLiveQuery(() => db.cards.filter((c) => c.stability >= 21).count(), 0)
 const kanaWorked = useLiveQuery(() => db.kanaStats.filter((k) => k.seen > 0).count(), 0)
 const quizCount = useLiveQuery(() => db.quizAttempts.count(), 0)
+const quizAccuracy = useLiveQuery(async () => {
+  const all = await db.quizAttempts.toArray()
+  const q = all.reduce((s, a) => s + a.total, 0)
+  const c = all.reduce((s, a) => s + a.score, 0)
+  return q ? Math.round((c / q) * 100) : 0
+}, 0)
 
 const checkedCriteria = useLiveQuery(() => getCheckedCriteria(), new Set<string>())
 const phase = computed(() => currentPhase(checkedCriteria.value))
 const completion = computed(() => phaseCompletion(phase.value, checkedCriteria.value))
-
-const shortcuts = [
-  { to: '/kana', label: 'Drill kana', desc: 'Reconnaissance hiragana / katakana' },
-  { to: '/srs', label: 'Réviser (SRS)', desc: 'File de révision du jour' },
-  { to: '/quiz', label: 'Quiz', desc: 'QCM par palier JLPT' },
-  { to: '/programme', label: 'Programme', desc: 'Phases, critères, jalons' },
-]
 </script>
 
 <template>
@@ -51,16 +50,25 @@ const shortcuts = [
     />
 
     <section class="grid grid-cols-2 gap-3 sm:grid-cols-3">
-      <StatCard label="Cartes SRS" :value="totalCards" hint="vocabulaire au total" />
-      <StatCard label="À réviser" :value="dueToday" hint="échéance aujourd’hui" />
-      <StatCard label="Cartes matures" :value="matureCards" hint="stabilité ≥ 21 j" />
-      <StatCard label="Série SRS" :value="srsStreak" hint="jours consécutifs" />
-      <StatCard label="Kana travaillés" :value="kanaWorked" hint="caractères distincts" />
-      <StatCard label="Série kana" :value="kanaStreak" hint="jours consécutifs" />
-      <StatCard label="Quiz passés" :value="quizCount" />
+      <StatCard label="Cartes SRS" :value="totalCards" hint="vocabulaire au total" to="/srs" />
+      <StatCard label="À réviser" :value="dueToday" hint="échéance aujourd’hui" to="/srs" />
+      <StatCard label="Cartes matures" :value="matureCards" hint="stabilité ≥ 21 j" to="/srs" />
+      <StatCard label="Série SRS" :value="srsStreak" hint="jours consécutifs" to="/srs" />
+      <StatCard label="Kana travaillés" :value="kanaWorked" hint="caractères distincts" to="/kana" />
+      <StatCard label="Série kana" :value="kanaStreak" hint="jours consécutifs" to="/kana" />
+      <StatCard label="Quiz passés" :value="quizCount" to="/quiz" />
+      <StatCard
+        label="Réussite quiz"
+        :value="quizCount ? `${quizAccuracy} %` : '—'"
+        hint="toutes tentatives"
+        to="/quiz"
+      />
     </section>
 
-    <section class="mt-6 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+    <NuxtLink
+      :to="`/programme/${phase.id}`"
+      class="mt-6 block rounded-xl border border-neutral-200 bg-white p-5 transition hover:border-brand-400 hover:shadow-sm dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-brand-600"
+    >
       <div class="text-xs font-medium tracking-wide text-neutral-400 uppercase">Phase en cours</div>
       <div class="mt-1 text-lg font-semibold">Phase {{ phase.number }} — {{ phase.title }}</div>
       <div v-if="completion.total" class="mt-2">
@@ -69,24 +77,7 @@ const shortcuts = [
         </div>
         <div class="mt-1 text-xs text-neutral-400">{{ completion.done }} / {{ completion.total }} critères de sortie</div>
       </div>
-      <NuxtLink :to="`/programme/${phase.id}`" class="mt-3 inline-block text-sm font-medium text-brand-600 hover:underline">
-        Ouvrir la phase →
-      </NuxtLink>
-    </section>
-
-    <section class="mt-6">
-      <h2 class="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">Accès rapides</h2>
-      <div class="grid gap-3 sm:grid-cols-2">
-        <NuxtLink
-          v-for="s in shortcuts"
-          :key="s.to"
-          :to="s.to"
-          class="rounded-xl border border-neutral-200 bg-white p-4 transition hover:border-brand-400 hover:shadow-sm dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-brand-600"
-        >
-          <div class="font-medium">{{ s.label }}</div>
-          <div class="mt-0.5 text-sm text-neutral-500 dark:text-neutral-400">{{ s.desc }}</div>
-        </NuxtLink>
-      </div>
-    </section>
+      <div class="mt-3 text-sm font-medium text-brand-600">Ouvrir la phase →</div>
+    </NuxtLink>
   </div>
 </template>

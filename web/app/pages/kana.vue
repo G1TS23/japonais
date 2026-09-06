@@ -17,6 +17,7 @@ useHead({ title: 'Kana — Japonais' })
 const { byChar, worked } = useKanaStats()
 
 const view = ref<'config' | 'running' | 'done'>('config')
+useScrollTopOn(view)
 
 // --- Réglages de session ------------------------------------------------
 const script = ref<Script>('hiragana')

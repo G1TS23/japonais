@@ -1,5 +1,6 @@
 import Dexie, { type Table } from 'dexie'
 import type { Grade, State } from 'ts-fsrs'
+import type { QuizQuestion } from '~/data/quiz-n5'
 
 // --- Types des enregistrements ---------------------------------------------
 
@@ -64,6 +65,9 @@ export interface QuizAttempt {
   score: number
   total: number
   missed: string[]
+  /** Détail des questions ratées, pour revoir le résumé depuis l'historique (optionnel : absent des tentatives antérieures). */
+  missedQuestions?: QuizQuestion[]
+  durationMs?: number
   ts: number
 }
 

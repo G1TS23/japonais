@@ -28,6 +28,7 @@ composants). IndexedDB est simulé via `fake-indexeddb` (voir `test/setup.ts`).
 | `app/lib/fsrs.test.ts` | carte neuve, aperçu des 4 notes (échéances croissantes), `lapses` sur "Again", effet de la rétention |
 | `app/lib/srs-session.test.ts` | import du deck (idempotent), file du jour (dues/nouvelles/suspendues), plafond quotidien, journal de révision |
 | `app/lib/progress.test.ts` | intégrité des données programme, calcul de la phase en cours et du % de critères validés, persistance critères/jalons/journal d'étude |
+| `app/lib/quiz-session.test.ts` | intégrité de la banque N5, mélange des options (réponse conservée), génération des questions de vocab, filtrage par thème / longueur, tentatives persistées |
 
 À étendre aux composants (`@vue/test-utils`) si besoin, plus tard.
 
@@ -50,7 +51,11 @@ composants). IndexedDB est simulé via `fake-indexeddb` (voir `test/setup.ts`).
       §3.3), critères de sortie et jalons en cases à cocher (persistés),
       journal d'étude léger, tableau de bord câblé sur la vraie phase en cours
       (calculée depuis les critères validés, plus de clé stockée à part).
-- [ ] Étape 5 — Quiz par palier
+- [x] **Étape 5 — Quiz par palier** : QCM par thème (particules / grammaire /
+      vocabulaire) niveau N5. Grammaire et particules rédigées à la main
+      (`data/quiz-n5.ts`), vocabulaire généré depuis le deck N5. Session notée,
+      correction + explication par question, révision des erreurs, historique
+      des tentatives persisté.
 - [ ] Étape 6 — Finitions (PWA / hors-ligne, thème, a11y)
 
 ## Structure
@@ -62,12 +67,14 @@ app/
   components/            # PageHeader, StatCard, SegmentedControl, ToggleSwitch, SettingField…
   components/kana/       # KanaDrill, KanaResults, KanaHeatmap
   components/srs/        # SrsReview, SrsResults
+  components/quiz/       # QuizSession, QuizResults
   components/StudyLogForm.vue  # journal d'étude (/programme)
   composables/           # useLiveQuery (wrapper Dexie.liveQuery), useKanaStats
   data/kana.ts             # jeu de données hiragana + katakana
   data/vocab.ts             # type VocabEntry + export du deck N5
   data/vocab-n5.json         # 718 mots N5 (généré, voir scripts/)
   data/programme.ts          # les 6 phases + jalons, portés depuis PROGRAMME.md
+  data/quiz-n5.ts             # banque de questions N5 (particules, grammaire)
   layouts/default.vue    # coquille + navigation
   lib/db.ts               # schéma Dexie (IndexedDB)
   lib/backup.ts           # export / import / reset JSON
@@ -76,6 +83,7 @@ app/
   lib/fsrs.ts               # wrapper ts-fsrs (aperçu des notes, application)
   lib/srs-session.ts        # import du deck, file du jour, journal de révision
   lib/progress.ts            # critères de sortie, jalons, journal d'étude, phase en cours
+  lib/quiz-session.ts        # construction de session, questions vocab générées, tentatives
   pages/                 # /, /kana, /srs, /programme(+[id]), /quiz, /settings
   plugins/theme.client.ts
   stores/settings.ts     # préférences (Pinia + Dexie)
