@@ -45,7 +45,9 @@ export default defineNuxtConfig({
       cleanupOutdatedCaches: true,
     },
     client: { installPrompt: true },
-    devOptions: { enabled: false },
+    // SW actif aussi en `npm run dev` pour pouvoir tester l'installation et le
+    // hors-ligne sans build. `suppressWarnings` masque le bruit console.
+    devOptions: { enabled: true, suppressWarnings: true, navigateFallback: '/', type: 'module' },
   },
 
   vite: {
