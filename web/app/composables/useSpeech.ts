@@ -35,20 +35,43 @@ function create(): SpeechApi {
     window.speechSynthesis.addEventListener('voiceschanged', refreshVoice)
   }
 
-  function speak(text: string, opts: { rate?: number } = {}) {
-    if (!supported || !text.trim()) return
+  function utter(text: string, rate: number) {
     const synth = window.speechSynthesis
-    synth.cancel() // coupe une lecture en cours avant d'enchaîner
     if (!voice.value) refreshVoice()
 
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'ja-JP'
     if (voice.value) u.voice = voice.value
-    u.rate = opts.rate ?? 0.95
+    u.rate = rate
     u.onstart = () => (speaking.value = true)
     u.onend = () => (speaking.value = false)
-    u.onerror = () => (speaking.value = false)
+    u.onerror = (e) => {
+      speaking.value = false
+      if (e.error && e.error !== 'interrupted' && e.error !== 'canceled') {
+        console.warn('[speech]', e.error)
+      }
+    }
+    // Chrome met la synthèse en pause après ~15 s et, surtout, peut « figer »
+    // le moteur : un resume() est inoffensif si rien n'est en pause et
+    // débloque le cas où speak() ne produisait plus rien.
+    synth.resume()
     synth.speak(u)
+  }
+
+  function speak(text: string, opts: { rate?: number } = {}) {
+    if (!supported || !text.trim()) return
+    const synth = window.speechSynthesis
+    const rate = opts.rate ?? 0.95
+
+    // Un cancel() suivi immédiatement d'un speak() perd parfois l'utterance
+    // (bug Chrome). On ne coupe que si une lecture est vraiment en cours, et on
+    // diffère le nouveau speak d'un tick.
+    if (synth.speaking || synth.pending) {
+      synth.cancel()
+      window.setTimeout(() => utter(text, rate), 60)
+    } else {
+      utter(text, rate)
+    }
   }
 
   function stop() {
