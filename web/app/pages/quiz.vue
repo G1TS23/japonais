@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { useStorage } from '@vueuse/core'
 import type { QuizAttempt } from '~/lib/db'
 import {
   buildQuiz,
@@ -40,8 +41,9 @@ watch(view, async (to, from) => {
   window.scrollTo({ top: from === 'review' && to === 'config' ? historyScrollY.value : 0 })
 })
 
-const themes = ref<QuizTheme[]>(['particules', 'grammaire', 'vocabulaire'])
-const length = ref('10')
+// Réglages mémorisés d'une visite à l'autre.
+const themes = useStorage<QuizTheme[]>('quiz:themes', ['particules', 'grammaire', 'vocabulaire'])
+const length = useStorage('quiz:length', '10')
 
 type Summary = { score: number; total: number; missed: string[]; durationMs: number }
 const questions = ref<QuizQuestion[]>([])
