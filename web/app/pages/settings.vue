@@ -13,7 +13,7 @@ const speech = useSpeech()
 const jpVoices = computed(() => speech.voices.value)
 
 /** Nom affiché : on retire le suffixe « (japonais (Japon)) » verbeux. */
-const voiceLabel = (name: string) => name.replace(/\s*\(.*\)\s*$/, '')
+const voiceLabel = (name: string) => name.split(' (')[0] ?? name
 
 // PWA (fourni par @vite-pwa/nuxt) : peut être absent selon le navigateur.
 const { $pwa } = useNuxtApp()
@@ -185,6 +185,8 @@ async function onReset() {
         >
           <div class="flex items-center gap-2">
             <select
+              id="audio-voice"
+              aria-label="Voix de synthèse"
               :value="settings.values.audioVoice"
               class="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
               @change="settings.set('audioVoice', ($event.target as HTMLSelectElement).value)"

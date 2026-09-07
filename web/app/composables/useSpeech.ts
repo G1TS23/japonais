@@ -122,6 +122,6 @@ function create(): SpeechApi {
 }
 
 export function useSpeech(): SpeechApi {
-  if (!shared) shared = create()
+  shared ??= create()
   return shared
 }
