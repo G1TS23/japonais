@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import type { QuizQuestion } from '~/lib/quiz-session'
+import { hasJapanese } from '~/lib/speech'
 
 const props = defineProps<{ questions: QuizQuestion[] }>()
 const emit = defineEmits<{
@@ -71,7 +72,15 @@ function optionClass(i: number): string {
     </div>
 
     <div class="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900">
-      <div class="jp text-center text-xl">{{ current.prompt }}</div>
+      <div class="flex items-center justify-center gap-2">
+        <span class="jp text-center text-xl">{{ current.prompt }}</span>
+        <SpeakButton
+          v-if="hasJapanese(current.prompt)"
+          :text="current.prompt"
+          size="sm"
+          :label="`Écouter ${current.prompt}`"
+        />
+      </div>
       <div v-if="current.hint" class="mt-1 text-center text-sm text-neutral-400">{{ current.hint }}</div>
 
       <div class="mt-5 grid gap-2">

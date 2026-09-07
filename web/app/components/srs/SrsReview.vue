@@ -4,6 +4,7 @@ import type { Card } from '~/lib/db'
 import { previewRatings, Rating, type RatingPreview } from '~/lib/fsrs'
 import { displaySens, recordReview, shouldRequeueInSession } from '~/lib/srs-session'
 import { useSettingsStore } from '~/stores/settings'
+import { useSpeech } from '~/composables/useSpeech'
 
 const props = defineProps<{ queue: Card[] }>()
 const emit = defineEmits<{
@@ -12,6 +13,11 @@ const emit = defineEmits<{
 }>()
 
 const settings = useSettingsStore()
+const speech = useSpeech()
+
+function maybeAutoplay(text: string) {
+  if (settings.values.audioEnabled && settings.values.audioAutoplay) speech.speak(text)
+}
 
 // File de travail locale et mutable : une carte notée Again/Hard qui reste en
 // apprentissage (Learning/Relearning) est réinsérée un peu plus loin dans la
@@ -51,7 +57,9 @@ watch(
 )
 
 function flip() {
-  if (phase.value === 'front') phase.value = 'back'
+  if (phase.value !== 'front') return
+  phase.value = 'back'
+  if (current.value) maybeAutoplay(current.value.terme)
 }
 
 async function rate(rating: Rating.Again | Rating.Hard | Rating.Good | Rating.Easy) {
@@ -114,7 +122,10 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
       <div class="jp text-4xl">{{ current.terme }}</div>
 
       <template v-if="phase === 'back'">
-        <div class="jp text-lg text-neutral-500 dark:text-neutral-400">{{ current.lecture }}</div>
+        <div class="flex items-center gap-2">
+          <span class="jp text-lg text-neutral-500 dark:text-neutral-400">{{ current.lecture }}</span>
+          <SpeakButton :text="current.terme" size="sm" :label="`Écouter ${current.terme}`" />
+        </div>
         <div class="text-xl">
           {{ meaning?.text }}
           <span v-if="meaning?.isFallback" class="ml-1 align-middle text-[10px] font-medium text-neutral-400">EN</span>

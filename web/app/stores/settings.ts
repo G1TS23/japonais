@@ -21,6 +21,10 @@ export interface AppSettings {
   retention: number
   theme: ThemePref
   sensLang: SensLang
+  /** Afficher les boutons d'écoute (synthèse vocale). */
+  audioEnabled: boolean
+  /** Prononcer automatiquement au retournement d'une carte / à la correction. */
+  audioAutoplay: boolean
 }
 
 const DEFAULTS: AppSettings = {
@@ -28,6 +32,8 @@ const DEFAULTS: AppSettings = {
   retention: 0.9,
   theme: 'system',
   sensLang: 'fr',
+  audioEnabled: true,
+  audioAutoplay: false,
 }
 
 export const useSettingsStore = defineStore('settings', {

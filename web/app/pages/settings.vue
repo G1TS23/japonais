@@ -130,6 +130,27 @@ async function onReset() {
             "
           />
         </SettingField>
+
+        <SettingField label="Écoute (synthèse vocale)" description="boutons pour entendre la prononciation" inline>
+          <ToggleSwitch
+            label="Écoute (synthèse vocale)"
+            :model-value="settings.values.audioEnabled"
+            @update:model-value="settings.set('audioEnabled', $event)"
+          />
+        </SettingField>
+
+        <SettingField
+          v-if="settings.values.audioEnabled"
+          label="Prononcer automatiquement"
+          description="au retournement d'une carte / à la correction"
+          inline
+        >
+          <ToggleSwitch
+            label="Prononcer automatiquement"
+            :model-value="settings.values.audioAutoplay"
+            @update:model-value="settings.set('audioAutoplay', $event)"
+          />
+        </SettingField>
       </div>
     </section>
 
