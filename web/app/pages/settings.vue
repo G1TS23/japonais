@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useSettingsStore } from '~/stores/settings'
 import { downloadBackup, importAll, resetAll } from '~/lib/backup'
 
@@ -7,6 +7,10 @@ useHead({ title: 'Réglages — Japonais' })
 
 const settings = useSettingsStore()
 onMounted(() => settings.load())
+
+// PWA (fourni par @vite-pwa/nuxt) : peut être absent selon le navigateur.
+const { $pwa } = useNuxtApp()
+const canInstall = computed(() => Boolean($pwa?.showInstallPrompt && !$pwa?.needRefresh))
 
 const fileInput = ref<HTMLInputElement | null>(null)
 const message = ref<{ kind: 'ok' | 'err'; text: string } | null>(null)
@@ -127,6 +131,26 @@ async function onReset() {
           />
         </SettingField>
       </div>
+    </section>
+
+    <section class="mt-5 space-y-3 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+      <h2 class="text-sm font-semibold text-neutral-500 dark:text-neutral-400">Application</h2>
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+        Installable sur l’écran d’accueil, fonctionne hors-ligne une fois chargée.
+      </p>
+      <button
+        v-if="canInstall"
+        class="rounded-lg bg-brand-500 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600"
+        @click="$pwa?.install()"
+      >
+        Installer l’application
+      </button>
+      <p v-else-if="$pwa?.isPWAInstalled" class="text-sm text-neutral-500 dark:text-neutral-400">
+        Application installée.
+      </p>
+      <p v-else class="text-sm text-neutral-400">
+        Installation via le menu du navigateur (« Ajouter à l’écran d’accueil »).
+      </p>
     </section>
 
     <section class="mt-5 space-y-4 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">

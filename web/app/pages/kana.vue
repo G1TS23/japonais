@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useStorage } from '@vueuse/core'
 import type { KanaGroup } from '~/data/kana'
 import {
   buildQueue,
@@ -19,12 +20,12 @@ const { byChar, worked } = useKanaStats()
 const view = ref<'config' | 'running' | 'done'>('config')
 useScrollTopOn(view)
 
-// --- Réglages de session ------------------------------------------------
-const script = ref<Script>('hiragana')
-const groups = ref<KanaGroup[]>(['base'])
-const direction = ref<Direction>('kana2romaji')
-const length = ref('20')
-const weakOnly = ref(false)
+// --- Réglages de session (mémorisés d'une visite à l'autre) ------------
+const script = useStorage<Script>('kana-drill:script', 'hiragana')
+const groups = useStorage<KanaGroup[]>('kana-drill:groups', ['base'])
+const direction = useStorage<Direction>('kana-drill:direction', 'kana2romaji')
+const length = useStorage('kana-drill:length', '20')
+const weakOnly = useStorage('kana-drill:weakOnly', false)
 
 const GROUPS: { value: KanaGroup; label: string }[] = [
   { value: 'base', label: 'Base (46)' },
