@@ -59,22 +59,23 @@ function create(): SpeechApi {
     const synth = window.speechSynthesis
     lastError.value = null
 
-    // Tout doit rester synchrone dans le geste utilisateur, sinon Chrome
-    // bloque la lecture (politique d'activation). cancel() est sans risque ;
-    // resume() débloque un moteur figé par une lecture précédente.
-    try {
-      synth.cancel()
-    } catch {
-      /* ignore */
-    }
-    synth.resume()
-
-    if (!voice.value) refreshVoice()
+    // Rester synchrone dans le geste utilisateur (politique d'activation
+    // Chrome). Ne débloquer que si réellement en pause, et ne couper que pour
+    // interrompre une lecture en cours : un cancel()+speak() synchrone quand
+    // rien ne joue fait « avaler » l'utterance (bug Chrome).
+    if (synth.paused) synth.resume()
+    if (synth.speaking || synth.pending) synth.cancel()
 
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'ja-JP'
-    if (voice.value) u.voice = voice.value
     u.rate = opts.rate ?? 0.95
+    // Voix résolue sur la liste FRAÎCHE de ce tick : une référence de voix
+    // périmée fait échouer speak() en silence sur certaines versions de Chrome.
+    const v = pickJapaneseVoice(synth.getVoices())
+    if (v) {
+      u.voice = v
+      voice.value = v
+    }
     u.onstart = () => {
       speaking.value = true
       startKeepAlive()
