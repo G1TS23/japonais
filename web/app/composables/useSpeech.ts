@@ -11,6 +11,7 @@ interface SpeechApi {
   supported: boolean
   speaking: Readonly<Ref<boolean>>
   voice: Readonly<ShallowRef<SpeechSynthesisVoice | null>>
+  lastError: Readonly<Ref<string | null>>
   speak: (text: string, opts?: { rate?: number }) => void
   stop: () => void
 }
@@ -22,11 +23,29 @@ function create(): SpeechApi {
     typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window
 
   const speaking = ref(false)
+  const lastError = ref<string | null>(null)
   const voice = shallowRef<SpeechSynthesisVoice | null>(null)
 
   function refreshVoice() {
     if (!supported) return
     voice.value = pickJapaneseVoice(window.speechSynthesis.getVoices())
+  }
+
+  // Contournement du bug Chrome : la synthèse se met en pause toute seule au
+  // bout de ~15 s et peut rester « figée ». Tant qu'on est censé parler, on la
+  // relance périodiquement.
+  let keepAlive: ReturnType<typeof setInterval> | null = null
+  function startKeepAlive() {
+    stopKeepAlive()
+    keepAlive = setInterval(() => {
+      const synth = window.speechSynthesis
+      if (synth.speaking) synth.resume()
+      else stopKeepAlive()
+    }, 5000)
+  }
+  function stopKeepAlive() {
+    if (keepAlive) clearInterval(keepAlive)
+    keepAlive = null
   }
 
   if (supported) {
@@ -35,54 +54,58 @@ function create(): SpeechApi {
     window.speechSynthesis.addEventListener('voiceschanged', refreshVoice)
   }
 
-  function utter(text: string, rate: number) {
+  function speak(text: string, opts: { rate?: number } = {}) {
+    if (!supported || !text.trim()) return
     const synth = window.speechSynthesis
+    lastError.value = null
+
+    // Tout doit rester synchrone dans le geste utilisateur, sinon Chrome
+    // bloque la lecture (politique d'activation). cancel() est sans risque ;
+    // resume() débloque un moteur figé par une lecture précédente.
+    try {
+      synth.cancel()
+    } catch {
+      /* ignore */
+    }
+    synth.resume()
+
     if (!voice.value) refreshVoice()
 
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'ja-JP'
     if (voice.value) u.voice = voice.value
-    u.rate = rate
-    u.onstart = () => (speaking.value = true)
-    u.onend = () => (speaking.value = false)
+    u.rate = opts.rate ?? 0.95
+    u.onstart = () => {
+      speaking.value = true
+      startKeepAlive()
+    }
+    u.onend = () => {
+      speaking.value = false
+      stopKeepAlive()
+    }
     u.onerror = (e) => {
       speaking.value = false
+      stopKeepAlive()
       if (e.error && e.error !== 'interrupted' && e.error !== 'canceled') {
+        lastError.value = e.error
         console.warn('[speech]', e.error)
       }
     }
-    // Chrome met la synthèse en pause après ~15 s et, surtout, peut « figer »
-    // le moteur : un resume() est inoffensif si rien n'est en pause et
-    // débloque le cas où speak() ne produisait plus rien.
-    synth.resume()
+
     synth.speak(u)
-  }
-
-  function speak(text: string, opts: { rate?: number } = {}) {
-    if (!supported || !text.trim()) return
-    const synth = window.speechSynthesis
-    const rate = opts.rate ?? 0.95
-
-    // Un cancel() suivi immédiatement d'un speak() perd parfois l'utterance
-    // (bug Chrome). On ne coupe que si une lecture est vraiment en cours, et on
-    // diffère le nouveau speak d'un tick.
-    if (synth.speaking || synth.pending) {
-      synth.cancel()
-      window.setTimeout(() => utter(text, rate), 60)
-    } else {
-      utter(text, rate)
-    }
   }
 
   function stop() {
     if (supported) window.speechSynthesis.cancel()
     speaking.value = false
+    stopKeepAlive()
   }
 
   return {
     supported,
     speaking: readonly(speaking),
     voice: readonly(voice) as Readonly<ShallowRef<SpeechSynthesisVoice | null>>,
+    lastError: readonly(lastError),
     speak,
     stop,
   }
