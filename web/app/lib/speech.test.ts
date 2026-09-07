@@ -40,16 +40,19 @@ describe('pickJapaneseVoice', () => {
 
   it('préfère une voix locale (hors-ligne) à une voix distante', () => {
     const remote = voice({ lang: 'ja-JP', name: 'Google 日本語' })
-    const local = voice({ lang: 'ja-JP', name: 'Hattori', localService: true })
+    const local = voice({ lang: 'ja-JP', name: 'Voix système', localService: true })
     expect(pickJapaneseVoice([remote, local])).toBe(local)
   })
 
-  it('à service égal, préfère une voix « améliorée » puis la voix par défaut', () => {
-    const plain = voice({ lang: 'ja-JP', name: 'Voix A' })
-    const enhanced = voice({ lang: 'ja-JP', name: 'Voix B (Enhanced)' })
-    expect(pickJapaneseVoice([plain, enhanced])).toBe(enhanced)
+  it('privilégie fortement une voix connue-fiable (Kyoko) sur les autres', () => {
+    const neural = voice({ lang: 'ja-JP', name: 'Eddy', localService: true, default: true })
+    const kyoko = voice({ lang: 'ja-JP', name: 'Kyoko', localService: true })
+    expect(pickJapaneseVoice([neural, kyoko])).toBe(kyoko)
+  })
 
-    const def = voice({ lang: 'ja-JP', name: 'Voix C', default: true })
+  it('à défaut de voix connue, prend la voix système par défaut', () => {
+    const plain = voice({ lang: 'ja-JP', name: 'Voix A', localService: true })
+    const def = voice({ lang: 'ja-JP', name: 'Voix B', localService: true, default: true })
     expect(pickJapaneseVoice([plain, def])).toBe(def)
   })
 })

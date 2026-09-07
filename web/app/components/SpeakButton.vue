@@ -25,7 +25,7 @@ const show = computed(() => supported && settings.values.audioEnabled && Boolean
       size === 'sm' ? 'h-7 w-7' : 'h-9 w-9',
       speaking && 'bg-brand-50 text-brand-600 dark:bg-brand-500/15 dark:text-brand-400',
     ]"
-    @click.stop="speak(text, { rate })"
+    @click.stop="speak(text, { rate: rate ?? settings.values.audioRate })"
   >
     <AppIcon name="speaker-wave" :class="size === 'sm' ? 'h-4 w-4' : 'h-5 w-5'" />
   </button>

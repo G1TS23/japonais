@@ -68,7 +68,7 @@ function create(): SpeechApi {
 
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'ja-JP'
-    u.rate = opts.rate ?? 0.95
+    u.rate = opts.rate ?? 0.85
     // Voix résolue sur la liste FRAÎCHE de ce tick : une référence de voix
     // périmée fait échouer speak() en silence sur certaines versions de Chrome.
     const v = pickJapaneseVoice(synth.getVoices())
@@ -78,7 +78,9 @@ function create(): SpeechApi {
     }
     u.onstart = () => {
       speaking.value = true
-      startKeepAlive()
+      // Keepalive utile seulement pour les longs textes (> ~15 s) ; inutile —
+      // et potentiellement source de micro-coupures — sur un simple mot.
+      if (text.length > 30) startKeepAlive()
     }
     u.onend = () => {
       speaking.value = false

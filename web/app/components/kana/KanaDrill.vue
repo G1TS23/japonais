@@ -18,7 +18,9 @@ const settings = useSettingsStore()
 const speech = useSpeech()
 
 function maybeAutoplay(text: string) {
-  if (settings.values.audioEnabled && settings.values.audioAutoplay) speech.speak(text)
+  if (settings.values.audioEnabled && settings.values.audioAutoplay) {
+    speech.speak(text, { rate: settings.values.audioRate })
+  }
 }
 
 const queue = ref<DrillItem[]>(props.items.slice())

@@ -25,6 +25,8 @@ export interface AppSettings {
   audioEnabled: boolean
   /** Prononcer automatiquement au retournement d'une carte / à la correction. */
   audioAutoplay: boolean
+  /** Débit de la synthèse vocale (SpeechSynthesisUtterance.rate). */
+  audioRate: number
 }
 
 const DEFAULTS: AppSettings = {
@@ -34,6 +36,7 @@ const DEFAULTS: AppSettings = {
   sensLang: 'fr',
   audioEnabled: true,
   audioAutoplay: false,
+  audioRate: 0.85,
 }
 
 export const useSettingsStore = defineStore('settings', {

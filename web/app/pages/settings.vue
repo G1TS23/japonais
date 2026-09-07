@@ -151,6 +151,19 @@ async function onReset() {
             @update:model-value="settings.set('audioAutoplay', $event)"
           />
         </SettingField>
+
+        <SettingField v-if="settings.values.audioEnabled" label="Vitesse de lecture">
+          <SegmentedControl
+            label="Vitesse de lecture"
+            :model-value="String(settings.values.audioRate)"
+            :options="[
+              { value: '0.7', label: 'Lente' },
+              { value: '0.85', label: 'Normale' },
+              { value: '1', label: 'Rapide' },
+            ]"
+            @update:model-value="settings.set('audioRate', Number($event))"
+          />
+        </SettingField>
       </div>
     </section>
 
