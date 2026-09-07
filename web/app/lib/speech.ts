@@ -9,11 +9,20 @@
  * étaient lus « underscore underscore », et les parenthèses d'indication ne
  * font pas partie de la phrase à entendre.
  */
+/** Retire les segments entre parenthèses (pleine ou demi-chasse), imbrication comprise. */
+function stripParens(s: string): string {
+  let out = ''
+  let depth = 0
+  for (const ch of s) {
+    if (ch === '(' || ch === '（') depth++
+    else if (ch === ')' || ch === '）') depth = Math.max(0, depth - 1)
+    else if (depth === 0) out += ch
+  }
+  return out
+}
+
 export function speechText(text: string): string {
-  return text
-    .replace(/[＿_]+/g, ' ')
-    .replace(/（[^）]*）/g, ' ')
-    .replace(/\([^)]*\)/g, ' ')
+  return stripParens(text.replace(/[＿_]+/g, ' '))
     .replace(/\s+/g, ' ')
     .trim()
 }
