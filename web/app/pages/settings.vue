@@ -1,12 +1,19 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useSettingsStore } from '~/stores/settings'
+import { useSpeech } from '~/composables/useSpeech'
 import { downloadBackup, importAll, resetAll } from '~/lib/backup'
 
 useHead({ title: 'Réglages — Japonais' })
 
 const settings = useSettingsStore()
 onMounted(() => settings.load())
+
+const speech = useSpeech()
+const jpVoices = computed(() => speech.voices.value)
+
+/** Nom affiché : on retire le suffixe « (japonais (Japon)) » verbeux. */
+const voiceLabel = (name: string) => name.split(' (')[0] ?? name
 
 // PWA (fourni par @vite-pwa/nuxt) : peut être absent selon le navigateur.
 const { $pwa } = useNuxtApp()
@@ -129,6 +136,68 @@ async function onReset() {
               )
             "
           />
+        </SettingField>
+      </div>
+    </section>
+
+    <section class="mt-5 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
+      <h2 class="mb-4 text-sm font-semibold text-neutral-500 dark:text-neutral-400">Audio</h2>
+
+      <div class="grid gap-x-8 gap-y-5 sm:grid-cols-2">
+        <SettingField label="Écoute (synthèse vocale)" description="boutons pour entendre la prononciation" inline>
+          <ToggleSwitch
+            label="Écoute (synthèse vocale)"
+            :model-value="settings.values.audioEnabled"
+            @update:model-value="settings.set('audioEnabled', $event)"
+          />
+        </SettingField>
+
+        <SettingField
+          v-if="settings.values.audioEnabled"
+          label="Prononcer automatiquement"
+          description="au retournement d'une carte / à la correction"
+          inline
+        >
+          <ToggleSwitch
+            label="Prononcer automatiquement"
+            :model-value="settings.values.audioAutoplay"
+            @update:model-value="settings.set('audioAutoplay', $event)"
+          />
+        </SettingField>
+
+        <SettingField v-if="settings.values.audioEnabled" label="Vitesse de lecture">
+          <SegmentedControl
+            label="Vitesse de lecture"
+            :model-value="String(settings.values.audioRate)"
+            :options="[
+              { value: '0.7', label: 'Lente' },
+              { value: '0.85', label: 'Normale' },
+              { value: '1', label: 'Rapide' },
+            ]"
+            @update:model-value="settings.set('audioRate', Number($event))"
+          />
+        </SettingField>
+
+        <SettingField
+          v-if="settings.values.audioEnabled && jpVoices.length"
+          label="Voix"
+          description="voix japonaises installées sur l'appareil"
+        >
+          <div class="flex items-center gap-2">
+            <select
+              id="audio-voice"
+              aria-label="Voix de synthèse"
+              :value="settings.values.audioVoice"
+              class="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+              @change="settings.set('audioVoice', ($event.target as HTMLSelectElement).value)"
+            >
+              <option value="">Automatique</option>
+              <option v-for="v in jpVoices" :key="v.name" :value="v.name">
+                {{ voiceLabel(v.name) }}{{ v.localService ? '' : ' (en ligne)' }}
+              </option>
+            </select>
+            <SpeakButton text="こんにちは。はじめまして。" label="Écouter un exemple" />
+          </div>
         </SettingField>
       </div>
     </section>

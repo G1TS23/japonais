@@ -3,6 +3,8 @@ import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { matchesRomaji } from '~/data/kana'
 import { makeChoices, type Direction, type DrillItem, type DrillResult } from '~/lib/kana-session'
 import { recordKanaAnswer } from '~/composables/useKanaStats'
+import { useSpeech } from '~/composables/useSpeech'
+import { useSettingsStore } from '~/stores/settings'
 
 const props = defineProps<{
   items: DrillItem[]
@@ -11,6 +13,13 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{ finish: [result: DrillResult]; quit: [] }>()
+
+const settings = useSettingsStore()
+const speech = useSpeech()
+
+function maybeAutoplay(text: string) {
+  if (settings.values.audioEnabled && settings.values.audioAutoplay) speech.speak(text)
+}
 
 const queue = ref<DrillItem[]>(props.items.slice())
 const index = ref(0)
@@ -98,6 +107,7 @@ function submitInput() {
   const ok = matchesRomaji(c.entry, answer.value)
   registerAttempt(c, ok)
   phase.value = ok ? 'correct' : 'wrong'
+  maybeAutoplay(c.char)
   inputEl.value?.focus()
   if (ok) setTimeout(advance, 350)
 }
@@ -108,6 +118,7 @@ function pick(choice: string) {
   picked.value = choice
   const ok = choice === c.char
   registerAttempt(c, ok)
+  maybeAutoplay(c.char)
   if (ok) setTimeout(advance, 400)
 }
 
@@ -167,11 +178,12 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             }"
           />
         </form>
-        <div class="min-h-6 text-sm">
+        <div class="flex min-h-6 items-center gap-2 text-sm">
           <span v-if="phase === 'wrong'" class="text-red-600 dark:text-red-400">
             Réponse : <strong>{{ current.romaji }}</strong>
           </span>
           <span v-else-if="phase === 'correct'" class="text-green-600 dark:text-green-400">Correct</span>
+          <SpeakButton v-if="phase !== 'input'" :text="current.char" size="sm" :label="`Écouter ${current.char}`" />
         </div>
         <button
           class="w-full rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-600"
@@ -209,13 +221,15 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             {{ ch }}
           </button>
         </div>
-        <button
-          v-if="picked"
-          class="w-full rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-600"
-          @click="advance"
-        >
-          Continuer
-        </button>
+        <div v-if="picked" class="flex w-full items-center gap-2">
+          <SpeakButton :text="current.char" :label="`Écouter ${current.char}`" />
+          <button
+            class="flex-1 rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-600"
+            @click="advance"
+          >
+            Continuer
+          </button>
+        </div>
       </div>
       <button
         class="mt-3 w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm font-medium text-neutral-600 transition hover:bg-neutral-100 dark:border-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-800"

@@ -21,6 +21,14 @@ export interface AppSettings {
   retention: number
   theme: ThemePref
   sensLang: SensLang
+  /** Afficher les boutons d'écoute (synthèse vocale). */
+  audioEnabled: boolean
+  /** Prononcer automatiquement au retournement d'une carte / à la correction. */
+  audioAutoplay: boolean
+  /** Débit de la synthèse vocale (SpeechSynthesisUtterance.rate). */
+  audioRate: number
+  /** Nom de la voix japonaise à utiliser ('' = choix automatique). */
+  audioVoice: string
 }
 
 const DEFAULTS: AppSettings = {
@@ -28,6 +36,10 @@ const DEFAULTS: AppSettings = {
   retention: 0.9,
   theme: 'system',
   sensLang: 'fr',
+  audioEnabled: true,
+  audioAutoplay: false,
+  audioRate: 0.85,
+  audioVoice: '',
 }
 
 export const useSettingsStore = defineStore('settings', {
