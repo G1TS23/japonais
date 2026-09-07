@@ -1,18 +1,26 @@
 import { readonly, ref, shallowRef, type Ref, type ShallowRef } from 'vue'
-import { pickJapaneseVoice } from '~/lib/speech'
+import { japaneseVoices, resolveJapaneseVoice } from '~/lib/speech'
+import { useSettingsStore } from '~/stores/settings'
 
 /**
  * Synthèse vocale japonaise via l'API Web Speech native (zéro dépendance).
- * État partagé pour toute l'appli : une seule voix résolue, un seul flag
- * `speaking` (une lecture à la fois de toute façon).
+ * État partagé pour toute l'appli : liste de voix, flag `speaking` (une lecture
+ * à la fois de toute façon).
  */
+
+interface SpeakOpts {
+  rate?: number
+  /** Nom de voix à forcer ; par défaut celle des réglages, sinon auto. */
+  voiceName?: string
+}
 
 interface SpeechApi {
   supported: boolean
   speaking: Readonly<Ref<boolean>>
-  voice: Readonly<ShallowRef<SpeechSynthesisVoice | null>>
+  /** Voix japonaises disponibles, de la plus fiable à la moins. */
+  voices: Readonly<ShallowRef<SpeechSynthesisVoice[]>>
   lastError: Readonly<Ref<string | null>>
-  speak: (text: string, opts?: { rate?: number }) => void
+  speak: (text: string, opts?: SpeakOpts) => void
   stop: () => void
 }
 
@@ -24,16 +32,16 @@ function create(): SpeechApi {
 
   const speaking = ref(false)
   const lastError = ref<string | null>(null)
-  const voice = shallowRef<SpeechSynthesisVoice | null>(null)
+  const voices = shallowRef<SpeechSynthesisVoice[]>([])
 
-  function refreshVoice() {
+  function refreshVoices() {
     if (!supported) return
-    voice.value = pickJapaneseVoice(window.speechSynthesis.getVoices())
+    voices.value = japaneseVoices(window.speechSynthesis.getVoices())
   }
 
   // Contournement du bug Chrome : la synthèse se met en pause toute seule au
   // bout de ~15 s et peut rester « figée ». Tant qu'on est censé parler, on la
-  // relance périodiquement.
+  // relance périodiquement (seulement pour les longs textes).
   let keepAlive: ReturnType<typeof setInterval> | null = null
   function startKeepAlive() {
     stopKeepAlive()
@@ -49,14 +57,15 @@ function create(): SpeechApi {
   }
 
   if (supported) {
-    refreshVoice()
+    refreshVoices()
     // Les voix arrivent souvent de façon asynchrone après le premier appel.
-    window.speechSynthesis.addEventListener('voiceschanged', refreshVoice)
+    window.speechSynthesis.addEventListener('voiceschanged', refreshVoices)
   }
 
-  function speak(text: string, opts: { rate?: number } = {}) {
+  function speak(text: string, opts: SpeakOpts = {}) {
     if (!supported || !text.trim()) return
     const synth = window.speechSynthesis
+    const settings = useSettingsStore()
     lastError.value = null
 
     // Rester synchrone dans le geste utilisateur (politique d'activation
@@ -68,18 +77,15 @@ function create(): SpeechApi {
 
     const u = new SpeechSynthesisUtterance(text)
     u.lang = 'ja-JP'
-    u.rate = opts.rate ?? 0.85
+    u.rate = opts.rate ?? settings.values.audioRate ?? 0.85
     // Voix résolue sur la liste FRAÎCHE de ce tick : une référence de voix
     // périmée fait échouer speak() en silence sur certaines versions de Chrome.
-    const v = pickJapaneseVoice(synth.getVoices())
-    if (v) {
-      u.voice = v
-      voice.value = v
-    }
+    const wanted = opts.voiceName ?? settings.values.audioVoice
+    const v = resolveJapaneseVoice(synth.getVoices(), wanted)
+    if (v) u.voice = v
+
     u.onstart = () => {
       speaking.value = true
-      // Keepalive utile seulement pour les longs textes (> ~15 s) ; inutile —
-      // et potentiellement source de micro-coupures — sur un simple mot.
       if (text.length > 30) startKeepAlive()
     }
     u.onend = () => {
@@ -107,7 +113,7 @@ function create(): SpeechApi {
   return {
     supported,
     speaking: readonly(speaking),
-    voice: readonly(voice) as Readonly<ShallowRef<SpeechSynthesisVoice | null>>,
+    voices: readonly(voices) as Readonly<ShallowRef<SpeechSynthesisVoice[]>>,
     lastError: readonly(lastError),
     speak,
     stop,

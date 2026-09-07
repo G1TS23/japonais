@@ -27,6 +27,8 @@ export interface AppSettings {
   audioAutoplay: boolean
   /** Débit de la synthèse vocale (SpeechSynthesisUtterance.rate). */
   audioRate: number
+  /** Nom de la voix japonaise à utiliser ('' = choix automatique). */
+  audioVoice: string
 }
 
 const DEFAULTS: AppSettings = {
@@ -37,6 +39,7 @@ const DEFAULTS: AppSettings = {
   audioEnabled: true,
   audioAutoplay: false,
   audioRate: 0.85,
+  audioVoice: '',
 }
 
 export const useSettingsStore = defineStore('settings', {

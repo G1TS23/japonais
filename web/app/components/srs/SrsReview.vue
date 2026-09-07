@@ -16,9 +16,7 @@ const settings = useSettingsStore()
 const speech = useSpeech()
 
 function maybeAutoplay(text: string) {
-  if (settings.values.audioEnabled && settings.values.audioAutoplay) {
-    speech.speak(text, { rate: settings.values.audioRate })
-  }
+  if (settings.values.audioEnabled && settings.values.audioAutoplay) speech.speak(text)
 }
 
 // File de travail locale et mutable : une carte notée Again/Hard qui reste en

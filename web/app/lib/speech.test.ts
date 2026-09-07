@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { hasJapanese, pickJapaneseVoice } from './speech'
+import { hasJapanese, japaneseVoices, pickJapaneseVoice, resolveJapaneseVoice } from './speech'
 
 describe('hasJapanese', () => {
   it('détecte hiragana, katakana et kanji', () => {
@@ -54,5 +54,30 @@ describe('pickJapaneseVoice', () => {
     const plain = voice({ lang: 'ja-JP', name: 'Voix A', localService: true })
     const def = voice({ lang: 'ja-JP', name: 'Voix B', localService: true, default: true })
     expect(pickJapaneseVoice([plain, def])).toBe(def)
+  })
+})
+
+describe('japaneseVoices', () => {
+  it('ne garde que le japonais, trié du plus fiable au moins', () => {
+    const en = voice({ lang: 'en-US', name: 'Alex' })
+    const eddy = voice({ lang: 'ja-JP', name: 'Eddy', localService: true })
+    const kyoko = voice({ lang: 'ja-JP', name: 'Kyoko', localService: true })
+    const got = japaneseVoices([en, eddy, kyoko])
+    expect(got.map((v) => v.name)).toEqual(['Kyoko', 'Eddy'])
+  })
+})
+
+describe('resolveJapaneseVoice', () => {
+  const kyoko = voice({ lang: 'ja-JP', name: 'Kyoko', localService: true })
+  const eddy = voice({ lang: 'ja-JP', name: 'Eddy', localService: true })
+
+  it('renvoie la voix nommée si elle est présente', () => {
+    expect(resolveJapaneseVoice([kyoko, eddy], 'Eddy')).toBe(eddy)
+  })
+
+  it('retombe sur le choix automatique si le nom est absent ou vide', () => {
+    expect(resolveJapaneseVoice([kyoko, eddy], 'Introuvable')).toBe(kyoko)
+    expect(resolveJapaneseVoice([kyoko, eddy], '')).toBe(kyoko)
+    expect(resolveJapaneseVoice([kyoko, eddy], null)).toBe(kyoko)
   })
 })

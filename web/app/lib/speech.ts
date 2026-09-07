@@ -18,17 +18,35 @@ export function hasJapanese(text: string): boolean {
  */
 const PREFERRED_VOICE = /\b(kyoko|otoya|o-?ren|hattori|haruka|ichiro|sayaka)\b/i
 
+/** Sous-ensemble japonais des voix, triées de la plus « fiable » à la moins. */
+export function japaneseVoices(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice[] {
+  const score = (v: SpeechSynthesisVoice) =>
+    (PREFERRED_VOICE.test(v.name) ? 10 : 0) + (v.localService ? 2 : 0) + (v.default ? 1 : 0)
+  return voices
+    .filter((v) => v.lang === 'ja-JP' || v.lang.toLowerCase().startsWith('ja'))
+    .sort((a, b) => score(b) - score(a))
+}
+
 /**
  * Choisit la meilleure voix japonaise parmi celles exposées par le navigateur.
  * Ordre : voix connue-fiable > voix locale (hors-ligne) > voix par défaut.
  * Renvoie `null` si aucune voix japonaise.
  */
 export function pickJapaneseVoice(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null {
-  const jp = voices.filter((v) => v.lang === 'ja-JP' || v.lang.toLowerCase().startsWith('ja'))
-  if (!jp.length) return null
+  return japaneseVoices(voices)[0] ?? null
+}
 
-  const score = (v: SpeechSynthesisVoice) =>
-    (PREFERRED_VOICE.test(v.name) ? 10 : 0) + (v.localService ? 2 : 0) + (v.default ? 1 : 0)
-
-  return [...jp].sort((a, b) => score(b) - score(a))[0] ?? null
+/**
+ * Voix à utiliser : celle nommée `preferredName` si elle est présente, sinon le
+ * meilleur choix automatique.
+ */
+export function resolveJapaneseVoice(
+  voices: SpeechSynthesisVoice[],
+  preferredName?: string | null,
+): SpeechSynthesisVoice | null {
+  if (preferredName) {
+    const match = voices.find((v) => v.name === preferredName)
+    if (match) return match
+  }
+  return pickJapaneseVoice(voices)
 }

@@ -1,12 +1,19 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { useSettingsStore } from '~/stores/settings'
+import { useSpeech } from '~/composables/useSpeech'
 import { downloadBackup, importAll, resetAll } from '~/lib/backup'
 
 useHead({ title: 'Réglages — Japonais' })
 
 const settings = useSettingsStore()
 onMounted(() => settings.load())
+
+const speech = useSpeech()
+const jpVoices = computed(() => speech.voices.value)
+
+/** Nom affiché : on retire le suffixe « (japonais (Japon)) » verbeux. */
+const voiceLabel = (name: string) => name.replace(/\s*\(.*\)\s*$/, '')
 
 // PWA (fourni par @vite-pwa/nuxt) : peut être absent selon le navigateur.
 const { $pwa } = useNuxtApp()
@@ -169,6 +176,26 @@ async function onReset() {
             ]"
             @update:model-value="settings.set('audioRate', Number($event))"
           />
+        </SettingField>
+
+        <SettingField
+          v-if="settings.values.audioEnabled && jpVoices.length"
+          label="Voix"
+          description="voix japonaises installées sur l'appareil"
+        >
+          <div class="flex items-center gap-2">
+            <select
+              :value="settings.values.audioVoice"
+              class="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+              @change="settings.set('audioVoice', ($event.target as HTMLSelectElement).value)"
+            >
+              <option value="">Automatique</option>
+              <option v-for="v in jpVoices" :key="v.name" :value="v.name">
+                {{ voiceLabel(v.name) }}{{ v.localService ? '' : ' (en ligne)' }}
+              </option>
+            </select>
+            <SpeakButton text="こんにちは。はじめまして。" label="Écouter un exemple" />
+          </div>
         </SettingField>
       </div>
     </section>
