@@ -1,5 +1,17 @@
 import { describe, expect, it } from 'vitest'
-import { hasJapanese, japaneseVoices, pickJapaneseVoice, resolveJapaneseVoice } from './speech'
+import { hasJapanese, japaneseVoices, pickJapaneseVoice, resolveJapaneseVoice, speechText } from './speech'
+
+describe('speechText', () => {
+  it('retire les trous et resserre les espaces', () => {
+    expect(speechText('わたし＿＿ がくせいです。')).toBe('わたし がくせいです。')
+    expect(speechText('あさごはんを ＿＿。')).toBe('あさごはんを 。')
+  })
+
+  it('retire les parenthèses d’indication (pleine ou demi-chasse)', () => {
+    expect(speechText('（相手の近くの物を指して）＿＿ は なんですか。')).toBe('は なんですか。')
+    expect(speechText('パン (pain) を たべます')).toBe('パン を たべます')
+  })
+})
 
 describe('hasJapanese', () => {
   it('détecte hiragana, katakana et kanji', () => {

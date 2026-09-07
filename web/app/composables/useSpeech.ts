@@ -1,5 +1,5 @@
 import { readonly, ref, shallowRef, type Ref, type ShallowRef } from 'vue'
-import { japaneseVoices, resolveJapaneseVoice } from '~/lib/speech'
+import { japaneseVoices, resolveJapaneseVoice, speechText } from '~/lib/speech'
 import { useSettingsStore } from '~/stores/settings'
 
 /**
@@ -62,8 +62,9 @@ function create(): SpeechApi {
     window.speechSynthesis.addEventListener('voiceschanged', refreshVoices)
   }
 
-  function speak(text: string, opts: SpeakOpts = {}) {
-    if (!supported || !text.trim()) return
+  function speak(rawText: string, opts: SpeakOpts = {}) {
+    const text = speechText(rawText)
+    if (!supported || !text) return
     const synth = window.speechSynthesis
     const settings = useSettingsStore()
     lastError.value = null

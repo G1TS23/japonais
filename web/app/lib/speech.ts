@@ -4,6 +4,19 @@
  * testable.
  */
 
+/**
+ * Nettoie un énoncé avant lecture : les marqueurs de trou (« ＿＿ », « ___ »)
+ * étaient lus « underscore underscore », et les parenthèses d'indication ne
+ * font pas partie de la phrase à entendre.
+ */
+export function speechText(text: string): string {
+  return text
+    .replace(/[＿_]+/g, ' ')
+    .replace(/[（(][^）)]*[）)]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 /** Vrai si la chaîne contient au moins un caractère japonais (kana ou kanji). */
 export function hasJapanese(text: string): boolean {
   // Hiragana + katakana (U+3040–30FF), kanji (U+3400–4DBF, U+4E00–9FAF),
