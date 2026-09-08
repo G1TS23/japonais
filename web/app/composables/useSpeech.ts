@@ -1,4 +1,4 @@
-import { readonly, ref, shallowRef, type Ref, type ShallowRef } from 'vue'
+import { computed, readonly, ref, shallowRef, type Ref, type ShallowRef } from 'vue'
 import { japaneseVoices, resolveJapaneseVoice, speechText } from '~/lib/speech'
 import { useSettingsStore } from '~/stores/settings'
 
@@ -19,6 +19,10 @@ interface SpeechApi {
   speaking: Readonly<Ref<boolean>>
   /** Voix japonaises disponibles, de la plus fiable à la moins. */
   voices: Readonly<ShallowRef<SpeechSynthesisVoice[]>>
+  /** true une fois la liste des voix du navigateur chargée (arrivée async). */
+  voicesReady: Readonly<Ref<boolean>>
+  /** L'appareil a-t-il une voix japonaise ? (indéterminé tant que !voicesReady) */
+  hasJapaneseVoice: Readonly<Ref<boolean>>
   lastError: Readonly<Ref<string | null>>
   speak: (text: string, opts?: SpeakOpts) => void
   stop: () => void
@@ -33,10 +37,13 @@ function create(): SpeechApi {
   const speaking = ref(false)
   const lastError = ref<string | null>(null)
   const voices = shallowRef<SpeechSynthesisVoice[]>([])
+  const voicesReady = ref(false)
 
   function refreshVoices() {
     if (!supported) return
-    voices.value = japaneseVoices(window.speechSynthesis.getVoices())
+    const all = window.speechSynthesis.getVoices()
+    voices.value = japaneseVoices(all)
+    if (all.length) voicesReady.value = true
   }
 
   // Contournement du bug Chrome : la synthèse se met en pause toute seule au
@@ -58,8 +65,20 @@ function create(): SpeechApi {
 
   if (supported) {
     refreshVoices()
-    // Les voix arrivent souvent de façon asynchrone après le premier appel.
+    // Les voix arrivent de façon asynchrone. On écoute 'voiceschanged' (pas
+    // toujours émis) ET on re-sonde getVoices() toutes les 250 ms : on s'arrête
+    // dès qu'on a des voix, sinon on abandonne au bout de ~4 s.
     window.speechSynthesis.addEventListener('voiceschanged', refreshVoices)
+    let tries = 0
+    const poll = setInterval(() => {
+      refreshVoices()
+      if (voices.value.length || window.speechSynthesis.getVoices().length || ++tries >= 16) {
+        clearInterval(poll)
+        voicesReady.value = true
+      }
+    }, 250)
+  } else {
+    voicesReady.value = true
   }
 
   function speak(rawText: string, opts: SpeakOpts = {}) {
@@ -111,10 +130,14 @@ function create(): SpeechApi {
     stopKeepAlive()
   }
 
+  const hasJapaneseVoice = computed(() => !voicesReady.value || voices.value.length > 0)
+
   return {
     supported,
     speaking: readonly(speaking),
     voices: readonly(voices) as Readonly<ShallowRef<SpeechSynthesisVoice[]>>,
+    voicesReady: readonly(voicesReady),
+    hasJapaneseVoice,
     lastError: readonly(lastError),
     speak,
     stop,

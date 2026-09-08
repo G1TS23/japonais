@@ -21,25 +21,19 @@ function maybeAutoplay(text: string) {
   if (settings.values.audioEnabled && settings.values.audioAutoplay) speech.speak(text)
 }
 
-const queue = ref<DrillItem[]>(props.items.slice())
 const index = ref(0)
 const startedAt = Date.now()
 
 const missed = ref<Set<string>>(new Set())
-const requeued = ref<Set<string>>(new Set())
 const firstSeen = ref<Set<string>>(new Set())
 const firstTryCorrect = ref(0)
 
-const current = computed<DrillItem | undefined>(() => queue.value[index.value])
+// Une session = exactement `items.length` questions. Les caractères ratés ne
+// sont PAS réinsérés dans la file : ils sont proposés via « Rejouer les ratés »
+// sur l'écran de résultats.
+const current = computed<DrillItem | undefined>(() => props.items[index.value])
 const total = props.items.length
 const doneCount = computed(() => Math.min(firstSeen.value.size, total))
-// Items requeued en plus du total de départ (queue.value ne grandit que sur
-// une mauvaise réponse, cf. registerAttempt). Ne pas dériver ce nombre de
-// `doneCount` vs `index` : ces deux valeurs changent à des moments différents
-// (doneCount à la réponse, index seulement à l'avancement, ~350ms plus tard
-// sur une bonne réponse) — ça faisait clignoter "+1 à revoir" sur une bonne
-// réponse alors que rien n'avait été remis en file.
-const extraToReview = computed(() => queue.value.length - total)
 
 // --- Saisie (kana -> rōmaji) ---------------------------------------------
 const answer = ref('')
@@ -71,17 +65,11 @@ function registerAttempt(item: DrillItem, ok: boolean) {
     firstSeen.value.add(item.id)
     if (ok) firstTryCorrect.value++
   }
-  if (!ok) {
-    missed.value.add(item.char)
-    if (!requeued.value.has(item.id)) {
-      requeued.value.add(item.id)
-      queue.value.push(item)
-    }
-  }
+  if (!ok) missed.value.add(item.char)
 }
 
 function advance() {
-  if (index.value + 1 >= queue.value.length) {
+  if (index.value + 1 >= total) {
     emit('finish', {
       total,
       firstTryCorrect: firstTryCorrect.value,
@@ -148,10 +136,9 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
       <div class="h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
         <div class="h-full bg-brand-500 transition-all" :style="{ width: `${progressPct}%` }" />
       </div>
-      <!-- Hauteur réservée (min-h-4 ≈ line-height de text-xs) même quand vide,
-           pour ne pas décaler le bloc kana en dessous à l'apparition/disparition. -->
+      <!-- Hauteur réservée même quand vide, pour ne pas décaler le bloc en dessous. -->
       <div class="mt-1 min-h-4 text-right text-xs text-amber-500">
-        <span v-if="extraToReview > 0">+{{ extraToReview }} à revoir</span>
+        <span v-if="missed.size">{{ missed.size }} raté{{ missed.size > 1 ? 's' : '' }}</span>
       </div>
     </div>
 
@@ -170,7 +157,7 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             spellcheck="false"
             enterkeyhint="done"
             placeholder="rōmaji…"
-            class="w-full rounded-lg border-2 bg-transparent px-4 py-3 text-center text-lg outline-none transition"
+            class="w-full rounded-lg border-2 bg-transparent px-4 py-3 text-center text-lg outline-none transition focus-visible:outline-none"
             :class="{
               'border-neutral-300 focus:border-brand-500 dark:border-neutral-700': phase === 'input',
               'border-green-500 text-green-600 dark:text-green-400': phase === 'correct',
@@ -178,12 +165,15 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             }"
           />
         </form>
+        <!-- Sur une bonne réponse : seul le contour vert de l'input, puis on
+             enchaîne. Le détail (réponse + écoute) n'apparaît que sur une erreur. -->
         <div class="flex min-h-6 items-center gap-2 text-sm">
-          <span v-if="phase === 'wrong'" class="text-red-600 dark:text-red-400">
-            Réponse : <strong>{{ current.romaji }}</strong>
-          </span>
-          <span v-else-if="phase === 'correct'" class="text-green-600 dark:text-green-400">Correct</span>
-          <SpeakButton v-if="phase !== 'input'" :text="current.char" size="sm" :label="`Écouter ${current.char}`" />
+          <template v-if="phase === 'wrong'">
+            <span class="text-red-600 dark:text-red-400">
+              Réponse : <strong>{{ current.romaji }}</strong>
+            </span>
+            <SpeakButton :text="current.char" size="sm" :label="`Écouter ${current.char}`" />
+          </template>
         </div>
         <button
           class="w-full rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-600"

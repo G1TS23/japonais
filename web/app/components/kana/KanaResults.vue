@@ -28,10 +28,11 @@ const seconds = computed(() => Math.round(props.result.durationMs / 1000))
           <span
             v-for="ch in result.missed"
             :key="ch"
-            class="inline-flex items-baseline gap-1 rounded-lg bg-neutral-100 px-2 py-1 dark:bg-neutral-800"
+            class="inline-flex items-center gap-1 rounded-lg bg-neutral-100 px-2 py-1 dark:bg-neutral-800"
           >
             <span class="jp text-lg">{{ ch }}</span>
             <span class="text-xs text-neutral-500">{{ romajiOf(ch) }}</span>
+            <SpeakButton :text="ch" size="sm" :label="`Écouter ${ch}`" />
           </span>
         </div>
       </div>

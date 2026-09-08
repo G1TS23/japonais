@@ -7,30 +7,34 @@ Ce fichier suit ce qui vient ensuite — les pistes du §9 de `SPEC-V1.md`
 (« Pistes post-v1 »), ordonnées par rapport valeur / coût. Une piste = une
 branche + une PR.
 
-Légende : ✅ fait · 🚧 en cours · ⬜ à faire · ❄️ parké (à trancher)
+Légende : ✅ fait · 🚧 en cours · ⬜ à faire · ❄️ parké (à trancher) · ❌ tenté puis abandonné
 
 ---
 
-## 🚧 1. Audio — synthèse vocale (`SpeechSynthesis`)
+## ✅ 1. Audio — synthèse vocale (`SpeechSynthesis`)
 
 Écouter la prononciation partout où il y a du japonais. API native, zéro
 dépendance. Qualité de la voix JP selon l'OS (bonne macOS/iOS, variable
 ailleurs — d'où l'interrupteur global).
 
-Branche : `audio-synthese-vocale`.
+Branches : `audio-synthese-vocale` (PR #2), `audio-finitions`.
 
-- ✅ `lib/speech.ts` — `hasJapanese()`, `pickJapaneseVoice()` (+ tests)
-- ✅ `composables/useSpeech.ts` — état partagé, résolution de voix, `speak/stop`
-- ✅ `components/SpeakButton.vue` — bouton rond haut-parleur, masqué si non
-  supporté ou audio désactivé
-- ✅ Réglages : `audioEnabled` + `audioAutoplay`
-- ✅ Câblage : SRS (dos de carte + autoplay), drill kana (révélation +
-  autoplay), quiz (énoncé japonais)
-- ⬜ Câblage : écrans de résultats (revoir les erreurs à l'oreille)
-- ⬜ Câblage : détail d'une phase / exemples de vocab du programme
-- ⬜ Idée : mode « dictée » dédié (entendre → écrire le kana / le mot)
-- ⬜ Vérifier le comportement sans voix JP installée (Linux/Windows) :
-  masquer le bouton plutôt que lire avec une voix anglaise ?
+- ✅ `lib/speech.ts` — `hasJapanese()`, `speechText()`, `pickJapaneseVoice()` /
+  `resolveJapaneseVoice()` (+ tests)
+- ✅ `composables/useSpeech.ts` — état partagé, résolution de voix, `speak/stop`,
+  `voicesReady` / `hasJapaneseVoice`
+- ✅ `components/SpeakButton.vue` — masqué si non supporté, audio désactivé ou
+  aucune voix japonaise
+- ✅ Réglages → section Audio : `audioEnabled`, `audioAutoplay`, `audioRate`,
+  `audioVoice` (choix de la voix) + message si aucune voix JP
+- ✅ Câblage : SRS (dos de carte + autoplay), drill kana (révélation + autoplay),
+  quiz (énoncé japonais), écrans de résultats kana + quiz
+- ✅ Sans voix JP installée : boutons masqués + note dans les réglages
+- ❌ Mode « dictée » kana (audio → rōmaji) : tenté puis retiré — UI peu
+  convaincante, faible valeur ajoutée par rapport au kana → rōmaji classique
+- ⬜ (reporté) Câblage du détail de phase du programme — la donnée mélange
+  français et fragments japonais dans un même item, pas de champ « exemple »
+  isolé à lire
 
 ## ⬜ 2. Grammaire — référence + SRS + quiz
 

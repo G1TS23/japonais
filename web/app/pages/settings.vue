@@ -143,6 +143,14 @@ async function onReset() {
     <section class="mt-5 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900">
       <h2 class="mb-4 text-sm font-semibold text-neutral-500 dark:text-neutral-400">Audio</h2>
 
+      <p
+        v-if="settings.values.audioEnabled && speech.voicesReady.value && !jpVoices.length"
+        class="mb-4 rounded-lg bg-amber-100 px-3 py-2 text-sm text-amber-800 dark:bg-amber-900/40 dark:text-amber-200"
+      >
+        Aucune voix japonaise détectée sur cet appareil. Les boutons d’écoute sont masqués.
+        Ajoutez une voix japonaise dans les réglages système (macOS/iOS : d’office).
+      </p>
+
       <div class="grid gap-x-8 gap-y-5 sm:grid-cols-2">
         <SettingField label="Écoute (synthèse vocale)" description="boutons pour entendre la prononciation" inline>
           <ToggleSwitch
