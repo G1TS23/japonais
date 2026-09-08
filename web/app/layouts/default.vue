@@ -8,9 +8,10 @@ const links: { to: string; label: string; short: string; icon: IconName }[] = [
   { to: '/', label: 'Tableau de bord', short: 'Accueil', icon: 'home' },
   { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language' },
   { to: '/srs', label: 'SRS', short: 'SRS', icon: 'rectangle-stack' },
+  { to: '/grammaire', label: 'Grammaire', short: 'Gram.', icon: 'book-open' },
   { to: '/programme', label: 'Programme', short: 'Prog.', icon: 'map' },
   { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
-  { to: '/settings', label: 'Réglages', short: 'Réglages', icon: 'cog-6-tooth' },
+  { to: '/settings', label: 'Réglages', short: 'Régl.', icon: 'cog-6-tooth' },
 ]
 
 // Barre latérale réduite à des icônes (avec bouton pour l'étendre à nouveau) :
@@ -109,8 +110,11 @@ function isActive(to: string) {
          l'indicateur d'accueil (+ un léger jeu pour le confort tactile). -->
     <nav
       aria-label="Navigation"
-      class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-6 border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
-      style="padding-bottom: calc(env(safe-area-inset-bottom) + 0.25rem)"
+      class="fixed inset-x-0 bottom-0 z-40 grid border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
+      :style="{
+        gridTemplateColumns: `repeat(${links.length}, minmax(0, 1fr))`,
+        paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.25rem)',
+      }"
     >
       <NuxtLink
         v-for="l in links"

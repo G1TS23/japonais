@@ -36,19 +36,29 @@ Branches : `audio-synthese-vocale` (PR #2), `audio-finitions`.
   français et fragments japonais dans un même item, pas de champ « exemple »
   isolé à lire
 
-## ⬜ 2. Grammaire — référence + SRS + quiz
+## 🚧 2. Grammaire — référence + SRS + quiz
 
-Le vrai levier vers B2. Surtout du contenu à rédiger/porter.
+Le vrai levier vers B2. Surtout du contenu à rédiger/porter. Livré en deux
+temps : la référence consultable d'abord, le branchement SRS/quiz ensuite.
 
-- ⬜ `data/grammar-n5.ts` — ~80–100 points {id, titre, structure, sens,
-  exemples[], notes, palier}
-- ⬜ Pages `/grammaire` (liste par palier/leçon) + `/grammaire/[id]` (fiche)
-- ⬜ Type de carte FSRS « phrase à trou » (cloze) branché sur ces points
+**2a — Référence** (branche `grammaire-reference`)
+
+- ✅ `data/grammar-n5.ts` — 73 points {id, palier, catégorie, titre, structure,
+  sens, explication, exemples[], notes, voirAussi}
+- ✅ `lib/grammar.ts` — regroupement par catégorie, recherche (accents tolérés,
+  japonais inclus), résolution des renvois (+ tests d'intégrité de la banque)
+- ✅ Pages `/grammaire` (recherche + catégories repliables) et
+  `/grammaire/[id]` (fiche : structure, explication, exemples audio, à retenir,
+  voir aussi)
+- ✅ Entrée de navigation + icône `book-open`
+
+**2b — SRS et quiz** (à venir)
+
+- ⬜ Type de carte FSRS « phrase à trou » (cloze) construit depuis les exemples
 - ⬜ Alimenter le quiz depuis la banque de grammaire (au lieu du seul
   `quiz-n5.ts` écrit à la main)
 - ⬜ Tableau de bord : compteur « points de grammaire vus »
-- ⬜ Retirer la mention « listes N5 communautaires » de `SPEC-V1.md` une fois
-  le contenu relu
+- ⬜ Compléter la banque vers ~100 points si des manques apparaissent à l'usage
 
 ## ⬜ 3. Dictionnaire intégré (JMdict-FR)
 
