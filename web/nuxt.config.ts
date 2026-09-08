@@ -59,7 +59,9 @@ export default defineNuxtConfig({
       title: SITE_TITLE,
       htmlAttrs: { lang: 'fr' },
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        // viewport-fit=cover : nécessaire pour que env(safe-area-inset-*)
+        // renvoie autre chose que 0 en PWA iOS (encoche / indicateur d'accueil).
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'description', content: SITE_DESCRIPTION },
         { name: 'theme-color', content: '#bc002d' },
 
