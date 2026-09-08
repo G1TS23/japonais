@@ -53,9 +53,13 @@ button:disabled,
   cursor: not-allowed;
 }
 
-/* Anneau de focus clavier homogène (souris/tap : rien, grâce à :focus-visible). */
-:focus-visible {
-  outline: 2px solid var(--color-brand-500);
-  outline-offset: 2px;
-  border-radius: 2px;
+/* Anneau de focus clavier homogène (souris/tap : rien, grâce à :focus-visible).
+   Dans @layer base pour qu'un utilitaire `focus-visible:outline-none` posé sur
+   un élément qui gère déjà son focus (ex. l'input du drill kana) puisse le
+   neutraliser. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
 }
