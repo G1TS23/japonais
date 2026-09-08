@@ -65,11 +65,18 @@ function create(): SpeechApi {
 
   if (supported) {
     refreshVoices()
-    // Les voix arrivent souvent de façon asynchrone après le premier appel.
+    // Les voix arrivent de façon asynchrone. On écoute 'voiceschanged' (pas
+    // toujours émis) ET on re-sonde getVoices() toutes les 250 ms : on s'arrête
+    // dès qu'on a des voix, sinon on abandonne au bout de ~4 s.
     window.speechSynthesis.addEventListener('voiceschanged', refreshVoices)
-    // Filet : certains navigateurs n'émettent jamais 'voiceschanged' et
-    // getVoices() reste vide — on arrête d'attendre au bout d'1,5 s.
-    setTimeout(() => (voicesReady.value = true), 1500)
+    let tries = 0
+    const poll = setInterval(() => {
+      refreshVoices()
+      if (voices.value.length || window.speechSynthesis.getVoices().length || ++tries >= 16) {
+        clearInterval(poll)
+        voicesReady.value = true
+      }
+    }, 250)
   } else {
     voicesReady.value = true
   }

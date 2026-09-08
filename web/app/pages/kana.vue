@@ -11,15 +11,11 @@ import {
   type Script,
 } from '~/lib/kana-session'
 import { useKanaStats } from '~/composables/useKanaStats'
-import { useSpeech } from '~/composables/useSpeech'
-import { useSettingsStore } from '~/stores/settings'
 import { bumpDailyStreak, getDailyStreak } from '~/lib/streak'
 
 useHead({ title: 'Kana — Japonais' })
 
 const { byChar, worked } = useKanaStats()
-const speech = useSpeech()
-const settings = useSettingsStore()
 
 const view = ref<'config' | 'running' | 'done'>('config')
 useScrollTopOn(view)
@@ -30,19 +26,6 @@ const groups = useStorage<KanaGroup[]>('kana-drill:groups', ['base'])
 const direction = useStorage<Direction>('kana-drill:direction', 'kana2romaji')
 const length = useStorage('kana-drill:length', '20')
 const weakOnly = useStorage('kana-drill:weakOnly', false)
-
-// Le mode « dictée » (audio → rōmaji) n'a de sens qu'avec une voix japonaise.
-const audioDrillAvailable = computed(
-  () => speech.supported && speech.hasJapaneseVoice.value && settings.values.audioEnabled,
-)
-const directionOptions = computed(() => [
-  { value: 'kana2romaji', label: 'Kana → rōmaji' },
-  { value: 'romaji2kana', label: 'Rōmaji → kana' },
-  ...(audioDrillAvailable.value ? [{ value: 'audio2romaji', label: 'Audio → rōmaji' }] : []),
-])
-const effectiveDirection = computed<Direction>(() =>
-  direction.value === 'audio2romaji' && !audioDrillAvailable.value ? 'kana2romaji' : direction.value,
-)
 
 const GROUPS: { value: KanaGroup; label: string }[] = [
   { value: 'base', label: 'Base (46)' },
@@ -67,7 +50,6 @@ const lastResult = ref<DrillResult | null>(null)
 const streak = ref(0)
 
 onMounted(async () => {
-  settings.load()
   streak.value = await getDailyStreak('kanaStreak')
 })
 
@@ -120,7 +102,13 @@ function replayMissed() {
           </SettingField>
 
           <SettingField label="Sens">
-            <SegmentedControl v-model="direction" :options="directionOptions" />
+            <SegmentedControl
+              v-model="direction"
+              :options="[
+                { value: 'kana2romaji', label: 'Kana → rōmaji' },
+                { value: 'romaji2kana', label: 'Rōmaji → kana' },
+              ]"
+            />
           </SettingField>
 
           <SettingField label="Groupes">
@@ -179,7 +167,7 @@ function replayMissed() {
       v-else-if="view === 'running'"
       :items="sessionItems"
       :pool="sessionPool"
-      :direction="effectiveDirection"
+      :direction="direction"
       @finish="onFinish"
       @quit="view = 'config'"
     />

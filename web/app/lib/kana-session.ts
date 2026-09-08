@@ -1,7 +1,7 @@
 import { KANA, type KanaEntry, type KanaGroup, type KanaScript } from '~/data/kana'
 
 export type Script = 'hiragana' | 'katakana' | 'mixte'
-export type Direction = 'kana2romaji' | 'romaji2kana' | 'audio2romaji'
+export type Direction = 'kana2romaji' | 'romaji2kana'
 
 export interface DrillItem {
   /** Identifiant unique = le caractère lui-même (hira ≠ kata en Unicode). */

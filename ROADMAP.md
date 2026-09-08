@@ -7,7 +7,7 @@ Ce fichier suit ce qui vient ensuite — les pistes du §9 de `SPEC-V1.md`
 (« Pistes post-v1 »), ordonnées par rapport valeur / coût. Une piste = une
 branche + une PR.
 
-Légende : ✅ fait · 🚧 en cours · ⬜ à faire · ❄️ parké (à trancher)
+Légende : ✅ fait · 🚧 en cours · ⬜ à faire · ❄️ parké (à trancher) · ❌ tenté puis abandonné
 
 ---
 
@@ -29,9 +29,9 @@ Branches : `audio-synthese-vocale` (PR #2), `audio-finitions`.
   `audioVoice` (choix de la voix) + message si aucune voix JP
 - ✅ Câblage : SRS (dos de carte + autoplay), drill kana (révélation + autoplay),
   quiz (énoncé japonais), écrans de résultats kana + quiz
-- ✅ Mode « dictée » kana : direction `audio → rōmaji` (entendre puis
-  transcrire), affichée seulement si une voix JP est dispo
 - ✅ Sans voix JP installée : boutons masqués + note dans les réglages
+- ❌ Mode « dictée » kana (audio → rōmaji) : tenté puis retiré — UI peu
+  convaincante, faible valeur ajoutée par rapport au kana → rōmaji classique
 - ⬜ (reporté) Câblage du détail de phase du programme — la donnée mélange
   français et fragments japonais dans un même item, pas de champ « exemple »
   isolé à lire
