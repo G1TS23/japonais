@@ -157,7 +157,7 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             spellcheck="false"
             enterkeyhint="done"
             placeholder="rōmaji…"
-            class="w-full rounded-lg border-2 bg-transparent px-4 py-3 text-center text-lg outline-none transition"
+            class="w-full rounded-lg border-2 bg-transparent px-4 py-3 text-center text-lg outline-none transition focus-visible:outline-none"
             :class="{
               'border-neutral-300 focus:border-brand-500 dark:border-neutral-700': phase === 'input',
               'border-green-500 text-green-600 dark:text-green-400': phase === 'correct',
