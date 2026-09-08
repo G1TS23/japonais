@@ -9,9 +9,14 @@ const props = withDefaults(
 )
 
 const settings = useSettingsStore()
-const { supported, speaking, speak } = useSpeech()
+const { supported, speaking, speak, hasJapaneseVoice } = useSpeech()
 
-const show = computed(() => supported && settings.values.audioEnabled && Boolean(props.text.trim()))
+// On masque le bouton si aucune voix japonaise n'est installée (sinon la
+// lecture se fait avec une voix inadaptée). Optimiste tant que les voix du
+// navigateur ne sont pas encore chargées.
+const show = computed(
+  () => supported && hasJapaneseVoice.value && settings.values.audioEnabled && Boolean(props.text.trim()),
+)
 </script>
 
 <template>

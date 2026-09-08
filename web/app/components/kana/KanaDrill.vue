@@ -41,10 +41,12 @@ const doneCount = computed(() => Math.min(firstSeen.value.size, total))
 // réponse alors que rien n'avait été remis en file.
 const extraToReview = computed(() => queue.value.length - total)
 
-// --- Saisie (kana -> rōmaji) ---------------------------------------------
+// --- Saisie (kana -> rōmaji, audio -> rōmaji) ---------------------------
 const answer = ref('')
 const phase = ref<'input' | 'correct' | 'wrong'>('input')
 const inputEl = ref<HTMLInputElement | null>(null)
+/** Modes à champ texte (rōmaji attendu), par opposition au QCM. */
+const isTyping = computed(() => props.direction !== 'romaji2kana')
 
 // --- QCM (rōmaji -> kana) ----------------------------------------------
 const choices = ref<string[]>([])
@@ -60,7 +62,9 @@ watch(
     // L'input reste le même élément DOM d'une carte à l'autre (pas de v-if par
     // carte) : le focus survit déjà en général. On le réaffirme quand même
     // ici en filet de sécurité (ex. premier montage).
-    if (c && props.direction === 'kana2romaji') nextTick(() => inputEl.value?.focus())
+    if (c && isTyping.value) nextTick(() => inputEl.value?.focus())
+    // Mode dictée : on joue le kana à l'arrivée de chaque carte.
+    if (c && props.direction === 'audio2romaji') speech.speak(c.char)
   },
   { immediate: true },
 )
@@ -155,10 +159,20 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
       </div>
     </div>
 
-    <!-- kana -> rōmaji -->
-    <template v-if="direction === 'kana2romaji'">
+    <!-- kana -> rōmaji  &  audio -> rōmaji (dictée) -->
+    <template v-if="isTyping">
       <div class="flex flex-col items-center gap-6 rounded-2xl border border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900">
-        <div class="jp text-7xl select-none">{{ current.char }}</div>
+        <!-- Dictée : haut-parleur à rejouer tant qu'on n'a pas répondu, puis le kana. -->
+        <button
+          v-if="direction === 'audio2romaji' && phase === 'input'"
+          type="button"
+          aria-label="Réécouter"
+          class="flex h-20 w-20 items-center justify-center rounded-full border-2 border-brand-500 text-brand-600 transition hover:bg-brand-50 dark:text-brand-400 dark:hover:bg-brand-500/15"
+          @click="speech.speak(current.char)"
+        >
+          <AppIcon name="speaker-wave" class="h-9 w-9" />
+        </button>
+        <div v-else class="jp text-7xl select-none">{{ current.char }}</div>
         <form class="w-full" @submit.prevent="submitInput">
           <input
             ref="inputEl"

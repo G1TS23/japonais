@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { QuizQuestion } from '~/lib/quiz-session'
+import { hasJapanese } from '~/lib/speech'
 
 const props = defineProps<{
   summary: { score: number; total: number; missed: string[]; durationMs: number }
@@ -70,13 +71,20 @@ const missingDetail = computed(() => props.summary.missed.length - props.missedQ
           :key="q.id"
           class="rounded-lg bg-neutral-50 p-3 text-sm dark:bg-neutral-800/60"
         >
-          <div>
+          <div class="flex items-center gap-1.5">
             <span class="jp">{{ q.prompt }}</span>
             <span v-if="q.hint && q.theme !== 'vocabulaire'" class="text-neutral-400"> ({{ q.hint }})</span>
+            <SpeakButton v-if="hasJapanese(q.prompt)" :text="q.prompt" size="sm" :label="`Écouter ${q.prompt}`" />
           </div>
-          <div class="mt-1">
+          <div class="mt-1 flex items-center gap-1.5">
             <span class="text-neutral-400">Bonne réponse : </span>
             <span class="jp font-medium text-neutral-900 dark:text-neutral-100">{{ q.options[q.answer] }}</span>
+            <SpeakButton
+              v-if="hasJapanese(q.options[q.answer] ?? '')"
+              :text="q.options[q.answer] ?? ''"
+              size="sm"
+              :label="`Écouter ${q.options[q.answer]}`"
+            />
           </div>
           <div v-if="q.explanation" class="mt-0.5 text-neutral-500 dark:text-neutral-400">{{ q.explanation }}</div>
         </div>
