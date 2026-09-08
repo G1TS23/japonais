@@ -165,12 +165,15 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
             }"
           />
         </form>
+        <!-- Sur une bonne réponse : seul le contour vert de l'input, puis on
+             enchaîne. Le détail (réponse + écoute) n'apparaît que sur une erreur. -->
         <div class="flex min-h-6 items-center gap-2 text-sm">
-          <span v-if="phase === 'wrong'" class="text-red-600 dark:text-red-400">
-            Réponse : <strong>{{ current.romaji }}</strong>
-          </span>
-          <span v-else-if="phase === 'correct'" class="text-green-600 dark:text-green-400">Correct</span>
-          <SpeakButton v-if="phase !== 'input'" :text="current.char" size="sm" :label="`Écouter ${current.char}`" />
+          <template v-if="phase === 'wrong'">
+            <span class="text-red-600 dark:text-red-400">
+              Réponse : <strong>{{ current.romaji }}</strong>
+            </span>
+            <SpeakButton :text="current.char" size="sm" :label="`Écouter ${current.char}`" />
+          </template>
         </div>
         <button
           class="w-full rounded-lg bg-brand-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-brand-600"
