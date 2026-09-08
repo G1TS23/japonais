@@ -33,9 +33,10 @@ function isActive(to: string) {
       Aller au contenu
     </a>
 
-    <!-- Barre supérieure (mobile uniquement) : fixée en haut -->
+    <!-- Barre supérieure (mobile uniquement) : fixée en haut. La hauteur inclut
+         l'inset du haut (encoche) pour garder 3.5rem de barre visible dessous. -->
     <header
-      class="fixed inset-x-0 top-0 z-40 flex min-h-14 items-center gap-2 border-b border-neutral-200 bg-white/95 px-4 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
+      class="fixed inset-x-0 top-0 z-40 flex min-h-[calc(3.5rem_+_env(safe-area-inset-top))] items-center gap-2 border-b border-neutral-200 bg-white/95 px-4 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
       style="padding-top: env(safe-area-inset-top)"
     >
       <span class="text-xl">🇯🇵</span>
@@ -88,22 +89,28 @@ function isActive(to: string) {
       </nav>
     </aside>
 
-    <!-- Contenu : décalé de la largeur de la barre latérale sur desktop -->
+    <!-- Contenu : sur mobile, décalé sous le header (dont la hauteur inclut
+         l'inset du haut) ; sur desktop, décalé de la largeur de la barre
+         latérale et inséré du safe-area haut. -->
     <div
-      class="mt-14 transition-[margin] duration-200 md:mt-0"
+      class="mt-[calc(3.5rem_+_env(safe-area-inset-top))] transition-[margin] duration-200 md:mt-0 md:pt-[env(safe-area-inset-top)]"
       :class="collapsed ? 'md:ml-14' : 'md:ml-52'"
-      style="padding-top: env(safe-area-inset-top)"
     >
-      <main id="content" tabindex="-1" class="mx-auto max-w-5xl px-4 py-6 pb-24 outline-none md:py-10">
+      <main
+        id="content"
+        tabindex="-1"
+        class="mx-auto max-w-5xl px-4 py-6 pb-[calc(6rem_+_env(safe-area-inset-bottom))] outline-none md:py-10"
+      >
         <slot />
       </main>
     </div>
 
-    <!-- Barre de navigation basse (mobile uniquement) -->
+    <!-- Barre de navigation basse (mobile uniquement). Le padding bas dégage
+         l'indicateur d'accueil (+ un léger jeu pour le confort tactile). -->
     <nav
       aria-label="Navigation"
       class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-6 border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
-      style="padding-bottom: env(safe-area-inset-bottom)"
+      style="padding-bottom: calc(env(safe-area-inset-bottom) + 0.25rem)"
     >
       <NuxtLink
         v-for="l in links"
