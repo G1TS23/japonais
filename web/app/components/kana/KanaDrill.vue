@@ -136,6 +136,10 @@ const progressPct = computed(() => Math.round((doneCount.value / total) * 100))
       <div class="h-1.5 overflow-hidden rounded-full bg-neutral-200 dark:bg-neutral-800">
         <div class="h-full bg-brand-500 transition-all" :style="{ width: `${progressPct}%` }" />
       </div>
+      <!-- Hauteur réservée même quand vide, pour ne pas décaler le bloc en dessous. -->
+      <div class="mt-1 min-h-4 text-right text-xs text-amber-500">
+        <span v-if="missed.size">{{ missed.size }} raté{{ missed.size > 1 ? 's' : '' }}</span>
+      </div>
     </div>
 
     <!-- kana -> rōmaji -->
