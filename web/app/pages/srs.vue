@@ -7,7 +7,7 @@ import { bumpDailyStreak, getDailyStreak } from '~/lib/streak'
 import { useLiveQuery } from '~/composables/useLiveQuery'
 import { useSettingsStore } from '~/stores/settings'
 
-useHead({ title: 'SRS — Japonais' })
+useHead({ title: 'Review — Japonais' })
 
 const settings = useSettingsStore()
 onMounted(() => settings.load())
@@ -58,7 +58,7 @@ async function continueReviewing() {
 
 <template>
   <div>
-    <PageHeader title="SRS vocabulaire" subtitle="Répétition espacée (FSRS) — deck N5." />
+    <PageHeader title="Review" subtitle="Répétition espacée (FSRS) — vocabulaire N5." />
 
     <div v-if="view === 'idle'" class="space-y-5">
       <section class="grid grid-cols-2 gap-3 sm:grid-cols-4">
