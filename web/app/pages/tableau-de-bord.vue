@@ -50,10 +50,10 @@ const completion = computed(() => phaseCompletion(phase.value, checkedCriteria.v
     />
 
     <section class="grid grid-cols-2 gap-3 sm:grid-cols-3">
-      <StatCard label="Cartes SRS" :value="totalCards" hint="vocabulaire au total" to="/srs" />
+      <StatCard label="Cartes" :value="totalCards" hint="vocabulaire au total" to="/srs" />
       <StatCard label="À réviser" :value="dueToday" hint="échéance aujourd’hui" to="/srs" />
       <StatCard label="Cartes matures" :value="matureCards" hint="stabilité ≥ 21 j" to="/srs" />
-      <StatCard label="Série SRS" :value="srsStreak" hint="jours consécutifs" to="/srs" />
+      <StatCard label="Série de révision" :value="srsStreak" hint="jours consécutifs" to="/srs" />
       <StatCard label="Kana travaillés" :value="kanaWorked" hint="caractères distincts" to="/kana" />
       <StatCard label="Série kana" :value="kanaStreak" hint="jours consécutifs" to="/kana" />
       <StatCard label="Quiz passés" :value="quizCount" to="/quiz" />

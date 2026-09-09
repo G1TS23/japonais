@@ -18,7 +18,7 @@ interface NavLink {
 // passer d'une section à l'autre.
 const learningLinks: NavLink[] = [
   { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language' },
-  { to: '/srs', label: 'SRS', short: 'SRS', icon: 'rectangle-stack' },
+  { to: '/srs', label: 'Review', short: 'Review', icon: 'rectangle-stack' },
   { to: '/grammaire', label: 'Grammaire', short: 'Gram.', icon: 'book-open' },
   { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
 ]
