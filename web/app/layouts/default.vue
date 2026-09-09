@@ -10,25 +10,24 @@ interface NavLink {
   label: string
   short: string
   icon: IconName
-  /** Épinglé dans la barre du bas sur mobile. Les autres passent sous « Plus ». */
-  primaire?: boolean
 }
 
-// La barre du bas ne tient pas plus de 5 cases sur un téléphone : on y épingle
-// les destinations du quotidien, le reste va dans la feuille « Plus ». La
-// barre latérale desktop, elle, affiche tout.
-const links: NavLink[] = [
-  { to: '/', label: 'Tableau de bord', short: 'Accueil', icon: 'home', primaire: true },
-  { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language', primaire: true },
-  { to: '/srs', label: 'SRS', short: 'SRS', icon: 'rectangle-stack', primaire: true },
-  { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square', primaire: true },
-  { to: '/grammaire', label: 'Grammaire', short: 'Grammaire', icon: 'book-open' },
-  { to: '/programme', label: 'Programme', short: 'Programme', icon: 'map' },
-  { to: '/settings', label: 'Réglages', short: 'Réglages', icon: 'cog-6-tooth' },
+// Navigation à deux niveaux. Premier niveau : les quatre grandes zones de
+// l'appli. « Apprentissage » n'est pas une page mais un regroupement — on y
+// entre par sa dernière section visitée, et une barre dédiée permet ensuite de
+// passer d'une section à l'autre.
+const learningLinks: NavLink[] = [
+  { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language' },
+  { to: '/srs', label: 'SRS', short: 'SRS', icon: 'rectangle-stack' },
+  { to: '/grammaire', label: 'Grammaire', short: 'Gram.', icon: 'book-open' },
+  { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
 ]
 
-const primaryLinks = computed(() => links.filter((l) => l.primaire))
-const moreLinks = computed(() => links.filter((l) => !l.primaire))
+const topLinks: NavLink[] = [
+  { to: '/', label: 'Tableau de bord', short: 'Accueil', icon: 'home' },
+  { to: '/programme', label: 'Programme', short: 'Prog.', icon: 'map' },
+  { to: '/settings', label: 'Réglages', short: 'Régl.', icon: 'cog-6-tooth' },
+]
 
 // Barre latérale réduite à des icônes (avec bouton pour l'étendre à nouveau) :
 // utile sur les fenêtres desktop plus étroites, où du contenu large (le
@@ -40,16 +39,29 @@ function isActive(to: string) {
   return to === '/' ? route.path === '/' : route.path.startsWith(to)
 }
 
-// --- Feuille « Plus » (mobile) -------------------------------------------
-const moreOpen = ref(false)
-const moreActive = computed(() => moreLinks.value.some((l) => isActive(l.to)))
+// --- Section « Apprentissage » -------------------------------------------
+/** Dernière section d'apprentissage visitée : « Apprentissage » y ramène. */
+const lastLearning = useStorage('nav-last-learning', '/srs')
+const inLearning = computed(() => learningLinks.some((l) => isActive(l.to)))
 
-watch(() => route.path, () => (moreOpen.value = false))
+watch(
+  () => route.path,
+  (path) => {
+    const hit = learningLinks.find((l) => path.startsWith(l.to))
+    if (hit) lastLearning.value = hit.to
+  },
+  { immediate: true },
+)
+
+// --- Tiroir latéral (mobile) ---------------------------------------------
+const drawerOpen = ref(false)
+
+watch(() => route.path, () => (drawerOpen.value = false))
 
 function onEsc(e: KeyboardEvent) {
-  if (e.key === 'Escape') moreOpen.value = false
+  if (e.key === 'Escape') drawerOpen.value = false
 }
-watch(moreOpen, (open) => {
+watch(drawerOpen, (open) => {
   if (open) window.addEventListener('keydown', onEsc)
   else window.removeEventListener('keydown', onEsc)
 })
@@ -71,6 +83,15 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
       class="fixed inset-x-0 top-0 z-40 flex min-h-[calc(3.5rem_+_env(safe-area-inset-top))] items-center gap-2 border-b border-neutral-200 bg-white/95 px-4 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
       style="padding-top: env(safe-area-inset-top)"
     >
+      <button
+        type="button"
+        aria-label="Ouvrir la navigation"
+        :aria-expanded="drawerOpen"
+        class="-ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-neutral-600 transition hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800"
+        @click="drawerOpen = true"
+      >
+        <AppIcon name="bars-3" class="h-6 w-6" />
+      </button>
       <span class="text-xl">🇯🇵</span>
       <span class="font-semibold tracking-tight">日本語</span>
     </header>
@@ -89,7 +110,47 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
       </div>
       <nav aria-label="Navigation principale" class="flex flex-1 flex-col gap-1 overflow-y-auto">
         <NuxtLink
-          v-for="l in links"
+          :to="topLinks[0]!.to"
+          :title="collapsed ? topLinks[0]!.label : undefined"
+          :aria-current="isActive(topLinks[0]!.to) ? 'page' : undefined"
+          class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
+          :class="[
+            collapsed && 'justify-center px-0',
+            isActive(topLinks[0]!.to)
+              ? 'bg-brand-500 text-white'
+              : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
+          ]"
+        >
+          <AppIcon :name="topLinks[0]!.icon" :solid="isActive(topLinks[0]!.to)" class="h-5 w-5 shrink-0" />
+          <span v-show="!collapsed" class="whitespace-nowrap">{{ topLinks[0]!.label }}</span>
+        </NuxtLink>
+
+        <!-- Groupe Apprentissage -->
+        <div v-show="!collapsed" class="mt-3 px-3 pb-1 text-[11px] font-semibold tracking-wide text-neutral-400 uppercase">
+          Apprentissage
+        </div>
+        <div v-show="collapsed" class="mx-2 my-2 border-t border-neutral-200 dark:border-neutral-800" />
+        <NuxtLink
+          v-for="l in learningLinks"
+          :key="l.to"
+          :to="l.to"
+          :title="collapsed ? l.label : undefined"
+          :aria-current="isActive(l.to) ? 'page' : undefined"
+          class="flex items-center gap-2.5 rounded-lg py-2 text-sm font-medium transition"
+          :class="[
+            collapsed ? 'justify-center px-0' : 'px-3',
+            isActive(l.to)
+              ? 'bg-brand-500 text-white'
+              : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
+          ]"
+        >
+          <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
+          <span v-show="!collapsed" class="whitespace-nowrap">{{ l.label }}</span>
+        </NuxtLink>
+
+        <div v-show="collapsed" class="mx-2 my-2 border-t border-neutral-200 dark:border-neutral-800" />
+        <NuxtLink
+          v-for="l in topLinks.slice(1)"
           :key="l.to"
           :to="l.to"
           :title="collapsed ? l.label : undefined"
@@ -97,6 +158,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
           class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
           :class="[
             collapsed && 'justify-center px-0',
+            l.to === '/programme' && !collapsed && 'mt-3',
             isActive(l.to)
               ? 'bg-brand-500 text-white'
               : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
@@ -131,52 +193,27 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
       <main
         id="content"
         tabindex="-1"
-        class="mx-auto max-w-5xl px-4 py-6 pb-[calc(6rem_+_env(safe-area-inset-bottom))] outline-none md:py-10"
+        class="mx-auto max-w-5xl px-4 py-6 outline-none md:py-10"
+        :class="
+          inLearning
+            ? 'pb-[calc(6rem_+_env(safe-area-inset-bottom))] md:pb-10'
+            : 'pb-[calc(2rem_+_env(safe-area-inset-bottom))]'
+        "
       >
         <slot />
       </main>
     </div>
 
-    <!-- Feuille « Plus » (mobile) : les destinations non épinglées. -->
-    <div v-if="moreOpen" class="fixed inset-0 z-50 md:hidden">
-      <div class="absolute inset-0 bg-black/40" @click="moreOpen = false" />
-      <div
-        role="dialog"
-        aria-label="Plus de sections"
-        class="absolute inset-x-0 bottom-0 rounded-t-2xl border-t border-neutral-200 bg-white p-2 dark:border-neutral-800 dark:bg-neutral-950"
-        :style="{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.5rem)' }"
-      >
-        <div class="mx-auto mb-2 h-1 w-10 rounded-full bg-neutral-300 dark:bg-neutral-700" />
-        <NuxtLink
-          v-for="l in moreLinks"
-          :key="l.to"
-          :to="l.to"
-          :aria-current="isActive(l.to) ? 'page' : undefined"
-          class="flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition"
-          :class="
-            isActive(l.to)
-              ? 'bg-brand-500 text-white'
-              : 'text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-800'
-          "
-        >
-          <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
-          {{ l.label }}
-        </NuxtLink>
-      </div>
-    </div>
-
-    <!-- Barre de navigation basse (mobile uniquement) : 4 destinations
-         épinglées + « Plus ». Le padding bas dégage l'indicateur d'accueil. -->
+    <!-- Barre de la section Apprentissage (mobile) : n'apparaît que dans la
+         section, pour passer d'une activité à l'autre en un geste. -->
     <nav
-      aria-label="Navigation"
-      class="fixed inset-x-0 bottom-0 z-40 grid border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
-      :style="{
-        gridTemplateColumns: `repeat(${primaryLinks.length + 1}, minmax(0, 1fr))`,
-        paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.25rem)',
-      }"
+      v-if="inLearning"
+      aria-label="Sections d'apprentissage"
+      class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-4 border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
+      :style="{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.25rem)' }"
     >
       <NuxtLink
-        v-for="l in primaryLinks"
+        v-for="l in learningLinks"
         :key="l.to"
         :to="l.to"
         :aria-current="isActive(l.to) ? 'page' : undefined"
@@ -190,22 +227,87 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
         <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5" />
         <span class="max-w-full truncate px-0.5">{{ l.short }}</span>
       </NuxtLink>
-
-      <button
-        type="button"
-        aria-label="Plus de sections"
-        :aria-expanded="moreOpen"
-        class="flex flex-col items-center gap-0.5 py-2 text-[10px] leading-none font-medium transition"
-        :class="
-          moreOpen || moreActive
-            ? 'text-brand-600 dark:text-brand-400'
-            : 'text-neutral-500 dark:text-neutral-400'
-        "
-        @click="moreOpen = !moreOpen"
-      >
-        <AppIcon name="ellipsis-horizontal" :solid="moreOpen || moreActive" class="h-5 w-5" />
-        <span class="max-w-full truncate px-0.5">Plus</span>
-      </button>
     </nav>
+
+    <!-- Tiroir de navigation (mobile) : ouvert par le bouton burger du header.
+         Toujours monté (pour animer l'entrée ET la sortie), neutralisé par
+         `inert` quand il est fermé. -->
+    <div
+      class="fixed inset-0 z-50 md:hidden"
+      :class="drawerOpen || 'pointer-events-none'"
+      :inert="!drawerOpen"
+    >
+      <div
+        class="absolute inset-0 bg-black/40 transition-opacity duration-200 ease-out"
+        :class="drawerOpen ? 'opacity-100' : 'opacity-0'"
+        @click="drawerOpen = false"
+      />
+      <aside
+        role="dialog"
+        aria-label="Navigation"
+        class="absolute inset-y-0 left-0 flex w-64 max-w-[80%] flex-col border-r border-neutral-200 bg-white px-3 pb-4 transition-transform duration-200 ease-out dark:border-neutral-800 dark:bg-neutral-950"
+        :class="drawerOpen ? 'translate-x-0' : '-translate-x-full'"
+        :style="{ paddingTop: 'calc(env(safe-area-inset-top) + 1rem)' }"
+      >
+          <div class="mb-4 flex items-center gap-2 px-2">
+            <span class="text-2xl">🇯🇵</span>
+            <span class="font-semibold tracking-tight">日本語</span>
+            <button
+              type="button"
+              aria-label="Fermer la navigation"
+              class="ml-auto flex h-9 w-9 items-center justify-center rounded-lg text-neutral-500 transition hover:bg-neutral-100 dark:hover:bg-neutral-800"
+              @click="drawerOpen = false"
+            >
+              <AppIcon name="x-mark" class="h-5 w-5" />
+            </button>
+          </div>
+
+          <nav aria-label="Navigation principale" class="flex flex-1 flex-col gap-1 overflow-y-auto">
+            <NuxtLink
+              :to="topLinks[0]!.to"
+              :aria-current="isActive(topLinks[0]!.to) ? 'page' : undefined"
+              class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition"
+              :class="
+                isActive(topLinks[0]!.to)
+                  ? 'bg-brand-500 text-white'
+                  : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
+              "
+            >
+              <AppIcon :name="topLinks[0]!.icon" :solid="isActive(topLinks[0]!.to)" class="h-5 w-5 shrink-0" />
+              {{ topLinks[0]!.label }}
+            </NuxtLink>
+
+            <!-- Regroupement : entre par la dernière section visitée. -->
+            <NuxtLink
+              :to="lastLearning"
+              class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition"
+              :class="
+                inLearning
+                  ? 'bg-brand-500 text-white'
+                  : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
+              "
+            >
+              <AppIcon name="academic-cap" :solid="inLearning" class="h-5 w-5 shrink-0" />
+              Apprentissage
+            </NuxtLink>
+
+            <NuxtLink
+              v-for="l in topLinks.slice(1)"
+              :key="l.to"
+              :to="l.to"
+              :aria-current="isActive(l.to) ? 'page' : undefined"
+              class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition"
+              :class="
+                isActive(l.to)
+                  ? 'bg-brand-500 text-white'
+                  : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
+              "
+            >
+              <AppIcon :name="l.icon" :solid="isActive(l.to)" class="h-5 w-5 shrink-0" />
+              {{ l.label }}
+            </NuxtLink>
+          </nav>
+      </aside>
+    </div>
   </div>
 </template>
