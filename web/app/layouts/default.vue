@@ -23,8 +23,10 @@ const learningLinks: NavLink[] = [
   { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
 ]
 
+// Après « Apprentissage » dans la navigation. La racine « / » redirige vers
+// l'apprentissage : le tableau de bord vit sur sa propre route.
 const topLinks: NavLink[] = [
-  { to: '/', label: 'Tableau de bord', short: 'Accueil', icon: 'home' },
+  { to: '/tableau-de-bord', label: 'Tableau de bord', short: 'Tableau', icon: 'chart-bar' },
   { to: '/programme', label: 'Programme', short: 'Prog.', icon: 'map' },
   { to: '/settings', label: 'Réglages', short: 'Régl.', icon: 'cog-6-tooth' },
 ]
@@ -36,7 +38,7 @@ const topLinks: NavLink[] = [
 const collapsed = useStorage('nav-collapsed', false)
 
 function isActive(to: string) {
-  return to === '/' ? route.path === '/' : route.path.startsWith(to)
+  return route.path === to || route.path.startsWith(to + '/')
 }
 
 // --- Section « Apprentissage » -------------------------------------------
@@ -109,27 +111,10 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
         <span v-show="!collapsed" class="font-semibold tracking-tight whitespace-nowrap">日本語</span>
       </div>
       <nav aria-label="Navigation principale" class="flex flex-1 flex-col gap-1 overflow-y-auto">
-        <NuxtLink
-          :to="topLinks[0]!.to"
-          :title="collapsed ? topLinks[0]!.label : undefined"
-          :aria-current="isActive(topLinks[0]!.to) ? 'page' : undefined"
-          class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
-          :class="[
-            collapsed && 'justify-center px-0',
-            isActive(topLinks[0]!.to)
-              ? 'bg-brand-500 text-white'
-              : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
-          ]"
-        >
-          <AppIcon :name="topLinks[0]!.icon" :solid="isActive(topLinks[0]!.to)" class="h-5 w-5 shrink-0" />
-          <span v-show="!collapsed" class="whitespace-nowrap">{{ topLinks[0]!.label }}</span>
-        </NuxtLink>
-
-        <!-- Groupe Apprentissage -->
-        <div v-show="!collapsed" class="mt-3 px-3 pb-1 text-[11px] font-semibold tracking-wide text-neutral-400 uppercase">
+        <!-- Groupe Apprentissage, en premier -->
+        <div v-show="!collapsed" class="px-3 pb-1 text-[11px] font-semibold tracking-wide text-neutral-400 uppercase">
           Apprentissage
         </div>
-        <div v-show="collapsed" class="mx-2 my-2 border-t border-neutral-200 dark:border-neutral-800" />
         <NuxtLink
           v-for="l in learningLinks"
           :key="l.to"
@@ -148,9 +133,9 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
           <span v-show="!collapsed" class="whitespace-nowrap">{{ l.label }}</span>
         </NuxtLink>
 
-        <div v-show="collapsed" class="mx-2 my-2 border-t border-neutral-200 dark:border-neutral-800" />
+        <div class="mx-2 my-2 border-t border-neutral-200 dark:border-neutral-800" />
         <NuxtLink
-          v-for="l in topLinks.slice(1)"
+          v-for="l in topLinks"
           :key="l.to"
           :to="l.to"
           :title="collapsed ? l.label : undefined"
@@ -158,7 +143,6 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
           class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition"
           :class="[
             collapsed && 'justify-center px-0',
-            l.to === '/programme' && !collapsed && 'mt-3',
             isActive(l.to)
               ? 'bg-brand-500 text-white'
               : 'text-neutral-600 hover:bg-neutral-200/60 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800/60 dark:hover:text-neutral-100',
@@ -261,21 +245,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
           </div>
 
           <nav aria-label="Navigation" class="flex flex-1 flex-col gap-1 overflow-y-auto">
-            <NuxtLink
-              :to="topLinks[0]!.to"
-              :aria-current="isActive(topLinks[0]!.to) ? 'page' : undefined"
-              class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition"
-              :class="
-                isActive(topLinks[0]!.to)
-                  ? 'bg-brand-500 text-white'
-                  : 'text-neutral-600 hover:bg-neutral-100 dark:text-neutral-400 dark:hover:bg-neutral-800/60'
-              "
-            >
-              <AppIcon :name="topLinks[0]!.icon" :solid="isActive(topLinks[0]!.to)" class="h-5 w-5 shrink-0" />
-              {{ topLinks[0]!.label }}
-            </NuxtLink>
-
-            <!-- Regroupement : entre par la dernière section visitée. -->
+            <!-- Regroupement, en premier : entre par la dernière section visitée. -->
             <NuxtLink
               :to="lastLearning"
               class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition"
@@ -289,8 +259,10 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
               Apprentissage
             </NuxtLink>
 
+            <div class="mx-2 my-1.5 border-t border-neutral-200 dark:border-neutral-800" />
+
             <NuxtLink
-              v-for="l in topLinks.slice(1)"
+              v-for="l in topLinks"
               :key="l.to"
               :to="l.to"
               :aria-current="isActive(l.to) ? 'page' : undefined"
