@@ -99,7 +99,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
     <!-- Barre latérale (desktop uniquement) : ancrée au bord gauche du
          viewport (position fixed), indépendamment de la largeur de fenêtre —
          pas seulement "collée" dans la colonne centrée du contenu. -->
-    <aside
+    <div
       class="fixed inset-y-0 left-0 z-30 hidden flex-col overflow-x-hidden border-r border-neutral-200 bg-neutral-50 py-10 transition-[width] duration-200 md:flex dark:border-neutral-800 dark:bg-neutral-950"
       :class="collapsed ? 'w-14 px-2' : 'w-52 px-4'"
       style="padding-top: calc(env(safe-area-inset-top) + 2.5rem)"
@@ -181,7 +181,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
           <span v-show="!collapsed" class="whitespace-nowrap">Réduire</span>
         </button>
       </nav>
-    </aside>
+    </div>
 
     <!-- Contenu : sur mobile, décalé sous le header (dont la hauteur inclut
          l'inset du haut) ; sur desktop, décalé de la largeur de la barre
@@ -242,9 +242,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
         :class="drawerOpen ? 'opacity-100' : 'opacity-0'"
         @click="drawerOpen = false"
       />
-      <aside
-        role="dialog"
-        aria-label="Navigation"
+      <div
         class="absolute inset-y-0 left-0 flex w-64 max-w-[80%] flex-col border-r border-neutral-200 bg-white px-3 pb-4 transition-transform duration-200 ease-out dark:border-neutral-800 dark:bg-neutral-950"
         :class="drawerOpen ? 'translate-x-0' : '-translate-x-full'"
         :style="{ paddingTop: 'calc(env(safe-area-inset-top) + 1rem)' }"
@@ -262,7 +260,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
             </button>
           </div>
 
-          <nav aria-label="Navigation principale" class="flex flex-1 flex-col gap-1 overflow-y-auto">
+          <nav aria-label="Navigation" class="flex flex-1 flex-col gap-1 overflow-y-auto">
             <NuxtLink
               :to="topLinks[0]!.to"
               :aria-current="isActive(topLinks[0]!.to) ? 'page' : undefined"
@@ -307,7 +305,7 @@ onUnmounted(() => window.removeEventListener('keydown', onEsc))
               {{ l.label }}
             </NuxtLink>
           </nav>
-      </aside>
+      </div>
     </div>
   </div>
 </template>
