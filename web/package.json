@@ -26,6 +26,6 @@
     "@vite-pwa/nuxt": "^1.1.1",
     "fake-indexeddb": "^6.0.0",
     "tailwindcss": "^4.0.0",
-    "vitest": "^3.0.0"
+    "vitest": "^4.1.11"
   }
 }
