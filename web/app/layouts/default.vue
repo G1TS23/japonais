@@ -1,35 +1,15 @@
 <script setup lang="ts">
-import { computed, onUnmounted, ref, watch } from 'vue'
-import { useStorage } from '@vueuse/core'
-import type { IconName } from '~/components/AppIcon.vue'
+import { computed, ref, watch } from 'vue'
+import { onKeyStroke, useStorage } from '@vueuse/core'
+import {
+  DEFAULT_LEARNING_ROUTE,
+  LAST_LEARNING_STORAGE_KEY,
+  LEARNING_LINKS as learningLinks,
+  matchesRoute,
+  TOP_LINKS as topLinks,
+} from '~/lib/nav-links'
 
 const route = useRoute()
-
-interface NavLink {
-  to: string
-  label: string
-  short: string
-  icon: IconName
-}
-
-// Navigation à deux niveaux. Premier niveau : les quatre grandes zones de
-// l'appli. « Apprentissage » n'est pas une page mais un regroupement — on y
-// entre par sa dernière section visitée, et une barre dédiée permet ensuite de
-// passer d'une section à l'autre.
-const learningLinks: NavLink[] = [
-  { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language' },
-  { to: '/srs', label: 'Review', short: 'Review', icon: 'rectangle-stack' },
-  { to: '/grammaire', label: 'Grammaire', short: 'Gram.', icon: 'book-open' },
-  { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
-]
-
-// Après « Apprentissage » dans la navigation. La racine « / » redirige vers
-// l'apprentissage : le tableau de bord vit sur sa propre route.
-const topLinks: NavLink[] = [
-  { to: '/tableau-de-bord', label: 'Tableau de bord', short: 'Tableau', icon: 'chart-bar' },
-  { to: '/programme', label: 'Programme', short: 'Prog.', icon: 'map' },
-  { to: '/settings', label: 'Réglages', short: 'Régl.', icon: 'cog-6-tooth' },
-]
 
 // Barre latérale réduite à des icônes (avec bouton pour l'étendre à nouveau) :
 // utile sur les fenêtres desktop plus étroites, où du contenu large (le
@@ -38,18 +18,18 @@ const topLinks: NavLink[] = [
 const collapsed = useStorage('nav-collapsed', false)
 
 function isActive(to: string) {
-  return route.path === to || route.path.startsWith(to + '/')
+  return matchesRoute(route.path, to)
 }
 
 // --- Section « Apprentissage » -------------------------------------------
 /** Dernière section d'apprentissage visitée : « Apprentissage » y ramène. */
-const lastLearning = useStorage('nav-last-learning', '/srs')
+const lastLearning = useStorage(LAST_LEARNING_STORAGE_KEY, DEFAULT_LEARNING_ROUTE)
 const inLearning = computed(() => learningLinks.some((l) => isActive(l.to)))
 
 watch(
   () => route.path,
   (path) => {
-    const hit = learningLinks.find((l) => path.startsWith(l.to))
+    const hit = learningLinks.find((l) => matchesRoute(path, l.to))
     if (hit) lastLearning.value = hit.to
   },
   { immediate: true },
@@ -59,15 +39,7 @@ watch(
 const drawerOpen = ref(false)
 
 watch(() => route.path, () => (drawerOpen.value = false))
-
-function onEsc(e: KeyboardEvent) {
-  if (e.key === 'Escape') drawerOpen.value = false
-}
-watch(drawerOpen, (open) => {
-  if (open) window.addEventListener('keydown', onEsc)
-  else window.removeEventListener('keydown', onEsc)
-})
-onUnmounted(() => window.removeEventListener('keydown', onEsc))
+onKeyStroke('Escape', () => (drawerOpen.value = false))
 </script>
 
 <template>

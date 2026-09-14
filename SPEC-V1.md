@@ -151,7 +151,7 @@ quand disponible, **KANJIDIC2** (kanji), listes de grammaire N5 communautaires.
 | `content/kana.json` | 46 base + dakuten + combinés, rōmaji, ligne/colonne pour la grille | rédigé |
 | `content/vocab/n5.json` | ~800 entrées {terme, lecture, sens_fr, sens_fr_source, sens_en, exemple_jp, exemple_fr, nature, leçon} | JMdict (EN) + JMdict-FR + relecture |
 | `content/kanji/n5.json` | ~100 entrées {kanji, on, kun, sens, exemples[], traits} | KANJIDIC2 |
-| `content/grammar/n5.json` | ~80–100 points {id, titre, structure, sens, exemples[], notes} | listes N5 communautaires + relecture |
+| `data/grammar-n5.ts` (pas `content/grammar/n5.json`, cf. note étape 4) | 73 points {id, palier, catégorie, titre, structure, sens, explication, exemples[], notes, voirAussi} | rédigé |
 | `content/quiz/n5.json` | banque de questions {id, palier, thème, type, énoncé, options[], réponse, explication} | dérivée de grammar/vocab + rédigée |
 | `content/programme/0x-*.md` | les 6 phases avec frontmatter (id, titre, palier, durée) | portage de `PROGRAMME.md` |
 
