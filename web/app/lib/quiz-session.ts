@@ -93,7 +93,7 @@ export function buildGrammarParticleQuestions(): QuizQuestion[] {
     const distractors = shuffle(answers.filter((a) => a !== s.answer)).slice(0, 3)
     const options = shuffle([s.answer, ...distractors])
     return {
-      id: `q-${s.contentId}`.replace(/:/g, '-'),
+      id: `q-${s.contentId}`.replaceAll(':', '-'),
       theme: 'particules',
       prompt: s.cloze,
       options,
