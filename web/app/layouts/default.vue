@@ -194,6 +194,7 @@ onKeyStroke('Escape', () => (drawerOpen.value = false))
       :inert="!drawerOpen"
     >
       <div
+        aria-hidden="true"
         class="absolute inset-0 bg-black/40 transition-opacity duration-200 ease-out"
         :class="drawerOpen ? 'opacity-100' : 'opacity-0'"
         @click="drawerOpen = false"
