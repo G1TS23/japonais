@@ -13,8 +13,18 @@ import type { QuizQuestion } from '~/data/quiz-n5'
  */
 export interface Card {
   id: string
-  /** Clé stable de l'entrée de contenu d'origine (`data/vocab.ts`), pour éviter les doublons à l'import. */
+  /** Clé stable de l'entrée de contenu d'origine (`data/vocab.ts` ou `data/grammar-n5.ts`), pour éviter les doublons à l'import. */
   content_id?: string
+  /**
+   * Nature de la carte. Absent = carte de vocabulaire (valeur historique,
+   * avant l'introduction des cartes de grammaire). `grammar-cloze` réutilise
+   * les mêmes champs avec un sens différent : `terme` = phrase à trou,
+   * `lecture` = réponse attendue, `sens_fr`/`sens_en` = glose du point,
+   * `exemple_jp`/`exemple_fr` = phrase complète. Voir `lib/grammar-srs.ts`.
+   */
+  kind?: 'vocab' | 'grammar-cloze'
+  /** Point de grammaire d'origine (`GrammarPoint.id`), si `kind === 'grammar-cloze'`. */
+  grammarId?: string
   terme: string
   lecture: string
   sens_fr: string | null

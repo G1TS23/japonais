@@ -36,10 +36,10 @@ Branches : `audio-synthese-vocale` (PR #2), `audio-finitions`.
   français et fragments japonais dans un même item, pas de champ « exemple »
   isolé à lire
 
-## 🚧 2. Grammaire — référence + SRS + quiz
+## ✅ 2. Grammaire — référence + SRS + quiz
 
-Le vrai levier vers B2. Surtout du contenu à rédiger/porter. Livré en deux
-temps : la référence consultable d'abord, le branchement SRS/quiz ensuite.
+Le vrai levier vers B2. Livré en deux temps : la référence consultable
+d'abord, le branchement SRS/quiz ensuite.
 
 **2a — Référence** (branche `grammaire-reference`)
 
@@ -52,13 +52,28 @@ temps : la référence consultable d'abord, le branchement SRS/quiz ensuite.
   voir aussi)
 - ✅ Entrée de navigation + icône `book-open`
 
-**2b — SRS et quiz** (à venir)
+**2b — SRS et quiz** (branche `grammaire-srs-quiz`)
 
-- ⬜ Type de carte FSRS « phrase à trou » (cloze) construit depuis les exemples
-- ⬜ Alimenter le quiz depuis la banque de grammaire (au lieu du seul
-  `quiz-n5.ts` écrit à la main)
-- ⬜ Tableau de bord : compteur « points de grammaire vus »
-- ⬜ Compléter la banque vers ~100 points si des manques apparaissent à l'usage
+- ✅ Champ `blank` sur `GrammarExample` (segment à transformer en trou) —
+  renseigné sur 71 des 73 points (seuls « Les trois groupes de verbes » et
+  「〜たり〜たりします」 n'ont pas de phrase unique adaptée à un trou)
+- ✅ `lib/grammar-cloze.ts` (`buildClozeSeeds`) + `srs-session.ts`
+  (`seedGrammarClozeCards`, dédup par `content_id`, appelable à chaque
+  ouverture de /srs) : les cartes à trou rejoignent **la même file FSRS** que
+  le vocabulaire, sans changement de schéma — `Card` gagne juste `kind` et
+  `grammarId` optionnels, les champs vocab existants sont réutilisés (`terme`
+  = phrase à trou, `lecture` = réponse, `sens_fr`/`sens_en` = glose)
+- ✅ Quiz : `buildGrammarParticleQuestions()` génère des QCM depuis les cartes
+  à trou de catégorie « particules » (pool de distracteurs fermé et sûr à
+  tirer au hasard) — alimente le thème « particules » en plus de
+  `quiz-n5.ts`. Les autres catégories (verbes, adjectifs…) restent à la main :
+  leurs distracteurs demandent des formes conjuguées liées entre elles, pas
+  génériques.
+- ✅ Tableau de bord : « Points de grammaire vus » (points distincts dont une
+  carte a été révisée au moins une fois), sur fond du nombre de points ayant
+  au moins un exemple à trou
+- ⬜ Compléter les `blank` manquants et pousser la banque vers ~100 points si
+  des manques apparaissent à l'usage
 
 ## ⬜ 3. Dictionnaire intégré (JMdict-FR)
 

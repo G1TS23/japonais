@@ -1,6 +1,7 @@
 import { QUIZ_N5, type QuizQuestion, type QuizTheme } from '~/data/quiz-n5'
 import { VOCAB_N5, type VocabEntry } from '~/data/vocab'
 import { getDb, uid, type QuizAttempt } from './db'
+import { buildClozeSeeds } from './grammar-cloze'
 
 export type { QuizQuestion, QuizTheme }
 
@@ -75,6 +76,33 @@ export function buildVocabQuestions(
   })
 }
 
+/**
+ * Questions QCM générées depuis les cartes « phrase à trou » de catégorie
+ * « particules » (`data/grammar-n5.ts`). Les particules forment un petit pool
+ * fermé où n'importe laquelle est un distracteur plausible pour n'importe
+ * quelle autre — sûr à générer automatiquement. Les autres catégories de
+ * grammaire (verbes, adjectifs…) restent hors de cette génération : leurs
+ * distracteurs demandent une curation par point (formes conjuguées liées
+ * entre elles), déjà couverte à la main dans `data/quiz-n5.ts`.
+ */
+export function buildGrammarParticleQuestions(): QuizQuestion[] {
+  const seeds = buildClozeSeeds().filter((s) => s.categorie === 'particules')
+  const answers = [...new Set(seeds.map((s) => s.answer))]
+
+  return seeds.map((s) => {
+    const distractors = shuffle(answers.filter((a) => a !== s.answer)).slice(0, 3)
+    const options = shuffle([s.answer, ...distractors])
+    return {
+      id: `q-${s.contentId}`.replace(/:/g, '-'),
+      theme: 'particules',
+      prompt: s.cloze,
+      options,
+      answer: options.indexOf(s.answer),
+      explanation: s.sens,
+    }
+  })
+}
+
 export interface QuizConfig {
   themes: QuizTheme[]
   length: number | 'all'
@@ -88,6 +116,10 @@ export function buildQuiz(config: QuizConfig, handAuthored: QuizQuestion[] = QUI
   const written = handAuthored.filter((q) => config.themes.includes(q.theme))
   pool.push(...written)
 
+  if (config.themes.includes('particules')) {
+    pool.push(...buildGrammarParticleQuestions())
+  }
+
   if (config.themes.includes('vocabulaire')) {
     const vocabCount = config.length === 'all' ? 40 : Math.max(config.length, 20)
     pool.push(...buildVocabQuestions(vocabCount, config.lang ?? 'fr'))
@@ -99,6 +131,7 @@ export function buildQuiz(config: QuizConfig, handAuthored: QuizQuestion[] = QUI
 
 export function poolSize(themes: QuizTheme[], handAuthored: QuizQuestion[] = QUIZ_N5): number {
   let n = handAuthored.filter((q) => themes.includes(q.theme)).length
+  if (themes.includes('particules')) n += buildGrammarParticleQuestions().length
   if (themes.includes('vocabulaire')) n += 40
   return n
 }

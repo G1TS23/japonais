@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { getDb, type Card } from '~/lib/db'
 import { State } from '~/lib/fsrs'
-import { getTodayQueue, seedDeckIfEmpty, syncContentTranslations } from '~/lib/srs-session'
+import { getTodayQueue, seedDeckIfEmpty, seedGrammarClozeCards, syncContentTranslations } from '~/lib/srs-session'
 import { bumpDailyStreak, getDailyStreak } from '~/lib/streak'
 import { useLiveQuery } from '~/composables/useLiveQuery'
 import { useSettingsStore } from '~/stores/settings'
@@ -31,6 +31,7 @@ const newAvailable = useLiveQuery(() => db.cards.where('state').equals(State.New
 
 onMounted(async () => {
   await seedDeckIfEmpty()
+  await seedGrammarClozeCards()
   await syncContentTranslations()
   seeding.value = false
   streak.value = await getDailyStreak('srsStreak')

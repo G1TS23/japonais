@@ -9,10 +9,12 @@ import {
   newCardsIntroducedToday,
   recordReview,
   seedDeckIfEmpty,
+  seedGrammarClozeCards,
   shouldRequeueInSession,
   syncContentTranslations,
 } from './srs-session'
 import type { VocabEntry } from '~/data/vocab'
+import { buildClozeSeeds } from './grammar-cloze'
 
 const NOW = new Date('2026-01-10T12:00:00Z')
 
@@ -65,6 +67,36 @@ describe('seedDeckIfEmpty', () => {
     const second = await seedDeckIfEmpty(SAMPLE_VOCAB, NOW)
     expect(second).toBe(0)
     expect(await getDb().cards.count()).toBe(3)
+  })
+})
+
+describe('seedGrammarClozeCards', () => {
+  it('ajoute une carte par exemple marqué blank, même deck vocabulaire non vide', async () => {
+    await seedDeckIfEmpty(SAMPLE_VOCAB, NOW)
+    const n = await seedGrammarClozeCards(NOW)
+    expect(n).toBe(buildClozeSeeds().length)
+    expect(await getDb().cards.count()).toBe(3 + n)
+  })
+
+  it('ne duplique rien au second appel (dédup par content_id)', async () => {
+    await seedGrammarClozeCards(NOW)
+    const second = await seedGrammarClozeCards(NOW)
+    expect(second).toBe(0)
+    expect(await getDb().cards.count()).toBe(buildClozeSeeds().length)
+  })
+
+  it('produit des cartes exploitables par le flux de révision existant', async () => {
+    await seedGrammarClozeCards(NOW)
+    const card = await getDb().cards.where('content_id').equals('grammar:n5-wa:0').first()
+    expect(card).toMatchObject({
+      kind: 'grammar-cloze',
+      grammarId: 'n5-wa',
+      terme: 'わたし＿＿ がくせいです。',
+      lecture: 'は',
+      sens_fr_source: 'manuel',
+      state: State.New,
+    })
+    expect(displaySens(card!, 'fr').text).toBe(card!.sens_fr)
   })
 })
 
