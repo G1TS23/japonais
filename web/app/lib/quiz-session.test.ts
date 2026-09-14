@@ -3,6 +3,7 @@ import { reactive } from 'vue'
 import { QUIZ_N5 } from '~/data/quiz-n5'
 import { getDb, type QuizAttempt } from './db'
 import {
+  buildGrammarParticleQuestions,
   buildQuiz,
   buildVocabQuestions,
   poolSize,
@@ -80,10 +81,33 @@ describe('buildQuiz', () => {
 })
 
 describe('poolSize', () => {
-  it('somme les questions rédigées des thèmes + 40 pour le vocabulaire', () => {
-    const particules = QUIZ_N5.filter((q) => q.theme === 'particules').length
+  it('somme les questions rédigées, générées (particules) et + 40 pour le vocabulaire', () => {
+    const particules = QUIZ_N5.filter((q) => q.theme === 'particules').length + buildGrammarParticleQuestions().length
     expect(poolSize(['particules'])).toBe(particules)
     expect(poolSize(['particules', 'vocabulaire'])).toBe(particules + 40)
+  })
+})
+
+describe('buildGrammarParticleQuestions', () => {
+  const questions = buildGrammarParticleQuestions()
+
+  it('génère une question par exemple à trou de catégorie particules', () => {
+    expect(questions.length).toBeGreaterThan(10)
+    expect(questions.every((q) => q.theme === 'particules')).toBe(true)
+  })
+
+  it('a 4 options distinctes dont la bonne, dans l’énoncé à trou', () => {
+    for (const q of questions) {
+      expect(q.options).toHaveLength(4)
+      expect(new Set(q.options).size).toBe(4)
+      expect(q.options[q.answer]).toBeDefined()
+      expect(q.prompt).toContain('＿＿')
+    }
+  })
+
+  it('a des ids uniques', () => {
+    const ids = questions.map((q) => q.id)
+    expect(new Set(ids).size).toBe(ids.length)
   })
 })
 

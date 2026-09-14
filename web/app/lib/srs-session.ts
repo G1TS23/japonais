@@ -2,6 +2,7 @@ import { toRaw } from 'vue'
 import { VOCAB_N5, type VocabEntry } from '~/data/vocab'
 import { getDb, uid, type Card } from './db'
 import { applyRating, newFsrsFields, State, type Grade } from './fsrs'
+import { buildClozeSeeds } from './grammar-cloze'
 
 function dayBounds(now: Date) {
   const start = new Date(now)
@@ -25,6 +26,47 @@ export async function seedDeckIfEmpty(entries: VocabEntry[] = VOCAB_N5, now: Dat
     sens_fr_source: e.sens_fr_source,
     sens_en: e.sens_en,
     tags: e.tags,
+    suspendue: false,
+    created_at: now.getTime(),
+    ...newFsrsFields(now),
+  }))
+  await db.cards.bulkAdd(cards)
+  return cards.length
+}
+
+/**
+ * Ajoute une carte « phrase à trou » pour chaque exemple de grammaire marqué
+ * `blank`, sans toucher aux cartes déjà présentes (dédup par `content_id`,
+ * donc appelable à chaque ouverture de /srs — contrairement à
+ * `seedDeckIfEmpty`, qui ne s'exécute qu'une fois pour tout le deck). Renvoie
+ * le nombre de cartes ajoutées.
+ */
+export async function seedGrammarClozeCards(now: Date = new Date()): Promise<number> {
+  const db = getDb()
+  const seeds = buildClozeSeeds()
+  if (!seeds.length) return 0
+
+  const existing = new Set(
+    (await db.cards.where('content_id').anyOf(seeds.map((s) => s.contentId)).toArray()).map((c) => c.content_id),
+  )
+  const missing = seeds.filter((s) => !existing.has(s.contentId))
+  if (!missing.length) return 0
+
+  const cards: Card[] = missing.map((s) => ({
+    id: uid(),
+    content_id: s.contentId,
+    kind: 'grammar-cloze',
+    grammarId: s.grammarId,
+    terme: s.cloze,
+    lecture: s.answer,
+    sens_fr: s.sens,
+    sens_fr_source: 'manuel',
+    // Pas de glose anglaise pour la grammaire : `sens_en` (obligatoire, sert
+    // de repli si sensLang = 'en') reprend le français plutôt que d'être vide.
+    sens_en: s.sens,
+    exemple_jp: s.fullJp,
+    exemple_fr: s.fullFr,
+    tags: ['grammaire', s.categorie],
     suspendue: false,
     created_at: now.getTime(),
     ...newFsrsFields(now),

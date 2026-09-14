@@ -24,6 +24,12 @@ export interface GrammarExample {
   /** Lecture en kana, quand l'exemple contient des kanji. */
   lecture?: string
   fr: string
+  /**
+   * Segment de `jp` à transformer en trou pour une carte SRS « phrase à
+   * trou » (doit être un sous-texte exact de `jp`, vérifié par un test
+   * d'intégrité). Absent = pas de carte générée pour cet exemple.
+   */
+  blank?: string
 }
 
 export interface GrammarPoint {
@@ -87,7 +93,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'は (prononcé « wa » quand c\'est une particule) marque le thème de la phrase : l\'élément déjà connu, celui dont on va dire quelque chose. Ce n\'est pas un marqueur de sujet grammatical — le thème peut être le sujet, le complément, un lieu, un moment.',
     exemples: [
-      { jp: 'わたしは がくせいです。', fr: 'Moi, je suis étudiant.' },
+      { jp: 'わたしは がくせいです。', blank: 'は', fr: 'Moi, je suis étudiant.' },
       { jp: 'この本は おもしろいです。', lecture: 'このほんは おもしろいです。', fr: 'Ce livre est intéressant.' },
       { jp: 'きょうは いそがしいです。', fr: 'Aujourd\'hui, je suis occupé.' },
     ],
@@ -107,7 +113,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'が marque le sujet. On l\'emploie quand l\'information est nouvelle ou qu\'on veut la mettre en avant, ainsi qu\'après les interrogatifs et avec ある / いる.',
     exemples: [
-      { jp: 'ねこが います。', fr: 'Il y a un chat.' },
+      { jp: 'ねこが います。', blank: 'が', fr: 'Il y a un chat.' },
       { jp: 'だれが 来ましたか。', lecture: 'だれが きましたか。', fr: 'Qui est venu ?' },
       { jp: '雨が ふっています。', lecture: 'あめが ふっています。', fr: 'Il pleut.' },
     ],
@@ -127,7 +133,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'を marque l\'objet direct du verbe. Elle sert aussi à marquer le lieu qu\'on traverse ou qu\'on quitte avec les verbes de mouvement (出る, 歩く, わたる).',
     exemples: [
-      { jp: 'パンを 食べます。', lecture: 'パンを たべます。', fr: 'Je mange du pain.' },
+      { jp: 'パンを 食べます。', blank: 'を', lecture: 'パンを たべます。', fr: 'Je mange du pain.' },
       { jp: '音楽を 聞きます。', lecture: 'おんがくを ききます。', fr: 'J\'écoute de la musique.' },
       { jp: '公園を 散歩します。', lecture: 'こうえんを さんぽします。', fr: 'Je me promène dans le parc.' },
     ],
@@ -144,7 +150,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'に marque un moment repérable sur le calendrier ou l\'horloge : heure, jour, date, mois, année. On ne la met pas devant les expressions de temps relatives (きょう, あした, まいにち…).',
     exemples: [
-      { jp: '七時に おきます。', lecture: 'しちじに おきます。', fr: 'Je me lève à sept heures.' },
+      { jp: '七時に おきます。', blank: 'に', lecture: 'しちじに おきます。', fr: 'Je me lève à sept heures.' },
       { jp: '日曜日に 行きます。', lecture: 'にちようびに いきます。', fr: 'J\'y vais dimanche.' },
       { jp: '2020年に 生まれました。', lecture: 'にせんにじゅうねんに うまれました。', fr: 'Je suis né en 2020.' },
     ],
@@ -164,7 +170,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'に marque le point d\'arrivée d\'un déplacement (行く, 来る, 帰る) et le lieu où quelque chose existe avec ある / いる. Elle marque aussi le destinataire (あげる, 教える, 電話する).',
     exemples: [
-      { jp: '学校に 行きます。', lecture: 'がっこうに いきます。', fr: 'Je vais à l\'école.' },
+      { jp: '学校に 行きます。', blank: 'に', lecture: 'がっこうに いきます。', fr: 'Je vais à l\'école.' },
       { jp: 'つくえの上に 本が あります。', lecture: 'つくえのうえに ほんが あります。', fr: 'Il y a un livre sur le bureau.' },
       { jp: '友だちに 電話します。', lecture: 'ともだちに でんわします。', fr: 'Je téléphone à un ami.' },
     ],
@@ -181,7 +187,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'で marque l\'endroit où l\'action a lieu. À distinguer de に, qui marque une destination ou un lieu d\'existence statique.',
     exemples: [
-      { jp: '図書館で 本を 読みます。', lecture: 'としょかんで ほんを よみます。', fr: 'Je lis un livre à la bibliothèque.' },
+      { jp: '図書館で 本を 読みます。', blank: 'で', lecture: 'としょかんで ほんを よみます。', fr: 'Je lis un livre à la bibliothèque.' },
       { jp: 'うちで ごはんを 作ります。', lecture: 'うちで ごはんを つくります。', fr: 'Je cuisine à la maison.' },
     ],
     notes: ['「としょかんに います」 (je suis à la bibliothèque) vs 「としょかんで 読みます」 (j\'y lis).'],
@@ -197,7 +203,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'で marque l\'instrument, le moyen de transport, la langue, la matière — bref, « au moyen de ».',
     exemples: [
-      { jp: '電車で 行きます。', lecture: 'でんしゃで いきます。', fr: 'J\'y vais en train.' },
+      { jp: '電車で 行きます。', blank: 'で', lecture: 'でんしゃで いきます。', fr: 'J\'y vais en train.' },
       { jp: 'はしで 食べます。', lecture: 'はしで たべます。', fr: 'Je mange avec des baguettes.' },
       { jp: '日本語で 話します。', lecture: 'にほんごで はなします。', fr: 'Je parle en japonais.' },
     ],
@@ -214,7 +220,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'へ (prononcé « e » comme particule) marque la direction d\'un déplacement. Dans la plupart des phrases N5 elle est interchangeable avec に ; へ insiste sur le trajet, に sur l\'arrivée.',
     exemples: [
-      { jp: '日本へ 行きたいです。', lecture: 'にほんへ いきたいです。', fr: 'Je veux aller au Japon.' },
+      { jp: '日本へ 行きたいです。', blank: 'へ', lecture: 'にほんへ いきたいです。', fr: 'Je veux aller au Japon.' },
       { jp: 'うちへ 帰ります。', lecture: 'うちへ かえります。', fr: 'Je rentre à la maison.' },
     ],
     notes: ['S\'écrit へ mais se lit « e » dans ce rôle.'],
@@ -230,7 +236,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'と relie des noms en donnant une liste complète (« A et B, c\'est tout »). Devant un verbe, elle marque la personne avec qui on fait l\'action.',
     exemples: [
-      { jp: 'パンと たまごを 買いました。', lecture: 'パンと たまごを かいました。', fr: 'J\'ai acheté du pain et des œufs.' },
+      { jp: 'パンと たまごを 買いました。', blank: 'と', lecture: 'パンと たまごを かいました。', fr: 'J\'ai acheté du pain et des œufs.' },
       { jp: '友だちと 映画を 見ました。', lecture: 'ともだちと えいがを みました。', fr: 'J\'ai vu un film avec un ami.' },
     ],
     notes: ['Pour une liste non exhaustive (« entre autres »), c\'est や.'],
@@ -246,7 +252,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'や relie des noms en sous-entendant que la liste n\'est pas complète. On la renforce souvent avec など (« etc. ») à la fin.',
     exemples: [
-      { jp: 'つくえの上に 本や ノートが あります。', lecture: 'つくえのうえに ほんや ノートが あります。', fr: 'Sur le bureau il y a des livres, des cahiers (entre autres).' },
+      { jp: 'つくえの上に 本や ノートが あります。', blank: 'や', lecture: 'つくえのうえに ほんや ノートが あります。', fr: 'Sur le bureau il y a des livres, des cahiers (entre autres).' },
       { jp: 'りんごや みかんなどを 買います。', lecture: 'りんごや みかんなどを かいます。', fr: 'J\'achète des pommes, des mandarines, etc.' },
     ],
     voirAussi: ['n5-to-et'],
@@ -261,7 +267,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'も signifie « aussi, également ». Elle remplace は, が et を (jamais 「はも」 ni 「をも」). Après une négation, elle donne « non plus ».',
     exemples: [
-      { jp: 'わたしは 学生です。かれも 学生です。', lecture: 'わたしは がくせいです。かれも がくせいです。', fr: 'Je suis étudiant. Lui aussi est étudiant.' },
+      { jp: 'わたしは 学生です。かれも 学生です。', blank: 'も', lecture: 'わたしは がくせいです。かれも がくせいです。', fr: 'Je suis étudiant. Lui aussi est étudiant.' },
       { jp: 'コーヒーも 飲みません。', lecture: 'コーヒーも のみません。', fr: 'Je ne bois pas de café non plus.' },
     ],
     notes: ['Se combine avec に, で, と : 「学校にも 行きます」.'],
@@ -277,7 +283,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'の relie deux noms : le premier précise le second. Elle couvre la possession (« de »), l\'appartenance, l\'origine, la matière — bien plus large que le « de » français.',
     exemples: [
-      { jp: 'わたしの かさ', fr: 'mon parapluie' },
+      { jp: 'わたしの かさ', blank: 'の', fr: 'mon parapluie' },
       { jp: '日本語の 本', lecture: 'にほんごの ほん', fr: 'un livre de japonais' },
       { jp: '大学の 先生', lecture: 'だいがくの せんせい', fr: 'un professeur d\'université' },
     ],
@@ -294,7 +300,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Quand le nom est évident d\'après le contexte, の peut le remplacer entièrement : 「わたしの」 = « le mien ».',
     exemples: [
-      { jp: 'このかさは わたしのです。', fr: 'Ce parapluie est le mien.' },
+      { jp: 'このかさは わたしのです。', blank: 'の', fr: 'Ce parapluie est le mien.' },
       { jp: '赤いのを ください。', lecture: 'あかいのを ください。', fr: 'Donnez-moi le rouge.' },
     ],
     voirAussi: ['n5-no-lien'],
@@ -309,7 +315,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'から marque le point de départ (lieu ou moment), まで le point d\'arrivée. Les deux s\'emploient ensemble ou séparément.',
     exemples: [
-      { jp: '九時から 五時まで はたらきます。', lecture: 'くじから ごじまで はたらきます。', fr: 'Je travaille de neuf heures à cinq heures.' },
+      { jp: '九時から 五時まで はたらきます。', blank: 'から', lecture: 'くじから ごじまで はたらきます。', fr: 'Je travaille de neuf heures à cinq heures.' },
       { jp: 'うちから 駅まで あるきます。', lecture: 'うちから えきまで あるきます。', fr: 'Je marche de chez moi jusqu\'à la gare.' },
     ],
     voirAussi: ['n5-kara-cause'],
@@ -324,7 +330,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'か en fin de phrase suffit à poser une question : l\'ordre des mots ne change pas. À l\'écrit, on met souvent un point 。 plutôt qu\'un point d\'interrogation.',
     exemples: [
-      { jp: '学生ですか。', lecture: 'がくせいですか。', fr: 'Êtes-vous étudiant ?' },
+      { jp: '学生ですか。', blank: 'か', lecture: 'がくせいですか。', fr: 'Êtes-vous étudiant ?' },
       { jp: 'コーヒーを 飲みますか。', lecture: 'コーヒーを のみますか。', fr: 'Buvez-vous du café ?' },
     ],
     notes: ['Entre deux noms, か signifie « ou » : 「コーヒーか お茶」.'],
@@ -340,7 +346,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'ね sollicite l\'accord de l\'interlocuteur (« n\'est-ce pas ? »). よ signale une information que l\'autre n\'a pas. Les omettre n\'est pas faux, mais le japonais sonne plat.',
     exemples: [
-      { jp: 'いい天気ですね。', lecture: 'いいてんきですね。', fr: 'Il fait beau, n\'est-ce pas ?' },
+      { jp: 'いい天気ですね。', blank: 'ね', lecture: 'いいてんきですね。', fr: 'Il fait beau, n\'est-ce pas ?' },
       { jp: 'この店は 安いですよ。', lecture: 'このみせは やすいですよ。', fr: 'Ce magasin est bon marché, tu sais.' },
     ],
   },
@@ -356,7 +362,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'です est la copule polie. Elle se place en fin de phrase après un nom ou un adjectif. Le japonais n\'a pas d\'article : 「学生です」 peut vouloir dire « je suis étudiant » comme « c\'est un étudiant », selon le contexte.',
     exemples: [
-      { jp: 'わたしは フランス人です。', lecture: 'わたしは フランスじんです。', fr: 'Je suis français.' },
+      { jp: 'わたしは フランス人です。', blank: 'です', lecture: 'わたしは フランスじんです。', fr: 'Je suis français.' },
       { jp: 'これは 本です。', lecture: 'これは ほんです。', fr: 'Ceci est un livre.' },
     ],
     notes: ['La forme neutre correspondante est だ, à réserver à l\'oral familier.'],
@@ -372,7 +378,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'La négation polie de です est ではありません, contractée en じゃありません à l\'oral. La forme en じゃ est la plus courante en conversation.',
     exemples: [
-      { jp: 'わたしは 学生じゃありません。', lecture: 'わたしは がくせいじゃありません。', fr: 'Je ne suis pas étudiant.' },
+      { jp: 'わたしは 学生じゃありません。', blank: 'じゃありません', lecture: 'わたしは がくせいじゃありません。', fr: 'Je ne suis pas étudiant.' },
       { jp: 'これは わたしのじゃありません。', fr: 'Ce n\'est pas à moi.' },
     ],
     notes: ['ではありません est plus formel (écrit, discours) ; じゃありません est neutre-poli courant.'],
@@ -388,7 +394,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Le passé poli de です est でした ; sa négation est じゃありませんでした.',
     exemples: [
-      { jp: 'きのうは 休みでした。', lecture: 'きのうは やすみでした。', fr: 'Hier c\'était congé.' },
+      { jp: 'きのうは 休みでした。', blank: 'でした', lecture: 'きのうは やすみでした。', fr: 'Hier c\'était congé.' },
       { jp: 'テストは かんたんじゃありませんでした。', fr: 'Le test n\'était pas facile.' },
     ],
     voirAussi: ['n5-desu', 'n5-dewa-arimasen'],
@@ -405,7 +411,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Système à trois termes, réglé sur la position des interlocuteurs : これ près de moi, それ près de toi, あれ loin de nous deux. どれ est l\'interrogatif (« lequel ? »). Ces mots remplacent le nom, ils ne l\'accompagnent pas.',
     exemples: [
-      { jp: 'これは 何ですか。', lecture: 'これは なんですか。', fr: 'Qu\'est-ce que c\'est (près de moi) ?' },
+      { jp: 'これは 何ですか。', lecture: 'これは なんですか。', fr: 'Qu\'est-ce que c\'est (près de moi) ?', blank: 'これ' },
       { jp: 'それは わたしのかばんです。', fr: 'Ça (près de toi), c\'est mon sac.' },
       { jp: 'あれは 学校です。', lecture: 'あれは がっこうです。', fr: 'Ça, là-bas, c\'est l\'école.' },
     ],
@@ -422,7 +428,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Même logique de distance que これ／それ／あれ, mais ces formes se placent obligatoirement devant un nom. L\'interrogatif est どの (« quel ? »).',
     exemples: [
-      { jp: 'この本は おもしろいです。', lecture: 'このほんは おもしろいです。', fr: 'Ce livre(-ci) est intéressant.' },
+      { jp: 'この本は おもしろいです。', lecture: 'このほんは おもしろいです。', fr: 'Ce livre(-ci) est intéressant.', blank: 'この' },
       { jp: 'あの人は だれですか。', lecture: 'あのひとは だれですか。', fr: 'Qui est cette personne là-bas ?' },
     ],
     notes: ['Erreur fréquente : 「これ本」. Il faut 「この本」.'],
@@ -438,7 +444,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Série des lieux : ここ ici (près de moi), そこ là (près de toi), あそこ là-bas, どこ où. Noter l\'irrégularité de あそこ (et non 「あこ」).',
     exemples: [
-      { jp: 'トイレは どこですか。', fr: 'Où sont les toilettes ?' },
+      { jp: 'トイレは どこですか。', blank: 'どこ', fr: 'Où sont les toilettes ?' },
       { jp: '駅は あそこです。', lecture: 'えきは あそこです。', fr: 'La gare est là-bas.' },
     ],
     voirAussi: ['n5-kore-sore-are', 'n5-interrogatifs'],
@@ -453,7 +459,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'L\'interrogatif se met à la place de l\'élément questionné : l\'ordre des mots ne bouge pas. La phrase se termine par か. 何 se lit なに devant une pause, なん devant です et les compteurs.',
     exemples: [
-      { jp: 'これは 何ですか。', lecture: 'これは なんですか。', fr: 'Qu\'est-ce que c\'est ?' },
+      { jp: 'これは 何ですか。', lecture: 'これは なんですか。', fr: 'Qu\'est-ce que c\'est ?', blank: '何' },
       { jp: 'いつ 来ますか。', lecture: 'いつ きますか。', fr: 'Quand viens-tu ?' },
       { jp: 'いくらですか。', fr: 'Combien ça coûte ?' },
       { jp: 'どうして 来ませんでしたか。', lecture: 'どうして きませんでしたか。', fr: 'Pourquoi n\'es-tu pas venu ?' },
@@ -490,7 +496,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'La forme en ます couvre le présent et le futur : le contexte tranche. C\'est le registre standard pour parler à quelqu\'un qu\'on ne tutoie pas.',
     exemples: [
-      { jp: '毎日 本を 読みます。', lecture: 'まいにち ほんを よみます。', fr: 'Je lis un livre tous les jours.' },
+      { jp: '毎日 本を 読みます。', blank: '読みます', lecture: 'まいにち ほんを よみます。', fr: 'Je lis un livre tous les jours.' },
       { jp: 'あした 東京に 行きます。', lecture: 'あした とうきょうに いきます。', fr: 'Demain je vais à Tokyo.' },
     ],
     voirAussi: ['n5-masen', 'n5-mashita', 'n5-groupes-verbes'],
@@ -505,7 +511,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'On remplace ます par ません. La base reste la même : 行きます → 行きません.',
     exemples: [
-      { jp: '朝ごはんを 食べません。', lecture: 'あさごはんを たべません。', fr: 'Je ne prends pas de petit-déjeuner.' },
+      { jp: '朝ごはんを 食べません。', blank: '食べません', lecture: 'あさごはんを たべません。', fr: 'Je ne prends pas de petit-déjeuner.' },
       { jp: 'きょうは 学校に 行きません。', lecture: 'きょうは がっこうに いきません。', fr: 'Aujourd\'hui je ne vais pas à l\'école.' },
     ],
     notes: ['Erreur fréquente : 「行かません」. La base ます de 行く est 行き, donc 行きません.'],
@@ -521,7 +527,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'ます → ました pour l\'affirmatif passé, ません → ませんでした pour le négatif passé.',
     exemples: [
-      { jp: 'きのう 映画を 見ました。', lecture: 'きのう えいがを みました。', fr: 'Hier j\'ai vu un film.' },
+      { jp: 'きのう 映画を 見ました。', blank: '見ました', lecture: 'きのう えいがを みました。', fr: 'Hier j\'ai vu un film.' },
       { jp: '何も 買いませんでした。', lecture: 'なにも かいませんでした。', fr: 'Je n\'ai rien acheté.' },
     ],
     voirAussi: ['n5-masu', 'n5-masen'],
@@ -536,7 +542,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'La forme en て ne porte ni temps ni politesse : elle sert de socle à de nombreuses tournures. Ichidan : る → て (食べて). Godan : selon la finale — く→いて, ぐ→いで, む/ぶ/ぬ→んで, う/つ/る→って, す→して. Irréguliers : して, きて. Exception : 行く → 行って.',
     exemples: [
-      { jp: '朝 起きて、ごはんを 食べます。', lecture: 'あさ おきて、ごはんを たべます。', fr: 'Le matin je me lève et je mange.' },
+      { jp: '朝 起きて、ごはんを 食べます。', blank: '起きて', lecture: 'あさ おきて、ごはんを たべます。', fr: 'Le matin je me lève et je mange.' },
       { jp: '書いて ください。', lecture: 'かいて ください。', fr: 'Écrivez, s\'il vous plaît.' },
     ],
     notes: ['行く est irrégulier en て : 行って (et non 「行いて」).'],
@@ -552,7 +558,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Formule standard pour demander quelque chose poliment. Pour demander de ne pas faire, on emploie la forme en ない : 〜ないでください.',
     exemples: [
-      { jp: 'ちょっと 待って ください。', lecture: 'ちょっと まって ください。', fr: 'Attendez un instant, s\'il vous plaît.' },
+      { jp: 'ちょっと 待って ください。', blank: '待って', lecture: 'ちょっと まって ください。', fr: 'Attendez un instant, s\'il vous plaît.' },
       { jp: 'ここに 名前を 書いて ください。', lecture: 'ここに なまえを かいて ください。', fr: 'Écrivez votre nom ici.' },
     ],
     voirAussi: ['n5-te-forme', 'n5-nai-de-kudasai'],
@@ -567,7 +573,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Deux valeurs selon le verbe. Avec un verbe d\'action : « être en train de ». Avec un verbe de changement d\'état (結婚する, 住む, 知る), le résultat persiste : 「結婚しています」 = « je suis marié », pas « je suis en train de me marier ».',
     exemples: [
-      { jp: 'いま ごはんを 食べています。', lecture: 'いま ごはんを たべています。', fr: 'Je suis en train de manger.' },
+      { jp: 'いま ごはんを 食べています。', blank: '食べています', lecture: 'いま ごはんを たべています。', fr: 'Je suis en train de manger.' },
       { jp: '東京に 住んでいます。', lecture: 'とうきょうに すんでいます。', fr: 'J\'habite à Tokyo.' },
     ],
     notes: ['À l\'oral on contracte souvent en 〜てます.'],
@@ -583,7 +589,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Sert à demander ou accorder une permission. En question : 「〜てもいいですか」.',
     exemples: [
-      { jp: 'ここで 写真を とっても いいですか。', lecture: 'ここで しゃしんを とっても いいですか。', fr: 'Puis-je prendre des photos ici ?' },
+      { jp: 'ここで 写真を とっても いいですか。', blank: 'とっても', lecture: 'ここで しゃしんを とっても いいですか。', fr: 'Puis-je prendre des photos ici ?' },
       { jp: '帰っても いいですよ。', lecture: 'かえっても いいですよ。', fr: 'Tu peux rentrer.' },
     ],
     voirAussi: ['n5-te-forme', 'n5-te-wa-ikemasen'],
@@ -598,7 +604,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Interdiction ferme. À l\'oral, ては se contracte souvent en ちゃ : 「食べちゃいけません」.',
     exemples: [
-      { jp: 'ここで たばこを すっては いけません。', fr: 'Il est interdit de fumer ici.' },
+      { jp: 'ここで たばこを すっては いけません。', blank: 'すっては', fr: 'Il est interdit de fumer ici.' },
       { jp: '入っては いけません。', lecture: 'はいっては いけません。', fr: 'Défense d\'entrer.' },
     ],
     voirAussi: ['n5-te-mo-ii'],
@@ -613,7 +619,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Négation de la forme neutre. Ichidan : る → ない (食べない). Godan : la voyelle finale passe en -a puis ない (書く → 書かない) ; les verbes en う donnent わない (買う → 買わない). する → しない, 来る → こない. Irrégulier : ある → ない.',
     exemples: [
-      { jp: '肉を 食べない。', lecture: 'にくを たべない。', fr: 'Je ne mange pas de viande.' },
+      { jp: '肉を 食べない。', blank: '食べない', lecture: 'にくを たべない。', fr: 'Je ne mange pas de viande.' },
       { jp: 'お金が ない。', lecture: 'おかねが ない。', fr: 'Je n\'ai pas d\'argent.' },
     ],
     notes: ['買う → 買わない, et non 「買あない」.'],
@@ -628,7 +634,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     sens: 'Veuillez ne pas…',
     explication: 'Pendant négatif de 〜てください.',
     exemples: [
-      { jp: 'ここに 車を とめないで ください。', lecture: 'ここに くるまを とめないで ください。', fr: 'Ne garez pas votre voiture ici.' },
+      { jp: 'ここに 車を とめないで ください。', blank: 'とめないで', lecture: 'ここに くるまを とめないで ください。', fr: 'Ne garez pas votre voiture ici.' },
       { jp: '心配しないで ください。', lecture: 'しんぱいしないで ください。', fr: 'Ne vous inquiétez pas.' },
     ],
     voirAussi: ['n5-nai-forme', 'n5-te-kudasai'],
@@ -643,7 +649,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'On remplace le ない final par なければ, puis なりません. Variante courante à l\'oral : 〜なきゃ. Synonyme fréquent : 〜ないといけません.',
     exemples: [
-      { jp: '毎日 勉強しなければ なりません。', lecture: 'まいにち べんきょうしなければ なりません。', fr: 'Je dois étudier tous les jours.' },
+      { jp: '毎日 勉強しなければ なりません。', blank: '勉強しなければ', lecture: 'まいにち べんきょうしなければ なりません。', fr: 'Je dois étudier tous les jours.' },
       { jp: '八時に 行かなければ なりません。', lecture: 'はちじに いかなければ なりません。', fr: 'Je dois y aller à huit heures.' },
     ],
     voirAussi: ['n5-nai-forme'],
@@ -658,7 +664,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'S\'ajoute à la base ます et se comporte ensuite comme un adjectif en い (たかった, たくない). L\'objet peut prendre が au lieu de を. Ne s\'emploie pas pour parler du désir d\'un tiers.',
     exemples: [
-      { jp: 'すしを 食べたいです。', lecture: 'すしを たべたいです。', fr: 'Je veux manger des sushis.' },
+      { jp: 'すしを 食べたいです。', blank: '食べたい', lecture: 'すしを たべたいです。', fr: 'Je veux manger des sushis.' },
       { jp: '日本に 行きたかったです。', lecture: 'にほんに いきたかったです。', fr: 'Je voulais aller au Japon.' },
     ],
     notes: ['Pour une tierce personne : 〜たがっている.'],
@@ -674,7 +680,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'ましょう propose une action commune (« faisons… »). ませんか est une invitation plus douce (« vous ne voudriez pas… ? »). ましょうか offre un service (« je le fais ? »).',
     exemples: [
-      { jp: 'いっしょに 行きましょう。', lecture: 'いっしょに いきましょう。', fr: 'Allons-y ensemble.' },
+      { jp: 'いっしょに 行きましょう。', blank: '行きましょう', lecture: 'いっしょに いきましょう。', fr: 'Allons-y ensemble.' },
       { jp: 'お茶を 飲みませんか。', lecture: 'おちゃを のみませんか。', fr: 'Et si on prenait un thé ?' },
       { jp: '手伝いましょうか。', lecture: 'てつだいましょうか。', fr: 'Je vous aide ?' },
     ],
@@ -690,7 +696,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Tournure analytique pour exprimer la capacité, à partir de la forme du dictionnaire. Avec un nom, on emploie 「N が できます」.',
     exemples: [
-      { jp: '日本語を 話すことが できます。', lecture: 'にほんごを はなすことが できます。', fr: 'Je sais parler japonais.' },
+      { jp: '日本語を 話すことが できます。', blank: '話すことが できます', lecture: 'にほんごを はなすことが できます。', fr: 'Je sais parler japonais.' },
       { jp: 'ピアノが できます。', fr: 'Je sais jouer du piano.' },
     ],
     notes: ['Le japonais courant préfère souvent la forme potentielle (話せます), vue au N4.'],
@@ -709,7 +715,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
       'Ils se placent directement devant le nom et portent le temps et la négation. です ne fait qu\'ajouter la politesse — il ne se conjugue pas ici.',
     exemples: [
       { jp: '高い 本', lecture: 'たかい ほん', fr: 'un livre cher' },
-      { jp: 'この本は 高いです。', lecture: 'このほんは たかいです。', fr: 'Ce livre est cher.' },
+      { jp: 'この本は 高いです。', blank: '高い', lecture: 'このほんは たかいです。', fr: 'Ce livre est cher.' },
     ],
     notes: ['きれい, ゆうめい, きらい finissent par い mais sont des adjectifs en な.'],
     voirAussi: ['n5-adj-i-neg', 'n5-adj-na'],
@@ -724,7 +730,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'On retire le い final et on ajoute la terminaison : 高い → 高くない, 高かった, 高くなかった. En registre poli on garde です après, ou on emploie 〜くありません. Irrégulier : いい → よくない, よかった.',
     exemples: [
-      { jp: 'この本は 高くないです。', lecture: 'このほんは たかくないです。', fr: 'Ce livre n\'est pas cher.' },
+      { jp: 'この本は 高くないです。', blank: '高くない', lecture: 'このほんは たかくないです。', fr: 'Ce livre n\'est pas cher.' },
       { jp: 'テストは むずかしかったです。', fr: 'Le test était difficile.' },
       { jp: '天気が よくなかったです。', lecture: 'てんきが よくなかったです。', fr: 'Le temps n\'était pas bon.' },
     ],
@@ -742,7 +748,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
       'Ils prennent な devant un nom, mais rien devant です. C\'est la copule qui porte le temps et la négation : 静かです → 静かじゃありません → 静かでした.',
     exemples: [
       { jp: '静かな へや', lecture: 'しずかな へや', fr: 'une pièce calme' },
-      { jp: 'この へやは 静かです。', lecture: 'この へやは しずかです。', fr: 'Cette pièce est calme.' },
+      { jp: 'この へやは 静かです。', blank: '静か', lecture: 'この へやは しずかです。', fr: 'Cette pièce est calme.' },
       { jp: 'あまり 静かじゃありません。', lecture: 'あまり しずかじゃありません。', fr: 'Ce n\'est pas très calme.' },
     ],
     notes: ['Erreur fréquente : 「静かなです」. Devant です, pas de な.'],
@@ -758,7 +764,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Adjectif en い : い → くて. Adjectif en な : on ajoute で. On ne relie pas deux adjectifs avec そして à l\'intérieur d\'une même phrase.',
     exemples: [
-      { jp: 'この部屋は 広くて 明るいです。', lecture: 'このへやは ひろくて あかるいです。', fr: 'Cette pièce est grande et lumineuse.' },
+      { jp: 'この部屋は 広くて 明るいです。', blank: '広くて', lecture: 'このへやは ひろくて あかるいです。', fr: 'Cette pièce est grande et lumineuse.' },
       { jp: 'かのじょは きれいで やさしいです。', fr: 'Elle est jolie et gentille.' },
     ],
     notes: ['いい → よくて.'],
@@ -774,7 +780,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Adjectif en い : い → く. Adjectif en な : on ajoute に. La forme obtenue modifie le verbe.',
     exemples: [
-      { jp: '早く 起きます。', lecture: 'はやく おきます。', fr: 'Je me lève tôt.' },
+      { jp: '早く 起きます。', blank: '早く', lecture: 'はやく おきます。', fr: 'Je me lève tôt.' },
       { jp: '静かに 話して ください。', lecture: 'しずかに はなして ください。', fr: 'Parlez doucement.' },
     ],
     voirAussi: ['n5-naru'],
@@ -789,7 +795,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'なる exprime le passage à un nouvel état. Il se construit sur la forme adverbiale de l\'adjectif, ou sur に après un nom.',
     exemples: [
-      { jp: '寒く なりました。', lecture: 'さむく なりました。', fr: 'Il a fait froid (c\'est devenu froid).' },
+      { jp: '寒く なりました。', blank: 'なりました', lecture: 'さむく なりました。', fr: 'Il a fait froid (c\'est devenu froid).' },
       { jp: '元気に なりました。', lecture: 'げんきに なりました。', fr: 'Je me suis rétabli.' },
       { jp: '先生に なりたいです。', lecture: 'せんせいに なりたいです。', fr: 'Je veux devenir professeur.' },
     ],
@@ -807,7 +813,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'います pour les êtres animés (personnes, animaux), あります pour tout le reste — objets, plantes, événements. Ce qui existe prend が, le lieu prend に.',
     exemples: [
-      { jp: '部屋に ねこが います。', lecture: 'へやに ねこが います。', fr: 'Il y a un chat dans la pièce.' },
+      { jp: '部屋に ねこが います。', blank: 'います', lecture: 'へやに ねこが います。', fr: 'Il y a un chat dans la pièce.' },
       { jp: 'つくえの上に 本が あります。', lecture: 'つくえのうえに ほんが あります。', fr: 'Il y a un livre sur le bureau.' },
       { jp: 'あした テストが あります。', fr: 'Demain il y a un test.' },
     ],
@@ -824,7 +830,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Ce sont des noms, pas des prépositions : ils se relient au nom précédent par の et prennent ensuite に ou で. Ordre inverse du français.',
     exemples: [
-      { jp: 'いすの 下に かばんが あります。', lecture: 'いすの したに かばんが あります。', fr: 'Il y a un sac sous la chaise.' },
+      { jp: 'いすの 下に かばんが あります。', blank: '下に', lecture: 'いすの したに かばんが あります。', fr: 'Il y a un sac sous la chaise.' },
       { jp: '駅の となりに コンビニが あります。', lecture: 'えきの となりに コンビニが あります。', fr: 'Il y a une supérette à côté de la gare.' },
     ],
     voirAussi: ['n5-aru-iru', 'n5-no-lien'],
@@ -841,7 +847,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'とき est un nom (« moment ») : ce qui le précède le qualifie. Le temps de la subordonnée est relatif à la principale — verbe au dictionnaire pour « avant/pendant », au passé pour « après ».',
     exemples: [
-      { jp: '子どもの とき、よく 泳ぎました。', lecture: 'こどもの とき、よく およぎました。', fr: 'Quand j\'étais enfant, je nageais souvent.' },
+      { jp: '子どもの とき、よく 泳ぎました。', blank: 'とき', lecture: 'こどもの とき、よく およぎました。', fr: 'Quand j\'étais enfant, je nageais souvent.' },
       { jp: '日本に 行くとき、カメラを 買います。', lecture: 'にほんに いくとき、カメラを かいます。', fr: 'Quand j\'irai au Japon (avant d\'y être), j\'achèterai un appareil photo.' },
     ],
     voirAussi: ['n5-mae-ni', 'n5-ato-de'],
@@ -856,7 +862,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Le verbe reste toujours à la forme du dictionnaire devant 前に, même si la phrase est au passé.',
     exemples: [
-      { jp: '寝る前に 歯を みがきます。', lecture: 'ねるまえに はを みがきます。', fr: 'Je me brosse les dents avant de dormir.' },
+      { jp: '寝る前に 歯を みがきます。', blank: '前に', lecture: 'ねるまえに はを みがきます。', fr: 'Je me brosse les dents avant de dormir.' },
       { jp: '食事の前に 手を あらいます。', lecture: 'しょくじのまえに てを あらいます。', fr: 'Je me lave les mains avant le repas.' },
     ],
     voirAussi: ['n5-ato-de', 'n5-toki'],
@@ -871,7 +877,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Le verbe est obligatoirement à la forme neutre passée (た) devant あとで. Avec un nom, on relie par の.',
     exemples: [
-      { jp: '食べたあとで 散歩します。', lecture: 'たべたあとで さんぽします。', fr: 'Après avoir mangé, je me promène.' },
+      { jp: '食べたあとで 散歩します。', blank: 'あとで', lecture: 'たべたあとで さんぽします。', fr: 'Après avoir mangé, je me promène.' },
       { jp: '仕事のあとで 会いましょう。', lecture: 'しごとのあとで あいましょう。', fr: 'Retrouvons-nous après le travail.' },
     ],
     voirAussi: ['n5-mae-ni'],
@@ -886,7 +892,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'もう + passé = « déjà ». まだ + négation = « pas encore » ; la réponse type est 「まだです」. まだ + affirmatif = « encore, toujours ».',
     exemples: [
-      { jp: 'もう 食べました。', lecture: 'もう たべました。', fr: 'J\'ai déjà mangé.' },
+      { jp: 'もう 食べました。', blank: 'もう', lecture: 'もう たべました。', fr: 'J\'ai déjà mangé.' },
       { jp: 'まだ 食べていません。', lecture: 'まだ たべていません。', fr: 'Je n\'ai pas encore mangé.' },
       { jp: 'まだ 学生です。', lecture: 'まだ がくせいです。', fr: 'Je suis encore étudiant.' },
     ],
@@ -902,7 +908,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Ils se placent avant le verbe. あまり et ぜんぜん appellent obligatoirement une négation : « pas beaucoup » et « pas du tout ».',
     exemples: [
-      { jp: 'よく 映画を 見ます。', lecture: 'よく えいがを みます。', fr: 'Je regarde souvent des films.' },
+      { jp: 'よく 映画を 見ます。', blank: 'よく', lecture: 'よく えいがを みます。', fr: 'Je regarde souvent des films.' },
       { jp: 'あまり テレビを 見ません。', lecture: 'あまり テレビを みません。', fr: 'Je ne regarde pas beaucoup la télévision.' },
       { jp: 'ぜんぜん わかりません。', fr: 'Je ne comprends pas du tout.' },
     ],
@@ -918,7 +924,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'ごろ s\'emploie après un point du temps (heure, date). ぐらい (ou くらい) après une quantité ou une durée.',
     exemples: [
-      { jp: '三時ごろ 来ます。', lecture: 'さんじごろ きます。', fr: 'Je viendrai vers trois heures.' },
+      { jp: '三時ごろ 来ます。', blank: 'ごろ', lecture: 'さんじごろ きます。', fr: 'Je viendrai vers trois heures.' },
       { jp: '一時間ぐらい かかります。', lecture: 'いちじかんぐらい かかります。', fr: 'Ça prend environ une heure.' },
     ],
     notes: ['Pas de に après ごろ : 「三時ごろ 来ます」.'],
@@ -935,7 +941,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Le japonais impose un compteur adapté à la nature de l\'objet : 〜まい (objets plats), 〜本 (objets longs), 〜人 (personnes), 〜さつ (livres), 〜だい (machines), 〜ひき (petits animaux). La série générique 〜つ (ひとつ, ふたつ…) dépanne jusqu\'à dix.',
     exemples: [
-      { jp: 'きってを 五まい 買いました。', lecture: 'きってを ごまい かいました。', fr: 'J\'ai acheté cinq timbres.' },
+      { jp: 'きってを 五まい 買いました。', blank: '五まい', lecture: 'きってを ごまい かいました。', fr: 'J\'ai acheté cinq timbres.' },
       { jp: '学生が 三人 います。', lecture: 'がくせいが さんにん います。', fr: 'Il y a trois étudiants.' },
       { jp: 'りんごを ふたつ ください。', fr: 'Deux pommes, s\'il vous plaît.' },
     ],
@@ -953,7 +959,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
       '〜時（じ）pour l\'heure, 〜分（ふん/ぷん）pour les minutes. Pour une durée, on ajoute 間（かん）: 二時間 = deux heures de temps. Attention aux lectures irrégulières : 四時（よじ）, 七時（しちじ）, 九時（くじ）.',
     exemples: [
       { jp: 'いま 何時ですか。', lecture: 'いま なんじですか。', fr: 'Quelle heure est-il ?' },
-      { jp: '二時間 勉強しました。', lecture: 'にじかん べんきょうしました。', fr: 'J\'ai étudié deux heures.' },
+      { jp: '二時間 勉強しました。', blank: '二時間', lecture: 'にじかん べんきょうしました。', fr: 'J\'ai étudié deux heures.' },
     ],
     voirAussi: ['n5-compteurs', 'n5-ni-temps'],
   },
@@ -969,7 +975,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'より marque l\'élément de référence (« que »). のほうが met en avant celui qu\'on juge supérieur. L\'ordre des deux membres est libre.',
     exemples: [
-      { jp: '電車のほうが バスより 速いです。', lecture: 'でんしゃのほうが バスより はやいです。', fr: 'Le train est plus rapide que le bus.' },
+      { jp: '電車のほうが バスより 速いです。', blank: 'のほうが', lecture: 'でんしゃのほうが バスより はやいです。', fr: 'Le train est plus rapide que le bus.' },
       { jp: '夏より 冬のほうが 好きです。', lecture: 'なつより ふゆのほうが すきです。', fr: 'Je préfère l\'hiver à l\'été.' },
     ],
     voirAussi: ['n5-ichiban', 'n5-dochira'],
@@ -984,7 +990,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Pour comparer deux choses on emploie どちら (どっち à l\'oral), même pour des objets. La réponse reprend のほうが.',
     exemples: [
-      { jp: 'コーヒーと お茶と どちらが 好きですか。', lecture: 'コーヒーと おちゃと どちらが すきですか。', fr: 'Vous préférez le café ou le thé ?' },
+      { jp: 'コーヒーと お茶と どちらが 好きですか。', blank: 'どちらが', lecture: 'コーヒーと おちゃと どちらが すきですか。', fr: 'Vous préférez le café ou le thé ?' },
       { jp: 'コーヒーのほうが 好きです。', lecture: 'コーヒーのほうが すきです。', fr: 'Je préfère le café.' },
     ],
     voirAussi: ['n5-hou-ga'],
@@ -999,7 +1005,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       '一番（いちばん）devant l\'adjectif donne le superlatif. Le domaine de comparaison prend で ; avec un interrogatif, le japonais emploie souvent 「〜の中で」.',
     exemples: [
-      { jp: '日本で 一番 高い山です。', lecture: 'にほんで いちばん たかいやまです。', fr: 'C\'est la plus haute montagne du Japon.' },
+      { jp: '日本で 一番 高い山です。', blank: '一番', lecture: 'にほんで いちばん たかいやまです。', fr: 'C\'est la plus haute montagne du Japon.' },
       { jp: 'くだものの中で 何が 一番 好きですか。', lecture: 'くだもののなかで なにが いちばん すきですか。', fr: 'Quel fruit préférez-vous ?' },
     ],
     voirAussi: ['n5-hou-ga'],
@@ -1016,7 +1022,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Ces mots relient deux phrases complètes, en début de seconde phrase. そして « et (aussi) », それから « puis, ensuite », でも « mais », だから « donc, c\'est pourquoi ».',
     exemples: [
-      { jp: '朝ごはんを 食べました。それから 学校に 行きました。', lecture: 'あさごはんを たべました。それから がっこうに いきました。', fr: 'J\'ai déjeuné. Puis je suis allé à l\'école.' },
+      { jp: '朝ごはんを 食べました。それから 学校に 行きました。', blank: 'それから', lecture: 'あさごはんを たべました。それから がっこうに いきました。', fr: 'J\'ai déjeuné. Puis je suis allé à l\'école.' },
       { jp: '安いです。でも おいしくないです。', lecture: 'やすいです。でも おいしくないです。', fr: 'C\'est bon marché. Mais ce n\'est pas bon.' },
     ],
     notes: ['Pour relier à l\'intérieur d\'une même phrase, on utilise la forme en て ou が.'],
@@ -1032,7 +1038,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'En fin de proposition, が introduit une opposition. À ne pas confondre avec la particule が qui marque le sujet. Sert aussi d\'introduction polie : 「すみませんが…」.',
     exemples: [
-      { jp: '高いですが、おいしいです。', lecture: 'たかいですが、おいしいです。', fr: 'C\'est cher, mais c\'est bon.' },
+      { jp: '高いですが、おいしいです。', blank: 'が', lecture: 'たかいですが、おいしいです。', fr: 'C\'est cher, mais c\'est bon.' },
       { jp: 'すみませんが、駅は どこですか。', lecture: 'すみませんが、えきは どこですか。', fr: 'Excusez-moi, où est la gare ?' },
     ],
     voirAussi: ['n5-connecteurs', 'n5-ga-sujet'],
@@ -1047,7 +1053,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'から se place après la proposition qui donne la raison — donc avant la conséquence, à l\'inverse du français. La réponse à どうして se termine souvent par 「〜からです」.',
     exemples: [
-      { jp: '寒いから、うちに います。', lecture: 'さむいから、うちに います。', fr: 'Comme il fait froid, je reste à la maison.' },
+      { jp: '寒いから、うちに います。', blank: 'から', lecture: 'さむいから、うちに います。', fr: 'Comme il fait froid, je reste à la maison.' },
       { jp: '時間が ないからです。', lecture: 'じかんが ないからです。', fr: 'Parce que je n\'ai pas le temps.' },
     ],
     voirAussi: ['n5-kara-made', 'n5-connecteurs'],
@@ -1064,7 +1070,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Ces adjectifs en な décrivent un état, pas une action : leur complément prend が et non を. Même logique pour 上手（じょうず）, 下手（へた）, ほしい.',
     exemples: [
-      { jp: 'わたしは 肉が 好きです。', lecture: 'わたしは にくが すきです。', fr: 'J\'aime la viande.' },
+      { jp: 'わたしは 肉が 好きです。', blank: '好き', lecture: 'わたしは にくが すきです。', fr: 'J\'aime la viande.' },
       { jp: '料理が 上手です。', lecture: 'りょうりが じょうずです。', fr: 'Il cuisine bien.' },
     ],
     notes: ['Erreur fréquente : 「肉を 好きです」. C\'est が.'],
@@ -1080,7 +1086,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'ほしい porte sur un nom (un objet désiré) et se comporte comme un adjectif en い. Pour vouloir *faire* quelque chose, c\'est 〜たい. Ne s\'emploie pas tel quel pour une tierce personne.',
     exemples: [
-      { jp: '新しい車が ほしいです。', lecture: 'あたらしいくるまが ほしいです。', fr: 'Je veux une nouvelle voiture.' },
+      { jp: '新しい車が ほしいです。', blank: 'ほしい', lecture: 'あたらしいくるまが ほしいです。', fr: 'Je veux une nouvelle voiture.' },
       { jp: '何も ほしくないです。', lecture: 'なにも ほしくないです。', fr: 'Je ne veux rien.' },
     ],
     voirAussi: ['n5-tai', 'n5-ga-suki'],
@@ -1095,7 +1101,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Comme 好き, ces verbes décrivent un état et prennent が. わかる signifie « comprendre » au sens de « être clair pour moi ».',
     exemples: [
-      { jp: 'お金が いります。', lecture: 'おかねが いります。', fr: 'J\'ai besoin d\'argent.' },
+      { jp: 'お金が いります。', blank: 'いります', lecture: 'おかねが いります。', fr: 'J\'ai besoin d\'argent.' },
       { jp: '日本語が わかります。', lecture: 'にほんごが わかります。', fr: 'Je comprends le japonais.' },
     ],
     voirAussi: ['n5-ga-suki'],
@@ -1110,7 +1116,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'ください demande un objet concret. お願いします est plus large et plus poli : il couvre aussi les services et les démarches.',
     exemples: [
-      { jp: 'コーヒーを ください。', fr: 'Un café, s\'il vous plaît.' },
+      { jp: 'コーヒーを ください。', blank: 'ください', fr: 'Un café, s\'il vous plaît.' },
       { jp: 'チェックインを お願いします。', lecture: 'チェックインを おねがいします。', fr: 'Je voudrais faire l\'enregistrement.' },
     ],
     voirAussi: ['n5-te-kudasai'],
@@ -1125,7 +1131,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'あげる : je donne (ou un tiers donne à un autre tiers). もらう : je reçois de quelqu\'un — le donneur prend に ou から. くれる : quelqu\'un me donne, à moi ou à mon groupe. On ne dit jamais 「わたしに あげる」.',
     exemples: [
-      { jp: '友だちに 花を あげました。', lecture: 'ともだちに はなを あげました。', fr: 'J\'ai offert des fleurs à un ami.' },
+      { jp: '友だちに 花を あげました。', blank: 'あげました', lecture: 'ともだちに はなを あげました。', fr: 'J\'ai offert des fleurs à un ami.' },
       { jp: '父に 時計を もらいました。', lecture: 'ちちに とけいを もらいました。', fr: 'J\'ai reçu une montre de mon père.' },
       { jp: '兄が 本を くれました。', lecture: 'あにが ほんを くれました。', fr: 'Mon frère m\'a donné un livre.' },
     ],
@@ -1142,7 +1148,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'La proposition citée passe obligatoirement à la forme neutre avant と, même si la phrase principale est polie. Avec un nom ou un adjectif en な, on ajoute だ.',
     exemples: [
-      { jp: 'あした 雨が ふると思います。', lecture: 'あした あめが ふるとおもいます。', fr: 'Je pense qu\'il pleuvra demain.' },
+      { jp: 'あした 雨が ふると思います。', blank: 'と思います', lecture: 'あした あめが ふるとおもいます。', fr: 'Je pense qu\'il pleuvra demain.' },
       { jp: 'これは 便利だと思います。', lecture: 'これは べんりだとおもいます。', fr: 'Je trouve ça pratique.' },
     ],
     notes: ['Erreur fréquente : 「ふりますと思います」. Il faut la forme neutre : 「ふると思います」.'],
@@ -1158,7 +1164,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'と marque le contenu cité. Pour se présenter : 「〜と言います」. Pour demander le nom d\'une chose : 「これは 日本語で 何と言いますか」.',
     exemples: [
-      { jp: 'たなかと 言います。', lecture: 'たなかと いいます。', fr: 'Je m\'appelle Tanaka.' },
+      { jp: 'たなかと 言います。', blank: 'と 言います', lecture: 'たなかと いいます。', fr: 'Je m\'appelle Tanaka.' },
       { jp: 'これは 日本語で 何と言いますか。', lecture: 'これは にほんごで なんといいますか。', fr: 'Comment dit-on ça en japonais ?' },
     ],
     voirAussi: ['n5-to-omoimasu'],
@@ -1173,7 +1179,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'でしょう marque une supposition. Prononcé avec une intonation montante, il cherche l\'accord de l\'interlocuteur. Très fréquent dans les bulletins météo.',
     exemples: [
-      { jp: 'あした 晴れるでしょう。', lecture: 'あした はれるでしょう。', fr: 'Il fera sans doute beau demain.' },
+      { jp: 'あした 晴れるでしょう。', blank: 'でしょう', lecture: 'あした はれるでしょう。', fr: 'Il fera sans doute beau demain.' },
       { jp: 'たかいでしょう？', fr: 'C\'est cher, non ?' },
     ],
     voirAussi: ['n5-to-omoimasu'],
@@ -1188,7 +1194,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'だけ se place après le nom et signifie « seulement, ne… que ». Il remplace は, が et を, mais se combine avec に et で.',
     exemples: [
-      { jp: '水だけ 飲みます。', lecture: 'みずだけ のみます。', fr: 'Je ne bois que de l\'eau.' },
+      { jp: '水だけ 飲みます。', blank: 'だけ', lecture: 'みずだけ のみます。', fr: 'Je ne bois que de l\'eau.' },
       { jp: '一人だけ 来ました。', lecture: 'ひとりだけ きました。', fr: 'Une seule personne est venue.' },
     ],
     voirAussi: ['n5-mo'],
@@ -1203,7 +1209,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Proche de 〜あとで, mais souligne l\'enchaînement : la seconde action ne peut avoir lieu qu\'une fois la première terminée.',
     exemples: [
-      { jp: '宿題を してから 遊びます。', lecture: 'しゅくだいを してから あそびます。', fr: 'Je joue une fois mes devoirs finis.' },
+      { jp: '宿題を してから 遊びます。', blank: 'してから', lecture: 'しゅくだいを してから あそびます。', fr: 'Je joue une fois mes devoirs finis.' },
       { jp: '手を あらってから 食べて ください。', lecture: 'てを あらってから たべて ください。', fr: 'Lavez-vous les mains avant de manger.' },
     ],
     voirAussi: ['n5-ato-de', 'n5-te-forme'],
@@ -1233,7 +1239,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'La base ます + ながら indique l\'action secondaire ; l\'action principale est celle du verbe final. Les deux actions doivent avoir le même sujet.',
     exemples: [
-      { jp: '音楽を 聞きながら 勉強します。', lecture: 'おんがくを ききながら べんきょうします。', fr: 'J\'étudie en écoutant de la musique.' },
+      { jp: '音楽を 聞きながら 勉強します。', blank: '聞きながら', lecture: 'おんがくを ききながら べんきょうします。', fr: 'J\'étudie en écoutant de la musique.' },
     ],
     notes: ['L\'action importante est la seconde : ici, c\'est « étudier ».'],
     voirAussi: ['n5-masu'],
@@ -1248,7 +1254,7 @@ export const GRAMMAR_N5: GrammarPoint[] = [
     explication:
       'Les jours de la semaine se terminent par 曜日（ようび）. Les mois sont réguliers (〜がつ), mais les jours du mois ont des lectures irrégulières du 1er au 10, plus 14, 20 et 24 : ついたち, ふつか, みっか… はつか.',
     exemples: [
-      { jp: 'きょうは 月曜日です。', lecture: 'きょうは げつようびです。', fr: 'Aujourd\'hui on est lundi.' },
+      { jp: 'きょうは 月曜日です。', blank: '月曜日', lecture: 'きょうは げつようびです。', fr: 'Aujourd\'hui on est lundi.' },
       { jp: '四月一日に 来ます。', lecture: 'しがつついたちに きます。', fr: 'Je viendrai le 1er avril.' },
     ],
     notes: ['二十日 se lit はつか, pas 「にじゅうにち」.'],

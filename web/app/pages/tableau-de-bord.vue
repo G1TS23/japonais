@@ -5,6 +5,9 @@ import { State } from '~/lib/fsrs'
 import { useLiveQuery } from '~/composables/useLiveQuery'
 import { getDailyStreak } from '~/lib/streak'
 import { currentPhase, getCheckedCriteria, phaseCompletion } from '~/lib/progress'
+import { GRAMMAR_N5 } from '~/data/grammar-n5'
+
+const grammarPointsWithCloze = GRAMMAR_N5.filter((p) => p.exemples.some((e) => e.blank !== undefined)).length
 
 useHead({ title: 'Tableau de bord — Japonais' })
 
@@ -29,6 +32,11 @@ const dueToday = useLiveQuery(
 )
 const matureCards = useLiveQuery(() => db.cards.filter((c) => c.stability >= 21).count(), 0)
 const kanaWorked = useLiveQuery(() => db.kanaStats.filter((k) => k.seen > 0).count(), 0)
+/** Points de grammaire distincts vus au moins une fois (leur carte à trou a été revue). */
+const grammarPointsSeen = useLiveQuery(async () => {
+  const cards = await db.cards.filter((c) => c.kind === 'grammar-cloze' && c.reps > 0).toArray()
+  return new Set(cards.map((c) => c.grammarId)).size
+}, 0)
 const quizCount = useLiveQuery(() => db.quizAttempts.count(), 0)
 const quizAccuracy = useLiveQuery(async () => {
   const all = await db.quizAttempts.toArray()
@@ -50,12 +58,18 @@ const completion = computed(() => phaseCompletion(phase.value, checkedCriteria.v
     />
 
     <section class="grid grid-cols-2 gap-3 sm:grid-cols-3">
-      <StatCard label="Cartes" :value="totalCards" hint="vocabulaire au total" to="/srs" />
+      <StatCard label="Cartes" :value="totalCards" hint="vocabulaire + grammaire" to="/srs" />
       <StatCard label="À réviser" :value="dueToday" hint="échéance aujourd’hui" to="/srs" />
       <StatCard label="Cartes matures" :value="matureCards" hint="stabilité ≥ 21 j" to="/srs" />
       <StatCard label="Série de révision" :value="srsStreak" hint="jours consécutifs" to="/srs" />
       <StatCard label="Kana travaillés" :value="kanaWorked" hint="caractères distincts" to="/kana" />
       <StatCard label="Série kana" :value="kanaStreak" hint="jours consécutifs" to="/kana" />
+      <StatCard
+        label="Points de grammaire vus"
+        :value="grammarPointsSeen"
+        :hint="`sur ${grammarPointsWithCloze} en révision`"
+        to="/grammaire"
+      />
       <StatCard label="Quiz passés" :value="quizCount" to="/quiz" />
       <StatCard
         label="Réussite quiz"
