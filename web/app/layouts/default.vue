@@ -193,9 +193,10 @@ onKeyStroke('Escape', () => (drawerOpen.value = false))
       :class="drawerOpen || 'pointer-events-none'"
       :inert="!drawerOpen"
     >
-      <div
-        aria-hidden="true"
-        class="absolute inset-0 bg-black/40 transition-opacity duration-200 ease-out"
+      <button
+        type="button"
+        aria-label="Fermer la navigation"
+        class="absolute inset-0 cursor-default bg-black/40 transition-opacity duration-200 ease-out"
         :class="drawerOpen ? 'opacity-100' : 'opacity-0'"
         @click="drawerOpen = false"
       />
