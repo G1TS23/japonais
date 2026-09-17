@@ -150,10 +150,11 @@ let _db: JaponaisDB | null = null
 
 /** Instance unique, créée à la première demande (côté client uniquement). */
 export function getDb(): JaponaisDB {
-  if (!_db) _db = new JaponaisDB()
+  _db ??= new JaponaisDB()
   return _db
 }
 
 export function uid(): string {
+  // NOSONAR — repli non cryptographique seulement si crypto.randomUUID est absent (id local, pas un secret)
   return globalThis.crypto?.randomUUID?.() ?? `id_${Date.now()}_${Math.random().toString(36).slice(2)}`
 }

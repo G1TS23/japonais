@@ -19,7 +19,7 @@ function byCommonFirst(entries: DictionaryEntry[]): DictionaryEntry[] {
 }
 
 function escapeRegExp(s: string): string {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  return s.replace(/[.*+?^${}()|[\]\\]/g, String.raw`\$&`)
 }
 
 /** Une glose (« terme ») découpée en ses variantes séparées par virgule/point-virgule. */
@@ -91,10 +91,10 @@ export function lookupExact(term: string, bank: DictionaryEntry[] = DICTIONARY):
 }
 
 function toKatakana(s: string): string {
-  return s.replace(/[ぁ-ゖ]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
+  return s.replace(/[ぁ-ゖ]/g, (c) => String.fromCodePoint(c.codePointAt(0)! + 0x60))
 }
 function toHiragana(s: string): string {
-  return s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
+  return s.replace(/[ァ-ヶ]/g, (c) => String.fromCodePoint(c.codePointAt(0)! - 0x60))
 }
 
 /** Variantes d'un terme sans les marqueurs propres à `vocab-n5.json` (pas du JMdict brut). */

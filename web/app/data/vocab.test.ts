@@ -3,7 +3,7 @@ import { VOCAB_N5 } from './vocab'
 
 describe('deck de vocabulaire N5', () => {
   it('contient 718 entrées', () => {
-    expect(VOCAB_N5.length).toBe(718)
+    expect(VOCAB_N5).toHaveLength(718)
   })
 
   it('a des content_id uniques', () => {

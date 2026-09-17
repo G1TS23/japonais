@@ -14,7 +14,7 @@ export const THEMES: { value: QuizTheme; label: string }[] = [
 function shuffle<T>(arr: T[]): T[] {
   const r = arr.slice()
   for (let i = r.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+    const j = Math.floor(Math.random() * (i + 1)) // NOSONAR — mélange de quiz, pas un usage cryptographique
     ;[r[i], r[j]] = [r[j]!, r[i]!]
   }
   return r
@@ -160,6 +160,9 @@ export async function recordQuizAttempt(input: QuizAttemptInput, now: Date = new
     score: input.score,
     total: input.total,
     missed: [...input.missed],
+    // NOSONAR (S7784) — structuredClone() échoue ici : mêmes restrictions que
+    // l'algorithme de clonage structuré d'IndexedDB sur les proxies Vue (voir
+    // commentaire ci-dessus). Le round-trip JSON contourne le problème.
     missedQuestions: JSON.parse(JSON.stringify(input.missedQuestions)) as QuizQuestion[],
     durationMs: input.durationMs,
     ts: now.getTime(),
@@ -266,7 +269,7 @@ export function summarizeQuizAttempts(attempts: QuizAttempt[], recentN = 5): Qui
     recentAccuracy: pct(recentC, recentQ),
     recentCount: recent.length,
     avgMsPerQuestion: timedQ ? Math.round(timedMs / timedQ) : 0,
-    lastTs: sorted[sorted.length - 1]?.ts ?? null,
+    lastTs: sorted.at(-1)?.ts ?? null,
     history: sorted.map((a) => ({ ts: a.ts, pct: pct(a.score, a.total) })),
     errorsByTheme,
     toughest,

@@ -12,8 +12,10 @@ export default defineNuxtPlugin(async () => {
 
   const media = window.matchMedia('(prefers-color-scheme: dark)')
 
-  const resolve = (pref: ThemePref) =>
-    pref === 'system' ? (media.matches ? 'dark' : 'light') : pref
+  const resolve = (pref: ThemePref) => {
+    if (pref !== 'system') return pref
+    return media.matches ? 'dark' : 'light'
+  }
 
   const apply = () => {
     document.documentElement.dataset.theme = resolve(settings.values.theme)

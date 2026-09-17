@@ -3,7 +3,7 @@ import { KANA, kanaChar, matchesRomaji } from './kana'
 
 describe('jeu de données kana', () => {
   it('contient 104 mores (46 base + 20 dakuten + 5 handakuten + 33 yōon)', () => {
-    expect(KANA.length).toBe(104)
+    expect(KANA).toHaveLength(104)
   })
 
   it("n'a aucun caractère hiragana ou katakana en double", () => {
