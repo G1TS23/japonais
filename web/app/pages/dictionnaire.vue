@@ -2,12 +2,15 @@
 import { computed, ref } from 'vue'
 import { DICTIONARY } from '~/data/dictionary'
 import { searchDictionary } from '~/lib/dictionary'
+import { useBlurOnScroll } from '~/composables/useBlurOnScroll'
 
 useHead({ title: 'Dictionnaire — Japonais' })
 
 const query = ref('')
+const searchInput = ref<HTMLInputElement | null>(null)
 const searching = computed(() => query.value.trim().length > 0)
 const results = computed(() => (searching.value ? searchDictionary(query.value) : []))
+useBlurOnScroll(searchInput)
 </script>
 
 <template>
@@ -19,14 +22,17 @@ const results = computed(() => (searching.value ? searchDictionary(query.value) 
 
     <div class="mb-5">
       <input
+        ref="searchInput"
         v-model="query"
         type="search"
+        enterkeyhint="search"
         autocapitalize="off"
         autocorrect="off"
         spellcheck="false"
         placeholder="食べる, たべる ou « manger »…"
         aria-label="Rechercher un mot"
         class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-brand-500 dark:border-neutral-700 dark:bg-neutral-900"
+        @keydown.enter="searchInput?.blur()"
       />
       <p class="mt-1.5 min-h-4 text-xs text-neutral-400">
         <span v-if="searching">{{ results.length }} résultat{{ results.length > 1 ? 's' : '' }}</span>

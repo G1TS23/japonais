@@ -2,12 +2,15 @@
 import { computed, ref } from 'vue'
 import { useStorage } from '@vueuse/core'
 import { GRAMMAR_N5, groupByCategory, searchGrammar } from '~/lib/grammar'
+import { useBlurOnScroll } from '~/composables/useBlurOnScroll'
 
 useHead({ title: 'Grammaire — Japonais' })
 
 const query = ref('')
+const searchInput = ref<HTMLInputElement | null>(null)
 /** Catégorie dépliée/repliée — mémorisé d'une visite à l'autre. */
 const collapsed = useStorage<string[]>('grammaire:collapsed', [])
+useBlurOnScroll(searchInput)
 
 const results = computed(() => searchGrammar(query.value))
 const searching = computed(() => query.value.trim().length > 0)
@@ -31,14 +34,17 @@ const isOpen = (categorie: string) => searching.value || !collapsed.value.includ
 
     <div class="mb-5">
       <input
+        ref="searchInput"
         v-model="query"
         type="search"
+        enterkeyhint="search"
         autocapitalize="off"
         autocorrect="off"
         spellcheck="false"
         placeholder="Rechercher — « thème », « て », « obligation »…"
         aria-label="Rechercher un point de grammaire"
         class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-brand-500 dark:border-neutral-700 dark:bg-neutral-900"
+        @keydown.enter="searchInput?.blur()"
       />
       <p class="mt-1.5 min-h-4 text-xs text-neutral-400">
         <span v-if="searching">{{ results.length }} résultat{{ results.length > 1 ? 's' : '' }}</span>
