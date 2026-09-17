@@ -23,9 +23,9 @@ function log(...args) {
 }
 
 /** Kanji du palier N5 : jlptLevel 4 dans kanjidic2 (ancienne numérotation JLPT — 4 = N5). */
-function fetchN5Kanji() {
+async function fetchN5Kanji() {
   log('Récupération de kanjidic2 (jmdict-simplified)…')
-  const release = JSON.parse(execSync('curl -sL https://api.github.com/repos/scriptin/jmdict-simplified/releases/latest').toString())
+  const release = await fetch('https://api.github.com/repos/scriptin/jmdict-simplified/releases/latest').then((r) => r.json())
   const asset = release.assets.find((a) => /^kanjidic2-en-.*\.json\.tgz$/.test(a.name))
   if (!asset) throw new Error('Asset kanjidic2-en introuvable dans la dernière release.')
   const dir = mkdtempSync(join(tmpdir(), 'kanjidic2-'))
@@ -39,9 +39,9 @@ function fetchN5Kanji() {
 }
 
 /** Dossier contenant kanji/{codepoint}.svg, extrait de la dernière release KanjiVG. */
-function fetchKanjiVgDir() {
+async function fetchKanjiVgDir() {
   log('Récupération de la dernière release KanjiVG…')
-  const release = JSON.parse(execSync('curl -sL https://api.github.com/repos/KanjiVG/kanjivg/releases/latest').toString())
+  const release = await fetch('https://api.github.com/repos/KanjiVG/kanjivg/releases/latest').then((r) => r.json())
   const asset = release.assets.find((a) => a.name.endsWith('-main.zip'))
   if (!asset) throw new Error('Asset "-main.zip" introuvable dans la dernière release KanjiVG.')
   const dir = mkdtempSync(join(tmpdir(), 'kanjivg-'))
@@ -61,10 +61,10 @@ function strokesFor(kanjiVgDir, kanji) {
   return [...svg.matchAll(/<path\s[^>]*\bd="([^"]+)"/g)].map((m) => m[1])
 }
 
-const n5Kanji = fetchN5Kanji()
+const n5Kanji = await fetchN5Kanji()
 log(`${n5Kanji.length} kanji N5 (kanjidic2 jlptLevel=4).`)
 
-const kanjiVgDir = fetchKanjiVgDir()
+const kanjiVgDir = await fetchKanjiVgDir()
 const entries = []
 const missing = []
 for (const kanji of n5Kanji) {

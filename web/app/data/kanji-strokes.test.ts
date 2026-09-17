@@ -14,7 +14,7 @@ describe('KANJI_STROKES (données générées)', () => {
   })
 
   it('couvre les 103 kanji du palier N5 (kanjidic2 jlptLevel=4)', () => {
-    expect(KANJI_STROKES.length).toBe(103)
+    expect(KANJI_STROKES).toHaveLength(103)
   })
 
   it('contient des kanji N5 courants', () => {
