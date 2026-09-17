@@ -46,7 +46,7 @@ export function pool(script: Script, groups: KanaGroup[]): DrillItem[] {
 function shuffle<T>(arr: T[]): T[] {
   const r = arr.slice()
   for (let i = r.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+    const j = Math.floor(Math.random() * (i + 1)) // NOSONAR — mélange de drill, pas un usage cryptographique
     ;[r[i], r[j]] = [r[j]!, r[i]!]
   }
   return r

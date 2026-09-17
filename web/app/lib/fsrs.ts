@@ -9,14 +9,13 @@ import {
   fsrs,
   generatorParameters,
   Rating,
-  State,
   type Card as FsrsCard,
   type CardInput,
   type Grade,
 } from 'ts-fsrs'
 import type { Card as DbCard } from './db'
 
-export { Rating, State }
+export { Rating, State } from 'ts-fsrs'
 export type { Grade }
 
 export const GRADES: Grade[] = [Rating.Again, Rating.Hard, Rating.Good, Rating.Easy]

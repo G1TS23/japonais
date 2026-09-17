@@ -64,4 +64,5 @@ for (const row of rows) {
 }
 
 writeFileSync(OUT, JSON.stringify(entries, null, 2) + '\n')
-console.log(`Écrit ${entries.length} entrées -> ${OUT}${skipped ? ` (${skipped} lignes ignorées)` : ''}`)
+const skippedNote = skipped ? ' (' + skipped + ' lignes ignorées)' : ''
+console.log(`Écrit ${entries.length} entrées -> ${OUT}${skippedNote}`)

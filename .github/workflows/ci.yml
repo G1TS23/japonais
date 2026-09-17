@@ -22,7 +22,17 @@ jobs:
           cache-dependency-path: web/package-lock.json
 
       - name: Install dependencies
-        run: npm ci
+        # --ignore-scripts : une dépendance compromise ne peut pas exécuter de
+        # code arbitraire à l'installation. `postinstall` du projet (nuxt
+        # prepare) est donc sauté par la même occasion — relancé juste après,
+        # explicitement (script à nous, de confiance).
+        run: npm ci --ignore-scripts
+
+      - name: Prepare Nuxt (types, .nuxt/)
+        # Binaire déjà installé par `npm ci` (version verrouillée du
+        # lockfile) : pas de `npx`, qui pourrait installer un paquet à la
+        # volée si le nom ne correspondait à rien de local.
+        run: ./node_modules/.bin/nuxt prepare
 
       - name: Tests
         run: npm run test

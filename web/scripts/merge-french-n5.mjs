@@ -46,33 +46,41 @@ function dedupe(strings) {
   return out
 }
 
+/** Sens français combiné d'un mot JMdict (2 premiers sens, 3 gloses max chacun), ou `null` si aucun. */
+function combinedSense(word) {
+  const senseStrings = []
+  for (const sense of word.sense) {
+    const texts = sense.gloss.filter((g) => g.lang === 'fre').map((g) => g.text)
+    if (texts.length) senseStrings.push(dedupe(texts.slice(0, 3)).join(', '))
+  }
+  if (!senseStrings.length) return null
+  return dedupe(senseStrings.slice(0, 2)).join(' ; ')
+}
+
+/** Indexe un mot JMdict déjà résolu (`combined` non nul) dans les deux maps, sans écraser une entrée existante. */
+function registerWord(pairMap, kanaMap, word, combined) {
+  const kanaTexts = word.kana.map((k) => k.text)
+  const kanjiTexts = word.kanji.map((k) => k.text)
+
+  for (const kana of kanaTexts) {
+    if (!kanaMap.has(kana)) kanaMap.set(kana, combined)
+    const selfKey = `${kana}|${kana}`
+    if (!pairMap.has(selfKey)) pairMap.set(selfKey, combined)
+  }
+  for (const kanji of kanjiTexts) {
+    for (const kana of kanaTexts) {
+      const key = `${kanji}|${kana}`
+      if (!pairMap.has(key)) pairMap.set(key, combined)
+    }
+  }
+}
+
 function buildLookup(words) {
   const pairMap = new Map()
   const kanaMap = new Map()
-
   for (const w of words) {
-    const senseStrings = []
-    for (const sense of w.sense) {
-      const texts = sense.gloss.filter((g) => g.lang === 'fre').map((g) => g.text)
-      if (texts.length) senseStrings.push(dedupe(texts.slice(0, 3)).join(', '))
-    }
-    if (!senseStrings.length) continue
-    const combined = dedupe(senseStrings.slice(0, 2)).join(' ; ')
-
-    const kanaTexts = w.kana.map((k) => k.text)
-    const kanjiTexts = w.kanji.map((k) => k.text)
-
-    for (const kana of kanaTexts) {
-      if (!kanaMap.has(kana)) kanaMap.set(kana, combined)
-      const selfKey = `${kana}|${kana}`
-      if (!pairMap.has(selfKey)) pairMap.set(selfKey, combined)
-    }
-    for (const kanji of kanjiTexts) {
-      for (const kana of kanaTexts) {
-        const key = `${kanji}|${kana}`
-        if (!pairMap.has(key)) pairMap.set(key, combined)
-      }
-    }
+    const combined = combinedSense(w)
+    if (combined) registerWord(pairMap, kanaMap, w, combined)
   }
   return { pairMap, kanaMap }
 }
@@ -83,24 +91,37 @@ function variants(s) {
   out.add(s.replace(/～$/, ''))
   out.add(s.replace(/^～|～$/g, ''))
   out.add(s.replace(/^お/, ''))
-  out.add(s.replace(/\s*\(する\)\s*$/, ''))
+  out.add(s.replace(/\(する\)\s*$/, '').trim())
   out.add(s.replace(/する$/, ''))
   return [...out].filter(Boolean)
 }
 
-function lookup({ pairMap, kanaMap }, terme, lecture) {
-  const termeParts = terme.split(/；|;\s*/).map((s) => s.trim()).filter(Boolean)
-  const lectureParts = lecture.split(/；|;\s*/).map((s) => s.trim()).filter(Boolean)
+function splitParts(s) {
+  return s.split(/；|;\s*/).map((p) => p.trim()).filter(Boolean)
+}
+
+/** Toutes les clés `terme|lecture` à essayer (produit des variantes de chaque partie). */
+function variantPairKeys(termeParts, lectureParts) {
+  const keys = []
   for (const t of termeParts) {
     for (const l of lectureParts) {
       for (const tv of variants(t)) {
-        for (const lv of variants(l)) {
-          const hit = pairMap.get(`${tv}|${lv}`)
-          if (hit) return hit
-        }
+        for (const lv of variants(l)) keys.push(`${tv}|${lv}`)
       }
     }
   }
+  return keys
+}
+
+function findPairHit(pairMap, termeParts, lectureParts) {
+  for (const key of variantPairKeys(termeParts, lectureParts)) {
+    const hit = pairMap.get(key)
+    if (hit) return hit
+  }
+  return null
+}
+
+function findKanaHit(kanaMap, lectureParts) {
   for (const l of lectureParts) {
     for (const lv of variants(l)) {
       const hit = kanaMap.get(lv)
@@ -108,6 +129,12 @@ function lookup({ pairMap, kanaMap }, terme, lecture) {
     }
   }
   return null
+}
+
+function lookup({ pairMap, kanaMap }, terme, lecture) {
+  const termeParts = splitParts(terme)
+  const lectureParts = splitParts(lecture)
+  return findPairHit(pairMap, termeParts, lectureParts) ?? findKanaHit(kanaMap, lectureParts)
 }
 
 function main() {

@@ -115,6 +115,7 @@ async function onReset() {
             type="number"
             min="0"
             max="100"
+            aria-label="Nouvelles cartes par jour"
             :value="settings.values.newCardsPerDay"
             class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             @change="settings.set('newCardsPerDay', Math.max(0, Number(($event.target as HTMLInputElement).value) || 0))"
@@ -127,6 +128,7 @@ async function onReset() {
             min="0.7"
             max="0.99"
             step="0.01"
+            aria-label="Cible de rétention"
             :value="settings.values.retention"
             class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             @change="
@@ -248,7 +250,14 @@ async function onReset() {
         >
           Importer…
         </button>
-        <input ref="fileInput" type="file" accept="application/json,.json" class="hidden" @change="onImportFile" />
+        <input
+          ref="fileInput"
+          type="file"
+          accept="application/json,.json"
+          aria-label="Importer une sauvegarde JSON"
+          class="hidden"
+          @change="onImportFile"
+        />
         <button
           class="rounded-lg border border-red-300 px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-50 dark:border-red-800 dark:text-red-300 dark:hover:bg-red-950/40"
           @click="onReset"

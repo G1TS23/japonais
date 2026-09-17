@@ -55,6 +55,7 @@ async function save() {
           v-model="date"
           type="date"
           :max="today()"
+          aria-label="Date"
           class="rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
         />
       </SettingField>
@@ -64,6 +65,7 @@ async function save() {
           v-model.number="minutesActives"
           type="number"
           min="0"
+          aria-label="Minutes actives"
           class="w-24 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
         />
       </SettingField>
@@ -73,6 +75,7 @@ async function save() {
           v-model.number="minutesImmersion"
           type="number"
           min="0"
+          aria-label="Minutes immersion"
           class="w-24 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
         />
       </SettingField>
@@ -82,6 +85,7 @@ async function save() {
           v-model="note"
           type="text"
           placeholder="Genki L5, 20 min NHK Easy…"
+          aria-label="Note"
           class="w-full rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
         />
       </SettingField>
