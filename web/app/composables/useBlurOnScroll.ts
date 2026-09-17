@@ -13,6 +13,15 @@ export function useBlurOnScroll(target: Ref<HTMLElement | null>): void {
   function onScroll() {
     target.value?.blur()
   }
-  onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
-  onUnmounted(() => window.removeEventListener('scroll', onScroll))
+  onMounted(() => {
+    // 'touchmove' se déclenche dès le début du geste de scroll, avant que le
+    // navigateur n'ait recalculé la position de la nav fixed — plus efficace
+    // que 'scroll' seul, qui n'arrive qu'une fois le défilement déjà entamé.
+    window.addEventListener('touchmove', onScroll, { passive: true })
+    window.addEventListener('scroll', onScroll, { passive: true })
+  })
+  onUnmounted(() => {
+    window.removeEventListener('touchmove', onScroll)
+    window.removeEventListener('scroll', onScroll)
+  })
 }
