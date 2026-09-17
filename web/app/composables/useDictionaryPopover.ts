@@ -19,11 +19,11 @@ async function openDefinition(text: string) {
   entries.value = []
   loading.value = true
   open.value = true
-  const { lookupExact } = await import('~/lib/dictionary')
+  const { lookupLoose } = await import('~/lib/dictionary')
   // L'ouverture a pu être suivie d'un tap sur un autre mot avant la fin du
   // chargement : on n'écrase le résultat que s'il concerne toujours ce mot.
   if (term.value === q) {
-    entries.value = lookupExact(q)
+    entries.value = lookupLoose(q)
     loading.value = false
   }
 }

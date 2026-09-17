@@ -89,3 +89,47 @@ export function searchDictionary(query: string, bank: DictionaryEntry[] = DICTIO
 export function lookupExact(term: string, bank: DictionaryEntry[] = DICTIONARY): DictionaryEntry[] {
   return bank.filter((e) => e.kanji === term || e.reading === term)
 }
+
+function toKatakana(s: string): string {
+  return s.replace(/[ぁ-ゖ]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
+}
+function toHiragana(s: string): string {
+  return s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
+}
+
+/** Variantes d'un terme sans les marqueurs propres à `vocab-n5.json` (pas du JMdict brut). */
+function markerVariants(s: string): string[] {
+  const variants = new Set([s])
+  variants.add(s.replace(/^～/, ''))
+  variants.add(s.replace(/～$/, ''))
+  variants.add(s.replace(/^お/, ''))
+  return [...variants].filter(Boolean)
+}
+
+/**
+ * Lookup tolérant pour un terme censé être un mot isolé (popover de
+ * définition au tap), qui peut porter des marqueurs de `vocab-n5.json` sans
+ * équivalent dans JMdict : variantes séparées par « ; » (ex. « いい; よい »),
+ * préfixe/suffixe de compteur « ～ » (ex. « ～円 »), préfixe honorifique
+ * « お » — et l'un ou l'autre alphabet syllabique (ex. « たばこ » saisi en
+ * hiragana quand JMdict n'a que « タバコ »). Retombe sur une recherche floue
+ * (préfixe/sous-texte) pour les formes tronquées (ex. « ラジオカセ » →
+ * « ラジオカセット »).
+ */
+export function lookupLoose(term: string, bank: DictionaryEntry[] = DICTIONARY): DictionaryEntry[] {
+  const parts = term
+    .split(/；|;\s*/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+
+  for (const part of parts) {
+    for (const variant of markerVariants(part)) {
+      for (const candidate of [variant, toKatakana(variant), toHiragana(variant)]) {
+        const hit = lookupExact(candidate, bank)
+        if (hit.length) return hit
+      }
+    }
+  }
+
+  return searchDictionary(parts[0] ?? term, bank, 5)
+}
