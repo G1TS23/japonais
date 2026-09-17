@@ -165,8 +165,11 @@ onKeyStroke('Escape', () => (drawerOpen.value = false))
     <nav
       v-if="inLearning"
       aria-label="Sections d'apprentissage"
-      class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-4 border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
-      :style="{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.25rem)' }"
+      class="fixed inset-x-0 bottom-0 z-40 grid border-t border-neutral-200 bg-white/95 backdrop-blur md:hidden dark:border-neutral-800 dark:bg-neutral-950/95"
+      :style="{
+        gridTemplateColumns: `repeat(${learningLinks.length}, minmax(0, 1fr))`,
+        paddingBottom: 'calc(env(safe-area-inset-bottom) + 0.25rem)',
+      }"
     >
       <NuxtLink
         v-for="l in learningLinks"
