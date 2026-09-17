@@ -56,3 +56,25 @@ Les gloses JMdict sont parfois verbeuses (mots grammaticaux comme あちら/そ�
 et peuvent contenir des indications d'usage entre parenthèses — c'est fidèle
 à la source, pas une erreur du script. Une repasse de relecture manuelle
 reste utile mais n'est pas bloquante pour l'usage courant.
+
+## 3. build-dictionary.mjs
+
+Régénère `app/data/dictionary.json`, le dictionnaire intégré (page
+`/dictionnaire`), depuis le même dump jmdict-fre que `merge-french-n5.mjs`
+(téléchargé à la volée, pas committé).
+
+```bash
+node scripts/build-dictionary.mjs
+```
+
+jmdict-fre ne contient que les entrées ayant au moins une glose française —
+~15 300 sur les ~200 000 de JMdict complet — donc **aucun filtre
+supplémentaire n'est appliqué** : c'est déjà le sous-ensemble pertinent pour
+un dictionnaire orienté apprenant francophone. Chaque entrée garde au plus 3
+sens et 3 gloses par sens (certains mots grammaticaux en ont des dizaines
+dans JMdict, inutile pour un lookup rapide). Fichier obtenu : ~1,6 Mo brut,
+~0,4 Mo compressé sur le fil (servi en gzip par Netlify).
+
+Contrairement au vocabulaire N5, ce fichier n'a pas de relecture manuelle :
+c'est un export direct de JMdict-fre, à l'échelle où une revue mot-à-mot
+n'est pas réaliste.

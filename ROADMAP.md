@@ -75,17 +75,25 @@ d'abord, le branchement SRS/quiz ensuite.
 - ⬜ Compléter les `blank` manquants et pousser la banque vers ~100 points si
   des manques apparaissent à l'usage
 
-## ⬜ 3. Dictionnaire intégré (JMdict-FR)
+## 🚧 3. Dictionnaire intégré (JMdict-FR)
 
 Lookup au tap dans toute l'app. JMdict-FR déjà récupéré côté scripts.
 
-- ⬜ Construire un sous-ensemble indexé (taille / perfs — viser < quelques Mo,
-  index Dexie ou pré-généré)
-- ⬜ `composables/useDictionary.ts` — recherche par terme / lecture / préfixe
-- ⬜ `components/WordPopover.vue` — définition au tap
+- ✅ `scripts/build-dictionary.mjs` → `data/dictionary.json` : les ~15 300
+  entrées de jmdict-fre (déjà le sous-ensemble « a une glose française », pas
+  de filtre de fréquence supplémentaire) — ~1,6 Mo bruts, ~0,4 Mo compressés,
+  chargés seulement à la visite de `/dictionnaire` (chunk séparé, pas dans le
+  bundle initial)
+- ✅ `lib/dictionary.ts` (`searchDictionary`, `lookupExact`) : recherche
+  japonais (exact > préfixe > sous-texte, mots courants d'abord dans chaque
+  groupe) ou français (sous-texte sur les gloses, accents/casse ignorés)
+- ✅ Page `/dictionnaire` (recherche + résultats avec écoute audio), entrée de
+  navigation dans Apprentissage (5ᵉ onglet — la grille de la barre du bas est
+  désormais dynamique, plus figée à 4)
+- ⬜ Popover de définition au tap, branché dans le reste de l'app (SRS, quiz)
 - ⬜ Segmenteur pour le tap sur texte libre (longest-match sur le dico, ou
-  TinySegmenter) — nécessaire surtout pour la lecture graduée
-- ⬜ Brancher : SRS, quiz, lecture graduée
+  TinySegmenter) — surtout utile une fois la lecture graduée en place ; sans
+  texte libre à segmenter pour l'instant, ce n'est pas bloquant
 
 ## ⬜ 4. Lecture graduée
 
