@@ -56,6 +56,17 @@ describe('searchDictionary', () => {
     expect(searchDictionary('coute', BANK).map((e) => e.id)).toContain('6') // coûteux
   })
 
+  it('classe une glose française par pertinence, pas seulement par mot courant', () => {
+    const bank: DictionaryEntry[] = [
+      { id: 'a', reading: 'いんしょく', common: true, gloss: 'manger et boire' },
+      { id: 'b', reading: 'たべる', common: true, gloss: 'manger' },
+      { id: 'c', reading: 'でまんげ', common: true, gloss: 'démanger, gratter' },
+    ]
+    // "manger" exact (b) avant "manger et boire" (débute par le mot, a),
+    // lui-même avant "démanger" (simple sous-chaîne dans un autre mot, c).
+    expect(searchDictionary('manger', bank).map((e) => e.id)).toEqual(['b', 'a', 'c'])
+  })
+
   it('respecte la limite demandée', () => {
     expect(searchDictionary('たべ', BANK, 1)).toHaveLength(1)
   })
