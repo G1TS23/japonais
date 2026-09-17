@@ -26,7 +26,7 @@ const results = computed(() => (searching.value ? searchDictionary(query.value) 
         spellcheck="false"
         placeholder="食べる, たべる ou « manger »…"
         aria-label="Rechercher un mot"
-        class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-brand-500 dark:border-neutral-700 dark:bg-neutral-900"
+        class="w-full rounded-xl border border-neutral-300 bg-white px-4 py-2.5 text-base outline-none transition focus:border-brand-500 dark:border-neutral-700 dark:bg-neutral-900"
       />
       <p class="mt-1.5 min-h-4 text-xs text-neutral-400">
         <span v-if="searching">{{ results.length }} résultat{{ results.length > 1 ? 's' : '' }}</span>

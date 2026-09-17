@@ -116,7 +116,7 @@ async function onReset() {
             min="0"
             max="100"
             :value="settings.values.newCardsPerDay"
-            class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700"
+            class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             @change="settings.set('newCardsPerDay', Math.max(0, Number(($event.target as HTMLInputElement).value) || 0))"
           />
         </SettingField>
@@ -128,7 +128,7 @@ async function onReset() {
             max="0.99"
             step="0.01"
             :value="settings.values.retention"
-            class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700"
+            class="w-20 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             @change="
               settings.set(
                 'retention',
@@ -196,7 +196,7 @@ async function onReset() {
               id="audio-voice"
               aria-label="Voix de synthèse"
               :value="settings.values.audioVoice"
-              class="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-sm dark:border-neutral-700 dark:bg-neutral-900"
+              class="min-w-0 flex-1 rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700 dark:bg-neutral-900"
               @change="settings.set('audioVoice', ($event.target as HTMLSelectElement).value)"
             >
               <option value="">Automatique</option>
