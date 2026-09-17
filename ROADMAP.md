@@ -108,13 +108,19 @@ Lookup au tap dans toute l'app. JMdict-FR déjà récupéré côté scripts.
 Prend tout son sens avec le dictionnaire (lookup au tap). Contenu à
 calibrer.
 
-- ✅ `data/reading-n5.ts` — 4 textes N5 rédigés à la main (自己紹介, une
-  journée type, un week-end, la météo), découpés en segments {text, reading?,
-  lookup?} : `reading` porte la furigana, `lookup` la forme dictionnaire à
-  chercher au tap quand elle diffère du texte affiché (verbe/adjectif
-  conjugué) — un même segment sert donc à la fois de porteur de furigana et
-  de cible de tap, pas besoin de segmenteur puisque le découpage est fait à
-  la main à l'écriture du contenu
+- ✅ `data/reading-n5.ts` — 14 textes N5 rédigés à la main (自己紹介, une
+  journée type, un week-end, la météo, la famille, les courses, un
+  restaurant, un anniversaire, un voyage, un loisir, une journée d'école, le
+  train, être malade, les plats préférés), découpés en segments {text,
+  reading?, lookup?} : `reading` porte la furigana, `lookup` la forme
+  dictionnaire à chercher au tap quand elle diffère du texte affiché
+  (verbe/adjectif conjugué) — un même segment sert donc à la fois de porteur
+  de furigana et de cible de tap, pas besoin de segmenteur puisque le
+  découpage est fait à la main à l'écriture du contenu. Chaque mot vérifié
+  contre le vrai dictionnaire (`lookupLoose`) avant de committer ; les rares
+  échecs restants sont des compteurs (七時, 四人…), noms propres ou mots hors
+  du sous-ensemble jmdict-fre (会社員) — limitation déjà documentée, pas une
+  erreur de contenu
 - ✅ Page `/lecture` (liste) + `/lecture/[id]` (lecteur : furigana à bascule
   mémorisée, lookup au tap sur chaque mot et sur le vocabulaire clé, audio
   phrase par phrase et du texte entier)
