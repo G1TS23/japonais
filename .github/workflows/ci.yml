@@ -29,7 +29,10 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: Prepare Nuxt (types, .nuxt/)
-        run: npx nuxt prepare
+        # Binaire déjà installé par `npm ci` (version verrouillée du
+        # lockfile) : pas de `npx`, qui pourrait installer un paquet à la
+        # volée si le nom ne correspondait à rien de local.
+        run: ./node_modules/.bin/nuxt prepare
 
       - name: Tests
         run: npm run test

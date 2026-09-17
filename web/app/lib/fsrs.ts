@@ -9,7 +9,6 @@ import {
   fsrs,
   generatorParameters,
   Rating,
-  State,
   type Card as FsrsCard,
   type CardInput,
   type Grade,
