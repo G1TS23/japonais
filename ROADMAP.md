@@ -90,7 +90,14 @@ Lookup au tap dans toute l'app. JMdict-FR déjà récupéré côté scripts.
 - ✅ Page `/dictionnaire` (recherche + résultats avec écoute audio), entrée de
   navigation dans Apprentissage (5ᵉ onglet — la grille de la barre du bas est
   désormais dynamique, plus figée à 4)
-- ⬜ Popover de définition au tap, branché dans le reste de l'app (SRS, quiz)
+- ✅ Popover de définition au tap (`useDictionaryPopover` + `DictionaryPopover.vue`,
+  `import()` dynamique — le poids du dico ne rejoint le chunk d'aucune page
+  tant qu'on n'a pas tapé un mot) : terme + lecture au dos d'une carte SRS
+  (jamais sur une phrase à trou de grammaire, pas de mot unique à chercher),
+  énoncé et bonne réponse dans le récap de quiz. Volontairement absent du
+  recto des cartes SRS et du quiz en cours : ce sont justement les mots
+  qu'on teste, un raccourci de définition court-circuiterait l'effort de
+  rappel actif.
 - ⬜ Segmenteur pour le tap sur texte libre (longest-match sur le dico, ou
   TinySegmenter) — surtout utile une fois la lecture graduée en place ; sans
   texte libre à segmenter pour l'instant, ce n'est pas bloquant
