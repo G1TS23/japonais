@@ -27,6 +27,7 @@ export const LEARNING_LINKS: NavLink[] = [
   { to: '/grammaire', label: 'Grammaire', short: 'Gram.', icon: 'book-open' },
   { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
   { to: '/dictionnaire', label: 'Dictionnaire', short: 'Dico', icon: 'magnifying-glass' },
+  { to: '/lecture', label: 'Lecture', short: 'Lecture', icon: 'document-text' },
 ]
 
 /** Clé de mémorisation de la dernière section d'apprentissage visitée. */

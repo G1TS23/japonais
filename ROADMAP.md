@@ -99,19 +99,29 @@ Lookup au tap dans toute l'app. JMdict-FR déjà récupéré côté scripts.
   qu'on teste, un raccourci de définition court-circuiterait l'effort de
   rappel actif.
 - ⬜ Segmenteur pour le tap sur texte libre (longest-match sur le dico, ou
-  TinySegmenter) — surtout utile une fois la lecture graduée en place ; sans
-  texte libre à segmenter pour l'instant, ce n'est pas bloquant
+  TinySegmenter) — la lecture graduée (piste 4) contourne le besoin en
+  segmentant à la main à l'écriture du contenu ; ne redevient utile que pour
+  du texte importé/non pré-segmenté (pas de source de ce type pour l'instant)
 
-## ⬜ 4. Lecture graduée
+## 🚧 4. Lecture graduée
 
 Prend tout son sens avec le dictionnaire (lookup au tap). Contenu à
 calibrer.
 
-- ⬜ `data/reading/*.ts` — textes courts par palier {titre, palier, corps,
-  vocab-clé}
-- ⬜ Page `/lecture` (liste) + lecteur avec furigana à bascule
-- ⬜ Lookup au tap (dépend de #3)
-- ⬜ Audio du texte (dépend de #1)
+- ✅ `data/reading-n5.ts` — 4 textes N5 rédigés à la main (自己紹介, une
+  journée type, un week-end, la météo), découpés en segments {text, reading?,
+  lookup?} : `reading` porte la furigana, `lookup` la forme dictionnaire à
+  chercher au tap quand elle diffère du texte affiché (verbe/adjectif
+  conjugué) — un même segment sert donc à la fois de porteur de furigana et
+  de cible de tap, pas besoin de segmenteur puisque le découpage est fait à
+  la main à l'écriture du contenu
+- ✅ Page `/lecture` (liste) + `/lecture/[id]` (lecteur : furigana à bascule
+  mémorisée, lookup au tap sur chaque mot et sur le vocabulaire clé, audio
+  phrase par phrase et du texte entier)
+- ✅ Lookup au tap — réutilise le popover de la piste 3 (`useDictionaryPopover`)
+- ✅ Audio du texte — réutilise `SpeakButton`/`useSpeech` de la piste 1
+- ⬜ Étoffer la banque au-delà de 4 textes si l'usage montre un manque de
+  contenu ; envisager un palier au-delà de N5 quand le reste de l'app en aura
 
 ## ⬜ 5. Tracé des kanji
 
