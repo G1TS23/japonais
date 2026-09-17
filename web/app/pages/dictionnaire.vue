@@ -20,7 +20,7 @@ useBlurOnScroll(searchInput)
       :subtitle="`${DICTIONARY.length.toLocaleString('fr-FR')} mots (JMdict). Cherche en japonais ou en français.`"
     />
 
-    <form class="mb-5" @submit.prevent="searchInput?.blur()">
+    <form class="mb-5" role="search" @submit.prevent="searchInput?.blur()">
       <input
         ref="searchInput"
         v-model="query"

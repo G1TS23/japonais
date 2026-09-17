@@ -32,7 +32,7 @@ const isOpen = (categorie: string) => searching.value || !collapsed.value.includ
       :subtitle="`${GRAMMAR_N5.length} points du palier N5, classés par thème.`"
     />
 
-    <form class="mb-5" @submit.prevent="searchInput?.blur()">
+    <form class="mb-5" role="search" @submit.prevent="searchInput?.blur()">
       <input
         ref="searchInput"
         v-model="query"
