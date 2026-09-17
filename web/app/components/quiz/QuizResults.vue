@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import type { QuizQuestion } from '~/lib/quiz-session'
 import { hasJapanese } from '~/lib/speech'
+import { useDictionaryPopover } from '~/composables/useDictionaryPopover'
 
 const props = defineProps<{
   summary: { score: number; total: number; missed: string[]; durationMs: number }
@@ -14,6 +15,7 @@ const props = defineProps<{
   title?: string
 }>()
 const emit = defineEmits<{ replay: []; again: []; config: [] }>()
+const { openDefinition } = useDictionaryPopover()
 
 const pct = computed(() => (props.summary.total ? Math.round((props.summary.score / props.summary.total) * 100) : 0))
 const seconds = computed(() => Math.round(props.summary.durationMs / 1000))
@@ -72,13 +74,29 @@ const missingDetail = computed(() => props.summary.missed.length - props.missedQ
           class="rounded-lg bg-neutral-50 p-3 text-sm dark:bg-neutral-800/60"
         >
           <div class="flex items-center gap-1.5">
-            <span class="jp">{{ q.prompt }}</span>
+            <button
+              v-if="hasJapanese(q.prompt) && !q.prompt.includes('＿＿')"
+              type="button"
+              class="jp cursor-pointer underline decoration-dotted underline-offset-4"
+              @click="openDefinition(q.prompt)"
+            >
+              {{ q.prompt }}
+            </button>
+            <span v-else class="jp">{{ q.prompt }}</span>
             <span v-if="q.hint && q.theme !== 'vocabulaire'" class="text-neutral-400"> ({{ q.hint }})</span>
             <SpeakButton v-if="hasJapanese(q.prompt)" :text="q.prompt" size="sm" :label="`Écouter ${q.prompt}`" />
           </div>
           <div class="mt-1 flex items-center gap-1.5">
             <span class="text-neutral-400">Bonne réponse : </span>
-            <span class="jp font-medium text-neutral-900 dark:text-neutral-100">{{ q.options[q.answer] }}</span>
+            <button
+              v-if="hasJapanese(q.options[q.answer] ?? '')"
+              type="button"
+              class="jp cursor-pointer font-medium text-neutral-900 underline decoration-dotted underline-offset-4 dark:text-neutral-100"
+              @click="openDefinition(q.options[q.answer] ?? '')"
+            >
+              {{ q.options[q.answer] }}
+            </button>
+            <span v-else class="jp font-medium text-neutral-900 dark:text-neutral-100">{{ q.options[q.answer] }}</span>
             <SpeakButton
               v-if="hasJapanese(q.options[q.answer] ?? '')"
               :text="q.options[q.answer] ?? ''"

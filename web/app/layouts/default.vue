@@ -256,5 +256,9 @@ onKeyStroke('Escape', () => (drawerOpen.value = false))
           </nav>
       </div>
     </div>
+
+    <!-- Popover de définition (tap sur un mot déjà révélé, hors des exercices
+         d'apprentissage actif — voir useDictionaryPopover). Monté une fois. -->
+    <DictionaryPopover />
   </div>
 </template>

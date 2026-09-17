@@ -5,6 +5,7 @@ import { previewRatings, Rating, type RatingPreview } from '~/lib/fsrs'
 import { displaySens, recordReview, shouldRequeueInSession } from '~/lib/srs-session'
 import { useSettingsStore } from '~/stores/settings'
 import { useSpeech } from '~/composables/useSpeech'
+import { useDictionaryPopover } from '~/composables/useDictionaryPopover'
 
 const props = defineProps<{ queue: Card[] }>()
 const emit = defineEmits<{
@@ -14,6 +15,7 @@ const emit = defineEmits<{
 
 const settings = useSettingsStore()
 const speech = useSpeech()
+const { openDefinition } = useDictionaryPopover()
 
 function maybeAutoplay(text: string) {
   if (settings.values.audioEnabled && settings.values.audioAutoplay) speech.speak(text)
@@ -119,11 +121,29 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
     </div>
 
     <div class="flex min-h-72 flex-col items-center justify-center gap-4 rounded-2xl border border-neutral-200 bg-white p-8 text-center dark:border-neutral-800 dark:bg-neutral-900">
-      <div class="jp text-4xl">{{ current.terme }}</div>
+      <!-- Le terme n'est tapable qu'une fois la réponse révélée (pas avant :
+           on ne veut pas offrir un raccourci pour éviter l'effort de rappel),
+           et jamais pour une phrase à trou (grammaire) : ce n'est pas un mot
+           du dictionnaire, il faudrait un segmenteur pour la découper. -->
+      <button
+        v-if="phase === 'back' && current.kind !== 'grammar-cloze'"
+        type="button"
+        class="jp cursor-pointer text-4xl underline decoration-dotted decoration-neutral-300 underline-offset-4 dark:decoration-neutral-700"
+        @click="openDefinition(current.terme)"
+      >
+        {{ current.terme }}
+      </button>
+      <div v-else class="jp text-4xl">{{ current.terme }}</div>
 
       <template v-if="phase === 'back'">
         <div class="flex items-center gap-2">
-          <span class="jp text-lg text-neutral-500 dark:text-neutral-400">{{ current.lecture }}</span>
+          <button
+            type="button"
+            class="jp cursor-pointer text-lg text-neutral-500 underline decoration-dotted underline-offset-4 dark:text-neutral-400"
+            @click="openDefinition(current.lecture)"
+          >
+            {{ current.lecture }}
+          </button>
           <SpeakButton :text="current.terme" size="sm" :label="`Écouter ${current.terme}`" />
         </div>
         <div class="text-xl">

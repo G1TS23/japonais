@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { DICTIONARY, type DictionaryEntry } from '~/data/dictionary'
-import { lookupExact, searchDictionary } from './dictionary'
+import { lookupExact, lookupLoose, searchDictionary } from './dictionary'
 
 describe('DICTIONARY (données générées)', () => {
   it('a des ids uniques et des champs obligatoires remplis', () => {
@@ -84,5 +84,35 @@ describe('lookupExact', () => {
 
   it('renvoie une liste vide sans correspondance', () => {
     expect(lookupExact('存在しない', BANK)).toEqual([])
+  })
+})
+
+describe('lookupLoose', () => {
+  const bank: DictionaryEntry[] = [
+    { id: '1', kanji: '煙草', reading: 'タバコ', common: true, gloss: 'cigarettes, tabac' },
+    { id: '2', kanji: '円', reading: 'えん', common: true, gloss: 'yen' },
+    { id: '3', reading: 'いい', common: true, gloss: 'bon, bien' },
+    { id: '4', kanji: '皆', reading: 'みな', common: true, gloss: 'tous, tout le monde' },
+    { id: '5', reading: 'ラジオカセット', gloss: 'radio-cassette' },
+  ]
+
+  it('ignore un préfixe/suffixe de compteur (～) absent de JMdict', () => {
+    expect(lookupLoose('～円', bank).map((e) => e.id)).toEqual(['2'])
+  })
+
+  it("essaie chaque variante d'un terme composé (« a; b »)", () => {
+    expect(lookupLoose('いい; よい', bank).map((e) => e.id)).toEqual(['3'])
+  })
+
+  it('bascule hiragana ↔ katakana si besoin', () => {
+    expect(lookupLoose('たばこ', bank).map((e) => e.id)).toEqual(['1'])
+  })
+
+  it('retombe sur une recherche floue pour une forme tronquée', () => {
+    expect(lookupLoose('ラジオカセ', bank).map((e) => e.id)).toContain('5')
+  })
+
+  it('renvoie une liste vide si vraiment rien ne correspond', () => {
+    expect(lookupLoose('存在しない', bank)).toEqual([])
   })
 })
