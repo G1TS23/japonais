@@ -10,16 +10,13 @@
 //
 // Usage : node scripts/merge-french-n5.mjs
 
-import { execSync } from 'node:child_process'
-import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs'
-import { tmpdir } from 'node:os'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { downloadJmdictFre } from './lib/jmdict-fre.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const VOCAB_PATH = join(__dirname, '../app/data/vocab-n5.json')
-
-const RELEASE_API = 'https://api.github.com/repos/scriptin/jmdict-simplified/releases/latest'
 
 /** Sens complétés à la main pour les quelques entrées que JMdict-fre ne couvre pas. */
 const MANUAL_FR = {
@@ -34,22 +31,6 @@ const MANUAL_FR = {
 
 function log(...args) {
   console.log('[merge-french-n5]', ...args)
-}
-
-function downloadJmdictFre() {
-  log('Récupération de la dernière release jmdict-simplified…')
-  const release = JSON.parse(execSync(`curl -sL ${RELEASE_API}`).toString())
-  const asset = release.assets.find((a) => /^jmdict-fre-.*\.json\.tgz$/.test(a.name))
-  if (!asset) throw new Error('Asset jmdict-fre introuvable dans la dernière release.')
-
-  const dir = mkdtempSync(join(tmpdir(), 'jmdict-fre-'))
-  const tgz = join(dir, asset.name)
-  log(`Téléchargement ${asset.name} (${Math.round(asset.size / 1024)} Ko)…`)
-  execSync(`curl -sL "${asset.browser_download_url}" -o "${tgz}"`)
-  execSync(`tar xzf "${tgz}" -C "${dir}"`)
-  const jsonFile = execSync(`ls "${dir}"/*.json`).toString().trim()
-  log('Extrait ->', jsonFile)
-  return JSON.parse(readFileSync(jsonFile, 'utf8'))
 }
 
 /** Retire les doublons casse-insensible en gardant l'ordre d'apparition. */
@@ -133,7 +114,7 @@ function main() {
   if (!existsSync(VOCAB_PATH)) throw new Error(`${VOCAB_PATH} introuvable — lance d'abord import-vocab-n5.mjs.`)
   const vocab = JSON.parse(readFileSync(VOCAB_PATH, 'utf8'))
 
-  const { words } = downloadJmdictFre()
+  const { words } = downloadJmdictFre(log)
   const index = buildLookup(words)
 
   let fromJmdict = 0

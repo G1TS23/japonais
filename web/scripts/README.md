@@ -37,7 +37,8 @@ l'édition française de JMdict
 ([jmdict-simplified](https://github.com/scriptin/jmdict-simplified), build
 `jmdict-fre`, licence Creative Commons Attribution-ShareAlike 4.0 — via
 [EDRDG](http://www.edrdg.org/)). Le dump (~8 Mo décompressé) est téléchargé à
-la volée dans un dossier temporaire, **pas committé**.
+la volée dans un dossier temporaire, **pas committé** — via
+`lib/jmdict-fre.mjs`, partagé avec `build-dictionary.mjs` ci-dessous.
 
 Matching par (kanji, lecture), avec repli sur la lecture seule et découpage
 des champs composés (`terme`/`lecture` séparés par `;`, préfixes/suffixes de
