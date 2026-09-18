@@ -7,8 +7,9 @@ const props = withDefaults(defineProps<{ kanji: string; size?: number }>(), { si
 const entry = computed(() => findKanjiStrokes(props.kanji))
 const strokes = computed(() => entry.value?.strokes ?? [])
 
-/** Nombre de traits entièrement dessinés. Par défaut : le kanji complet, tout de suite lisible. */
-const revealed = ref(strokes.value.length)
+/** Nombre de traits entièrement dessinés par l'animation. Vide par défaut :
+ *  seul le repère pâle guide le tracé, l'animation est à la demande. */
+const revealed = ref(0)
 let timer: ReturnType<typeof setTimeout> | null = null
 
 function clearTimer() {
@@ -86,7 +87,7 @@ watch(
   () => props.kanji,
   () => {
     clearTimer()
-    revealed.value = strokes.value.length
+    revealed.value = 0
     clearCanvas()
   },
 )
