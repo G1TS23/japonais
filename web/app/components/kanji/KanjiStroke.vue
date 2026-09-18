@@ -58,6 +58,13 @@ function clearCanvas() {
   ctx.clearRect(0, 0, canvasEl.value.width / dpr, canvasEl.value.height / dpr)
 }
 
+/** Efface à la fois mon tracé libre et le tracé animé (pour recommencer à blanc, même après « Animer »). */
+function clearAll() {
+  clearTimer()
+  revealed.value = 0
+  clearCanvas()
+}
+
 function pointerPos(e: PointerEvent) {
   const rect = canvasEl.value!.getBoundingClientRect()
   return { x: e.clientX - rect.left, y: e.clientY - rect.top }
@@ -85,11 +92,7 @@ onMounted(setupCanvas)
 watch(() => props.size, setupCanvas)
 watch(
   () => props.kanji,
-  () => {
-    clearTimer()
-    revealed.value = 0
-    clearCanvas()
-  },
+  clearAll,
 )
 onBeforeUnmount(clearTimer)
 </script>
@@ -175,9 +178,9 @@ onBeforeUnmount(clearTimer)
       <button
         type="button"
         class="rounded-lg border border-neutral-300 px-3 py-1.5 text-sm font-medium hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
-        @click="clearCanvas"
+        @click="clearAll"
       >
-        Effacer mon tracé
+        Effacer
       </button>
     </div>
   </div>
