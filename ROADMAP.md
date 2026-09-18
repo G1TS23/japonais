@@ -75,7 +75,7 @@ d'abord, le branchement SRS/quiz ensuite.
 - ⬜ Compléter les `blank` manquants et pousser la banque vers ~100 points si
   des manques apparaissent à l'usage
 
-## 🚧 3. Dictionnaire intégré (JMdict-FR)
+## ✅ 3. Dictionnaire intégré (JMdict-FR)
 
 Lookup au tap dans toute l'app. JMdict-FR déjà récupéré côté scripts.
 
