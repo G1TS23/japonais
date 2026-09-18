@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { KANJI_STROKES, findKanjiStrokes } from '~/lib/kanji'
+import { findKanjiStrokes, sortedByComplexity } from '~/lib/kanji'
 import { useDictionaryPopover } from '~/composables/useDictionaryPopover'
 
 const route = useRoute()
@@ -9,7 +9,7 @@ const entry = computed(() => findKanjiStrokes(kanji.value))
 const { openDefinition } = useDictionaryPopover()
 
 /** Même ordre que la liste (plus simple → plus complexe), pour naviguer d'un kanji au suivant. */
-const sorted = computed(() => [...KANJI_STROKES].sort((a, b) => a.strokes.length - b.strokes.length))
+const sorted = computed(() => sortedByComplexity())
 const index = computed(() => sorted.value.findIndex((k) => k.kanji === kanji.value))
 const prev = computed(() => (index.value > 0 ? sorted.value[index.value - 1] : undefined))
 const next = computed(() => (index.value >= 0 && index.value < sorted.value.length - 1 ? sorted.value[index.value + 1] : undefined))
@@ -46,6 +46,7 @@ useHead({ title: () => `${kanji.value} — Kanji — Japonais` })
       <NuxtLink
         v-if="prev"
         :to="`/kanji/${encodeURIComponent(prev.kanji)}`"
+        :aria-label="`Kanji précédent : ${prev.kanji}`"
         class="jp flex items-center gap-2 rounded-lg border border-neutral-300 px-3 py-2 text-sm transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
       >
         <AppIcon name="arrow-left" class="h-4 w-4" />
@@ -55,6 +56,7 @@ useHead({ title: () => `${kanji.value} — Kanji — Japonais` })
       <NuxtLink
         v-if="next"
         :to="`/kanji/${encodeURIComponent(next.kanji)}`"
+        :aria-label="`Kanji suivant : ${next.kanji}`"
         class="jp flex items-center gap-2 rounded-lg border border-neutral-300 px-3 py-2 text-sm transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
       >
         {{ next.kanji }}

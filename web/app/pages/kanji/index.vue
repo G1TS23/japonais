@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { KANJI_STROKES } from '~/lib/kanji'
+import { KANJI_STROKES, sortedByComplexity } from '~/lib/kanji'
 
 useHead({ title: 'Kanji — Japonais' })
 
-/** Du plus simple au plus complexe : progression naturelle pour s'entraîner. */
-const sorted = computed(() => [...KANJI_STROKES].sort((a, b) => a.strokes.length - b.strokes.length))
+const sorted = computed(() => sortedByComplexity())
 </script>
 
 <template>
