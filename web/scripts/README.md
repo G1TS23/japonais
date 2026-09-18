@@ -79,3 +79,24 @@ dans JMdict, inutile pour un lookup rapide). Fichier obtenu : ~1,6 Mo brut,
 Contrairement au vocabulaire N5, ce fichier n'a pas de relecture manuelle :
 c'est un export direct de JMdict-fre, à l'échelle où une revue mot-à-mot
 n'est pas réaliste.
+
+## 4. build-kanji-strokes.mjs
+
+Régénère `app/data/kanji-strokes.json` (tracé/animation d'écriture, page
+`/kanji`), depuis deux sources téléchargées à la volée (pas committées) :
+
+```bash
+node scripts/build-kanji-strokes.mjs
+```
+
+- La liste des 103 kanji du palier N5 vient de **kanjidic2**
+  ([jmdict-simplified](https://github.com/scriptin/jmdict-simplified), même
+  source que le dictionnaire ci-dessus) : `misc.jlptLevel === 4`, l'ancienne
+  numérotation JLPT (4 niveaux) dont le niveau 4 correspond au N5 actuel.
+- Les tracés (chemins SVG, dans l'ordre d'écriture) viennent de
+  [KanjiVG](https://github.com/KanjiVG/kanjivg) (Ulrich Apel, licence
+  Creative Commons Attribution-ShareAlike 3.0) : dernière release,
+  `kanji/{codepoint}.svg` par caractère.
+
+Fichier obtenu : ~60 Ko (`[{ kanji, strokes: string[] }]`, un `d` de `<path>`
+par trait).

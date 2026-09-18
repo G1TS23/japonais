@@ -103,7 +103,7 @@ Lookup au tap dans toute l'app. JMdict-FR déjà récupéré côté scripts.
   segmentant à la main à l'écriture du contenu ; ne redevient utile que pour
   du texte importé/non pré-segmenté (pas de source de ce type pour l'instant)
 
-## 🚧 4. Lecture graduée
+## ✅ 4. Lecture graduée
 
 Prend tout son sens avec le dictionnaire (lookup au tap). Contenu à
 calibrer.
@@ -126,16 +126,25 @@ calibrer.
   phrase par phrase et du texte entier)
 - ✅ Lookup au tap — réutilise le popover de la piste 3 (`useDictionaryPopover`)
 - ✅ Audio du texte — réutilise `SpeakButton`/`useSpeech` de la piste 1
-- ⬜ Étoffer la banque au-delà de 4 textes si l'usage montre un manque de
-  contenu ; envisager un palier au-delà de N5 quand le reste de l'app en aura
+- ⬜ Étoffer encore la banque (14 textes actuellement) si l'usage en montre
+  le besoin ; envisager un palier au-delà de N5 quand le reste de l'app en aura
 
-## ⬜ 5. Tracé des kanji
+## ✅ 5. Tracé des kanji
 
 Valeur plus ciblée. Données d'ordre des traits volumineuses.
 
-- ⬜ Données KanjiVG (SVG ordre des traits) pour le sous-ensemble N5
-- ⬜ `components/KanjiStroke.vue` — animation + canvas de tracé
-- ⬜ Page `/kanji` ou intégration à une future fiche kanji
+- ✅ `scripts/build-kanji-strokes.mjs` → `data/kanji-strokes.json` : les 103
+  kanji du palier N5 (kanjidic2, `jlptLevel === 4` — ancienne numérotation
+  JLPT), tracés depuis KanjiVG (SVG, licence CC BY-SA 3.0), ~60 Ko
+- ✅ `components/kanji/KanjiStroke.vue` — animation trait par trait
+  (`stroke-dashoffset` + `pathLength="1"`, pas de dépendance externe) sur un
+  fond pâle du kanji complet, plus un canevas de tracé libre par-dessus
+  (`<canvas>`, pointer events) pour s'entraîner au geste ; pas de correction
+  automatique du tracé (reconnaissance de forme hors de portée ici — la
+  valeur est dans la répétition, pas dans une note)
+- ✅ Page `/kanji` (grille des 103 kanji, du plus simple au plus complexe) +
+  `/kanji/[kanji]` (tracé, définition au tap du kanji — réutilise le popover
+  de la piste 3 —, kanji précédent/suivant)
 
 ---
 
