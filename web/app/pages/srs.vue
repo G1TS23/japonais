@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { useStorage } from '@vueuse/core'
 import { getDb, type Card } from '~/lib/db'
 import { State } from '~/lib/fsrs'
+import { PERSO_TAG } from '~/lib/notes'
 import { getTodayQueue, seedDeckIfEmpty, seedGrammarClozeCards, syncContentTranslations } from '~/lib/srs-session'
 import { bumpDailyStreak, getDailyStreak } from '~/lib/streak'
 import { useLiveQuery } from '~/composables/useLiveQuery'
@@ -20,14 +22,35 @@ const lastSummary = ref<Summary | null>(null)
 const streak = ref(0)
 const seeding = ref(true)
 
+// Portée de la session : tout le deck, ou seulement les notes perso.
+// Mémorisée d'une visite à l'autre, comme les réglages de quiz (quiz.vue).
+const scope = useStorage<'all' | 'perso'>('srs:scope', 'all')
+const scopeTag = () => (scope.value === 'perso' ? PERSO_TAG : undefined)
+
 const db = getDb()
-const totalCards = useLiveQuery(() => db.cards.count(), 0)
+const totalCards = useLiveQuery(() => db.cards.filter((c) => !scopeTag() || c.tags.includes(scopeTag()!)).count(), 0)
 const dueNow = useLiveQuery(
-  () => db.cards.where('due').belowOrEqual(Date.now()).and((c) => !c.suspendue && c.state !== State.New).count(),
+  () =>
+    db.cards
+      .where('due')
+      .belowOrEqual(Date.now())
+      .and((c) => !c.suspendue && c.state !== State.New && (!scopeTag() || c.tags.includes(scopeTag()!)))
+      .count(),
   0,
 )
-const matureCards = useLiveQuery(() => db.cards.filter((c) => c.stability >= 21).count(), 0)
-const newAvailable = useLiveQuery(() => db.cards.where('state').equals(State.New).and((c) => !c.suspendue).count(), 0)
+const matureCards = useLiveQuery(
+  () => db.cards.filter((c) => c.stability >= 21 && (!scopeTag() || c.tags.includes(scopeTag()!))).count(),
+  0,
+)
+const newAvailable = useLiveQuery(
+  () =>
+    db.cards
+      .where('state')
+      .equals(State.New)
+      .and((c) => !c.suspendue && (!scopeTag() || c.tags.includes(scopeTag()!)))
+      .count(),
+  0,
+)
 
 onMounted(async () => {
   await seedDeckIfEmpty()
@@ -39,7 +62,7 @@ onMounted(async () => {
 
 async function start() {
   await settings.load()
-  const q = await getTodayQueue(settings.values.newCardsPerDay)
+  const q = await getTodayQueue(settings.values.newCardsPerDay, new Date(), scopeTag())
   queue.value = [...q.due, ...q.fresh]
   if (!queue.value.length) return
   view.value = 'running'
@@ -62,8 +85,20 @@ async function continueReviewing() {
     <PageHeader title="Review" subtitle="Répétition espacée (FSRS) — vocabulaire N5." />
 
     <div v-if="view === 'idle'" class="space-y-5">
+      <SettingField label="Portée">
+        <SegmentedControl
+          label="Portée"
+          :model-value="scope"
+          :options="[
+            { value: 'all', label: 'Tout' },
+            { value: 'perso', label: 'Mes notes' },
+          ]"
+          @update:model-value="scope = $event as 'all' | 'perso'"
+        />
+      </SettingField>
+
       <section class="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <StatCard label="Cartes" :value="totalCards" hint="deck N5" />
+        <StatCard label="Cartes" :value="totalCards" :hint="scope === 'perso' ? 'mes notes' : 'deck N5'" />
         <StatCard label="À réviser" :value="dueNow" />
         <StatCard label="Nouvelles dispo." :value="newAvailable" :hint="`plafond ${settings.values.newCardsPerDay}/j`" />
         <StatCard label="Mûres" :value="matureCards" hint="stabilité ≥ 21 j" />
