@@ -28,7 +28,15 @@ const scope = useStorage<'all' | 'perso'>('srs:scope', 'all')
 const scopeTag = () => (scope.value === 'perso' ? PERSO_TAG : undefined)
 
 const db = getDb()
-const totalCards = useLiveQuery(() => db.cards.filter((c) => !scopeTag() || c.tags.includes(scopeTag()!)).count(), 0)
+// `deps: [scope]` : liveQuery ne resouscrit que sur une écriture Dexie, pas
+// sur un changement de `scope` (un simple ref Vue, pas une table) — sans
+// cette dépendance explicite, les compteurs restent figés sur l'ancienne
+// portée tant qu'aucune carte n'est modifiée par ailleurs.
+const totalCards = useLiveQuery(
+  () => db.cards.filter((c) => !scopeTag() || c.tags.includes(scopeTag()!)).count(),
+  0,
+  [scope],
+)
 const dueNow = useLiveQuery(
   () =>
     db.cards
@@ -37,10 +45,12 @@ const dueNow = useLiveQuery(
       .and((c) => !c.suspendue && c.state !== State.New && (!scopeTag() || c.tags.includes(scopeTag()!)))
       .count(),
   0,
+  [scope],
 )
 const matureCards = useLiveQuery(
   () => db.cards.filter((c) => c.stability >= 21 && (!scopeTag() || c.tags.includes(scopeTag()!))).count(),
   0,
+  [scope],
 )
 const newAvailable = useLiveQuery(
   () =>
@@ -50,6 +60,7 @@ const newAvailable = useLiveQuery(
       .and((c) => !c.suspendue && (!scopeTag() || c.tags.includes(scopeTag()!)))
       .count(),
   0,
+  [scope],
 )
 
 onMounted(async () => {
