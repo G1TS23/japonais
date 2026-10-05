@@ -119,16 +119,20 @@ async function onDelete(card: Card) {
         <div class="grid gap-x-8 gap-y-5 sm:grid-cols-2">
           <SettingField :label="form.type === 'vocab' ? 'Terme' : 'Titre / structure'">
             <input
+              id="note-terme"
               v-model="form.terme"
               type="text"
+              :aria-label="form.type === 'vocab' ? 'Terme' : 'Titre / structure'"
               class="w-full rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             />
           </SettingField>
 
           <SettingField :label="form.type === 'vocab' ? 'Lecture' : 'Sens court'">
             <input
+              id="note-lecture"
               v-model="form.lecture"
               type="text"
+              :aria-label="form.type === 'vocab' ? 'Lecture' : 'Sens court'"
               class="w-full rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             />
           </SettingField>
@@ -136,8 +140,10 @@ async function onDelete(card: Card) {
 
         <SettingField :label="form.type === 'vocab' ? 'Sens' : 'Explication'">
           <textarea
+            id="note-sens-fr"
             v-model="form.sensFr"
             rows="3"
+            :aria-label="form.type === 'vocab' ? 'Sens' : 'Explication'"
             class="w-full rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
           />
         </SettingField>
@@ -145,15 +151,19 @@ async function onDelete(card: Card) {
         <div class="grid gap-x-8 gap-y-5 sm:grid-cols-2">
           <SettingField label="Exemple (japonais)" description="optionnel">
             <input
+              id="note-exemple-jp"
               v-model="form.exempleJp"
               type="text"
+              aria-label="Exemple (japonais)"
               class="jp w-full rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             />
           </SettingField>
           <SettingField label="Exemple (français)" description="optionnel">
             <input
+              id="note-exemple-fr"
               v-model="form.exempleFr"
               type="text"
+              aria-label="Exemple (français)"
               class="w-full rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700"
             />
           </SettingField>
@@ -161,8 +171,10 @@ async function onDelete(card: Card) {
 
         <SettingField label="Date de séance" description="optionnel">
           <input
+            id="note-seance"
             v-model="form.seance"
             type="date"
+            aria-label="Date de séance"
             class="rounded-lg border border-neutral-300 bg-transparent px-3 py-1.5 text-base dark:border-neutral-700 dark:bg-neutral-900"
           />
         </SettingField>
