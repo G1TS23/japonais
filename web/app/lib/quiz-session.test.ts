@@ -4,6 +4,7 @@ import { QUIZ_N5 } from '~/data/quiz-n5'
 import { getDb, type QuizAttempt } from './db'
 import {
   buildGrammarParticleQuestions,
+  buildNumberQuestions,
   buildQuiz,
   buildVocabQuestions,
   poolSize,
@@ -62,6 +63,24 @@ describe('buildVocabQuestions', () => {
   })
 })
 
+describe('buildNumberQuestions', () => {
+  it('génère le nombre demandé, chaque question ayant 4 options uniques dont la bonne', () => {
+    const qs = buildNumberQuestions(30)
+    expect(qs).toHaveLength(30)
+    for (const q of qs) {
+      expect(q.theme).toBe('chiffres')
+      expect(q.options).toHaveLength(4)
+      expect(q.options[q.answer]).toBeDefined()
+      expect(new Set(q.options).size).toBe(4)
+    }
+  })
+
+  it('a des ids uniques', () => {
+    const qs = buildNumberQuestions(50)
+    expect(new Set(qs.map((q) => q.id)).size).toBe(qs.length)
+  })
+})
+
 describe('buildQuiz', () => {
   it('ne tire que des questions des thèmes choisis', () => {
     const qs = buildQuiz({ themes: ['particules'], length: 'all' })
@@ -85,6 +104,11 @@ describe('poolSize', () => {
     const particules = QUIZ_N5.filter((q) => q.theme === 'particules').length + buildGrammarParticleQuestions().length
     expect(poolSize(['particules'])).toBe(particules)
     expect(poolSize(['particules', 'vocabulaire'])).toBe(particules + 40)
+  })
+
+  it('ajoute les questions rédigées + générées de chiffres', () => {
+    const chiffres = QUIZ_N5.filter((q) => q.theme === 'chiffres').length + buildNumberQuestions(1_000_000).length
+    expect(poolSize(['chiffres'])).toBe(chiffres)
   })
 })
 
@@ -168,7 +192,7 @@ describe('summarizeQuizAttempts', () => {
     const s = summarizeQuizAttempts([])
     expect(s.attempts).toBe(0)
     expect(s.accuracy).toBe(0)
-    expect(s.errorsByTheme).toEqual({ particules: 0, grammaire: 0, vocabulaire: 0 })
+    expect(s.errorsByTheme).toEqual({ particules: 0, grammaire: 0, vocabulaire: 0, chiffres: 0 })
     expect(s.toughest).toEqual([])
     expect(s.lastTs).toBeNull()
   })
@@ -200,7 +224,7 @@ describe('summarizeQuizAttempts', () => {
 
   it('déduit le thème des erreurs depuis le préfixe de l’id', () => {
     const s = summarizeQuizAttempts(attempts)
-    expect(s.errorsByTheme).toEqual({ particules: 3, grammaire: 1, vocabulaire: 2 })
+    expect(s.errorsByTheme).toEqual({ particules: 3, grammaire: 1, vocabulaire: 2, chiffres: 0 })
   })
 
   it('liste les questions ratées ≥ 2 fois, avec l’énoncé', () => {
