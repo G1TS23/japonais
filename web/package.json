@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "prepare": "git config core.hooksPath .githooks || true",
     "test": "vitest run"
   },
   "dependencies": {
