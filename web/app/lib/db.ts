@@ -21,8 +21,10 @@ export interface Card {
    * les mêmes champs avec un sens différent : `terme` = phrase à trou,
    * `lecture` = réponse attendue, `sens_fr`/`sens_en` = glose du point,
    * `exemple_jp`/`exemple_fr` = phrase complète. Voir `lib/grammar-srs.ts`.
+   * `perso-note` = note de grammaire perso (voir `lib/notes.ts`) : `terme` =
+   * titre/structure, `lecture` = sens court, `sens_fr` = explication libre.
    */
-  kind?: 'vocab' | 'grammar-cloze'
+  kind?: 'vocab' | 'grammar-cloze' | 'perso-note'
   /** Point de grammaire d'origine (`GrammarPoint.id`), si `kind === 'grammar-cloze'`. */
   grammarId?: string
   terme: string
