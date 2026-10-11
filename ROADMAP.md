@@ -146,6 +146,30 @@ Valeur plus ciblée. Données d'ordre des traits volumineuses.
   `/kanji/[kanji]` (tracé, définition au tap du kanji — réutilise le popover
   de la piste 3 —, kanji précédent/suivant)
 
+## ✅ 6. Chiffres et numération
+
+Nombres et compteurs n'existaient qu'en creux (quelques fiches grammaire,
+sans contenu systématique ni exercice dédié) — point bloquant en pratique
+(prix, étage, âge). Intégration SRS explicitement reportée à une itération
+suivante.
+
+- ✅ `data/numbers.ts` — `numberReading()` : lecture cardinale algorithmique
+  0–9999 (dizaines régulières, tables d'exceptions distinctes pour les
+  géminations/voisements de 百 et de 千, いち explicite conservé sur 万) +
+  `COUNTERS` : 8 compteurs (〜つ 〜人 〜個 〜枚 〜本 〜回 〜階 〜歳) avec leurs
+  lectures irrégulières 1–10, hand-authored
+- ✅ Thème `chiffres` ajouté au quiz existant (`/quiz`) plutôt qu'une nouvelle
+  page de drill : `buildNumberQuestions()` dans `lib/quiz-session.ts` génère
+  des QCM bidirectionnels (compteur+nombre ↔ lecture, nombre cardinal →
+  lecture) ; le cas 二十歳 → はたち reste rédigé à la main dans `data/quiz-n5.ts`
+  pour ne pas se perdre dans le mélange aléatoire
+- ✅ Page de référence `/chiffres` (tableau des compteurs + règles 百/千/万),
+  entrée de navigation et icône `hashtag`
+- ⬜ (reporté) Intégration SRS dédiée pour mémoriser les lectures
+  irrégulières
+- ⬜ (reporté) Correction du lookup dictionnaire sur les compteurs dans
+  `reading-n5.ts` (七時, 四人…) — piste distincte, cf. piste 4
+
 ---
 
 ## ❄️ Parké — valeur limitée en solo
