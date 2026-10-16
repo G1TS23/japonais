@@ -14,7 +14,7 @@
   "dependencies": {
     "@pinia/nuxt": "^1.0.2",
     "@vueuse/core": "^15.0.0",
-    "@vueuse/nuxt": "^13.0.0",
+    "@vueuse/nuxt": "^15.0.0",
     "dexie": "^4.4.6",
     "nuxt": "^4.6.1",
     "pinia": "^4.0.3",
