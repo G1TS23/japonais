@@ -113,8 +113,12 @@ export interface TodayQueue {
   fresh: Card[]
 }
 
-/** File du jour : révisions dues + nouvelles cartes plafonnées par le réglage utilisateur. */
-export async function getTodayQueue(newCardsPerDay: number, now: Date = new Date()): Promise<TodayQueue> {
+/**
+ * File du jour : révisions dues + nouvelles cartes plafonnées par le réglage
+ * utilisateur. `tag`, si fourni, restreint la file aux cartes portant ce tag
+ * (ex. `'perso'` pour ne réviser que ses propres notes).
+ */
+export async function getTodayQueue(newCardsPerDay: number, now: Date = new Date(), tag?: string): Promise<TodayQueue> {
   const db = getDb()
   const nowMs = now.getTime()
 
@@ -122,12 +126,12 @@ export async function getTodayQueue(newCardsPerDay: number, now: Date = new Date
     db.cards
       .where('due')
       .belowOrEqual(nowMs)
-      .and((c) => !c.suspendue && c.state !== State.New)
+      .and((c) => !c.suspendue && c.state !== State.New && (!tag || c.tags.includes(tag)))
       .sortBy('due'),
     db.cards
       .where('state')
       .equals(State.New)
-      .and((c) => !c.suspendue)
+      .and((c) => !c.suspendue && (!tag || c.tags.includes(tag)))
       .sortBy('created_at'),
     newCardsIntroducedToday(now),
   ])

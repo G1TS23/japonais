@@ -24,6 +24,7 @@ export function matchesRoute(path: string, to: string): boolean {
 export const LEARNING_LINKS: NavLink[] = [
   { to: '/kana', label: 'Kana', short: 'Kana', icon: 'language' },
   { to: '/srs', label: 'Review', short: 'Review', icon: 'rectangle-stack' },
+  { to: '/notes', label: 'Mes notes', short: 'Notes', icon: 'academic-cap' },
   { to: '/grammaire', label: 'Grammaire', short: 'Gram.', icon: 'book-open' },
   { to: '/quiz', label: 'Quiz', short: 'Quiz', icon: 'pencil-square' },
   { to: '/dictionnaire', label: 'Dictionnaire', short: 'Dico', icon: 'magnifying-glass' },
