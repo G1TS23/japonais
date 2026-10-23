@@ -1,6 +1,8 @@
 /**
- * Banque de questions N5 rédigées à la main — particules et grammaire de base.
- * Le vocabulaire est généré automatiquement depuis `data/vocab.ts` (voir
+ * Banque de questions N5 rédigées à la main — particules, grammaire de base,
+ * et quelques cas particuliers de chiffres (ex. はたち) trop irréguliers pour
+ * le générateur. Le vocabulaire et le gros des chiffres sont générés
+ * automatiquement depuis `data/vocab.ts` / `data/numbers.ts` (voir
  * `lib/quiz-session.ts`), pas ici.
  *
  * `answer` = index de la bonne réponse dans `options`. Les options sont
@@ -8,7 +10,7 @@
  * Identifiants stables (historique des tentatives).
  */
 
-export type QuizTheme = 'particules' | 'grammaire' | 'vocabulaire'
+export type QuizTheme = 'particules' | 'grammaire' | 'vocabulaire' | 'chiffres'
 
 export interface QuizQuestion {
   id: string
@@ -259,5 +261,16 @@ export const QUIZ_N5: QuizQuestion[] = [
     options: ['ごまい', 'いつつ', 'ごほん', 'ごこ'],
     answer: 0,
     explanation: 'まい compte les objets plats (feuilles, timbres, billets).',
+  },
+
+  // --- Chiffres ---------------------------------------------------------------
+  {
+    id: 'c-hatachi',
+    theme: 'chiffres',
+    prompt: '二十歳 の読み方は？',
+    hint: '20 ans',
+    options: ['はたち', 'にじゅっさい', 'にじゅうさい', 'はつち'],
+    answer: 0,
+    explanation: '二十歳 (20 ans) est une lecture irrégulière à part entière : はたち, jamais にじゅっさい.',
   },
 ]
