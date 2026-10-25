@@ -123,10 +123,10 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
     <div class="flex min-h-72 flex-col items-center justify-center gap-4 rounded-2xl border border-neutral-200 bg-white p-8 text-center dark:border-neutral-800 dark:bg-neutral-900">
       <!-- Le terme n'est tapable qu'une fois la réponse révélée (pas avant :
            on ne veut pas offrir un raccourci pour éviter l'effort de rappel),
-           et jamais pour une phrase à trou (grammaire) : ce n'est pas un mot
-           du dictionnaire, il faudrait un segmenteur pour la découper. -->
+           et jamais pour une phrase à trou (grammaire) ou un titre de note
+           perso (grammaire perso) : ce n'est pas un mot du dictionnaire. -->
       <button
-        v-if="phase === 'back' && current.kind !== 'grammar-cloze'"
+        v-if="phase === 'back' && current.kind !== 'grammar-cloze' && current.kind !== 'perso-note'"
         type="button"
         class="jp cursor-pointer text-4xl underline decoration-dotted decoration-neutral-300 underline-offset-4 dark:decoration-neutral-700"
         @click="openDefinition(current.terme)"
@@ -137,13 +137,18 @@ const labelFor = (r: Rating) => preview.value.find((p) => p.rating === r)?.inter
 
       <template v-if="phase === 'back'">
         <div class="flex items-center gap-2">
+          <!-- `lecture` est une vraie lecture/réponse lookupable pour le
+               vocabulaire et la grammaire-cloze, mais un simple sens court
+               en texte libre pour une note perso de grammaire. -->
           <button
+            v-if="current.kind !== 'perso-note'"
             type="button"
             class="jp cursor-pointer text-lg text-neutral-500 underline decoration-dotted underline-offset-4 dark:text-neutral-400"
             @click="openDefinition(current.lecture)"
           >
             {{ current.lecture }}
           </button>
+          <span v-else class="text-lg text-neutral-500 dark:text-neutral-400">{{ current.lecture }}</span>
           <SpeakButton :text="current.terme" size="sm" :label="`Écouter ${current.terme}`" />
         </div>
         <div class="text-xl">
