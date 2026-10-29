@@ -4,9 +4,7 @@
   publish = ".output/public"
 
 [build.environment]
-  # Version exacte : Node 22.23.4 (npm 10.9.9) fait planter "npm ci" sur Netlify
-  # (ERR_INVALID_ARG_TYPE). À relâcher vers "22" une fois le bug corrigé.
-  NODE_VERSION = "22.22.0"
+  NODE_VERSION = "22"
   # Nitro détecte Netlify et bascule sinon sur le préréglage "netlify-static"
   # (sortie dans dist/ au lieu de .output/public/). On force "static" pour que
   # la sortie soit identique en local, en CI et sur Netlify.
