@@ -1,3 +1,4 @@
+import { COUNTERS, numberReading, type CounterEntry } from '~/data/numbers'
 import { QUIZ_N5, type QuizQuestion, type QuizTheme } from '~/data/quiz-n5'
 import { VOCAB_N5, type VocabEntry } from '~/data/vocab'
 import { getDb, uid, type QuizAttempt } from './db'
@@ -9,6 +10,7 @@ export const THEMES: { value: QuizTheme; label: string }[] = [
   { value: 'particules', label: 'Particules' },
   { value: 'grammaire', label: 'Grammaire' },
   { value: 'vocabulaire', label: 'Vocabulaire' },
+  { value: 'chiffres', label: 'Chiffres' },
 ]
 
 function shuffle<T>(arr: T[]): T[] {
@@ -103,6 +105,92 @@ export function buildGrammarParticleQuestions(): QuizQuestion[] {
   })
 }
 
+interface CounterItem {
+  counter: CounterEntry
+  n: number
+  term: string
+  reading: string
+}
+
+/** Un item par compteur × lecture 1–10 (`data/numbers.ts`), terme = chiffre kanji + suffixe du compteur. */
+function counterItems(): CounterItem[] {
+  const items: CounterItem[] = []
+  for (const counter of COUNTERS) {
+    const suffix = counter.kanji.replace('〜', '')
+    counter.readings.forEach((reading, i) => {
+      const n = i + 1
+      items.push({ counter, n, term: numberReading(n).kanji + suffix, reading })
+    })
+  }
+  return items
+}
+
+/** Nombres cardinaux couvrant les pièges de lecture (dizaines, centaines, milliers, 万), pour varier le pool. */
+const CARDINAL_SAMPLES = [
+  7, 14, 23, 47, 56, 68, 79, 90, 100, 200, 300, 456, 600, 700, 800, 900, 1000, 2500, 3000, 3800, 6000, 8000, 9999,
+]
+
+/**
+ * Pool complet de questions « chiffres », trois formes : compteur+nombre →
+ * lecture, lecture → compteur+nombre, nombre cardinal → lecture. Distracteurs
+ * tirés d'un pool de valeurs uniques (évite les doublons d'options entre
+ * 〜回/〜階, qui partagent leurs lectures).
+ */
+function numberQuestionPool(): QuizQuestion[] {
+  const items = counterItems()
+  const uniqueReadings = [...new Set(items.map((i) => i.reading))]
+  const uniqueTerms = [...new Set(items.map((i) => i.term))]
+  const pool: QuizQuestion[] = []
+
+  shuffle(items).forEach((item, i) => {
+    if (i % 2 === 0) {
+      const distractors = shuffle(uniqueReadings.filter((r) => r !== item.reading)).slice(0, 3)
+      const options = shuffle([item.reading, ...distractors])
+      pool.push({
+        id: `c-${item.counter.id}-${item.n}-r`,
+        theme: 'chiffres',
+        prompt: item.term,
+        options,
+        answer: options.indexOf(item.reading),
+        explanation: item.counter.label,
+      })
+    } else {
+      const distractors = shuffle(uniqueTerms.filter((t) => t !== item.term)).slice(0, 3)
+      const options = shuffle([item.term, ...distractors])
+      pool.push({
+        id: `c-${item.counter.id}-${item.n}-t`,
+        theme: 'chiffres',
+        prompt: item.reading,
+        options,
+        answer: options.indexOf(item.term),
+        explanation: item.counter.label,
+      })
+    }
+  })
+
+  const uniqueCardinalReadings = CARDINAL_SAMPLES.map((n) => numberReading(n).kana)
+  CARDINAL_SAMPLES.forEach((n) => {
+    const r = numberReading(n)
+    const distractors = shuffle(uniqueCardinalReadings.filter((k) => k !== r.kana)).slice(0, 3)
+    const options = shuffle([r.kana, ...distractors])
+    pool.push({
+      id: `c-cardinal-${n}`,
+      theme: 'chiffres',
+      prompt: r.kanji,
+      options,
+      answer: options.indexOf(r.kana),
+      explanation: `${n}`,
+    })
+  })
+
+  return pool
+}
+
+/** Questions « chiffres » générées à la volée (voir `numberQuestionPool`). */
+export function buildNumberQuestions(count: number): QuizQuestion[] {
+  return shuffle(numberQuestionPool()).slice(0, count)
+}
+
 export interface QuizConfig {
   themes: QuizTheme[]
   length: number | 'all'
@@ -125,6 +213,11 @@ export function buildQuiz(config: QuizConfig, handAuthored: QuizQuestion[] = QUI
     pool.push(...buildVocabQuestions(vocabCount, config.lang ?? 'fr'))
   }
 
+  if (config.themes.includes('chiffres')) {
+    const numberCount = config.length === 'all' ? numberQuestionPool().length : Math.max(config.length, 20)
+    pool.push(...buildNumberQuestions(numberCount))
+  }
+
   const shuffled = shuffle(pool).map(shuffleOptions)
   return config.length === 'all' ? shuffled : shuffled.slice(0, config.length)
 }
@@ -133,6 +226,7 @@ export function poolSize(themes: QuizTheme[], handAuthored: QuizQuestion[] = QUI
   let n = handAuthored.filter((q) => themes.includes(q.theme)).length
   if (themes.includes('particules')) n += buildGrammarParticleQuestions().length
   if (themes.includes('vocabulaire')) n += 40
+  if (themes.includes('chiffres')) n += numberQuestionPool().length
   return n
 }
 
@@ -175,7 +269,7 @@ export async function recentQuizAttempts(limit = 20) {
 
 // --- Statistiques ------------------------------------------------------------
 
-const THEME_BY_PREFIX: Record<string, QuizTheme> = { p: 'particules', g: 'grammaire', v: 'vocabulaire' }
+const THEME_BY_PREFIX: Record<string, QuizTheme> = { p: 'particules', g: 'grammaire', v: 'vocabulaire', c: 'chiffres' }
 
 /** Thème d'une question déduit du préfixe de son id (`p-…`, `g-…`, `v-…`). */
 function themeOfId(id: string): QuizTheme | null {
@@ -216,7 +310,7 @@ const EMPTY_STATS: QuizStats = {
   avgMsPerQuestion: 0,
   lastTs: null,
   history: [],
-  errorsByTheme: { particules: 0, grammaire: 0, vocabulaire: 0 },
+  errorsByTheme: { particules: 0, grammaire: 0, vocabulaire: 0, chiffres: 0 },
   toughest: [],
 }
 
@@ -240,7 +334,7 @@ export function summarizeQuizAttempts(attempts: QuizAttempt[], recentN = 5): Qui
   const timedMs = timed.reduce((s, a) => s + (a.durationMs ?? 0), 0)
   const timedQ = timed.reduce((s, a) => s + a.total, 0)
 
-  const errorsByTheme: Record<QuizTheme, number> = { particules: 0, grammaire: 0, vocabulaire: 0 }
+  const errorsByTheme: Record<QuizTheme, number> = { particules: 0, grammaire: 0, vocabulaire: 0, chiffres: 0 }
   const missCount = new Map<string, number>()
   const promptById = new Map<string, string>()
   for (const q of QUIZ_N5) promptById.set(q.id, q.prompt)

@@ -29,6 +29,7 @@ export const LEARNING_LINKS: NavLink[] = [
   { to: '/dictionnaire', label: 'Dictionnaire', short: 'Dico', icon: 'magnifying-glass' },
   { to: '/lecture', label: 'Lecture', short: 'Lecture', icon: 'document-text' },
   { to: '/kanji', label: 'Kanji', short: 'Kanji', icon: 'pencil' },
+  { to: '/chiffres', label: 'Chiffres', short: 'Chiffres', icon: 'hashtag' },
 ]
 
 /** Clé de mémorisation de la dernière section d'apprentissage visitée. */
